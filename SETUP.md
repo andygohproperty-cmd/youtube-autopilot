@@ -7,8 +7,8 @@ These steps need your own accounts, so only you can do them. After this, everyth
 | What | Where | Cost |
 |---|---|---|
 | Claude API key | console.anthropic.com → Settings → API keys → Create key. Add $10 credit under Billing. | ~$0.10–0.40 per video |
-| Pexels key (stock video) | pexels.com/api → "Get started" | Free |
-| Pixabay key (backup stock, optional) | pixabay.com/api/docs (shown when logged in) | Free |
+| Pixabay key (stock video) | pixabay.com/api/docs (shown when logged in) | Free |
+| Pexels key (optional; new keys paused as of Oct 2026) | pexels.com/api | Free |
 
 ## 2. YouTube channels (10 min)
 
@@ -42,8 +42,8 @@ Repo → Settings → Secrets and variables → Actions:
 | Name | Value |
 |---|---|
 | `ANTHROPIC_API_KEY` | Claude API key |
-| `PEXELS_API_KEY` | Pexels key |
-| `PIXABAY_API_KEY` | Pixabay key (optional) |
+| `PIXABAY_API_KEY` | Pixabay key |
+| `PEXELS_API_KEY` | Pexels key (optional) |
 | `YT_CLIENT_ID` | Google client ID |
 | `YT_CLIENT_SECRET` | Google client secret |
 | `YT_REFRESH_TOKEN_BIZ` | refresh token for the business explainer channel |
