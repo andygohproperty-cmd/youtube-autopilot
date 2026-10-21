@@ -1,6 +1,8 @@
 """Command line entry point used by the GitHub Actions workflows.
 
   python -m autopilot.run produce --channel weird_facts [--dry-run] [--force]
+  python -m autopilot.run produce --plan-file queue/x.json   # plan written by the scheduled Claude task
+  python -m autopilot.run check-plan queue/x.json
   python -m autopilot.run approve --issue 12
   python -m autopilot.run reject --issue 12 --reason "too slow"
   python -m autopilot.run release-pending
@@ -34,19 +36,35 @@ def latest_status(channel_id: str) -> dict[str, dict]:
     return state
 
 
-def produce(channel_id: str, dry_run: bool, force: bool) -> None:
-    from .llm import research, write_plan
+def load_plan_file(path: str):
+    """A queued plan: {"channel": id, "research_notes": str, "plan": VideoPlan}."""
+    from .plan import VideoPlan
+    data = json.loads(open(path).read())
+    channel = load_channel(data["channel"])
+    plan = VideoPlan.model_validate(data["plan"])
+    words = sum(len(s.narration.split()) for s in plan.segments)
+    if not 0.6 * channel.target_words <= words <= 1.4 * channel.target_words:
+        raise SystemExit(f"{path}: {words} words, expected about {channel.target_words}")
+    if not plan.sources:
+        raise SystemExit(f"{path}: no sources")
+    return channel, plan, data.get("research_notes", "")
+
+
+def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str | None = None) -> None:
     from .render import render
     from .thumbnail import make_thumbnail
     from .voice import narrate
 
-    channel = load_channel(channel_id)
-    if not force and not channel.produces_today():
-        print(f"{channel.id}: not a production day, skipping")
-        return
-
-    notes = research(channel)
-    plan = write_plan(channel, notes)
+    if plan_file:
+        channel, plan, notes = load_plan_file(plan_file)
+    else:
+        from .llm import research, write_plan
+        channel = load_channel(channel_id)
+        if not force and not channel.produces_today():
+            print(f"{channel.id}: not a production day, skipping")
+            return
+        notes = research(channel)
+        plan = write_plan(channel, notes)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M")
     work = OUT_DIR / channel.id / f"{stamp}-{_slug(plan.title)}"
     work.mkdir(parents=True, exist_ok=True)
@@ -146,7 +164,8 @@ def main() -> None:
     p = argparse.ArgumentParser()
     sub = p.add_subparsers(dest="cmd", required=True)
     pr = sub.add_parser("produce")
-    pr.add_argument("--channel", required=True)
+    pr.add_argument("--channel")
+    pr.add_argument("--plan-file")
     pr.add_argument("--dry-run", action="store_true")
     pr.add_argument("--force", action="store_true")
     ap = sub.add_parser("approve")
@@ -155,9 +174,16 @@ def main() -> None:
     rj.add_argument("--issue", type=int, required=True)
     rj.add_argument("--reason", default="")
     sub.add_parser("release-pending")
+    cp = sub.add_parser("check-plan")
+    cp.add_argument("plan_file")
     a = p.parse_args()
     if a.cmd == "produce":
-        produce(a.channel, a.dry_run, a.force)
+        if not (a.channel or a.plan_file):
+            p.error("produce needs --channel or --plan-file")
+        produce(a.channel, a.dry_run, a.force, a.plan_file)
+    elif a.cmd == "check-plan":
+        channel, plan, _ = load_plan_file(a.plan_file)
+        print(f"OK: {channel.id} · {plan.title}")
     elif a.cmd == "approve":
         approve(a.issue)
     elif a.cmd == "reject":

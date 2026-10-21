@@ -2,28 +2,11 @@
 import os
 
 import anthropic
-from pydantic import BaseModel
-
 from .config import Channel, feedback, history
+from .plan import VideoPlan
 
 MODEL = os.environ.get("CLAUDE_MODEL", "claude-opus-5-5")
 client = anthropic.Anthropic()
-
-
-class Segment(BaseModel):
-    narration: str        # what the narrator says, 1-3 sentences
-    broll_query: str      # 2-4 word stock-footage search, concrete and visual
-
-
-class VideoPlan(BaseModel):
-    title: str
-    description: str
-    tags: list[str]
-    thumbnail_text: str   # 2-5 words, all caps friendly
-    segments: list[Segment]
-    sources: list[str]    # URLs the facts came from
-    uses_realistic_ai_media: bool
-    originality_note: str  # what makes this video different from what's already on YouTube
 
 
 def _past_titles(channel: Channel, limit: int = 60) -> list[str]:

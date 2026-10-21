@@ -1,8 +1,8 @@
-name: Produce videos
+name: Produce videos (Claude API mode)
 
+# Manual only. Day to day, scripts come from the scheduled Claude task (see WRITER.md)
+# and are rendered by render-queue.yml. Use this if you switch to the Claude API.
 on:
-  schedule:
-    - cron: "0 6 * * *"        # daily 06:00 UTC; each channel decides if today is a production day
   workflow_dispatch:
     inputs:
       channel:

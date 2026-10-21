@@ -6,13 +6,17 @@ Makes and uploads faceless YouTube videos on a schedule. The owner only approves
 
 **Approval:** reply `/approve` or `/reject <reason>` on the issue. Approved videos get the next free publish slot. Rejection reasons are fed into future scripts.
 
-**Cost:** GitHub Actions free tier, free voice/footage/render. Only the Claude API is paid (roughly $0.10–0.40 per video).
+**Who writes the scripts:** a daily scheduled Claude task on the owner's Claude plan follows [WRITER.md](WRITER.md) and commits plans to `queue/`. `render-queue.yml` renders and uploads them. (The `produce.yml` Claude API mode is kept for later, if plan limits run short.)
+
+**Cost:** $0 extra: Claude plan, GitHub Actions free tier, free voice/footage/render.
 
 | Path | What |
 |---|---|
 | `channels/*.yaml` | One file per channel: niche, style, voice, schedule. Add a file to add a channel. |
 | `autopilot/` | Pipeline code (`run.py` is the entry point). |
-| `.github/workflows/produce.yml` | Daily run; each channel produces on its own days. Can also be run by hand, incl. a dry run. |
+| `queue/` | Plans waiting to render (`done/`, `failed/` after). |
+| `.github/workflows/render-queue.yml` | Renders + uploads queued plans. |
+| `.github/workflows/produce.yml` | Optional Claude API mode, manual run. |
 | `.github/workflows/approvals.yml` | Handles `/approve` and `/reject` comments. |
 | `data/` | History and feedback, committed automatically. |
 | `assets/music/` | Optional background tracks (`.mp3`, licensed for commercial use). |
