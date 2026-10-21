@@ -1,5 +1,6 @@
 """Free stock footage from Pexels (primary) and Pixabay (backup)."""
 import os
+import time
 from pathlib import Path
 
 import requests
@@ -73,10 +74,20 @@ def find_clips(query: str, portrait: bool, used: set[str], n: int) -> list[dict]
     return picks
 
 
-def download(clip: dict, dest: Path) -> Path:
-    with requests.get(clip["url"], stream=True, timeout=120) as r:
-        r.raise_for_status()
-        with open(dest, "wb") as f:
-            for chunk in r.iter_content(1 << 20):
-                f.write(chunk)
-    return dest
+def download(clip: dict, dest: Path) -> Path | None:
+    """Download with backoff on rate limits (Pixabay's CDN answers 429 when pushed); None if it never works."""
+    for attempt in range(6):
+        try:
+            with requests.get(clip["url"], stream=True, timeout=120) as r:
+                if r.status_code == 429 or r.status_code >= 500:
+                    wait = float(r.headers.get("Retry-After") or 0) or 5 * 2 ** attempt
+                    time.sleep(min(wait, 120))
+                    continue
+                r.raise_for_status()
+                with open(dest, "wb") as f:
+                    for chunk in r.iter_content(1 << 20):
+                        f.write(chunk)
+            return dest
+        except requests.RequestException:
+            time.sleep(5 * 2 ** attempt)
+    return None

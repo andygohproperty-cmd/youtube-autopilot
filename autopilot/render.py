@@ -202,7 +202,7 @@ def render(channel: Channel, segments: list[Segment], durations: list[float], le
     for i, (seg, dur) in enumerate(zip(segments, durations)):
         n = max(1, round(dur / shot_length(channel, t)))
         found = find_clips(seg.broll_query, channel.is_short, used, min(n, MAX_SOURCES))
-        sources = [download(c, clips_dir / f"src_{i}_{j}.mp4") for j, c in enumerate(found)]
+        sources = [p for j, c in enumerate(found) if (p := download(c, clips_dir / f"src_{i}_{j}.mp4"))]
         sources = sources or last_sources      # nothing found: reuse the previous segment's clips
         last_sources = sources or last_sources
         seg_end = round((t + dur) * FPS)
