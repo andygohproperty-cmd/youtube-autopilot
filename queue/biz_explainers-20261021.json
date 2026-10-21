@@ -1,0 +1,157 @@
+{
+  "channel": "biz_explainers",
+  "research_notes": "FY2025 (ended Aug 31 2025), Costco 10-K: net sales $269,912M; membership fees $5,323M; net income $8,099M ($18.21/share); gross margin 11.12%; 914 warehouses; 81.0M paid members; 38.7M Executive; renewal 92.3% US/Canada, 89.8% worldwide; Gold Star $65, Executive +$65; fee increase effective Sept 1 2024; <4,000 active SKUs per warehouse; Kirkland Signature a growing portion of sales. Sources: https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm, https://www.nasdaq.com/articles/costco-reports-higher-sales-and-earnings-q4-and-fiscal-year",
+  "plan": {
+    "title": "How Costco Really Makes Money (It's Not the Groceries)",
+    "description": "Costco sells around $270 billion of goods a year, but its profit story is really about the membership card. We use Costco's fiscal 2025 annual report to show how fees, thin margins and 90%+ renewal rates fit together.\n\nChapters:\n0:00 The surprising number\n0:51 Fees vs profit\n1:33 Thin margins on purpose\n2:27 Renewal rates\n3:02 Gold Star vs Executive\n4:02 Fewer products, more power\n4:55 The full model\n\nSources:\nhttps://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm\nhttps://www.nasdaq.com/articles/costco-reports-higher-sales-and-earnings-q4-and-fiscal-year\n\nNarration is AI-generated. Educational content only, not investment advice.",
+    "tags": [
+      "costco",
+      "how costco makes money",
+      "business explained",
+      "membership model",
+      "retail business",
+      "costco membership",
+      "business model",
+      "kirkland signature",
+      "warehouse club",
+      "company breakdown"
+    ],
+    "thumbnail_text": "The card is the product",
+    "segments": [
+      {
+        "narration": "Costco sold almost two hundred and seventy billion dollars of stuff last year. And yet, the groceries, the TVs and the giant packs of toilet paper are not really how it makes its money.",
+        "broll_query": "warehouse store aisles"
+      },
+      {
+        "narration": "To see where the money actually comes from, we need to look at one small plastic card. Let's open up Costco's own annual report and follow the numbers.",
+        "broll_query": "membership card wallet"
+      },
+      {
+        "narration": "In its 2025 fiscal year, which ended on the last day of August, Costco reported net sales of about two hundred and seventy billion dollars. That is the money customers paid at the checkout for products.",
+        "broll_query": "shopping cart checkout"
+      },
+      {
+        "narration": "On top of that, it collected about five point three billion dollars in membership fees. That is the yearly fee people pay just for the right to walk through the door.",
+        "broll_query": "people entering store"
+      },
+      {
+        "narration": "Now here is the number that changes how you see the whole business. Costco's net income for the year, the profit left after paying for everything, was about eight point one billion dollars.",
+        "broll_query": "calculator financial report"
+      },
+      {
+        "narration": "Put those side by side. Membership fees of five point three billion. Total profit of eight point one billion. The fees alone are equal to roughly two thirds of the company's entire profit.",
+        "broll_query": "coins stacking"
+      },
+      {
+        "narration": "And unlike product sales, a membership fee has almost no cost attached to it. Costco does not have to buy a pallet of anything to earn it. Most of that money drops straight through to the bottom line.",
+        "broll_query": "money counting"
+      },
+      {
+        "narration": "So how does the store side of the business look? Costco's gross margin in 2025 was about eleven point one percent.",
+        "broll_query": "grocery shelves"
+      },
+      {
+        "narration": "In plain words, for every hundred dollars of goods Costco sells, only about eleven dollars is left after paying for the goods themselves. And that eleven dollars still has to cover wages, rent, electricity and trucks.",
+        "broll_query": "warehouse workers"
+      },
+      {
+        "narration": "Most supermarkets keep a much bigger slice of each sale. Costco deliberately keeps its slice thin, so its prices stay low, so members feel the fee is worth paying.",
+        "broll_query": "price tags"
+      },
+      {
+        "narration": "That is the trick. The store is designed to roughly break even on products, and the membership is designed to make the profit.",
+        "broll_query": "store entrance"
+      },
+      {
+        "narration": "Low prices keep members happy. Happy members renew. Renewals pay the fees. And the fees fund the low prices. It is a loop that feeds itself.",
+        "broll_query": "circle rotation"
+      },
+      {
+        "narration": "How strong is that loop? According to Costco, about ninety two percent of members in the United States and Canada renewed in 2025. Worldwide the figure was close to ninety percent.",
+        "broll_query": "family shopping"
+      },
+      {
+        "narration": "For a subscription business, that is a remarkable number. Many streaming services and gym chains would be thrilled to keep nine out of ten customers every single year.",
+        "broll_query": "streaming tv remote"
+      },
+      {
+        "narration": "And there are a lot of members. At the end of fiscal 2025, Costco had about eighty one million paid memberships, across nine hundred and fourteen warehouses around the world.",
+        "broll_query": "world map"
+      },
+      {
+        "narration": "There are two main tiers. The basic Gold Star membership in the United States costs sixty five dollars a year.",
+        "broll_query": "membership card"
+      },
+      {
+        "narration": "The Executive membership adds another sixty five dollars on top, for one hundred and thirty dollars in total, and gives members a cash reward on what they spend.",
+        "broll_query": "credit card payment"
+      },
+      {
+        "narration": "That upgrade matters more than it looks. About thirty eight point seven million members were on the Executive tier, close to half of all paid members.",
+        "broll_query": "people walking crowd"
+      },
+      {
+        "narration": "Executive members pay double the fee, and they tend to shop more often and spend more, because they are earning a reward on every purchase.",
+        "broll_query": "full shopping cart"
+      },
+      {
+        "narration": "Costco also raised its fees in the United States and Canada on the first of September 2024. Even after that increase, renewal rates stayed above ninety percent.",
+        "broll_query": "calendar"
+      },
+      {
+        "narration": "When a company can raise its price and almost nobody leaves, that tells you customers see real value in what they are paying for.",
+        "broll_query": "happy customer"
+      },
+      {
+        "narration": "The other part of the machine is simplicity. Costco says a typical warehouse carries fewer than four thousand active products at any one time.",
+        "broll_query": "warehouse pallets"
+      },
+      {
+        "narration": "A regular supermarket might carry tens of thousands. Fewer products means Costco can buy each one in enormous volume, and that buying power is what lets it squeeze suppliers for low prices.",
+        "broll_query": "forklift warehouse"
+      },
+      {
+        "narration": "Fewer products also means less shelf work, less storage and faster stock turnover. The warehouses themselves are plain concrete buildings with goods stacked on pallets, which keeps running costs down.",
+        "broll_query": "concrete warehouse interior"
+      },
+      {
+        "narration": "Then there is Kirkland Signature, Costco's own brand. The company describes it as a growing portion of its sales.",
+        "broll_query": "product packaging"
+      },
+      {
+        "narration": "Own brand products let Costco control quality and price, and they give members one more reason they can only get this deal by renewing their card.",
+        "broll_query": "grocery products"
+      },
+      {
+        "narration": "So if we put it all together, the model looks like this.",
+        "broll_query": "city skyline"
+      },
+      {
+        "narration": "Step one, charge a yearly fee. Step two, use that guaranteed income to keep prices so low that the store barely profits on the goods. Step three, keep the range small, buy in huge volume, and run lean warehouses.",
+        "broll_query": "delivery truck highway"
+      },
+      {
+        "narration": "Step four, members feel they save more than the fee, so more than nine in ten come back. And the cycle starts again.",
+        "broll_query": "people shopping"
+      },
+      {
+        "narration": "That is why Costco can sell close to two hundred and seventy billion dollars of goods on thin margins and still earn about eight billion dollars in profit.",
+        "broll_query": "warehouse store exterior"
+      },
+      {
+        "narration": "The real product Costco sells is not the hot dog or the rotisserie chicken. It is the membership card, and everything inside the warehouse exists to make that card feel worth renewing.",
+        "broll_query": "parking lot cars"
+      },
+      {
+        "narration": "If you liked this breakdown, subscribe for more stories on how famous companies actually make their money.",
+        "broll_query": "sunset city"
+      }
+    ],
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+      "https://www.nasdaq.com/articles/costco-reports-higher-sales-and-earnings-q4-and-fiscal-year"
+    ],
+    "uses_realistic_ai_media": false,
+    "originality_note": "Built directly from Costco's FY2025 10-K numbers, comparing membership fees to total net income to show the fee loop, with every figure explained in plain words."
+  }
+}
