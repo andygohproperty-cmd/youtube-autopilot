@@ -1,0 +1,113 @@
+name: Produce videos
+
+on:
+  schedule:
+    - cron: "0 6 * * *"        # daily 06:00 UTC; each channel decides if today is a production day
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: "Channel id (file name in channels/), or 'all'"
+        default: all
+      force:
+        description: "Produce even if today is not a production day"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Render only, no upload (video saved as a run artifact)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: produce
+  cancel-in-progress: false
+
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        channel: [biz_explainers, weird_facts]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Skip channels not selected
+        id: pick
+        run: |
+          want="${{ github.event.inputs.channel || 'all' }}"
+          if [ "$want" = "all" ] || [ "$want" = "${{ matrix.channel }}" ]; then echo "run=true" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: actions/setup-python@v5
+        if: steps.pick.outputs.run
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install FFmpeg and Python packages
+        if: steps.pick.outputs.run
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -r requirements.txt
+
+      - name: Cache voice model
+        if: steps.pick.outputs.run
+        uses: actions/cache@v4
+        with:
+          path: models
+          key: kokoro-v1.0
+
+      - name: Download voice model
+        if: steps.pick.outputs.run
+        run: |
+          mkdir -p models
+          base=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
+          [ -f models/kokoro-v1.0.int8.onnx ] || curl -sSL -o models/kokoro-v1.0.int8.onnx $base/kokoro-v1.0.int8.onnx
+          [ -f models/voices-v1.0.bin ] || curl -sSL -o models/voices-v1.0.bin $base/voices-v1.0.bin
+
+      - name: Ensure approval label exists
+        if: steps.pick.outputs.run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh label create approval --color FBCA04 --description "Video waiting for approval" --force
+
+      - name: Produce
+        if: steps.pick.outputs.run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN_BIZ: ${{ secrets.YT_REFRESH_TOKEN_BIZ }}
+          YT_REFRESH_TOKEN_FACTS: ${{ secrets.YT_REFRESH_TOKEN_FACTS }}
+        run: |
+          args="--channel ${{ matrix.channel }}"
+          [ "${{ github.event.inputs.force }}" = "true" ] && args="$args --force"
+          [ "${{ github.event.inputs.dry_run }}" = "true" ] && args="$args --dry-run"
+          python -m autopilot.run produce $args
+
+      - name: Keep dry-run output
+        if: steps.pick.outputs.run && github.event.inputs.dry_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dry-run-${{ matrix.channel }}
+          path: |
+            out/**/final.mp4
+            out/**/thumbnail.jpg
+            out/**/plan.json
+          retention-days: 7
+
+      - name: Save history
+        if: steps.pick.outputs.run
+        run: |
+          git config user.name "autopilot"
+          git config user.email "autopilot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || (git commit -m "history: ${{ matrix.channel }}" && git pull --rebase && git push)

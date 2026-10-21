@@ -1,0 +1,23 @@
+id: biz_explainers
+name: "How It Makes Money"          # working name, rename before launch
+secret_suffix: BIZ                   # uses secret YT_REFRESH_TOKEN_BIZ
+format: long                         # 1920x1080
+target_minutes: 8
+voice: am_michael
+speed: 1.0
+category_id: "27"                    # Education
+language: en
+production_days: [mon, thu]
+publish_hour_utc: 15                 # ~11am US Eastern
+niche: >
+  Business and tech explainers for curious adults: how a well-known company,
+  product or industry actually makes money, told as a clear story with real
+  numbers from public sources (annual reports, earnings calls, reputable press).
+style: >
+  Calm, confident documentary narrator. Open with a surprising fact in the first
+  two sentences. Short sentences written for the ear. Explain every number in
+  plain words. No hype, no investment advice, no "buy/sell" talk. End with a
+  one-line takeaway and a soft prompt to subscribe.
+avoid: >
+  Stock tips, crypto price predictions, health or legal advice, rumours,
+  impersonating real people, clickbait the video does not deliver on.

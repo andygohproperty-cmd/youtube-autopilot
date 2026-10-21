@@ -1,0 +1,21 @@
+id: weird_facts
+name: "Strange But True"             # working name, rename before launch
+secret_suffix: FACTS                 # uses secret YT_REFRESH_TOKEN_FACTS
+format: short                        # 1080x1920 Shorts
+target_seconds: 50
+voice: af_heart
+speed: 1.05
+category_id: "27"                    # Education
+language: en
+production_days: [mon, tue, wed, thu, fri, sat, sun]
+publish_hour_utc: 13
+niche: >
+  One genuinely surprising, verifiable fact from history or science per Short,
+  with the context that makes it make sense.
+style: >
+  Energetic but not shouty. Hook in the first sentence (a question or a jaw-drop
+  claim that the Short then proves). One idea only. Close with a twist or a
+  "now you know" line. Around 120-140 spoken words.
+avoid: >
+  Myths presented as fact, gore, staged or distressing content, medical advice,
+  anything not backed by at least one reputable source.

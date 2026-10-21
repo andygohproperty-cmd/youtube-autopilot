@@ -1,0 +1,52 @@
+name: Approvals
+
+# Reply on an approval issue with:
+#   /approve
+#   /reject <reason>
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: history
+  cancel-in-progress: false
+
+jobs:
+  decide:
+    if: >-
+      contains(github.event.issue.labels.*.name, 'approval') &&
+      github.event.comment.user.login == github.repository_owner &&
+      (startsWith(github.event.comment.body, '/approve') || startsWith(github.event.comment.body, '/reject'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Apply decision
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMMENT: ${{ github.event.comment.body }}
+          ISSUE: ${{ github.event.issue.number }}
+          AUDIT_PASSED: ${{ vars.AUDIT_PASSED }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN_BIZ: ${{ secrets.YT_REFRESH_TOKEN_BIZ }}
+          YT_REFRESH_TOKEN_FACTS: ${{ secrets.YT_REFRESH_TOKEN_FACTS }}
+        run: |
+          case "$COMMENT" in
+            /approve*) python -m autopilot.run approve --issue "$ISSUE" ;;
+            /reject*)  python -m autopilot.run reject --issue "$ISSUE" --reason "${COMMENT#/reject}" ;;
+          esac
+      - name: Save history
+        run: |
+          git config user.name "autopilot"
+          git config user.email "autopilot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || (git commit -m "history: issue #${{ github.event.issue.number }}" && git pull --rebase && git push)
