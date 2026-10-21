@@ -1,0 +1,11 @@
+name: Probe music sources
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          b=https://incompetech.com/music/royalty-free/mp3-royaltyfree
+          for t in "Investigations" "Sneaky%20Snitch" "Hitman" "Cipher" "Volatile%20Reaction" "Movement%20Proposition" "Pamgaea" "Inspired" "Local%20Forecast%20-%20Elevator" "Dark%20Fog" "Night%20on%20the%20Docks%20-%20Sax" "Spy%20Glass" "Hyperfun" "Funk%20Game%20Loop" "Rollin%20at%205" "Ice%20Flow" "Clean%20Soul" "Deliberate%20Thought" "Thinking%20Music" "Lightless%20Dawn" "Impact%20Moderato" "Blue%20Feather" "Breaktime%20-%20Silent%20Film%20Light" "Carefree" "Daily%20Beetle" "Covert%20Affair" "Mesmerize" "Werq" "Voxel%20Revolution" "Cyborg%20Ninja" "Bit%20Shift" "EDM%20Detection%20Mode" "Ether%20Vox" "Space%20Fighter%20Loop" "Pixel%20Peeker%20Polka%20-%20faster"; do
+            echo "$(curl -s -o /dev/null -w '%{http_code} %{size_download}' -L "$b/$t.mp3") $t"
+          done
