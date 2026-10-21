@@ -40,7 +40,8 @@ class Channel:
 
     @property
     def size(self) -> tuple[int, int]:
-        return (1080, 1920) if self.is_short else (1920, 1080)
+        # Long videos are uploaded at 1440p: YouTube then streams them with its higher-quality codec.
+        return (1080, 1920) if self.is_short else (2560, 1440)
 
     @property
     def target_words(self) -> int:

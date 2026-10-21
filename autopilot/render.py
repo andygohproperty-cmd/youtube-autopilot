@@ -20,7 +20,7 @@ from .voice import PAUSE_S
 FPS = 30
 CHAPTER_LEAD = 0.9      # silence before a chapter's narration while its card shows
 CHAPTER_CARD = 1.8
-MAX_SOURCES = 3         # distinct clips per segment; extra shots reuse them from a new angle
+MAX_SOURCES = 2         # distinct clips per segment; extra shots reuse them from a new angle
 
 
 def _ff(*args: str) -> None:
@@ -50,15 +50,15 @@ def _motion(move: str, w: int, h: int, length: float, amount: float = 0.12) -> s
 def _shot(src: Path | None, frames: int, size: tuple[int, int], move: str, dest: Path) -> None:
     w, h = size
     length = frames / FPS
-    enc = ["-frames:v", str(frames), "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-an"]
+    enc = ["-frames:v", str(frames), "-c:v", "libx264", "-preset", "fast", "-crf", "15", "-an"]
     if src is None:  # no footage at all: dark slate so the render never fails
         _ff("-f", "lavfi", "-i", f"color=c=0x15171c:s={w}x{h}:r={FPS}", "-vf", "format=yuv420p",
             *enc, str(dest))
         return
     span = _probe_seconds(src)
     start = random.uniform(0, max(0.0, span - length - 0.2)) if span > length + 0.5 else 0.0
-    vf = (f"fps={FPS},scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
-          f"{_motion(move, w, h, length)},eq=contrast=1.07:saturation=1.15,vignette=PI/6,"
+    vf = (f"fps={FPS},scale={w}:{h}:force_original_aspect_ratio=increase:flags=lanczos,crop={w}:{h},"
+          f"{_motion(move, w, h, length, 0.08)},eq=contrast=1.05:saturation=1.08,unsharp=5:5:0.4,"
           f"setsar=1,format=yuv420p")
     _ff("-ss", f"{start:.2f}", "-stream_loop", "-1", "-i", str(src), "-vf", vf, *enc, str(dest))
 
@@ -104,7 +104,7 @@ def _rect(w: int, h: int, alpha: str) -> str:
 def _overlays(channel: Channel, segments: list[Segment], durations: list[float],
               leads: list[float], hook_text: str, dest: Path) -> list[tuple[float, str]]:
     """Write the ASS file; return sound-effect cues [(time, name)] that match the visuals."""
-    w, h = channel.size
+    w, h = (1080, 1920) if channel.is_short else (1920, 1080)   # design size; libass scales it
     ev: list[str] = []
     cues: list[tuple[float, str]] = []
     words_per_chunk = 2 if channel.is_short else 4
@@ -233,6 +233,7 @@ def render(channel: Channel, segments: list[Segment], durations: list[float], le
     out = workdir / "final.mp4"
     fonts = ASSETS_DIR / "fonts"
     _ff("-i", str(silent), "-i", str(audio), "-vf", f"subtitles={subs}:fontsdir={fonts}",
-        "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+        "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "17",
+        "-tune", "film", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out))
     return out, tracks

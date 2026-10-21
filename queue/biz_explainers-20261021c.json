@@ -1,0 +1,374 @@
+{
+  "channel": "biz_explainers",
+  "research_notes": "FY2025 (ended Aug 31 2025), Costco 10-K: net sales $269,912M; membership fees $5,323M; net income $8,099M ($18.21/share); gross margin 11.12%; 914 warehouses; 81.0M paid members; 38.7M Executive; renewal 92.3% US/Canada, 89.8% worldwide; Gold Star $65, Executive +$65; fee increase effective Sept 1 2024; <4,000 active SKUs per warehouse; Kirkland Signature a growing portion of sales. Sources: https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm, https://www.nasdaq.com/articles/costco-reports-higher-sales-and-earnings-q4-and-fiscal-year\nHot dog + soda combo $1.50 since 1985; ex-CEO Craig Jelinek recalled founder Jim Sinegal saying \"If you raise the effing hot dog, I will kill you. Figure it out.\" Source: https://fortune.com/article/costco-promises-hot-dog-drink-combo-will-always-be-1-50\nMarkup caps: \"Costco caps its markups at 14% for outside brands and 15% for store brands\" (RetailWire via TheStreet/Yahoo Finance, Feb 9 2026); CFO Gary Millerchip: wants to be \"always the first to lower prices for our members and the last to increase them\". https://finance.yahoo.com/news/costco-reveals-keeps-prices-low-183300293.html\nStore design: staples (toilet paper, cleaning supplies) in separate corners, Costco calls them \"triggers\" and rotates them; marked-down treasure-hunt items (diamond rings, steaks, wine, vacuums) near the centre; faster product rotation creates urgency. https://chowhound.com/1540007/costco-shopping-grocery-treasure-hunts\nStructure studied (not copied) from top-viewed videos: WSJ \"Behind Costco's Treasure-Hunt Shopping Strategy\" (store psychology first, then membership), The Food Theorists \"Costco DOESN'T Save You Money!\" (viewer-centric contrarian question), CNBC \"How Costco Became A Massive Members Only Retailer\".",
+  "plan": {
+    "title": "How Costco Gets You to Spend More (and Still Feel Like You Saved)",
+    "description": "Why do you go to Costco for milk and leave with a kayak? We break down the treasure-hunt store design, the markup caps, and the membership machine that earns Costco billions, using its fiscal 2025 annual report. Plus: is it actually saving you money?\n\nChapters:\n0:00 The $300 receipt\n0:44 The treasure hunt\n1:50 The price ceiling\n2:56 The real business\n4:02 Is it actually saving you money?\n4:47 How to beat the machine\n\nSources:\nhttps://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm\nhttps://www.nasdaq.com/articles/costco-reports-higher-sales-and-earnings-q4-and-fiscal-year\nhttps://fortune.com/article/costco-promises-hot-dog-drink-combo-will-always-be-1-50\nhttps://finance.yahoo.com/news/costco-reveals-keeps-prices-low-183300293.html\nhttps://chowhound.com/1540007/costco-shopping-grocery-treasure-hunts\n\nThe opening shopping trip is an illustrative example. Narration is AI-generated. Educational content only, not financial advice.",
+    "tags": [
+      "costco",
+      "how costco makes money",
+      "costco treasure hunt",
+      "costco membership",
+      "business explained",
+      "costco business model",
+      "kirkland signature",
+      "shopping psychology",
+      "retail strategy",
+      "company breakdown"
+    ],
+    "thumbnail_text": "HOW COSTCO GETS YOU",
+    "segments": [
+      {
+        "narration": "You walk into Costco for milk and a rotisserie chicken.",
+        "broll_query": "shopping cart warehouse",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Forty minutes later, you're at the checkout with a kayak, a tub of cashews and a three hundred dollar receipt.",
+        "broll_query": "checkout cashier",
+        "on_screen": "$300",
+        "chapter": ""
+      },
+      {
+        "narration": "And somehow, you walk out feeling like you just saved money.",
+        "broll_query": "parking lot shopping",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "That feeling is not an accident. It's the whole business.",
+        "broll_query": "warehouse store exterior",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Last year Costco sold almost two hundred and seventy billion dollars of stuff.",
+        "broll_query": "warehouse store aisles",
+        "on_screen": "$270 BILLION",
+        "chapter": ""
+      },
+      {
+        "narration": "But it makes surprisingly little profit on any of it.",
+        "broll_query": "price tags",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "So where does the money really come from? And is Costco actually saving you money, or is it getting you?",
+        "broll_query": "question mark",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "By the end of this video, you'll know exactly how the machine works. And how to beat it.",
+        "broll_query": "gears turning",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "It starts the second you walk through the door.",
+        "broll_query": "store entrance doors",
+        "on_screen": "",
+        "chapter": "The treasure hunt"
+      },
+      {
+        "narration": "The things you actually came for, like toilet paper and cleaning supplies, sit in separate corners of the store.",
+        "broll_query": "toilet paper shelves",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Costco calls them trigger items. And it moves them around, so you have to cross the whole warehouse to find them.",
+        "broll_query": "forklift warehouse",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Which means you walk straight past the middle of the store.",
+        "broll_query": "people walking store",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "That's where the treasure is. Marked down steaks, wine, vacuum cleaners, even diamond rings.",
+        "broll_query": "jewelry display",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "And here's the catch. Costco rotates its products faster than most stores.",
+        "broll_query": "warehouse pallets",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "So every member learns the same rule. If you see it, buy it. Next week it might be gone.",
+        "broll_query": "shopping cart full",
+        "on_screen": "SEE IT. BUY IT.",
+        "chapter": ""
+      },
+      {
+        "narration": "That's not a shopping trip. It's a treasure hunt. And the urgency is built into the floor plan.",
+        "broll_query": "store aisle walking",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "There's another trick hiding in plain sight. There just isn't much to choose from.",
+        "broll_query": "warehouse shelves",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "A typical Costco warehouse carries fewer than four thousand active products.",
+        "broll_query": "bulk products shelves",
+        "on_screen": "UNDER 4,000",
+        "chapter": ""
+      },
+      {
+        "narration": "A regular supermarket can carry tens of thousands.",
+        "broll_query": "supermarket aisle",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Less choice means faster decisions. And faster decisions mean fuller carts.",
+        "broll_query": "shopping cart",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Now, the deals themselves are real. And this is the part most people miss.",
+        "broll_query": "price tag sale",
+        "on_screen": "",
+        "chapter": "The price ceiling"
+      },
+      {
+        "narration": "According to retail industry reports, Costco caps its markup at about fourteen percent on outside brands.",
+        "broll_query": "grocery products",
+        "on_screen": "14% MAX",
+        "chapter": ""
+      },
+      {
+        "narration": "And about fifteen percent on its own Kirkland Signature products.",
+        "broll_query": "product packaging",
+        "on_screen": "15% ON KIRKLAND",
+        "chapter": ""
+      },
+      {
+        "narration": "Put that together and Costco's gross margin in 2025 was only about eleven percent.",
+        "broll_query": "calculator",
+        "on_screen": "11%",
+        "chapter": ""
+      },
+      {
+        "narration": "In plain words, sell a hundred dollars of goods, and only around eleven dollars is left after paying for the goods.",
+        "broll_query": "shopping receipt",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "And that eleven dollars still has to pay the staff, the rent and the trucks.",
+        "broll_query": "warehouse workers",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Costco's finance chief says the goal is to be first to cut prices for members, and last to raise them.",
+        "broll_query": "business meeting",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "The most famous proof? The hot dog and soda combo. It has cost a dollar fifty since 1985.",
+        "broll_query": "hot dog",
+        "on_screen": "$1.50 SINCE 1985",
+        "chapter": ""
+      },
+      {
+        "narration": "When an executive once warned founder Jim Sinegal it was losing money, his reported reply was, raise it and I'll kill you. Figure it out.",
+        "broll_query": "food court",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "So if Costco barely profits on the stuff in your cart, how does it earn billions?",
+        "broll_query": "money counting",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "The answer is in your wallet.",
+        "broll_query": "wallet cards",
+        "on_screen": "",
+        "chapter": "The real business"
+      },
+      {
+        "narration": "A basic Costco membership in the United States costs sixty five dollars a year.",
+        "broll_query": "membership card",
+        "on_screen": "$65 A YEAR",
+        "chapter": ""
+      },
+      {
+        "narration": "At the end of fiscal 2025, there were about eighty one million paid memberships.",
+        "broll_query": "crowd walking",
+        "on_screen": "81 MILLION",
+        "chapter": ""
+      },
+      {
+        "narration": "Together those fees brought in about five point three billion dollars.",
+        "broll_query": "money stack",
+        "on_screen": "$5.3 BILLION",
+        "chapter": ""
+      },
+      {
+        "narration": "Now compare that to Costco's total profit for the year. About eight point one billion dollars.",
+        "broll_query": "financial report",
+        "on_screen": "$8.1B PROFIT",
+        "chapter": ""
+      },
+      {
+        "narration": "The fees alone are worth roughly two thirds of the company's entire profit.",
+        "broll_query": "pie chart",
+        "on_screen": "TWO THIRDS",
+        "chapter": ""
+      },
+      {
+        "narration": "And a fee costs almost nothing to collect. No pallets. No trucks. No shelf space.",
+        "broll_query": "empty parking lot",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Then there's the upgrade. The Executive tier costs another sixty five dollars and pays a cash reward on what you spend.",
+        "broll_query": "credit card payment",
+        "on_screen": "$130",
+        "chapter": ""
+      },
+      {
+        "narration": "About thirty eight point seven million members took it. Close to half of everyone.",
+        "broll_query": "people shopping",
+        "on_screen": "38.7 MILLION",
+        "chapter": ""
+      },
+      {
+        "narration": "And here's the real test of the machine.",
+        "broll_query": "storm clouds",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "In September 2024, Costco raised its fees in the United States and Canada.",
+        "broll_query": "calendar",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Renewal rates barely moved. About ninety two percent of members there still renewed in 2025.",
+        "broll_query": "family shopping",
+        "on_screen": "92.3%",
+        "chapter": ""
+      },
+      {
+        "narration": "Most gyms and streaming services would kill for that.",
+        "broll_query": "gym treadmill",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "So, back to that three hundred dollar receipt.",
+        "broll_query": "shopping receipt",
+        "on_screen": "",
+        "chapter": "Is it actually saving you money?"
+      },
+      {
+        "narration": "On the things you planned to buy, Costco is hard to beat. The markup caps make sure of that.",
+        "broll_query": "grocery shelves",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "But the treasure hunt is designed to sell you things you didn't plan to buy.",
+        "broll_query": "jewelry display",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "And a bulk pack only saves money if you actually finish it. A crate of avocados that goes brown is not a deal.",
+        "broll_query": "avocados",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Here's the clever part. Costco wins either way.",
+        "broll_query": "chess board",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "If you save, you feel smart, and you renew. If you overspend, Costco still earns its slim margin on every item.",
+        "broll_query": "cash register",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Your cart is not where Costco makes its money. Your cart is the proof the membership is worth it.",
+        "broll_query": "shopping cart",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "So how do you beat it? Shop it the way Costco's own buyers would.",
+        "broll_query": "person writing list",
+        "on_screen": "",
+        "chapter": "How to beat the machine"
+      },
+      {
+        "narration": "Bring a list. Treat the middle of the store like a museum. Look, don't touch.",
+        "broll_query": "shopping list",
+        "on_screen": "BRING A LIST",
+        "chapter": ""
+      },
+      {
+        "narration": "Only buy bulk on things you already use every single week.",
+        "broll_query": "pantry shelves",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "And do the maths on the Executive tier. It only pays if your reward is bigger than the extra sixty five dollars.",
+        "broll_query": "calculator",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Costco isn't really selling you groceries. It's selling you the feeling of a great deal.",
+        "broll_query": "warehouse store exterior",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "And it might be the best company on the planet at doing it.",
+        "broll_query": "city skyline",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "If you want more breakdowns like this, subscribe. We follow the money behind a famous company every week.",
+        "broll_query": "city night",
+        "on_screen": "",
+        "chapter": ""
+      }
+    ],
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+      "https://www.nasdaq.com/articles/costco-reports-higher-sales-and-earnings-q4-and-fiscal-year",
+      "https://fortune.com/article/costco-promises-hot-dog-drink-combo-will-always-be-1-50",
+      "https://finance.yahoo.com/news/costco-reveals-keeps-prices-low-183300293.html",
+      "https://chowhound.com/1540007/costco-shopping-grocery-treasure-hunts"
+    ],
+    "uses_realistic_ai_media": false,
+    "originality_note": "Viewer-centric angle: follows one shopping trip through the store psychology, the markup caps and the membership maths, then answers whether it really saves you money and how to shop it smarter."
+  }
+}

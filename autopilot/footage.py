@@ -24,26 +24,39 @@ def _pexels(query: str, portrait: bool) -> list[dict]:
         if not files:
             continue
         # Smallest file that is still at least HD on its short side.
-        hd = [f for f in files if min(f["width"], f["height"]) >= 1080] or files
+        hd = [f for f in files if min(f["width"], f["height"]) >= 1080]
+        if not hd:
+            continue
         best = min(hd, key=lambda f: f["width"] * f["height"])
         out.append({"id": f"pexels-{v['id']}", "url": best["link"], "duration": v.get("duration", 0)})
     return out
 
 
 def _pixabay(query: str, portrait: bool) -> list[dict]:
+    """Sharp clips only: 4K for Shorts (cropped to vertical) or portrait clips; 1080p+ for long videos."""
     if not PIXABAY_KEY:
         return []
     r = requests.get(
         "https://pixabay.com/api/videos/",
-        params={"key": PIXABAY_KEY, "q": query, "per_page": 15, "safesearch": "true"},
+        params={"key": PIXABAY_KEY, "q": query, "per_page": 30, "safesearch": "true",
+                "video_type": "film", "min_width": 0 if portrait else 1920},
         timeout=30,
     )
     r.raise_for_status()
     out = []
     for v in r.json().get("hits", []):
-        f = v["videos"].get("large") or v["videos"].get("medium")
-        if f and f.get("url"):
-            out.append({"id": f"pixabay-{v['id']}", "url": f["url"], "duration": v.get("duration", 0)})
+        sizes = [f for f in v["videos"].values() if f.get("url") and f.get("width")]
+        if portrait:
+            ok = [f for f in sizes if f["height"] >= 1920 and (f["height"] > f["width"] or f["width"] >= 3840)]
+        else:
+            ok = [f for f in sizes if f["width"] >= 1920]
+        if not ok:
+            continue
+        # Smallest file that is still sharp enough; skip giant downloads.
+        best = min(ok, key=lambda f: f.get("size") or f["width"] * f["height"])
+        if (best.get("size") or 0) > 150_000_000:
+            continue
+        out.append({"id": f"pixabay-{v['id']}", "url": best["url"], "duration": v.get("duration", 0)})
     return out
 
 
