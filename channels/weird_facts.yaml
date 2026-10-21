@@ -1,5 +1,5 @@
 id: weird_facts
-name: "Strange But True"             # working name, rename before launch
+name: "Odd Facts Daily"            # channel not created yet (YouTube 24h name lock, 2026-10-21)
 secret_suffix: FACTS                 # uses secret YT_REFRESH_TOKEN_FACTS
 format: short                        # 1080x1920 Shorts
 target_seconds: 50
@@ -7,7 +7,7 @@ voice: af_heart
 speed: 1.05
 category_id: "27"                    # Education
 language: en
-production_days: [mon, tue, wed, thu, fri, sat, sun]
+production_days: []                  # paused until the channel exists; restore [mon, tue, wed, thu, fri, sat, sun]
 publish_hour_utc: 13
 niche: >
   One genuinely surprising, verifiable fact from history or science per Short,
