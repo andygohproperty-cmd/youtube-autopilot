@@ -1,0 +1,25 @@
+name: Study top videos
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: "Search query"
+        required: true
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q google-api-python-client google-auth youtube-transcript-api
+      - env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN_BIZ: ${{ secrets.YT_REFRESH_TOKEN_BIZ }}
+          QUERY: ${{ github.event.inputs.query }}
+        run: |
+          python tools/study.py "$QUERY" study.json
+          # Log the transcripts so they can be read from the job log (artifacts are not reachable).
+          python -c "import json;[print('=====',v['views'],v['title'],'\n',' '.join(f\"[{s['t']}] {s['text']}\" for s in v.get('transcript',[]))) for v in json.load(open('study.json'))]"
