@@ -6,6 +6,11 @@ on:
     branches: [main]
     paths: ["queue/*.json"]
   workflow_dispatch:
+    inputs:
+      sample:
+        description: "Render samples/*.json without uploading (quality check)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -44,7 +49,23 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh label create approval --color FBCA04 --description "Video waiting for approval" --force
+      - name: Render samples (no upload)
+        if: github.event.inputs.sample == 'true'
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: for f in samples/*.json; do python -m autopilot.run produce --plan-file "$f" --dry-run; done
+      - name: Keep sample videos
+        if: github.event.inputs.sample == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: sample-videos
+          path: |
+            out/**/final.mp4
+            out/**/thumbnail.jpg
+          retention-days: 14
       - name: Render and upload each queued plan
+        if: github.event.inputs.sample != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -66,7 +87,7 @@ jobs:
             fi
           done
       - name: Save history
-        if: always()
+        if: always() && github.event.inputs.sample != 'true'
         run: |
           git add -A data queue
           git diff --cached --quiet || (git commit -m "render: processed queue" && git pull --rebase && git push)
