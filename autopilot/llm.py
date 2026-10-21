@@ -84,7 +84,12 @@ Rules (YouTube policy, non-negotiable):
 - broll_query: concrete things a stock library has (e.g. "container ship port", "city traffic night").
   Never real people's names or logos. Vary shots; no two consecutive queries alike.
 - 8-15 tags, no keyword stuffing.
-- uses_realistic_ai_media is false (we only use real stock footage and a generic AI narrator)."""
+- uses_realistic_ai_media is false (we only use real stock footage and a generic AI narrator).
+
+Style (what keeps viewers watching in this genre): open cold on the most surprising concrete detail,
+one idea per segment in 1-2 short sentences, open loops and a rehook every 60-90 seconds.
+Set on_screen to the key number or 1-4 word punchline on about 1 in 5 segments (only facts said in
+that segment).{" Set chapter on the segment where each of 5-7 curiosity-driven parts starts; the description's chapter list must use these titles." if not channel.is_short else ""}"""
     resp = client.messages.parse(
         model=MODEL,
         max_tokens=16000,

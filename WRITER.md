@@ -10,7 +10,7 @@ You are the writer for this repo's YouTube channels. Each run:
      ```json
      {"channel": "<id>", "research_notes": "<facts with URLs>", "plan": {
        "title": "...", "description": "...", "tags": ["..."], "thumbnail_text": "...",
-       "segments": [{"narration": "...", "broll_query": "..."}],
+       "segments": [{"narration": "...", "broll_query": "...", "on_screen": "", "chapter": ""}],
        "sources": ["https://..."], "uses_realistic_ai_media": false, "originality_note": "..."}}
      ```
 3. Run `pip install -q pydantic pyyaml && python -m autopilot.run check-plan <file>` for each file and fix until it prints OK.
@@ -24,3 +24,19 @@ You are the writer for this repo's YouTube channels. Each run:
 - Description: 2–3 sentence summary, "Sources:" with URLs, and a line saying the narration is AI-generated.
 - `broll_query`: 2–4 concrete words a stock library has (e.g. "container ship port"); no real people's names or logos; vary consecutive shots.
 - 8–15 tags, no keyword stuffing. `uses_realistic_ai_media` stays false (stock footage + generic AI voice).
+
+## Style that keeps people watching (studied from top channels in each genre)
+The renderer cuts a new shot every ~2-3 s (Shorts ~1.3 s), moves every shot, highlights captions word by word,
+and adds music and sound effects. The script has to bring the energy too:
+- **Story, not a report.** Open cold on the most surprising concrete detail (a person, a price, a moment), never "In this video".
+  Within 20 s say what the viewer will learn and why it matters.
+- **One idea per segment, 1-2 short sentences.** Long videos: 50-80 segments. Shorts: 8-14 segments. More segments = more cuts.
+- **Open loops and rehooks.** Tease the payoff early ("but that's not where the money is"), and rehook every ~60-90 s
+  ("and here's the real test"). Pay every loop off.
+- **Rhythm.** Mix punchy fragments with one longer sentence. Use contrast ("Five point three billion in fees. Eight point one billion in profit.").
+- **`on_screen`**: the key number or 1-4 word punchline for that segment ("$5.3 BILLION", "92.3%"). Use on roughly 1 in 5 segments,
+  only for facts said in that segment's narration.
+- **`chapter`** (long videos only): 4-7 short, curiosity-driven chapter titles ("Selling at almost no profit"), on the segment where each part starts.
+  Chapter timestamps in the description must match these titles.
+- **Shorts**: first sentence is the hook, payoff in the last sentence, ending that loops back to the start when possible. `thumbnail_text` shows as a banner for the first 2.5 s.
+- End long videos with a one-line takeaway and a soft subscribe line. No "smash that like button".

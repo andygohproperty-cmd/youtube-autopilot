@@ -14,7 +14,7 @@ import re
 import subprocess
 from datetime import datetime, timezone
 
-from .config import OUT_DIR, all_channels, append_record, history, load_channel
+from .config import ASSETS_DIR, OUT_DIR, all_channels, append_record, history, load_channel
 
 MARKER = re.compile(r"<!-- autopilot (\{.*?\}) -->")
 
@@ -71,11 +71,17 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
     (work / "research.md").write_text(notes)
     (work / "plan.json").write_text(plan.model_dump_json(indent=2))
 
+    from .render import leads_for
     texts = [s.narration for s in plan.segments]
-    durations = narrate(channel, texts, work / "narration.wav")
-    video = render(channel, [s.broll_query for s in plan.segments], texts, durations,
-                   work / "narration.wav", work)
+    leads = leads_for(channel, plan.segments)
+    durations = narrate(channel, texts, work / "narration.wav", leads)
+    video, tracks = render(channel, plan.segments, durations, leads, work / "narration.wav", work,
+                           hook_text=plan.thumbnail_text)
     thumb = make_thumbnail(work / "silent.mp4", plan.thumbnail_text, work / "thumbnail.jpg")
+    if tracks:  # licensed tracks from assets/music may need credit (assets/music/credits.json)
+        credits_file = ASSETS_DIR / "music" / "credits.json"
+        credits = json.loads(credits_file.read_text()) if credits_file.exists() else {}
+        plan.description += "\n\nMusic: " + "; ".join(credits.get(t, t) for t in tracks)
     print(f"Rendered {video} ({sum(durations):.0f}s)")
     if dry_run:
         return

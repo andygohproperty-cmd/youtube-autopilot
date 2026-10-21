@@ -32,6 +32,7 @@ class Channel:
     target_seconds: int = 50
     speed: float = 1.0
     language: str = "en"
+    music_mood: str = ""                # folder under assets/music picked first
 
     @property
     def is_short(self) -> bool:

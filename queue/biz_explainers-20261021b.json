@@ -1,0 +1,408 @@
+{
+  "channel": "biz_explainers",
+  "research_notes": "FY2025 (ended Aug 31 2025), Costco 10-K: net sales $269,912M; membership fees $5,323M; net income $8,099M ($18.21/share); gross margin 11.12%; 914 warehouses; 81.0M paid members; 38.7M Executive; renewal 92.3% US/Canada, 89.8% worldwide; Gold Star $65, Executive +$65; fee increase effective Sept 1 2024; <4,000 active SKUs per warehouse; Kirkland Signature a growing portion of sales. Sources: https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm, https://www.nasdaq.com/articles/costco-reports-higher-sales-and-earnings-q4-and-fiscal-year\nHot dog + soda combo $1.50 since 1985; ex-CEO Craig Jelinek recalled founder Jim Sinegal saying \"If you raise the effing hot dog, I will kill you. Figure it out.\" Source: https://fortune.com/article/costco-promises-hot-dog-drink-combo-will-always-be-1-50",
+  "plan": {
+    "title": "Why Costco's $1.50 Hot Dog Explains Its Whole Business",
+    "description": "Costco has sold its hot dog combo for $1.50 since 1985, and that tiny price explains its entire business. Using Costco's fiscal 2025 annual report, we show how membership fees, razor-thin margins and 90%+ renewal rates power the machine.\n\nChapters:\n0:00 The $1.50 hot dog\n0:54 The $65 ticket\n1:51 Selling at almost no profit\n2:39 The loyalty machine\n3:22 The upgrade\n3:51 Less is more\n4:30 The flywheel\n\nSources:\nhttps://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm\nhttps://www.nasdaq.com/articles/costco-reports-higher-sales-and-earnings-q4-and-fiscal-year\nhttps://fortune.com/article/costco-promises-hot-dog-drink-combo-will-always-be-1-50\n\nNarration is AI-generated. Educational content only, not investment advice.",
+    "tags": [
+      "costco",
+      "how costco makes money",
+      "costco hot dog",
+      "business explained",
+      "membership model",
+      "costco membership",
+      "business model",
+      "kirkland signature",
+      "warehouse club",
+      "company breakdown"
+    ],
+    "thumbnail_text": "THE $1.50 HOT DOG TRICK",
+    "segments": [
+      {
+        "narration": "Since 1985, Costco has sold a hot dog and a soda for a dollar fifty.",
+        "broll_query": "hot dog",
+        "on_screen": "$1.50",
+        "chapter": ""
+      },
+      {
+        "narration": "Not a dollar fifty in 1985 money. A dollar fifty today. Forty years of inflation, and the price hasn't moved.",
+        "broll_query": "vintage cash register",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "A Costco executive once told founder Jim Sinegal that the hot dog was losing money.",
+        "broll_query": "business meeting office",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "His reported answer? Raise the price of that hot dog and I will kill you. Figure it out.",
+        "broll_query": "food court crowd",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "That sounds like terrible business. Until you realise Costco isn't really in the hot dog business.",
+        "broll_query": "warehouse store aisles",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "It isn't really in the grocery business either.",
+        "broll_query": "grocery shelves",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Last year it sold almost two hundred and seventy billion dollars of stuff.",
+        "broll_query": "shopping cart checkout",
+        "on_screen": "$270 BILLION",
+        "chapter": ""
+      },
+      {
+        "narration": "And the profit on all those products? Surprisingly thin.",
+        "broll_query": "cash register receipt",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Because the real money is hiding somewhere else. In your wallet. In one small plastic card.",
+        "broll_query": "wallet cards",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "This is how Costco really makes money.",
+        "broll_query": "warehouse store exterior",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "To shop at Costco, you first have to pay just to walk through the door.",
+        "broll_query": "people entering store",
+        "on_screen": "",
+        "chapter": "The $65 ticket"
+      },
+      {
+        "narration": "A basic Gold Star membership in the United States costs sixty five dollars a year.",
+        "broll_query": "membership card",
+        "on_screen": "$65 A YEAR",
+        "chapter": ""
+      },
+      {
+        "narration": "That sounds small. Now multiply it.",
+        "broll_query": "calculator",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "At the end of fiscal 2025, Costco had about eighty one million paid memberships.",
+        "broll_query": "crowd walking",
+        "on_screen": "81 MILLION",
+        "chapter": ""
+      },
+      {
+        "narration": "Together, those fees brought in about five point three billion dollars in a single year.",
+        "broll_query": "money counting",
+        "on_screen": "$5.3 BILLION",
+        "chapter": ""
+      },
+      {
+        "narration": "Hold that number in your head. Because here's the twist.",
+        "broll_query": "clock ticking",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Costco's total profit for the year, after paying for absolutely everything, was about eight point one billion dollars.",
+        "broll_query": "financial report",
+        "on_screen": "$8.1B PROFIT",
+        "chapter": ""
+      },
+      {
+        "narration": "Five point three billion in fees. Eight point one billion in profit.",
+        "broll_query": "coins stacking",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "The fees alone are worth about two thirds of the entire company's profit.",
+        "broll_query": "pie chart",
+        "on_screen": "TWO THIRDS",
+        "chapter": ""
+      },
+      {
+        "narration": "And a fee costs almost nothing to collect. No pallets. No trucks. No shelf space.",
+        "broll_query": "empty parking lot",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Almost every dollar of it drops straight to the bottom line.",
+        "broll_query": "money falling",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "So what's happening inside the store? This is where it gets strange.",
+        "broll_query": "warehouse forklift",
+        "on_screen": "",
+        "chapter": "Selling at almost no profit"
+      },
+      {
+        "narration": "Costco's gross margin in 2025 was about eleven percent.",
+        "broll_query": "price tags",
+        "on_screen": "11%",
+        "chapter": ""
+      },
+      {
+        "narration": "In plain words, sell a hundred dollars of goods, and only about eleven dollars is left after paying for the goods themselves.",
+        "broll_query": "shopping receipt",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "And those eleven dollars still have to pay for the workers, the rent, the electricity and the trucks.",
+        "broll_query": "warehouse workers",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Most supermarkets keep a bigger slice than that.",
+        "broll_query": "supermarket aisle",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Costco keeps its slice thin on purpose.",
+        "broll_query": "bulk products shelves",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Thin margins mean low prices. And low prices make the card feel worth every cent.",
+        "broll_query": "family shopping",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Which is exactly why the hot dog stays at a dollar fifty.",
+        "broll_query": "hot dog",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "It's not a meal. It's a reminder. Every visit, you see proof that the membership pays for itself.",
+        "broll_query": "food court",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "But a membership is only valuable if people keep paying for it.",
+        "broll_query": "calendar pages",
+        "on_screen": "",
+        "chapter": "The loyalty machine"
+      },
+      {
+        "narration": "So how many actually come back?",
+        "broll_query": "store entrance doors",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "In the United States and Canada, about ninety two percent of members renewed in 2025.",
+        "broll_query": "people shopping carts",
+        "on_screen": "92.3%",
+        "chapter": ""
+      },
+      {
+        "narration": "Worldwide, it was close to ninety percent.",
+        "broll_query": "world map",
+        "on_screen": "89.8% WORLDWIDE",
+        "chapter": ""
+      },
+      {
+        "narration": "Nine out of ten customers, paying again, every single year.",
+        "broll_query": "crowd city",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Plenty of gyms and streaming services would love to keep customers like that.",
+        "broll_query": "gym treadmill",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "And here's the real test.",
+        "broll_query": "storm clouds",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "On the first of September 2024, Costco raised its membership fees in the United States and Canada.",
+        "broll_query": "calendar",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Renewal rates still stayed above ninety percent.",
+        "broll_query": "people walking",
+        "on_screen": "STILL 90%+",
+        "chapter": ""
+      },
+      {
+        "narration": "When you raise your price and almost nobody leaves, customers are telling you they see real value.",
+        "broll_query": "happy customer",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Then there's the upgrade most shoppers don't think twice about.",
+        "broll_query": "credit card payment",
+        "on_screen": "",
+        "chapter": "The upgrade"
+      },
+      {
+        "narration": "The Executive membership costs another sixty five dollars on top. A hundred and thirty in total.",
+        "broll_query": "membership card",
+        "on_screen": "$130",
+        "chapter": ""
+      },
+      {
+        "narration": "In return, members earn a cash reward on what they spend.",
+        "broll_query": "cash money",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "About thirty eight point seven million members chose it. That's close to half of all paid members.",
+        "broll_query": "crowd",
+        "on_screen": "38.7 MILLION",
+        "chapter": ""
+      },
+      {
+        "narration": "Double the fee. And a reason to shop more often, because every trip earns a little back.",
+        "broll_query": "full shopping cart",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "The last piece is something you notice the moment you walk in. There isn't much choice.",
+        "broll_query": "warehouse pallets",
+        "on_screen": "",
+        "chapter": "Less is more"
+      },
+      {
+        "narration": "A typical Costco warehouse carries fewer than four thousand active products.",
+        "broll_query": "warehouse shelves",
+        "on_screen": "UNDER 4,000",
+        "chapter": ""
+      },
+      {
+        "narration": "A regular supermarket can carry tens of thousands.",
+        "broll_query": "supermarket shelves",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Fewer products means Costco buys each one in enormous volume.",
+        "broll_query": "forklift pallets",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "And enormous volume means real power when it sits down with suppliers.",
+        "broll_query": "business handshake",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "The buildings help too. Concrete floors. Goods stacked on pallets. No fancy displays.",
+        "broll_query": "concrete warehouse interior",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Then there's Kirkland Signature, Costco's own brand, which the company calls a growing part of its sales.",
+        "broll_query": "product packaging",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "One more thing you can only get by renewing that card.",
+        "broll_query": "grocery products",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "So let's put the whole machine together.",
+        "broll_query": "gears turning",
+        "on_screen": "",
+        "chapter": "The flywheel"
+      },
+      {
+        "narration": "Step one. Charge a yearly fee.",
+        "broll_query": "membership card",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Step two. Use that money to keep prices so low the store barely profits on the goods.",
+        "broll_query": "price tags",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Step three. Keep the range small, buy in huge volume, and run lean warehouses.",
+        "broll_query": "delivery truck highway",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "Step four. Members feel they save more than the fee, so nine in ten come back.",
+        "broll_query": "people shopping",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "And the loop starts all over again.",
+        "broll_query": "spinning wheel",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "That's how Costco sells close to two hundred and seventy billion dollars of goods on razor thin margins, and still earns around eight billion in profit.",
+        "broll_query": "warehouse store exterior",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "The hot dog was never the product. Neither were the TVs, or the giant packs of toilet paper.",
+        "broll_query": "hot dog",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "The product is the card. And everything inside the warehouse exists to make you renew it.",
+        "broll_query": "parking lot cars",
+        "on_screen": "",
+        "chapter": ""
+      },
+      {
+        "narration": "If you want more breakdowns like this, subscribe. We follow the money behind a famous company every week.",
+        "broll_query": "city night",
+        "on_screen": "",
+        "chapter": ""
+      }
+    ],
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+      "https://www.nasdaq.com/articles/costco-reports-higher-sales-and-earnings-q4-and-fiscal-year",
+      "https://fortune.com/article/costco-promises-hot-dog-drink-combo-will-always-be-1-50"
+    ],
+    "uses_realistic_ai_media": false,
+    "originality_note": "Story-led take that uses the fixed $1.50 hot dog as the hook, then proves the membership model with Costco's own FY2025 10-K numbers."
+  }
+}
