@@ -81,7 +81,7 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
         return
 
     from .youtube import upload_private
-    video_id = upload_private(channel, video, thumb, plan.title, plan.description, plan.tags,
+    video_id, thumb_set = upload_private(channel, video, thumb, plan.title, plan.description, plan.tags,
                               plan.uses_realistic_ai_media)
     append_record("history", channel.id, {
         "video_id": video_id, "title": plan.title, "status": "awaiting_approval",
@@ -93,6 +93,7 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
 
 ▶️ Watch (private): https://youtu.be/{video_id}
 ✏️ Edit in Studio: https://studio.youtube.com/video/{video_id}/edit
+{"" if thumb_set or channel.is_short else "⚠️ Custom thumbnail not set: verify the channel at https://www.youtube.com/verify, then upload thumbnail.jpg in Studio."}
 
 **Why it's original:** {plan.originality_note}
 

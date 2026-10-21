@@ -5,6 +5,7 @@ from pathlib import Path
 
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 
 from .config import Channel
@@ -50,9 +51,15 @@ def upload_private(channel: Channel, video: Path, thumb: Path | None, title: str
     while resp is None:
         _, resp = req.next_chunk()
     video_id = resp["id"]
+    thumb_set = False
     if thumb and not channel.is_short:
-        yt.thumbnails().set(videoId=video_id, media_body=MediaFileUpload(str(thumb))).execute()
-    return video_id
+        try:
+            yt.thumbnails().set(videoId=video_id, media_body=MediaFileUpload(str(thumb))).execute()
+            thumb_set = True
+        except HttpError as e:
+            # Custom thumbnails need a phone-verified channel; keep the upload anyway.
+            print(f"Thumbnail not set ({e.reason}); YouTube will pick a frame.")
+    return video_id, thumb_set
 
 
 def next_slot(channel: Channel, taken: list[str]) -> datetime:
