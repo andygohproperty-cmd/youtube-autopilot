@@ -1,0 +1,38 @@
+name: Voice test
+on:
+  push:
+    branches: [voice-test]
+    paths: [voicetest/hook.txt, .github/workflows/voice-test.yml]
+permissions:
+  contents: write
+jobs:
+  voices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: |
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q chatterbox-tts
+      - run: |
+          python - <<'PY'
+          import time, torchaudio
+          from chatterbox.tts import ChatterboxTTS
+          m = ChatterboxTTS.from_pretrained(device="cpu")
+          lines = [l.strip() for l in open("voicetest/hook.txt") if l.strip()]
+          for name, ref, ex in [("cb_default", None, 0.6), ("cb_fenrir", "voicetest/am_fenrir.wav", 0.6),
+                                ("cb_george", "voicetest/bm_george.wav", 0.6), ("cb_heart", "voicetest/af_heart.wav", 0.6)]:
+              t = time.time(); parts = []
+              import torch
+              for l in lines:
+                  w = m.generate(l, audio_prompt_path=ref, exaggeration=ex, cfg_weight=0.4)
+                  parts += [w, torch.zeros(1, int(m.sr * 0.3))]
+              torchaudio.save(f"voicetest/{name}.wav", torch.cat(parts, 1), m.sr)
+              print(name, round(time.time() - t), "s")
+          PY
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git add voicetest/cb_*.wav && git commit -m "Chatterbox voice samples" && git push
