@@ -28,7 +28,9 @@ These steps need your own accounts, so only you can do them. After this, everyth
 
 1. Open developers.google.com/oauthplayground → gear icon (top right) → tick **Use your own OAuth credentials** → paste Client ID and secret.
 2. Left box "Input your own scopes", paste:
-   `https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube`
+   `https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/yt-analytics.readonly`
+   (The last scope lets the weekly **Weekly analytics** workflow read views, retention and CTR. Also enable
+   **YouTube Analytics API** in the Cloud project's API Library.)
 3. **Authorize APIs** → sign in → **pick the channel** → Allow (click "Advanced → continue" on the unverified warning; it's your own app).
 4. **Exchange authorization code for tokens** → copy the **Refresh token**.
 5. Repeat for the second channel.
