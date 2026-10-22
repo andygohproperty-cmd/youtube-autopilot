@@ -1,0 +1,26 @@
+name: Trending topics
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days back"
+        default: "30"
+      queries:
+        description: "Searches, separated by |"
+        required: true
+jobs:
+  trends:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q google-api-python-client google-auth
+      - env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN_BIZ: ${{ secrets.YT_REFRESH_TOKEN_BIZ }}
+          DAYS: ${{ github.event.inputs.days }}
+          QUERIES: ${{ github.event.inputs.queries }}
+        run: IFS='|' read -ra Q <<< "$QUERIES"; python tools/trends.py "$DAYS" "${Q[@]}"
