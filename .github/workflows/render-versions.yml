@@ -69,7 +69,7 @@ jobs:
           name=$(basename "${{ matrix.file }}" .json)
           ffmpeg -loglevel error -y -i "$f" -vf scale=854:-2 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k "/tmp/$name.mp4"
           git config user.name "autopilot"; git config user.email "autopilot@users.noreply.github.com"
-          git fetch -q origin previews && git worktree add -q /tmp/pv origin/previews -B previews || git worktree add -q --orphan -b previews /tmp/pv
+          git fetch -q origin previews && git worktree add -q -B previews /tmp/pv origin/previews
           cp "/tmp/$name.mp4" /tmp/pv/ && cd /tmp/pv && git add "$name.mp4" && git commit -qm "preview: $name"
           for i in 1 2 3 4 5; do git pull -q --rebase origin previews 2>/dev/null; git push -q origin previews && break; sleep $((i * 5)); done
       - name: Save history
