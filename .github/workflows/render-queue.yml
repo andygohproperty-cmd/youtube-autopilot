@@ -23,17 +23,26 @@ concurrency:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
+      - name: Free runner disk (PyTorch for Chatterbox needs room)
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
       - name: Install FFmpeg and Python packages
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           pip install -r requirements.txt
+          pip install --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts
+          python -m playwright install --with-deps chromium
+      - name: Cache Chatterbox model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: chatterbox-v1
       - name: Cache voice model
         uses: actions/cache@v4
         with:

@@ -50,6 +50,24 @@ def load_plan_file(path: str):
     return channel, plan, data.get("research_notes", "")
 
 
+def _real_chapter_times(description: str, segments, durations: list[float]) -> str:
+    """The writer can only estimate chapter timestamps; replace them with the narrated ones."""
+    starts, t = [], 0.0
+    for seg, dur in zip(segments, durations):
+        if seg.chapter:
+            starts.append((t, seg.chapter))
+        t += dur
+    if not starts or "Chapters:" not in description:
+        return description
+    head, _, rest = description.partition("Chapters:")
+    tail = rest.lstrip("\n").split("\n\n", 1)
+    old = tail[0].splitlines()
+    first = old[0].split(" ", 1)[1] if old and old[0].startswith("0:00") and starts[0][0] > 0 else None
+    lines = ([f"0:00 {first}"] if first else []) + [
+        f"{'0:00' if i == 0 and not first else f'{int(s // 60)}:{int(s % 60):02d}'} {c}" for i, (s, c) in enumerate(starts)]
+    return head + "Chapters:\n" + "\n".join(lines) + ("\n\n" + tail[1] if len(tail) > 1 else "")
+
+
 def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str | None = None) -> None:
     from .render import render
     from .thumbnail import make_thumbnail
@@ -82,6 +100,7 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
         credits_file = ASSETS_DIR / "music" / "credits.json"
         credits = json.loads(credits_file.read_text()) if credits_file.exists() else {}
         plan.description += "\n\nMusic: " + "; ".join(credits.get(t, t) for t in tracks)
+    plan.description = _real_chapter_times(plan.description, plan.segments, durations)
     print(f"Rendered {video} ({sum(durations):.0f}s)")
     if dry_run:
         return

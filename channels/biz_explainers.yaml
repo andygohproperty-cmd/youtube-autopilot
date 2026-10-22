@@ -3,8 +3,12 @@ name: "How It Makes Money"
 secret_suffix: BIZ                   # uses secret YT_REFRESH_TOKEN_BIZ
 format: long                         # 1920x1080
 target_minutes: 8
-voice: am_michael
-speed: 1.08                          # brisk documentary pace
+tts: chatterbox                      # natural, expressive free voice (andy picked "voice 3" 2026-10-22)
+voice: default
+exaggeration: 0.6
+speed: 1.0
+visual_style: animated               # cartoon people + motion graphics
+visual_theme: light
 music_mood: documentary
 category_id: "27"                    # Education
 language: en

@@ -21,7 +21,7 @@ class Channel:
     name: str
     secret_suffix: str
     format: str
-    voice: str
+    voice: str                          # Kokoro voice id, or a reference .wav for Chatterbox ("default" = its own voice)
     category_id: str
     niche: str
     style: str
@@ -35,6 +35,8 @@ class Channel:
     music_mood: str = ""                # folder under assets/music picked first
     visual_style: str = "stock"         # "stock" footage or "animated" motion graphics
     visual_theme: str = "dark"          # animated look: "dark" or "light" (cartoon)
+    tts: str = "kokoro"                 # "kokoro" (fast) or "chatterbox" (more natural, ~10x slower on CPU)
+    exaggeration: float = 0.6           # Chatterbox expressiveness
 
     @property
     def is_short(self) -> bool:
