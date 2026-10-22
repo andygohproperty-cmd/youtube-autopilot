@@ -1,0 +1,36 @@
+name: Weekly analytics
+
+# Saves last-28-day performance per channel to data/analytics/ so the script writer can learn from it.
+on:
+  schedule:
+    - cron: "0 2 * * 1"        # Mondays 02:00 UTC, before the writer runs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: history
+  cancel-in-progress: false
+
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q google-api-python-client google-auth pyyaml
+      - env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN_BIZ: ${{ secrets.YT_REFRESH_TOKEN_BIZ }}
+          YT_REFRESH_TOKEN_FACTS: ${{ secrets.YT_REFRESH_TOKEN_FACTS }}
+        run: python -m autopilot.analytics
+      - name: Save report
+        run: |
+          git config user.name "autopilot"
+          git config user.email "autopilot@users.noreply.github.com"
+          git add data/analytics
+          git diff --cached --quiet || (git commit -m "analytics: weekly report" && git pull --rebase && git push)
