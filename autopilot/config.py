@@ -49,10 +49,11 @@ class Channel:
 
     @property
     def target_words(self) -> int:
-        # Kokoro narrates at roughly 150 words per minute at speed 1.0.
+        # Kokoro narrates at roughly 150 words per minute at speed 1.0, Chatterbox at roughly 200.
+        wpm = (200 if self.tts == "chatterbox" else 150) * self.speed
         if self.is_short:
-            return int(self.target_seconds / 60 * 150 * self.speed)
-        return int(self.target_minutes * 150 * self.speed)
+            return int(self.target_seconds / 60 * wpm)
+        return int(self.target_minutes * wpm)
 
     def produces_today(self, now: datetime | None = None) -> bool:
         now = now or datetime.now(timezone.utc)
