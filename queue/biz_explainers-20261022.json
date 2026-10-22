@@ -1,0 +1,1920 @@
+{
+ "channel": "biz_explainers",
+ "research_notes": "v4 remake after owner feedback: more interesting script, voice 3 (Chatterbox), cartoon style.",
+ "plan": {
+  "title": "Costco Is Tricking You (And You Still Love It)",
+  "description": "Costco loses money on its $1.50 hot dog and $4.99 chicken on purpose. Here's how the store that refuses to profit on what it sells still makes billions.\nWe break down Costco's business model: the bait items, the treasure hunt, the 14% markup rule, Kirkland Signature and the membership fees that make most of Costco's profit. Plus how to shop it without overspending.\n\nChapters:\n0:00 The $1.50 hot dog\n1:10 The bait\n1:40 The treasure hunt\n2:46 The 14% rule\n3:31 The secret brand\n3:56 The real money\n4:47 Is it a trick?\n\nSources:\nhttps://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm\nhttps://fortune.com/article/costco-promises-hot-dog-drink-combo-will-always-be-1-50\nhttps://wtop.com/business-finance/2019/10/its-only-4-99-but-costcos-rotisserie-chicken-comes-at-a-huge-price/\nhttps://www.fortune.com/2024/04/10/costco-200-million-gold-bars/\nhttps://www.chowhound.com/2095034/costco-kirkland-signature-total-sales-2025\nhttps://chowhound.com/1547313/costco-price-tags-discount-code\nhttps://finance.yahoo.com/news/costco-reveals-keeps-prices-low-183300293.html\n\nNarration is AI-generated. Price-tag codes are shopper-reported, not confirmed by Costco. Educational content only, not financial advice.",
+  "tags": [
+   "costco",
+   "costco business model",
+   "how costco makes money",
+   "costco membership",
+   "kirkland signature",
+   "costco hot dog",
+   "costco price tags",
+   "treasure hunt shopping",
+   "retail psychology",
+   "business explained"
+  ],
+  "thumbnail_text": "THEY LOSE MONEY ON PURPOSE",
+  "segments": [
+   {
+    "narration": "Costco sells you a hot dog and a soda for a dollar fifty.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "stand",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "sandwich",
+       "x": 0.55,
+       "y": 0.38,
+       "fall": true,
+       "at": 0.1,
+       "label": "Hot dog"
+      },
+      {
+       "icon": "cup-soda",
+       "x": 0.75,
+       "y": 0.38,
+       "fall": true,
+       "at": 0.25,
+       "label": "Soda",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Same price since 1985. Forty years. Not one cent more.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "$1.50 SINCE 1985",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 1.5,
+     "label": "since 1985",
+     "prefix": "$",
+     "suffix": "",
+     "decimals": 2
+    }
+   },
+   {
+    "narration": "Years ago, an executive told the founder they had to raise it. They were losing money.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "explain",
+       "expr": "worried",
+       "talk": true
+      }
+     ],
+     "panel": {
+      "type": "bars",
+      "items": [
+       {
+        "label": "Cost",
+        "value": 2,
+        "display": "$$",
+        "color": "red"
+       },
+       {
+        "label": "Price",
+        "value": 1.5,
+        "display": "$1.50"
+       }
+      ]
+     },
+     "panel_side": "right"
+    }
+   },
+   {
+    "narration": "The founder's reported answer? \"If you raise the hot dog, I will kill you. Figure it out.\"",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.3,
+       "pose": "arms",
+       "expr": "angry",
+       "bubble": {
+        "text": "Raise it and I'll kill you!",
+        "at": 0.25
+       }
+      }
+     ],
+     "punch": 0.6
+    }
+   },
+   {
+    "narration": "So they figured it out. They built their own hot dog factory.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "stand",
+       "then": "point",
+       "expr": "shock",
+       "then_expr": "grin",
+       "switch": 0.4
+      }
+     ],
+     "items": [
+      {
+       "icon": "factory",
+       "x": 0.62,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Own hot dog plant",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Same story with the rotisserie chicken. Four ninety nine. For a whole, hot chicken.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "$4.99 CHICKEN",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.1,
+       "to": 0.4,
+       "cart": true,
+       "expr": "love"
+      }
+     ],
+     "items": [
+      {
+       "icon": "drumstick",
+       "x": 0.75,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "label": "$4.99 chicken",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "To keep that price, Costco built a four hundred and fifty million dollar chicken farm in Nebraska.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "$450 MILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 450,
+     "label": "Costco's chicken complex in Nebraska",
+     "prefix": "$",
+     "suffix": "M",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "Its finance chief once said they give up thirty to forty million dollars a year just to keep that chicken cheap.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "We give up $30 to $40 million a year to keep it at $4.99",
+     "who": "Costco's finance chief, 2015"
+    }
+   },
+   {
+    "narration": "Wait. What?",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "shrug",
+       "expr": "shock",
+       "react": "jump",
+       "bubble": {
+        "text": "Wait. What?",
+        "at": 0.1
+       }
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "A company that loses money on its most famous products, on purpose?",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "trending-down",
+      "label": "Loses money"
+     },
+     "right": {
+      "icon": "trophy",
+      "label": "Wins anyway"
+     }
+    }
+   },
+   {
+    "narration": "And it's one of the most successful retailers on the planet.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.15,
+       "to": 0.45,
+       "expr": "think"
+      }
+     ],
+     "items": [
+      {
+       "icon": "store",
+       "x": 0.75,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "label": "Top retailer",
+       "color": "blue"
+      }
+     ],
+     "camera": "out"
+    }
+   },
+   {
+    "narration": "Here's what's going on. Costco is not really a store.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "Costco is not",
+      "really a store"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "It's a club. And you're paying to get in.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "easy",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "id-card",
+       "x": 0.6,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Members only",
+       "color": "yellow"
+      },
+      {
+       "icon": "lock-keyhole",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.4,
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "By the end of this video, you'll know the five tricks that make it work. And the one place Costco actually makes its money.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "list",
+     "items": [
+      "5 tricks",
+      "1 place the money is really made"
+     ],
+     "icon": "search"
+    }
+   },
+   {
+    "narration": "Let's start with that chicken.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.05,
+       "to": 0.35,
+       "cart": true,
+       "expr": "happy"
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "Ever noticed where the chicken is? Right at the very back of the store.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "THE BAIT",
+    "chapter": "The bait",
+    "visual": {
+     "type": "floorplan",
+     "corners": [
+      "drumstick",
+      "milk",
+      "toilet",
+      "shopping-cart"
+     ],
+     "center": []
+    }
+   },
+   {
+    "narration": "Same with the milk. Same with the toilet paper.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.15,
+       "pose": "point",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "milk",
+       "x": 0.5,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.1,
+       "label": "Milk"
+      },
+      {
+       "icon": "toilet",
+       "x": 0.68,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "label": "Toilet paper",
+       "color": "teal"
+      },
+      {
+       "icon": "drumstick",
+       "x": 0.86,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.35,
+       "label": "Chicken",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "To grab the cheap stuff you came for, you have to walk past everything else.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "floorplan",
+     "corners": [
+      "drumstick",
+      "milk",
+      "toilet",
+      "shopping-cart"
+     ],
+     "center": [
+      "tv",
+      "armchair",
+      "sailboat"
+     ]
+    }
+   },
+   {
+    "narration": "The TVs. The patio furniture. The kayak you did not know you needed.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.05,
+       "to": 0.55,
+       "cart": true,
+       "expr": "love",
+       "then_expr": "shock",
+       "switch": 0.6
+      }
+     ],
+     "items": [
+      {
+       "icon": "tv",
+       "x": 0.3,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.1,
+       "label": "TV",
+       "color": "blue"
+      },
+      {
+       "icon": "armchair",
+       "x": 0.5,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.3,
+       "label": "Patio set",
+       "color": "teal"
+      },
+      {
+       "icon": "sailboat",
+       "x": 0.7,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.5,
+       "label": "Kayak",
+       "color": "yellow"
+      }
+     ],
+     "pan": "right"
+    }
+   },
+   {
+    "narration": "Supermarkets have done this for decades. Costco just does it with a forty-pack of muffins.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.25,
+       "pose": "cross",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "cake-slice",
+       "x": 0.6,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "40-pack muffins",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The hot dog and the chicken are the bait. Your cart is the catch.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "drumstick",
+      "label": "The bait"
+     },
+     "right": {
+      "icon": "shopping-cart",
+      "label": "The catch"
+     }
+    }
+   },
+   {
+    "narration": "Trick number two. Costco carries about four thousand products.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "THE TREASURE HUNT",
+    "chapter": "The treasure hunt",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "stand",
+       "expr": "think"
+      }
+     ],
+     "panel": {
+      "type": "stat",
+      "value": 4000,
+      "label": "products in a Costco",
+      "prefix": "",
+      "suffix": "",
+      "decimals": 0
+     }
+    }
+   },
+   {
+    "narration": "A normal supermarket? Around thirty thousand.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "4,000 VS 30,000",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Costco",
+       "value": 4000,
+       "display": "~4,000"
+      },
+      {
+       "label": "Supermarket",
+       "value": 30000,
+       "display": "~30,000",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So you'd think Costco would be boring. Same stuff, every week.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.3,
+       "pose": "whatever",
+       "expr": "tired"
+      }
+     ],
+     "camera": "out"
+    }
+   },
+   {
+    "narration": "Except it isn't. A big chunk of what's on the floor keeps changing.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.05,
+       "to": 0.45,
+       "cart": true,
+       "expr": "happy",
+       "then_expr": "shock",
+       "switch": 0.5
+      }
+     ],
+     "items": [
+      {
+       "icon": "sparkles",
+       "x": 0.7,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.4,
+       "label": "New this week!",
+       "color": "yellow"
+      }
+     ],
+     "pan": "right"
+    }
+   },
+   {
+    "narration": "Lobster tails one week. Gold bars the next.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.2,
+       "pose": "point",
+       "expr": "grin"
+      }
+     ],
+     "items": [
+      {
+       "icon": "shell",
+       "x": 0.55,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.1,
+       "label": "Lobster tails",
+       "color": "red"
+      },
+      {
+       "icon": "vault",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.45,
+       "label": "Gold bars",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Yes, gold bars. Costco sold so many that analysts at Wells Fargo estimated up to two hundred million dollars of gold a month.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.25,
+       "pose": "laptop",
+       "expr": "shock"
+      }
+     ],
+     "panel": {
+      "type": "stat",
+      "value": 200,
+      "label": "of gold a month (Wells Fargo estimate)",
+      "prefix": "$",
+      "suffix": "M",
+      "decimals": 0
+     },
+     "panel_side": "right"
+    }
+   },
+   {
+    "narration": "Two hundred million. A month. At the place you buy toilet paper.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "$200M A MONTH",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "shrug",
+       "expr": "shock",
+       "react": "jump"
+      }
+     ],
+     "items": [
+      {
+       "icon": "vault",
+       "x": 0.2,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.1,
+       "label": "Gold",
+       "color": "yellow"
+      },
+      {
+       "icon": "toilet",
+       "x": 0.8,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "label": "Toilet paper",
+       "color": "teal"
+      }
+     ],
+     "punch": 0.5
+    }
+   },
+   {
+    "narration": "And that's the point. If you see something good, you grab it. Because next week, it might be gone.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.15,
+       "to": 0.5,
+       "cart": true,
+       "expr": "love",
+       "then_expr": "grin",
+       "switch": 0.6,
+       "bubble": {
+        "text": "Gone next week? I'll take it!",
+        "at": 0.3
+       }
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Costco calls this the treasure hunt. And it turns shopping into a game you play with your wallet.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "idea",
+       "expr": "grin",
+       "talk": true
+      }
+     ],
+     "panel": {
+      "type": "icons",
+      "icons": [
+       "map",
+       "gem",
+       "wallet"
+      ],
+      "labels": [
+       "Hunt",
+       "Treasure",
+       "Your wallet"
+      ]
+     }
+    }
+   },
+   {
+    "narration": "Shoppers have even cracked the code on the price tags.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.2,
+       "pose": "paper",
+       "expr": "think"
+      }
+     ],
+     "items": [
+      {
+       "icon": "scan-barcode",
+       "x": 0.65,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Cracking the code",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "A price ending in ninety seven? That usually means it's been marked down.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "ENDS IN .97",
+    "chapter": "",
+    "visual": {
+     "type": "receipt",
+     "title": "PRICE TAG",
+     "items": [
+      [
+       "Kayak",
+       "$199.97"
+      ],
+      [
+       "Code",
+       ".97"
+      ],
+      [
+       "Means",
+       "Marked down"
+      ]
+     ],
+     "total": ".97 = DEAL"
+    }
+   },
+   {
+    "narration": "See a little star in the corner? Shoppers say that item probably won't be restocked.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.25,
+       "pose": "point",
+       "expr": "think"
+      }
+     ],
+     "items": [
+      {
+       "icon": "star",
+       "x": 0.65,
+       "y": 0.38,
+       "fall": true,
+       "at": 0.2,
+       "label": "Star = won't come back",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Costco never confirmed any of this. But millions of people now shop by those codes. And that's a pretty great game for Costco.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "laptop",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "gamepad-2",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "A game",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Okay. So Costco gets you to buy more. That doesn't mean it's ripping you off.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "THE 14% RULE",
+    "chapter": "The 14% rule",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.25,
+       "pose": "cross",
+       "expr": "think",
+       "bubble": {
+        "text": "Am I being ripped off?",
+        "think": true,
+        "at": 0.2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In fact, it's the opposite. And this is the part that blows people's minds.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "shrug",
+       "expr": "shock",
+       "react": "jump"
+      }
+     ],
+     "items": [
+      {
+       "icon": "brain",
+       "x": 0.2,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "color": "red"
+      },
+      {
+       "icon": "sparkles",
+       "x": 0.8,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "yellow"
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "Costco reportedly caps its markup at about fourteen percent on most brands.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "MAX 14% MARKUP",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 14,
+     "label": "max markup on most brands (reported)",
+     "prefix": "",
+     "suffix": "%",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "Lots of stores mark things up far more than that.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Costco",
+       "value": 14,
+       "display": "14%"
+      },
+      {
+       "label": "Many stores",
+       "value": 40,
+       "display": "more",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Costco's gross margin last year? About eleven percent.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "pie",
+     "fraction": 0.11,
+     "display": "11%",
+     "label": "Costco's gross margin last year",
+     "color": "yellow"
+    }
+   },
+   {
+    "narration": "In plain words, sell a hundred dollars of stuff, and about eleven dollars is left. Before paying the staff, the rent and the trucks.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "receipt",
+     "title": "EVERY $100 YOU SPEND",
+     "items": [
+      [
+       "You pay",
+       "$100.00"
+      ],
+      [
+       "Goods cost Costco",
+       "$89.00"
+      ]
+     ],
+     "total": "$11.00"
+    }
+   },
+   {
+    "narration": "So after all that, Costco keeps almost nothing from the stuff in your cart.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "whatever",
+       "expr": "tired"
+      }
+     ],
+     "items": [
+      {
+       "icon": "hand-coins",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Almost nothing",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Which brings back the big question. Where does the money come from?",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.3,
+       "pose": "idea",
+       "expr": "think",
+       "talk": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "circle-help",
+       "x": 0.75,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Where's the money?",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Hold that thought. Because there's one product that breaks all the rules.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "stand",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "package",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "label": "Rule breaker",
+       "color": "yellow"
+      }
+     ],
+     "camera": "out"
+    }
+   },
+   {
+    "narration": "Kirkland Signature. Costco's own brand.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "THE SECRET BRAND",
+    "chapter": "The secret brand",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.2,
+       "pose": "point",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "tag",
+       "x": 0.6,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Kirkland Signature",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Kirkland reportedly sold about ninety billion dollars of stuff in 2025.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "$90 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 90,
+     "label": "Kirkland sales in 2025 (reported)",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "That's more than three times the sales of Kraft Heinz. And Costco barely advertises it.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Kirkland",
+       "value": 90,
+       "display": "$90B"
+      },
+      {
+       "label": "Kraft Heinz",
+       "value": 26,
+       "display": "~$26B",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Kirkland coffee. Kirkland vodka. Kirkland batteries. Kirkland... everything.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.15,
+       "pose": "easy",
+       "expr": "love"
+      }
+     ],
+     "items": [
+      {
+       "icon": "coffee",
+       "x": 0.45,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.05,
+       "label": "Coffee",
+       "color": "red"
+      },
+      {
+       "icon": "wine",
+       "x": 0.62,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.2,
+       "label": "Vodka",
+       "color": "blue"
+      },
+      {
+       "icon": "battery-full",
+       "x": 0.79,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.35,
+       "label": "Batteries",
+       "color": "teal"
+      },
+      {
+       "icon": "boxes",
+       "x": 0.62,
+       "y": 0.66,
+       "fall": true,
+       "at": 0.5,
+       "label": "Everything",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Costco makes a bit more on these. And because only Costco sells them, you can't price-check them anywhere else.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "tag",
+      "label": "Only at Costco"
+     },
+     "right": {
+      "icon": "search-x",
+      "label": "Can't compare"
+     }
+    }
+   },
+   {
+    "narration": "Brand loyalty, without the ad budget.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "explain",
+       "expr": "smug",
+       "talk": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "megaphone-off",
+       "x": 0.72,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "No ad budget",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Now, the big reveal. Remember the plastic card in your wallet?",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "THE REAL MONEY",
+    "chapter": "The real money",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "stand",
+       "then": "point",
+       "expr": "think",
+       "then_expr": "grin",
+       "switch": 0.5
+      }
+     ],
+     "items": [
+      {
+       "icon": "credit-card",
+       "x": 0.65,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "label": "The card",
+       "color": "yellow"
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "In the US, a basic membership costs sixty five dollars a year.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "$65 A YEAR",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 65,
+     "label": "basic US membership a year",
+     "prefix": "$",
+     "suffix": "",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "About eighty one million households pay it.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.15,
+       "pose": "stand",
+       "expr": "happy"
+      },
+      {
+       "cast": "friend",
+       "x": 0.35,
+       "pose": "stand",
+       "expr": "happy"
+      },
+      {
+       "cast": "expert",
+       "x": 0.55,
+       "pose": "cross",
+       "expr": "happy"
+      }
+     ],
+     "panel": {
+      "type": "stat",
+      "value": 81,
+      "label": "paid memberships",
+      "prefix": "",
+      "suffix": "M",
+      "decimals": 0
+     },
+     "panel_side": "right"
+    }
+   },
+   {
+    "narration": "That's five point three billion dollars in fees. Every year.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "$5.3 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 5.3,
+     "label": "in fees every year",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 1
+    }
+   },
+   {
+    "narration": "Costco's total profit for the year? About eight point one billion.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "$8.1B PROFIT",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Fees",
+       "value": 5.3,
+       "display": "$5.3B"
+      },
+      {
+       "label": "Profit",
+       "value": 8.1,
+       "display": "$8.1B",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Those fees are worth around two thirds of all of Costco's profit.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "pie",
+     "fraction": 0.66,
+     "display": "2/3",
+     "label": "Membership fees vs. Costco's whole profit",
+     "color": "yellow"
+    }
+   },
+   {
+    "narration": "And they cost almost nothing to collect. No shelves. No trucks. No chickens.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "ban",
+      "truck",
+      "drumstick"
+     ],
+     "labels": [
+      "No shelves",
+      "No trucks",
+      "No chickens"
+     ],
+     "colors": [
+      "#FF5E5B",
+      "#4D7CFE",
+      "#2EC4B6"
+     ]
+    }
+   },
+   {
+    "narration": "So the hot dog, the chicken, the low markups? They aren't how Costco makes money.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.2,
+       "pose": "explain",
+       "expr": "smug",
+       "talk": true
+      }
+     ],
+     "panel": {
+      "type": "list",
+      "items": [
+       "Hot dog",
+       "Chicken",
+       "Low markups"
+      ],
+      "icon": "x"
+     }
+    }
+   },
+   {
+    "narration": "They're how Costco gets you to pay again next year.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.1,
+       "to": 0.5,
+       "cart": true,
+       "expr": "love"
+      }
+     ],
+     "items": [
+      {
+       "icon": "repeat",
+       "x": 0.8,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.4,
+       "label": "Renew!",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And people do. In the US and Canada, about ninety two percent renew.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "92% RENEW",
+    "chapter": "",
+    "visual": {
+     "type": "pie",
+     "fraction": 0.92,
+     "display": "92%",
+     "label": "renew in the US and Canada",
+     "color": "teal"
+    }
+   },
+   {
+    "narration": "Even after Costco raised the fee in 2024, almost nobody left.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.25,
+       "pose": "easy",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "trending-up",
+       "x": 0.62,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.1,
+       "label": "Fee up in 2024",
+       "color": "red"
+      },
+      {
+       "icon": "users",
+       "x": 0.82,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.4,
+       "label": "Still stayed",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Most streaming apps would kill for that. Your gym definitely would.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.2,
+       "pose": "laptop",
+       "expr": "tired"
+      }
+     ],
+     "items": [
+      {
+       "icon": "tv-minimal-play",
+       "x": 0.6,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.1,
+       "label": "Streaming",
+       "color": "blue"
+      },
+      {
+       "icon": "dumbbell",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "label": "Gym",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So. Is Costco tricking you?",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "IS IT A TRICK?",
+    "chapter": "Is it a trick?",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "shrug",
+       "expr": "think",
+       "bubble": {
+        "text": "Is it a trick?",
+        "at": 0.1
+       }
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "Kind of. Yes.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.3,
+       "pose": "easy",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "check",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Kind of. Yes.",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The store is built to make you spend more than you planned.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "receipt",
+     "title": "COSTCO",
+     "items": [
+      [
+       "Milk",
+       "$3.99"
+      ],
+      [
+       "Chicken",
+       "$4.99"
+      ],
+      [
+       "Kayak",
+       "$229.99"
+      ],
+      [
+       "TV",
+       "$499.99"
+      ]
+     ],
+     "total": "$738.96"
+    }
+   },
+   {
+    "narration": "And a bulk pack only saves money if you actually finish it. Forty brown avocados are not a deal.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.25,
+       "pose": "stand",
+       "then": "shrug",
+       "expr": "happy",
+       "then_expr": "sad",
+       "switch": 0.5
+      }
+     ],
+     "items": [
+      {
+       "icon": "avocado",
+       "x": 0.62,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.1,
+       "label": "x40",
+       "color": "teal"
+      },
+      {
+       "icon": "trash-2",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.5,
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "But here's the twist. On the things you actually need, Costco really is cheap.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "point",
+       "expr": "grin"
+      }
+     ],
+     "panel": {
+      "type": "list",
+      "items": [
+       "Milk",
+       "Eggs",
+       "Toilet paper"
+      ],
+      "icon": "check"
+     }
+    }
+   },
+   {
+    "narration": "It wins when you overspend. It wins when you save. Because either way, you renew.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "piggy-bank",
+      "label": "You save"
+     },
+     "right": {
+      "icon": "shopping-cart",
+      "label": "You splurge"
+     }
+    }
+   },
+   {
+    "narration": "It might be the most honest trick in retail.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "coffee",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "medal",
+       "x": 0.72,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Most honest trick",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So how do you beat it? Bring a list. Go straight to the back. Treat the middle aisles like a museum.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "list",
+     "items": [
+      "Bring a list",
+      "Go straight to the back",
+      "Middle aisles = museum"
+     ],
+     "icon": "check"
+    }
+   },
+   {
+    "narration": "Only buy bulk on stuff you use every week. And split the giant packs with a friend.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "list",
+     "items": [
+      "Bulk only for weekly stuff",
+      "Split giant packs"
+     ],
+     "icon": "check"
+    }
+   },
+   {
+    "narration": "And grab the hot dog on the way out. That one really is a deal.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.1,
+       "to": 0.45,
+       "then": "point",
+       "expr": "happy",
+       "then_expr": "laugh",
+       "switch": 0.6
+      }
+     ],
+     "items": [
+      {
+       "icon": "sandwich",
+       "x": 0.75,
+       "y": 0.38,
+       "fall": true,
+       "at": 0.5,
+       "label": "$1.50",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Next time, we're breaking down how another famous company makes its money. Subscribe so you don't miss it.",
+    "broll_query": "warehouse store shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "idea",
+       "expr": "grin",
+       "talk": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "bell",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "label": "Subscribe",
+       "color": "red"
+      }
+     ],
+     "camera": "out"
+    }
+   }
+  ],
+  "sources": [
+   "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+   "https://fortune.com/article/costco-promises-hot-dog-drink-combo-will-always-be-1-50",
+   "https://wtop.com/business-finance/2019/10/its-only-4-99-but-costcos-rotisserie-chicken-comes-at-a-huge-price/",
+   "https://www.fortune.com/2024/04/10/costco-200-million-gold-bars/",
+   "https://www.chowhound.com/2095034/costco-kirkland-signature-total-sales-2025",
+   "https://chowhound.com/1547313/costco-price-tags-discount-code",
+   "https://finance.yahoo.com/news/costco-reveals-keeps-prices-low-183300293.html"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Original script; hook and structure modelled on top Costco videos (bait items, treasure hunt, markup cap, Kirkland, membership reveal) with a viewer-first 'is it a trick + how to beat it' payoff and cartoon animation."
+ }
+}
