@@ -82,7 +82,7 @@ function icon(name, color) {
   const d = h('div', null, svg); const s = d.firstElementChild; s.style.color = COLORS[color] || color || 'var(--white)'; return s;
 }
 function anim(el, frames, start, dur, opts = {}) {
-  const a = el.animate(frames, {duration: dur * 1000, delay: start * 1000, fill: 'both', easing: opts.easing || EASE,
+  const a = el.animate(frames, {duration: dur * 1000, delay: start * 1000, fill: opts.fill || 'both', easing: opts.easing || EASE,
                                 iterations: opts.iterations || 1, direction: opts.direction || 'normal'});
   a.pause(); anims.push(a); return a;
 }
@@ -202,7 +202,7 @@ const BUILD = {
       sp.appendChild(icon(n, PALETTE[i % 4])); p.appendChild(sp); popIn(sp, t0 + .15 + i * .15); });
     (s.center || []).forEach((n, i, arr) => { const sp = h('div', 'spot'); sp.style.left = (665 - (arr.length - 1) * 100 + i * 200) + 'px'; sp.style.top = '290px';
       sp.style.background = '#3a2f12'; sp.appendChild(icon(n, 'yellow')); p.appendChild(sp); popIn(sp, t0 + .6 + i * .15); float(sp, t0 + 1.2, t1, 6); });
-    const path = 'M750 760 C 750 520, 300 560, 125 160 S 900 120, 1375 160 S 1300 640, 1375 640 S 400 700, 125 640';
+    const path = 'M750 760 C 700 500, 200 450, 125 160 C 400 60, 1100 60, 1375 160 C 1450 300, 1450 500, 1375 640 C 1100 720, 400 720, 125 640';
     const svg = h('div', null, `<svg class="path" viewBox="0 0 1500 760"><path d="${path}" fill="none" stroke="var(--yellow)" stroke-width="10"
       stroke-dasharray="26 22" stroke-linecap="round" opacity=".9"/></svg>`).firstElementChild;
     p.insertBefore(svg, p.firstChild);
@@ -237,5 +237,6 @@ window.seek = function (t) {
   }
 };
 </script>
+<script src="chars.js"></script>
 </body>
 </html>

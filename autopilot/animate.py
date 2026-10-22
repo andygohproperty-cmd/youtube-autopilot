@@ -17,23 +17,24 @@ FPS = 30
 
 
 def _icons_for(scenes: list[dict]) -> dict[str, str]:
-    names = {"check", "circle-help"}
-    for sc in scenes:
-        s = sc["spec"]
-        names.update(s.get("icons", []))
-        names.update(s.get("corners", []))
-        names.update(s.get("center", []))
-        for side in ("left", "right"):
-            if isinstance(s.get(side), dict):
-                names.add(s[side].get("icon", ""))
-        if s.get("icon"):
-            names.add(s["icon"])
-    out = {}
-    for n in names:
-        f = ICON_DIR / f"{n}.svg"
-        if n and f.exists():
-            out[n] = f.read_text()
-    return out
+    """Every Lucide icon a scene mentions (icon/icons/prop/corners/center keys, at any depth)."""
+    names = {"check", "circle-help", "shopping-cart"}
+
+    def walk(x):
+        if isinstance(x, dict):
+            for k, v in x.items():
+                if k in ("icon", "prop") and isinstance(v, str):
+                    names.add(v)
+                elif k in ("icons", "corners", "center") and isinstance(v, list):
+                    names.update(i for i in v if isinstance(i, str))
+                else:
+                    walk(v)
+        elif isinstance(x, list):
+            for v in x:
+                walk(v)
+
+    walk([sc["spec"] for sc in scenes])
+    return {n: (ICON_DIR / f"{n}.svg").read_text() for n in names if (ICON_DIR / f"{n}.svg").exists()}
 
 
 def icon_exists(name: str) -> bool:
