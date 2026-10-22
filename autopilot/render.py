@@ -102,7 +102,7 @@ def _rect(w: int, h: int, alpha: str) -> str:
 
 
 def _overlays(channel: Channel, segments: list[Segment], durations: list[float],
-              leads: list[float], hook_text: str, dest: Path) -> list[tuple[float, str]]:
+              leads: list[float], hook_text: str, dest: Path, cards: bool = True) -> list[tuple[float, str]]:
     """Write the ASS file; return sound-effect cues [(time, name)] that match the visuals."""
     w, h = (1080, 1920) if channel.is_short else (1920, 1080)   # design size; libass scales it
     ev: list[str] = []
@@ -125,12 +125,13 @@ def _overlays(channel: Channel, segments: list[Segment], durations: list[float],
         if seg.chapter and not channel.is_short:
             chapter_no += 1
             a, b = t, t + CHAPTER_CARD
-            add(6, a, b, "Box", "{\\fad(120,250)}" + _rect(w, h, "40"))
-            add(7, a, b, "Label", f"{{\\fad(120,250)\\pos({w // 2},{h // 2 - 110})}}PART {chapter_no}")
-            add(7, a, b, "Title", f"{{\\fad(120,250)\\pos({w // 2},{h // 2 + 30})"
-                                  f"\\fscx85\\fscy85\\t(0,250,\\fscx100\\fscy100)}}{_esc(seg.chapter.upper())}")
             cues += [(a - 0.2, "whoosh"), (a + 0.05, "impact")]
-        if seg.on_screen:
+            if cards:
+                add(6, a, b, "Box", "{\\fad(120,250)}" + _rect(w, h, "40"))
+                add(7, a, b, "Label", f"{{\\fad(120,250)\\pos({w // 2},{h // 2 - 110})}}PART {chapter_no}")
+                add(7, a, b, "Title", f"{{\\fad(120,250)\\pos({w // 2},{h // 2 + 30})"
+                                      f"\\fscx85\\fscy85\\t(0,250,\\fscx100\\fscy100)}}{_esc(seg.chapter.upper())}")
+        if seg.on_screen and cards:
             a = speech_a + 0.1
             b = min(speech_b + 0.2, a + 2.6)
             y = h // 2 if not channel.is_short else int(h * 0.33)
@@ -139,6 +140,9 @@ def _overlays(channel: Channel, segments: list[Segment], durations: list[float],
                                  f"\\t(0,120,\\fscx112\\fscy112)\\t(120,220,\\fscx100\\fscy100)}}"
                                  f"{_esc(seg.on_screen.upper())}")
             cues.append((a, "pop"))
+
+        if not cards and seg.visual.get("type") in ("stat", "pie", "bars", "receipt"):
+            cues.append((t + lead + 0.1, "pop"))
 
         # Word-by-word captions, timed by character share of the segment's speech.
         words = seg.narration.split()
@@ -191,6 +195,54 @@ def leads_for(channel: Channel, segments: list[Segment]) -> list[float]:
 def render(channel: Channel, segments: list[Segment], durations: list[float], leads: list[float],
            narration: Path, workdir: Path, hook_text: str = "") -> tuple[Path, list[str]]:
     """Returns the final video and the music tracks used (for attribution)."""
+    w, h = channel.size
+    animated = channel.visual_style == "animated"
+    silent = workdir / "silent.mp4"
+    if animated:
+        from .animate import render_scenes
+        render_scenes(scenes_for(channel, segments, durations), sum(durations), (w, h), silent)
+    else:
+        _stock_video(channel, segments, durations, workdir, silent)
+
+    subs = workdir / "overlays.ass"
+    cues = _overlays(channel, segments, durations, leads, hook_text, subs, cards=not animated)
+    sections, t = [], 0.0
+    for seg, dur in zip(segments, durations):
+        if seg.chapter and t > 0:
+            sections.append(t)
+        t += dur
+    audio = workdir / "mix.wav"
+    tracks = mix(narration, cues, sections, channel.music_mood, audio)
+
+    out = workdir / "final.mp4"
+    fonts = ASSETS_DIR / "fonts"
+    _ff("-i", str(silent), "-i", str(audio), "-vf", f"subtitles={subs}:fontsdir={fonts}",
+        "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "17",
+        "-tune", "film", "-pix_fmt", "yuv420p",
+        "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out))
+    return out, tracks
+
+
+def scenes_for(channel: Channel, segments: list[Segment], durations: list[float]) -> list[dict]:
+    """One animated scene per segment; a chapter card takes the first moments of its segment."""
+    scenes, t, chapter_no = [], 0.0, 0
+    for seg, dur in zip(segments, durations):
+        start = t
+        if seg.chapter and not channel.is_short:
+            chapter_no += 1
+            card = min(CHAPTER_CARD, dur * 0.5)
+            scenes.append({"start": t, "end": t + card,
+                           "spec": {"type": "chapter", "number": chapter_no, "title": seg.chapter}})
+            start = t + card
+        spec = seg.visual or ({"type": "text", "lines": [seg.on_screen]} if seg.on_screen
+                              else {"type": "text", "lines": [" ".join(seg.narration.split()[:3])]})
+        scenes.append({"start": start, "end": t + dur, "spec": spec})
+        t += dur
+    return scenes
+
+
+def _stock_video(channel: Channel, segments: list[Segment], durations: list[float], workdir: Path,
+                 silent: Path) -> None:
     clips_dir = workdir / "clips"
     clips_dir.mkdir(parents=True, exist_ok=True)
     w, h = channel.size
@@ -217,23 +269,4 @@ def render(channel: Channel, segments: list[Segment], durations: list[float], le
 
     concat = workdir / "shots.txt"
     concat.write_text("".join(f"file '{p.resolve()}'\n" for p in shots))
-    silent = workdir / "silent.mp4"
     _ff("-f", "concat", "-safe", "0", "-i", str(concat), "-c", "copy", str(silent))
-
-    subs = workdir / "overlays.ass"
-    cues = _overlays(channel, segments, durations, leads, hook_text, subs)
-    sections, t = [], 0.0
-    for seg, dur in zip(segments, durations):
-        if seg.chapter and t > 0:
-            sections.append(t)
-        t += dur
-    audio = workdir / "mix.wav"
-    tracks = mix(narration, cues, sections, channel.music_mood, audio)
-
-    out = workdir / "final.mp4"
-    fonts = ASSETS_DIR / "fonts"
-    _ff("-i", str(silent), "-i", str(audio), "-vf", f"subtitles={subs}:fontsdir={fonts}",
-        "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "17",
-        "-tune", "film", "-pix_fmt", "yuv420p",
-        "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out))
-    return out, tracks

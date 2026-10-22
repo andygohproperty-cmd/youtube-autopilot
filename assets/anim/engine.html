@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: Inter; font-weight: 700; src: url(../fonts/inter-latin-700-normal.woff2); }
+  @font-face { font-family: Inter; font-weight: 800; src: url(../fonts/inter-latin-800-normal.woff2); }
+  @font-face { font-family: Inter; font-weight: 900; src: url(../fonts/inter-latin-900-normal.woff2); }
+  @font-face { font-family: Anton; src: url(../fonts/Anton-Regular.ttf); }
+  :root {
+    --bg1: #0b1020; --bg2: #18214a; --tile: #1d2852; --line: #2c3a72;
+    --yellow: #ffc93c; --red: #ff5e5b; --teal: #2ec4b6; --blue: #4d7cfe; --white: #f5f7ff; --muted: #9aa6d6;
+  }
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--bg1); }
+  #stage { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; color: var(--white);
+    background: radial-gradient(ellipse at 50% 35%, var(--bg2) 0%, var(--bg1) 70%); }
+  #grid { position: absolute; inset: -200px; opacity: .22;
+    background-image: linear-gradient(var(--line) 2px, transparent 2px), linear-gradient(90deg, var(--line) 2px, transparent 2px);
+    background-size: 120px 120px; }
+  #glow { position: absolute; width: 1400px; height: 1400px; border-radius: 50%; opacity: .45;
+    background: radial-gradient(circle, rgba(77,124,254,.55) 0%, rgba(77,124,254,0) 65%); left: 10%; top: -20%; }
+  #vignette { position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.55) 100%); }
+  section { position: absolute; left: 0; top: 0; width: 1920px; height: 880px; display: flex;
+    align-items: center; justify-content: center; opacity: 0; }
+  .row { display: flex; gap: 70px; align-items: center; justify-content: center; }
+  .col { display: flex; flex-direction: column; align-items: center; gap: 28px; }
+  .tile { width: 300px; height: 300px; border-radius: 60px; background: var(--tile); display: flex; align-items: center;
+    justify-content: center; box-shadow: 0 30px 60px rgba(0,0,0,.45), inset 0 0 0 4px rgba(255,255,255,.06); }
+  .tile svg { width: 175px; height: 175px; stroke-width: 1.8; }
+  .label { font-weight: 800; font-size: 58px; letter-spacing: -.5px; text-align: center; }
+  .caption { font-weight: 900; font-size: 88px; letter-spacing: -1px; text-align: center; max-width: 1500px; line-height: 1.05; }
+  .big { font-family: Anton, sans-serif; font-size: 300px; line-height: .95; color: var(--yellow);
+    text-shadow: 0 10px 0 rgba(0,0,0,.35); }
+  .sub { font-weight: 800; font-size: 54px; color: var(--muted); text-transform: uppercase; letter-spacing: 3px; }
+  .bars { display: flex; flex-direction: column; gap: 46px; width: 1400px; }
+  .bar-row { display: grid; grid-template-columns: 330px 1fr; align-items: center; gap: 30px; }
+  .bar-label { font-weight: 900; font-size: 64px; text-align: right; }
+  .bar-track { height: 150px; position: relative; }
+  .bar { position: absolute; left: 0; top: 0; height: 100%; border-radius: 0 24px 24px 0; transform-origin: left center; }
+  .bar-val { position: absolute; top: 50%; transform: translateY(-50%); font-family: Anton; font-size: 110px; padding-left: 26px; }
+  .receipt { width: 900px; background: #fbfaf5; color: #1a1a1a; padding: 50px 60px 70px; font-family: "Courier New", monospace;
+    font-weight: 700; font-size: 52px; box-shadow: 0 40px 80px rgba(0,0,0,.5); position: relative; }
+  .receipt h2 { margin: 0 0 30px; text-align: center; font-family: Inter; font-weight: 900; font-size: 56px; letter-spacing: 6px; }
+  .receipt .line { display: flex; justify-content: space-between; padding: 8px 0; }
+  .receipt .total { border-top: 4px dashed #999; margin-top: 22px; padding-top: 22px; font-size: 58px; color: #c4211c; }
+  .chip { padding: 18px 44px; border-radius: 999px; font-weight: 900; font-size: 54px; }
+  .vs { font-family: Anton; font-size: 210px; color: var(--muted); }
+  .text-line { font-family: Anton; font-size: 210px; line-height: 1; text-transform: uppercase; text-align: center; }
+  .chapter-num { font-weight: 900; font-size: 54px; color: var(--yellow); letter-spacing: 12px; }
+  .chapter-title { font-family: Anton; font-size: 170px; text-transform: uppercase; text-align: center; max-width: 1600px; line-height: 1; }
+  .rule { width: 0; height: 10px; background: var(--yellow); border-radius: 5px; }
+  .quote { font-weight: 900; font-size: 84px; max-width: 1500px; text-align: center; line-height: 1.12; }
+  .who { font-weight: 800; font-size: 46px; color: var(--yellow); }
+  .list { display: flex; flex-direction: column; gap: 34px; }
+  .list-item { display: flex; align-items: center; gap: 34px; font-weight: 900; font-size: 74px; }
+  .badge { width: 96px; height: 96px; border-radius: 28px; display: flex; align-items: center; justify-content: center; flex: none; }
+  .badge svg { width: 60px; height: 60px; stroke-width: 2.6; }
+  .plan { position: relative; width: 1500px; height: 760px; border: 8px solid var(--line); border-radius: 30px; background: rgba(20,28,60,.6); }
+  .plan .spot { position: absolute; width: 170px; height: 170px; border-radius: 36px; background: var(--tile);
+    display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(0,0,0,.4); }
+  .plan .spot svg { width: 100px; height: 100px; stroke-width: 1.8; }
+  .plan .door { position: absolute; bottom: -8px; left: 50%; width: 220px; margin-left: -110px; height: 16px; background: var(--yellow); }
+  .plan svg.path { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .pie-wrap { position: relative; width: 560px; height: 560px; }
+  .pie-center { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: Anton; font-size: 150px; }
+</style>
+</head>
+<body>
+<div id="stage"><div id="glow"></div><div id="grid"></div><div id="scenes"></div><div id="vignette"></div></div>
+<script>
+const COLORS = {yellow: 'var(--yellow)', red: 'var(--red)', teal: 'var(--teal)', blue: 'var(--blue)', white: 'var(--white)'};
+const PALETTE = ['yellow', 'teal', 'red', 'blue'];
+const anims = [];
+const counters = [];
+const OVERSHOOT = 'cubic-bezier(.34,1.56,.64,1)';
+const EASE = 'cubic-bezier(.22,1,.36,1)';
+
+function h(tag, cls, html) { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
+function icon(name, color) {
+  const svg = (window.ICONS || {})[name] || window.ICONS['circle-help'];
+  const d = h('div', null, svg); const s = d.firstElementChild; s.style.color = COLORS[color] || color || 'var(--white)'; return s;
+}
+function anim(el, frames, start, dur, opts = {}) {
+  const a = el.animate(frames, {duration: dur * 1000, delay: start * 1000, fill: 'both', easing: opts.easing || EASE,
+                                iterations: opts.iterations || 1, direction: opts.direction || 'normal'});
+  a.pause(); anims.push(a); return a;
+}
+function popIn(el, at) {
+  anim(el, [{transform: 'scale(0) rotate(-8deg)', opacity: 0}, {transform: 'scale(1) rotate(0)', opacity: 1}], at, .55, {easing: OVERSHOOT});
+}
+function rise(el, at, dist = 60) {
+  anim(el, [{transform: `translateY(${dist}px)`, opacity: 0}, {transform: 'translateY(0)', opacity: 1}], at, .5);
+}
+function float(el, at, end, amp = 10) {  // gentle idle motion so nothing sits still
+  const wrap = el; const period = 2.6 + Math.random();
+  anim(wrap, [{translate: `0 ${-amp}px`}, {translate: `0 ${amp}px`}], at, period / 2,
+       {iterations: Math.max(1, Math.ceil((end - at) / (period / 2))), direction: 'alternate', easing: 'ease-in-out'});
+}
+function counter(el, at, dur, spec) { counters.push({el, at, dur, spec}); }
+function fmtNum(v, spec) {
+  const d = spec.decimals || 0;
+  let s = v.toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d});
+  return (spec.prefix || '') + s + (spec.suffix || '');
+}
+
+const BUILD = {
+  icons(sec, s, t0, t1) {
+    const col = h('div', 'col'); const row = h('div', 'row'); col.appendChild(row);
+    (s.icons || []).forEach((n, i) => {
+      const c = h('div', 'col'); const tile = h('div', 'tile'); tile.appendChild(icon(n, s.colors?.[i] || PALETTE[i % 4]));
+      c.appendChild(tile);
+      if (s.labels?.[i]) { const l = h('div', 'label', s.labels[i]); c.appendChild(l); rise(l, t0 + .35 + i * .18, 30); }
+      row.appendChild(c); popIn(tile, t0 + .1 + i * .18); float(c, t0 + .7 + i * .18, t1, 8);
+    });
+    if (s.caption) { const cap = h('div', 'caption', s.caption); col.appendChild(cap); rise(cap, t0 + .3 + (s.icons || []).length * .18); }
+    sec.appendChild(col);
+  },
+  stat(sec, s, t0, t1) {
+    const col = h('div', 'col'); const big = h('div', 'big'); col.appendChild(big);
+    if (s.label) { const l = h('div', 'sub', s.label); col.appendChild(l); rise(l, t0 + .5, 30); }
+    sec.appendChild(col); popIn(big, t0 + .05);
+    if (typeof s.value === 'number') counter(big, t0 + .1, Math.min(1.4, (t1 - t0) * .5), s); else big.textContent = s.value;
+    anim(big, [{transform: 'scale(1)'}, {transform: 'scale(1.06)'}], t0 + .7, Math.max(.5, t1 - t0 - .7), {easing: 'linear'});
+  },
+  bars(sec, s, t0, t1) {
+    const wrap = h('div', 'bars'); const max = Math.max(...s.items.map(i => i.value));
+    s.items.forEach((it, i) => {
+      const row = h('div', 'bar-row'); const lab = h('div', 'bar-label', it.label); const track = h('div', 'bar-track');
+      const w = Math.max(.02, it.value / max) * 0.78;
+      const bar = h('div', 'bar'); bar.style.width = (w * 100) + '%'; bar.style.background = COLORS[it.color || PALETTE[i % 4]];
+      const val = h('div', 'bar-val', it.display || it.value); val.style.left = (w * 100) + '%';
+      track.append(bar, val); row.append(lab, track); wrap.appendChild(row);
+      rise(lab, t0 + .1 + i * .35, 0);
+      anim(bar, [{transform: 'scaleX(0)'}, {transform: 'scaleX(1)'}], t0 + .2 + i * .35, 1.0);
+      rise(val, t0 + .9 + i * .35, 20);
+    });
+    sec.appendChild(wrap);
+  },
+  pie(sec, s, t0, t1) {
+    const col = h('div', 'row'); const wrap = h('div', 'pie-wrap'); const r = 230, C = 2 * Math.PI * r;
+    wrap.innerHTML = `<svg viewBox="0 0 560 560" width="560" height="560"><circle cx="280" cy="280" r="${r}" fill="none" stroke="#2a3566" stroke-width="90"/>
+      <circle class="arc" cx="280" cy="280" r="${r}" fill="none" stroke="${COLORS[s.color || 'yellow']}" stroke-width="90"
+        stroke-dasharray="${C}" stroke-dashoffset="${C}" transform="rotate(-90 280 280)"/></svg>`;
+    const center = h('div', 'pie-center', s.display || Math.round(s.fraction * 100) + '%'); wrap.appendChild(center);
+    col.appendChild(wrap);
+    if (s.label) { const l = h('div', 'caption', s.label); l.style.maxWidth = '800px'; l.style.textAlign = 'left'; col.appendChild(l); rise(l, t0 + .6); }
+    sec.appendChild(col); popIn(wrap, t0 + .05);
+    anim(wrap.querySelector('.arc'), [{strokeDashoffset: C}, {strokeDashoffset: C * (1 - s.fraction)}], t0 + .35, 1.2);
+    rise(center, t0 + 1.0, 20);
+  },
+  receipt(sec, s, t0, t1) {
+    const r = h('div', 'receipt'); r.appendChild(h('h2', null, s.title || 'RECEIPT'));
+    const n = s.items.length; const span = Math.max(.6, (t1 - t0) - 1.6);
+    s.items.forEach((it, i) => { const l = h('div', 'line', `<span>${it[0]}</span><span>${it[1]}</span>`); r.appendChild(l); rise(l, t0 + .5 + i * span / n, 20); });
+    const tot = h('div', 'line total', `<span>TOTAL</span><span>${s.total}</span>`); r.appendChild(tot);
+    sec.appendChild(r);
+    anim(r, [{transform: 'translateY(700px) rotate(4deg)'}, {transform: 'translateY(0) rotate(-2deg)'}], t0, .7);
+    anim(tot, [{transform: 'scale(0)', opacity: 0}, {transform: 'scale(1)', opacity: 1}], t0 + .6 + span, .45, {easing: OVERSHOOT});
+  },
+  text(sec, s, t0, t1) {
+    const col = h('div', 'col'); col.style.gap = '0';
+    s.lines.forEach((ln, i) => {
+      const e = h('div', 'text-line', ln); if ((s.highlight ?? -1) === i) e.style.color = 'var(--yellow)';
+      col.appendChild(e); anim(e, [{transform: 'translateY(80px) scale(.9)', opacity: 0},
+                                     {transform: 'none', opacity: 1}], t0 + .05 + i * .25, .5);
+    });
+    sec.appendChild(col);
+    anim(col, [{transform: 'scale(1)'}, {transform: 'scale(1.05)'}], t0 + .5, Math.max(.5, t1 - t0 - .5), {easing: 'linear'});
+  },
+  versus(sec, s, t0, t1) {
+    const row = h('div', 'row'); row.style.gap = '110px';
+    const side = (x, i) => { const c = h('div', 'col'); const tile = h('div', 'tile'); tile.appendChild(icon(x.icon, x.color || (i ? 'red' : 'teal')));
+      c.append(tile, h('div', 'label', x.label)); popIn(c, t0 + .1 + i * .5); float(c, t0 + .8, t1, 8); return c; };
+    const vs = h('div', 'vs', 'VS'); row.append(side(s.left, 0), vs, side(s.right, 1)); popIn(vs, t0 + .35);
+    sec.appendChild(row);
+  },
+  list(sec, s, t0, t1) {
+    const l = h('div', 'list'); const n = s.items.length; const span = Math.max(.6, (t1 - t0) - 1);
+    s.items.forEach((it, i) => {
+      const row = h('div', 'list-item'); const b = h('div', 'badge'); b.style.background = COLORS[PALETTE[i % 4]];
+      b.appendChild(icon(s.icon || 'check', '#0b1020')); row.append(b, h('span', null, it)); l.appendChild(row);
+      anim(row, [{transform: 'translateX(-120px)', opacity: 0}, {transform: 'none', opacity: 1}], t0 + .15 + i * span / n, .45);
+    });
+    sec.appendChild(l);
+  },
+  quote(sec, s, t0, t1) {
+    const col = h('div', 'col'); const q = h('div', 'quote', '&ldquo;' + s.text + '&rdquo;'); const w = h('div', 'who', s.who || '');
+    col.append(q, w); sec.appendChild(col); rise(q, t0 + .1); rise(w, t0 + .6, 20);
+  },
+  chapter(sec, s, t0, t1) {
+    const col = h('div', 'col'); const num = h('div', 'chapter-num', 'PART ' + s.number); const title = h('div', 'chapter-title', s.title);
+    const rule = h('div', 'rule'); col.append(num, title, rule); sec.appendChild(col);
+    rise(num, t0 + .05, 30);
+    anim(title, [{transform: 'scale(1.4)', opacity: 0}, {transform: 'scale(1)', opacity: 1}], t0 + .1, .6);
+    anim(rule, [{width: '0px'}, {width: '420px'}], t0 + .45, .6);
+  },
+  floorplan(sec, s, t0, t1) {
+    const p = h('div', 'plan'); p.appendChild(h('div', 'door'));
+    const corners = [[40, 40], [1290 - 0, 40], [40, 550], [1290, 550]];
+    (s.corners || []).slice(0, 4).forEach((n, i) => { const sp = h('div', 'spot'); sp.style.left = corners[i][0] + 'px'; sp.style.top = corners[i][1] + 'px';
+      sp.appendChild(icon(n, PALETTE[i % 4])); p.appendChild(sp); popIn(sp, t0 + .15 + i * .15); });
+    (s.center || []).forEach((n, i, arr) => { const sp = h('div', 'spot'); sp.style.left = (665 - (arr.length - 1) * 100 + i * 200) + 'px'; sp.style.top = '290px';
+      sp.style.background = '#3a2f12'; sp.appendChild(icon(n, 'yellow')); p.appendChild(sp); popIn(sp, t0 + .6 + i * .15); float(sp, t0 + 1.2, t1, 6); });
+    const path = 'M750 760 C 750 520, 300 560, 125 160 S 900 120, 1375 160 S 1300 640, 1375 640 S 400 700, 125 640';
+    const svg = h('div', null, `<svg class="path" viewBox="0 0 1500 760"><path d="${path}" fill="none" stroke="var(--yellow)" stroke-width="10"
+      stroke-dasharray="26 22" stroke-linecap="round" opacity=".9"/></svg>`).firstElementChild;
+    p.insertBefore(svg, p.firstChild);
+    const pathEl = svg.querySelector('path'); const L = 4200;
+    pathEl.style.strokeDasharray = `${L}`; pathEl.style.strokeDashoffset = `${L}`;
+    anim(pathEl, [{strokeDashoffset: L}, {strokeDashoffset: 0}], t0 + .4, Math.max(1, (t1 - t0) - .6), {easing: 'linear'});
+    sec.appendChild(p);
+  },
+};
+
+window.build = function (scenes, total) {
+  const root = document.getElementById('scenes');
+  for (const sc of scenes) {
+    const sec = h('section'); root.appendChild(sec);
+    (BUILD[sc.spec.type] || BUILD.icons)(sec, sc.spec, sc.start, sc.end);
+    const d = sc.end - sc.start;
+    anim(sec, [{opacity: 0, transform: 'scale(1.06)'}, {opacity: 1, transform: 'scale(1)'}], sc.start, Math.min(.3, d / 3));
+    anim(sec, [{opacity: 1}, {opacity: 0}], sc.end - .18, .18, {easing: 'linear'});
+    // composite: second animation must not reset the first before it starts
+    anims[anims.length - 1].effect.updateTiming({fill: 'forwards'});
+  }
+  anim(document.getElementById('grid'), [{transform: 'translate(0,0)'}, {transform: 'translate(-120px,-120px)'}], 0, 12,
+       {iterations: Math.ceil(total / 12) + 1, easing: 'linear'});
+  anim(document.getElementById('glow'), [{transform: 'translate(0,0)'}, {transform: 'translate(500px,150px)'}], 0, 9,
+       {iterations: Math.ceil(total / 9) + 1, direction: 'alternate', easing: 'ease-in-out'});
+};
+window.seek = function (t) {
+  for (const a of anims) a.currentTime = t * 1000;
+  for (const c of counters) {
+    const p = Math.min(1, Math.max(0, (t - c.at) / c.dur)); const e = 1 - Math.pow(1 - p, 3);
+    c.el.textContent = fmtNum(c.spec.value * e, c.spec);
+  }
+};
+</script>
+</body>
+</html>

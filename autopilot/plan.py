@@ -7,6 +7,7 @@ class Segment(BaseModel):
     broll_query: str      # 2-4 word stock-footage search, concrete and visual
     on_screen: str = ""   # optional big stat/keyword card, max ~4 words ("$5.3 BILLION")
     chapter: str = ""     # optional chapter title card shown as this segment starts (long videos)
+    visual: dict = {}     # animated channels: the motion-graphics scene for this segment (see ANIMATION.md)
 
 
 class VideoPlan(BaseModel):

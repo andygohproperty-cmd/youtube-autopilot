@@ -33,6 +33,7 @@ class Channel:
     speed: float = 1.0
     language: str = "en"
     music_mood: str = ""                # folder under assets/music picked first
+    visual_style: str = "stock"         # "stock" footage or "animated" motion graphics
 
     @property
     def is_short(self) -> bool:

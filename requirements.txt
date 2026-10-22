@@ -8,3 +8,4 @@ pillow>=10
 requests>=2.31
 google-api-python-client>=2.130
 google-auth>=2.29
+playwright==1.64.0
