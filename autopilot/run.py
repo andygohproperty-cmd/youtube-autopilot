@@ -68,6 +68,42 @@ def _real_chapter_times(description: str, segments, durations: list[float]) -> s
     return head + "Chapters:\n" + "\n".join(lines) + ("\n\n" + tail[1] if len(tail) > 1 else "")
 
 
+def _visual_problems(channel, plan) -> list[str]:
+    """Animated channels: every segment needs a `visual` from ANIMATION.md, using icons that exist."""
+    from .animate import icon_exists
+
+    known = {"scene", "icons", "stat", "bars", "pie", "receipt", "text", "versus", "list", "quote", "floorplan"}
+    out = []
+    for i, seg in enumerate(plan.segments):
+        v = seg.visual
+        if not v:
+            out.append(f"segment {i}: missing `visual`")
+            continue
+        if v.get("type") not in known:
+            out.append(f"segment {i}: unknown visual type {v.get('type')!r}")
+        missing = sorted(n for n in _names(v) if not icon_exists(n))
+        if missing:
+            out.append(f"segment {i}: unknown icons {missing} (see assets/anim/icons)")
+    return out
+
+
+def _names(x) -> set[str]:
+    """Icon names a visual mentions (same keys the renderer reads)."""
+    found = set()
+    if isinstance(x, dict):
+        for k, v in x.items():
+            if k in ("icon", "prop") and isinstance(v, str):
+                found.add(v)
+            elif k in ("icons", "corners", "center") and isinstance(v, list):
+                found.update(i for i in v if isinstance(i, str))
+            else:
+                found |= _names(v)
+    elif isinstance(x, list):
+        for v in x:
+            found |= _names(v)
+    return found
+
+
 def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str | None = None) -> None:
     from .render import render
     from .thumbnail import make_thumbnail
@@ -209,6 +245,9 @@ def main() -> None:
         produce(a.channel, a.dry_run, a.force, a.plan_file)
     elif a.cmd == "check-plan":
         channel, plan, _ = load_plan_file(a.plan_file)
+        problems = _visual_problems(channel, plan) if channel.visual_style == "animated" else []
+        if problems:
+            raise SystemExit("Fix the visuals:\n" + "\n".join(problems))
         print(f"OK: {channel.id} · {plan.title}")
     elif a.cmd == "approve":
         approve(a.issue)

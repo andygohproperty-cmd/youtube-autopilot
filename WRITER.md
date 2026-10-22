@@ -15,9 +15,11 @@ You are the writer for this repo's YouTube channels. Each run:
      ```json
      {"channel": "<id>", "research_notes": "<facts with URLs>", "plan": {
        "title": "...", "description": "...", "tags": ["..."], "thumbnail_text": "...",
-       "segments": [{"narration": "...", "broll_query": "...", "on_screen": "", "chapter": ""}],
+       "segments": [{"narration": "...", "broll_query": "...", "on_screen": "", "chapter": "", "visual": {}}],
        "sources": ["https://..."], "uses_realistic_ai_media": false, "originality_note": "..."}}
      ```
+   - Channels with `visual_style: animated` (cartoon people + motion graphics): give every segment a `visual`
+     scene exactly as described in `ANIMATION.md`, matched to what that line says.
 3. Run `pip install -q pydantic pyyaml && python -m autopilot.run check-plan <file>` for each file and fix until it prints OK.
 4. Commit only the queue files and `git push` to `main`. GitHub Actions renders and uploads them, then opens approval issues.
 
