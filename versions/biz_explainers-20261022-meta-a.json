@@ -1,0 +1,1764 @@
+{
+ "channel": "biz_explainers",
+ "channel_overrides": {
+  "visual_theme": "light",
+  "target_minutes": 6
+ },
+ "research_notes": "Meta style test version A",
+ "plan": {
+  "title": "How Meta Makes $700 Million a Day (and Shrugs Off a $25B Fine)",
+  "description": "How does Meta make so much money that a $25 billion fine looks like a speed bump? We follow the money from your thumb to Meta's $140 billion AI bet.\nMeta's Q3 2026 results, the New Mexico ruling and its AI data centers, explained with real numbers from Meta's earnings release and court reporting.\n\nChapters:\n0:00 Your $0 scroll\n0:38 The money machine\n2:26 The $25 billion problem\n3:30 The $140 billion bet\n4:32 Is it working?\n5:16 So what about you?\n\nSources:\nhttps://fortune.com/2026/10/21/meta-q3-earnings-mark-zuckerberg-capex-muse/\nhttps://www.stocktitan.net/news/META/meta-reports-third-quarter-2026-13ysmyjaxliq.html\nhttps://sourcenm.com/2026/10/21/new-mexico-judge-orders-meta-to-pay-state-25b/\nhttps://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder\nhttps://techcrunch.com/2025/07/14/mark-zuckerberg-says-meta-is-building-a-5gw-ai-data-center\nhttps://epoch.ai/data/ai-data-centers/directory/meta-hyperion\n\nNarration is AI-generated. Meta is expected to appeal the ruling. Educational content only, not financial advice.",
+  "tags": [
+   "meta",
+   "meta ai",
+   "meta earnings",
+   "meta fine",
+   "meta 25 billion",
+   "meta capex",
+   "zuckerberg",
+   "ai data centers",
+   "how meta makes money",
+   "business explained"
+  ],
+  "thumbnail_text": "$700M A DAY",
+  "segments": [
+   {
+    "narration": "You just opened Instagram. You scrolled for ten minutes. You watched a guy fall off a scooter. Twice.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "laptop",
+       "expr": "laugh"
+      }
+     ],
+     "items": [
+      {
+       "icon": "smartphone",
+       "x": 0.2,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "10 minutes",
+       "color": "blue"
+      },
+      {
+       "icon": "bike",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.5,
+       "label": "Scooter fail x2",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And in those ten minutes, Meta made money off you. A lot of it.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "stand",
+       "then": "easy",
+       "expr": "happy",
+       "then_expr": "shock",
+       "switch": 0.5
+      }
+     ],
+     "items": [
+      {
+       "icon": "coins",
+       "x": 0.6,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.55,
+       "color": "yellow"
+      },
+      {
+       "icon": "banknote",
+       "x": 0.78,
+       "y": 0.45,
+       "fall": true,
+       "at": 0.65,
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Meta now brings in around seven hundred million dollars. Every single day.",
+    "broll_query": "technology company",
+    "on_screen": "$700M A DAY",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 700,
+     "label": "Meta's revenue per day",
+     "prefix": "$",
+     "suffix": "M",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "This week, a judge ordered it to pay twenty five billion dollars. One of the biggest penalties ever handed to a tech company.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "explain",
+       "expr": "worried",
+       "talk": true
+      }
+     ],
+     "panel": {
+      "type": "stat",
+      "value": 25,
+      "label": "penalty ordered by a judge",
+      "prefix": "$",
+      "suffix": "B",
+      "decimals": 0
+     },
+     "panel_side": "right"
+    }
+   },
+   {
+    "narration": "And Meta's response? It's about to spend a hundred and forty billion dollars this year. On AI.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "coffee",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "brain-circuit",
+       "x": 0.65,
+       "y": 0.38,
+       "fall": true,
+       "at": 0.3,
+       "label": "$140B on AI",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So how does a company make so much money that a twenty five billion dollar fine looks like a speed bump?",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "gavel",
+      "label": "$25B fine"
+     },
+     "right": {
+      "icon": "rocket",
+      "label": "$140B AI bet"
+     }
+    }
+   },
+   {
+    "narration": "And what is it building with all that cash?",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.15,
+       "to": 0.45,
+       "expr": "think",
+       "bubble": {
+        "text": "What's it building?",
+        "think": true,
+        "at": 0.3
+       }
+      }
+     ],
+     "camera": "out"
+    }
+   },
+   {
+    "narration": "Let's follow the money. Starting with your thumb.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "point",
+       "expr": "grin"
+      }
+     ],
+     "items": [
+      {
+       "icon": "smartphone",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "label": "Your thumb",
+       "color": "yellow"
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "Here's the thing most people miss. Facebook, Instagram, WhatsApp. They're all free.",
+    "broll_query": "technology company",
+    "on_screen": "THE MONEY MACHINE",
+    "chapter": "The money machine",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "users",
+      "camera",
+      "message-circle"
+     ],
+     "labels": [
+      "Facebook",
+      "Instagram",
+      "WhatsApp"
+     ],
+     "caption": "All free"
+    }
+   },
+   {
+    "narration": "So you aren't the customer. You're what's being sold.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.25,
+       "pose": "shrug",
+       "expr": "shock"
+      }
+     ],
+     "items": [
+      {
+       "icon": "tag",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "You're the product",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Well, technically, your attention is. Every second you spend looking at your screen is something Meta can rent out.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "laptop",
+       "expr": "neutral"
+      }
+     ],
+     "items": [
+      {
+       "icon": "eye",
+       "x": 0.6,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Attention",
+       "color": "blue"
+      },
+      {
+       "icon": "clock",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.4,
+       "label": "for rent",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And Meta has gotten very, very good at renting it.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "explain",
+       "expr": "smug",
+       "talk": true
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Every time you scroll, Meta shows you an ad. And a company pays for that spot.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "stand",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "smartphone",
+       "x": 0.5,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.1,
+       "label": "Scroll",
+       "color": "blue"
+      },
+      {
+       "icon": "megaphone",
+       "x": 0.68,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "label": "Ad",
+       "color": "red"
+      },
+      {
+       "icon": "banknote",
+       "x": 0.86,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.5,
+       "label": "Paid",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Three point six four billion people use Meta's apps every day. That's almost half the planet.",
+    "broll_query": "technology company",
+    "on_screen": "3.64 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 3.64,
+     "label": "people use Meta's apps every day",
+     "prefix": "",
+     "suffix": "B",
+     "decimals": 2
+    }
+   },
+   {
+    "narration": "More eyeballs than any TV network in history. Every single day.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Meta apps, daily",
+       "value": 3640,
+       "display": "3.64B",
+       "color": "yellow"
+      },
+      {
+       "label": "Half the planet",
+       "value": 4100,
+       "display": "~4.1B",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And Meta knows a scary amount about each of them. What you like. What you click. What you almost bought.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.25,
+       "pose": "laptop",
+       "expr": "think"
+      }
+     ],
+     "items": [
+      {
+       "icon": "heart",
+       "x": 0.55,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.1,
+       "label": "Likes",
+       "color": "red"
+      },
+      {
+       "icon": "mouse-pointer-click",
+       "x": 0.72,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.25,
+       "label": "Clicks",
+       "color": "blue"
+      },
+      {
+       "icon": "shopping-cart",
+       "x": 0.88,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.4,
+       "label": "Almost bought",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So when a sneaker brand wants people who just started running, Meta can find exactly those people.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.1,
+       "to": 0.45,
+       "expr": "happy",
+       "then": "point",
+       "switch": 0.6
+      }
+     ],
+     "items": [
+      {
+       "icon": "footprints",
+       "x": 0.75,
+       "y": 0.38,
+       "fall": true,
+       "at": 0.4,
+       "label": "New runner",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Advertisers love that. So they keep paying more.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "arms",
+       "expr": "grin"
+      }
+     ],
+     "items": [
+      {
+       "icon": "trending-up",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Pay more",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Think about the old way. A company buys a TV ad and hopes the right people happen to be watching.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.2,
+       "pose": "shrug",
+       "expr": "worried"
+      }
+     ],
+     "items": [
+      {
+       "icon": "tv",
+       "x": 0.6,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Hope?",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "With Meta, it can pick the exact people. And see who clicked, who bought, and what it cost.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "point",
+       "expr": "grin"
+      }
+     ],
+     "items": [
+      {
+       "icon": "target",
+       "x": 0.6,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Exact people",
+       "color": "red"
+      },
+      {
+       "icon": "chart-column-increasing",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.4,
+       "label": "Results",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That's why small shops and giant brands all end up in the same place. Your feed.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.05,
+       "to": 0.4,
+       "cart": true,
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "smartphone",
+       "x": 0.75,
+       "y": 0.38,
+       "fall": true,
+       "at": 0.4,
+       "label": "Your feed",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Last quarter, the price of each ad went up fourteen percent. And Meta showed ten percent more ads.",
+    "broll_query": "technology company",
+    "on_screen": "PRICE PER AD +14%",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Price per ad",
+       "value": 14,
+       "display": "+14%",
+       "color": "yellow"
+      },
+      {
+       "label": "Ads shown",
+       "value": 10,
+       "display": "+10%",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "More ads, at higher prices. That's the whole machine.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.2,
+       "pose": "explain",
+       "expr": "smug",
+       "talk": true
+      }
+     ],
+     "panel": {
+      "type": "list",
+      "items": [
+       "More ads",
+       "Higher prices"
+      ],
+      "icon": "trending-up"
+     }
+    }
+   },
+   {
+    "narration": "Put it together and Meta made sixty four point six billion dollars in three months.",
+    "broll_query": "technology company",
+    "on_screen": "$64.6 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 64.6,
+     "label": "revenue in 3 months",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 1
+    }
+   },
+   {
+    "narration": "Up twenty six percent from a year ago. For a company this huge, that is wild.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "shrug",
+       "expr": "shock",
+       "react": "jump"
+      }
+     ],
+     "items": [
+      {
+       "icon": "trending-up",
+       "x": 0.8,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "label": "+26%",
+       "color": "teal"
+      }
+     ],
+     "punch": 0.6
+    }
+   },
+   {
+    "narration": "Split that across everyone who uses the apps every day, and each of us is worth around seventeen dollars to Meta. Every three months.",
+    "broll_query": "technology company",
+    "on_screen": "$17 PER PERSON",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 17,
+     "label": "per daily user, every 3 months",
+     "prefix": "$",
+     "suffix": "",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "In rich countries like the US, it's a lot more than that.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.2,
+       "pose": "stand",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "flag",
+       "x": 0.65,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "US users",
+       "color": "blue"
+      },
+      {
+       "icon": "trending-up",
+       "x": 0.82,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.4,
+       "label": "Worth more",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And almost all of it, more than ninety nine percent, came from those apps. Basically, from ads.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "pie",
+     "fraction": 0.99,
+     "display": "99%",
+     "label": "of revenue from the apps (mostly ads)",
+     "color": "yellow"
+    }
+   },
+   {
+    "narration": "Remember the metaverse? The VR headsets?",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.25,
+       "pose": "think",
+       "expr": "think"
+      }
+     ],
+     "items": [
+      {
+       "icon": "glasses",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Metaverse?",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That part of Meta lost another four point one billion dollars last quarter.",
+    "broll_query": "technology company",
+    "on_screen": "-$4.1 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "whatever",
+       "expr": "tired"
+      }
+     ],
+     "panel": {
+      "type": "stat",
+      "value": 4.1,
+      "label": "Reality Labs loss, 1 quarter",
+      "prefix": "-$",
+      "suffix": "B",
+      "decimals": 1
+     },
+     "panel_side": "right"
+    }
+   },
+   {
+    "narration": "The ads pay for everything. Even the expensive experiments.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "easy",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "megaphone",
+       "x": 0.55,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.1,
+       "label": "Ads",
+       "color": "yellow"
+      },
+      {
+       "icon": "glasses",
+       "x": 0.75,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.35,
+       "label": "Experiments",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Now, about that fine.",
+    "broll_query": "technology company",
+    "on_screen": "THE $25B PROBLEM",
+    "chapter": "The $25 billion problem",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "paper",
+       "expr": "worried"
+      }
+     ],
+     "items": [
+      {
+       "icon": "gavel",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "The fine",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Back in 2018, the world found out that a firm called Cambridge Analytica had got hold of data from millions of Facebook users.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.2,
+       "pose": "paper",
+       "expr": "shock"
+      }
+     ],
+     "items": [
+      {
+       "icon": "database",
+       "x": 0.6,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Millions of users' data",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "New Mexico sued Meta. It said Facebook misled people about how much control they had over their own data.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "cross",
+       "expr": "angry"
+      }
+     ],
+     "items": [
+      {
+       "icon": "landmark",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "New Mexico sues",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "This September, a jury agreed. It found close to forty four million violations of the state's consumer protection law.",
+    "broll_query": "technology company",
+    "on_screen": "44 MILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 44,
+     "label": "violations found by the jury",
+     "prefix": "",
+     "suffix": "M",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "The law allows up to five thousand dollars for each one. Do that maths, and you get around two hundred and twenty billion dollars.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "receipt",
+     "title": "THE MATHS",
+     "items": [
+      [
+       "Violations",
+       "44,000,000"
+      ],
+      [
+       "Max per violation",
+       "$5,000"
+      ]
+     ],
+     "total": "~$220B"
+    }
+   },
+   {
+    "narration": "The judge said the state was entitled to closer to that. But ordered twenty five billion.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Could have been",
+       "value": 220,
+       "display": "~$220B",
+       "color": "red"
+      },
+      {
+       "label": "Ordered",
+       "value": 25,
+       "display": "$25B",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Meta is expected to appeal. And it has also agreed to pay up to eighteen and a half billion to settle a separate fight over teen safety.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.2,
+       "pose": "explain",
+       "expr": "serious",
+       "talk": true
+      }
+     ],
+     "panel": {
+      "type": "list",
+      "items": [
+       "Appeal expected",
+       "Up to $18.5B teen-safety deal"
+      ],
+      "icon": "gavel"
+     }
+    }
+   },
+   {
+    "narration": "That's a lot of zeroes. So does it actually hurt?",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "shrug",
+       "expr": "think",
+       "bubble": {
+        "text": "Does it hurt?",
+        "at": 0.3
+       }
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Here's a way to see it. Twenty five billion is about five weeks of Meta's sales.",
+    "broll_query": "technology company",
+    "on_screen": "5 WEEKS",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 5,
+     "label": "of Meta's sales = the fine",
+     "prefix": "",
+     "suffix": " WEEKS",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "Painful? Sure. A threat to the company? Not even close.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "frown",
+      "label": "Painful"
+     },
+     "right": {
+      "icon": "shield",
+      "label": "Not a threat"
+     }
+    }
+   },
+   {
+    "narration": "Because Meta is already busy spending far more money somewhere else.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.15,
+       "to": 0.45,
+       "expr": "smug"
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "And it has the cash to do it. Meta is sitting on more than eighty two billion dollars in cash and investments.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 82,
+     "label": "in cash and investments",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "This year, Meta plans to spend between a hundred and thirty five and a hundred and forty five billion dollars on building stuff.",
+    "broll_query": "technology company",
+    "on_screen": "THE $140B BET",
+    "chapter": "The $140 billion bet",
+    "visual": {
+     "type": "stat",
+     "value": 140,
+     "label": "Meta's 2026 building budget (up to $145B)",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "That's almost double what it spent last year. Mostly on one thing. Computers for AI.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "2025",
+       "value": 72,
+       "display": "~$72B",
+       "color": "blue"
+      },
+      {
+       "label": "2026",
+       "value": 140,
+       "display": "$145B",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "At a hundred and forty billion, that's around three hundred and eighty million dollars a day. Just on construction and chips.",
+    "broll_query": "technology company",
+    "on_screen": "$380M A DAY",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 380,
+     "label": "a day on buildings and chips",
+     "prefix": "$",
+     "suffix": "M",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "It's building a data center in Louisiana called Hyperion. Mark Zuckerberg said it would cover most of Manhattan.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.15,
+       "pose": "point",
+       "expr": "shock"
+      }
+     ],
+     "items": [
+      {
+       "icon": "building-2",
+       "x": 0.5,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.1,
+       "label": "Hyperion",
+       "color": "blue"
+      },
+      {
+       "icon": "map-pin",
+       "x": 0.7,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "label": "Louisiana",
+       "color": "red"
+      },
+      {
+       "icon": "map",
+       "x": 0.88,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.5,
+       "label": "\u2248 Manhattan",
+       "color": "yellow"
+      }
+     ],
+     "camera": "out"
+    }
+   },
+   {
+    "narration": "Another one in Ohio, called Prometheus, is already running.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.2,
+       "pose": "stand",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "server",
+       "x": 0.65,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Prometheus, Ohio",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "These buildings are packed with hundreds of thousands of powerful AI chips. They drink enormous amounts of electricity.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "cpu",
+      "zap",
+      "server"
+     ],
+     "labels": [
+      "AI chips",
+      "Power",
+      "Data centers"
+     ]
+    }
+   },
+   {
+    "narration": "Hyperion is being built to eventually need five gigawatts of power. That's the output of several big power plants.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.25,
+       "pose": "explain",
+       "expr": "shock",
+       "talk": true
+      }
+     ],
+     "panel": {
+      "type": "stat",
+      "value": 5,
+      "label": "of power planned for Hyperion",
+      "prefix": "",
+      "suffix": " GW",
+      "decimals": 0
+     }
+    }
+   },
+   {
+    "narration": "And this month it launched its most powerful AI model yet. It's called Muse Wonder.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "laptop",
+       "expr": "love"
+      }
+     ],
+     "items": [
+      {
+       "icon": "sparkles",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Muse Wonder",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Why go this big? Because Meta thinks AI is the next version of the money machine.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "idea",
+       "expr": "driven",
+       "talk": true
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Smarter AI means better ad targeting. Ads that basically make themselves. And chat assistants inside apps that billions of people already use.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "target",
+      "wand-sparkles",
+      "bot"
+     ],
+     "labels": [
+      "Sharper targeting",
+      "Self-made ads",
+      "AI assistants"
+     ]
+    }
+   },
+   {
+    "narration": "Zuckerberg's take after the latest results? \"Our investments are paying off, the core business is strong.\"",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "Our investments are paying off, the core business is strong",
+     "who": "Mark Zuckerberg, Q3 2026 results"
+    }
+   },
+   {
+    "narration": "But here's the catch.",
+    "broll_query": "technology company",
+    "on_screen": "IS IT WORKING?",
+    "chapter": "Is it working?",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "cross",
+       "expr": "think"
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "Last quarter, after all that building, Meta actually burned through about two point one billion dollars more than it brought in.",
+    "broll_query": "technology company",
+    "on_screen": "-$2.1 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 2.1,
+     "label": "free cash flow last quarter",
+     "prefix": "-$",
+     "suffix": "B",
+     "decimals": 1
+    }
+   },
+   {
+    "narration": "A year ago, it had more than ten billion left over.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "A year ago",
+       "value": 10.6,
+       "display": "+$10.6B",
+       "color": "teal"
+      },
+      {
+       "label": "Last quarter",
+       "value": 2.1,
+       "display": "-$2.1B",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And while the spending went up, the number of people working at Meta went down. About fifteen percent fewer than a year ago.",
+    "broll_query": "technology company",
+    "on_screen": "-15% STAFF",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "arms",
+       "expr": "serious"
+      }
+     ],
+     "panel": {
+      "type": "stat",
+      "value": 15,
+      "label": "fewer employees than a year ago",
+      "prefix": "-",
+      "suffix": "%",
+      "decimals": 0
+     },
+     "panel_side": "right"
+    }
+   },
+   {
+    "narration": "Fewer people. Way more machines. That tells you exactly where Meta thinks the future is.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "users",
+      "label": "Fewer people"
+     },
+     "right": {
+      "icon": "server",
+      "label": "More machines"
+     }
+    }
+   },
+   {
+    "narration": "Profit dropped too. Partly from the legal bills. Partly from the spending.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Q2 profit",
+       "value": 15.9,
+       "display": "$15.9B",
+       "color": "teal"
+      },
+      {
+       "label": "Q3 profit",
+       "value": 9.9,
+       "display": "$9.9B",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Meta is betting it all on one idea. Spend now, win the AI race, and make even more from ads later.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.15,
+       "to": 0.45,
+       "expr": "driven"
+      }
+     ],
+     "items": [
+      {
+       "icon": "rocket",
+       "x": 0.8,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.4,
+       "label": "Win the AI race",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "If that works, a twenty five billion dollar fine will be a footnote.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "easy",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "check",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Footnote",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "If it doesn't, this could be the most expensive bet in tech history.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "shrug",
+       "expr": "worried"
+      }
+     ],
+     "items": [
+      {
+       "icon": "trending-down",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Priciest bet ever",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So where does that leave you?",
+    "broll_query": "technology company",
+    "on_screen": "WHAT ABOUT YOU?",
+    "chapter": "So what about you?",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.5,
+       "pose": "stand",
+       "expr": "think"
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "You still don't pay a cent to use Instagram.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "laptop",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "badge-dollar-sign",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "$0",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "But every scroll, every like, every pause on a video, helps pay for all of this.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.2,
+       "pose": "laptop",
+       "expr": "neutral"
+      }
+     ],
+     "items": [
+      {
+       "icon": "heart",
+       "x": 0.5,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.1,
+       "label": "Like",
+       "color": "red"
+      },
+      {
+       "icon": "smartphone",
+       "x": 0.68,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.25,
+       "label": "Scroll",
+       "color": "blue"
+      },
+      {
+       "icon": "server",
+       "x": 0.86,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.45,
+       "label": "Pays for AI",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Meta isn't really a social media company. It's an attention company. And right now, it's turning your attention into the biggest AI bet on Earth.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "Not social media.",
+      "An attention company."
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "Next time, we'll break down another tech giant's money machine. Subscribe so you don't miss it.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "idea",
+       "expr": "grin",
+       "talk": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "bell",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "label": "Subscribe",
+       "color": "red"
+      }
+     ],
+     "camera": "out"
+    }
+   }
+  ],
+  "sources": [
+   "https://fortune.com/2026/10/21/meta-q3-earnings-mark-zuckerberg-capex-muse/",
+   "https://www.stocktitan.net/news/META/meta-reports-third-quarter-2026-13ysmyjaxliq.html",
+   "https://sourcenm.com/2026/10/21/new-mexico-judge-orders-meta-to-pay-state-25b/",
+   "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder",
+   "https://techcrunch.com/2025/07/14/mark-zuckerberg-says-meta-is-building-a-5gw-ai-data-center",
+   "https://epoch.ai/data/ai-data-centers/directory/meta-hyperion"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Viewer-first story: follows your scrolling through Meta's ad machine, the $25B New Mexico penalty and the $140B AI build-out, with fresh Q3 2026 numbers."
+ }
+}

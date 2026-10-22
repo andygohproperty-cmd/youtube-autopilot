@@ -43,7 +43,9 @@ function joint(parent, x, y) {  // positioned group whose child rotates about th
   r.style.transformBox = 'view-box'; r.style.transformOrigin = '0px 0px';
   return r;
 }
-const STROKE = {stroke: '#f5f7ff', 'stroke-width': 15, 'stroke-linecap': 'round', fill: 'none'};
+let INK = '#f5f7ff', HEAD = '#141b34';   // stick-figure line and head colours; the paper theme swaps them
+const STROKE = {stroke: INK, 'stroke-width': 15, 'stroke-linecap': 'round', fill: 'none'};
+window.setInk = (ink, head) => { INK = ink; HEAD = head; STROKE.stroke = ink; };
 
 function makeActor(svg, a) {
   const root = sv('g', {}, svg);                       // x position (walks)
@@ -76,21 +78,21 @@ function makeActor(svg, a) {
   body.insertBefore(body.lastChild, body.firstChild);
   const head = joint(torso, 0, -(L.head - L.hip) + 50);
   const face = sv('g', {transform: 'translate(0,-50)'}, head);
-  sv('circle', {cx: 0, cy: 0, r: 56, fill: a.skin || '#141b34', stroke: '#f5f7ff', 'stroke-width': 13}, face);
+  sv('circle', {cx: 0, cy: 0, r: 56, fill: a.skin || HEAD, stroke: INK, 'stroke-width': 13}, face);
   if (a.cap) {
     sv('path', {d: 'M -58 -10 A 58 58 0 0 1 58 -10 Z', fill: COLORS[a.cap] || a.cap}, face);
     sv('path', {d: 'M 40 -14 L 92 -10 L 52 -2 Z', fill: COLORS[a.cap] || a.cap}, face);
   }
   if (a.tie) sv('path', {d: 'M -10 -112 L 10 -112 L 6 -60 L 0 -50 L -6 -60 Z', fill: COLORS[a.tie] || a.tie}, torso);
-  if (a.hair) sv('path', {d: 'M -56 -6 Q -50 -70 6 -60 Q 50 -64 56 -10 Q 30 -40 -10 -36 Q -40 -34 -56 -6', fill: '#f5f7ff'}, face);
+  if (a.hair) sv('path', {d: 'M -56 -6 Q -50 -70 6 -60 Q 50 -64 56 -10 Q 30 -40 -10 -36 Q -40 -34 -56 -6', fill: INK}, face);
   const eyes = sv('g', {}, face); eyes.style.transformBox = 'view-box'; eyes.style.transformOrigin = '0px -6px';
-  sv('circle', {cx: -18, cy: -6, r: 7, fill: '#f5f7ff'}, eyes); sv('circle', {cx: 18, cy: -6, r: 7, fill: '#f5f7ff'}, eyes);
+  sv('circle', {cx: -18, cy: -6, r: 7, fill: INK}, eyes); sv('circle', {cx: 18, cy: -6, r: 7, fill: INK}, eyes);
   const brow = sv('g', {}, face);
   const mouths = {};
   for (const [k, d] of Object.entries(MOUTHS)) {
     const fillable = d.endsWith('Z') || k === 'shock';
-    mouths[k] = sv('path', {d, stroke: '#f5f7ff', 'stroke-width': 8, 'stroke-linecap': 'round',
-      fill: fillable ? '#f5f7ff' : 'none', opacity: 0}, face);
+    mouths[k] = sv('path', {d, stroke: INK, 'stroke-width': 8, 'stroke-linecap': 'round',
+      fill: fillable ? INK : 'none', opacity: 0}, face);
   }
   return {root, bob, limbs, eyes, brow, mouths, rightHand, face};
 }
@@ -113,7 +115,7 @@ function setFace(actor, expr, at, end) {
   anim(m, on, at, Math.max(.05, end - at), {easing: 'linear', fill: 'forwards'});
   const b = BROWS[expr];
   if (b) b.forEach(([x1, y1, x2, y2]) => {
-    const line = sv('line', {x1, y1, x2, y2, stroke: '#f5f7ff', 'stroke-width': 7, 'stroke-linecap': 'round', opacity: 0}, actor.brow);
+    const line = sv('line', {x1, y1, x2, y2, stroke: INK, 'stroke-width': 7, 'stroke-linecap': 'round', opacity: 0}, actor.brow);
     anim(line, on, at, Math.max(.05, end - at), {easing: 'linear', fill: 'forwards'});
   });
 }
@@ -154,6 +156,7 @@ function bubble(svg, x, y, b, at, end) {
 
 const PALETTES = {
   dark:  {ceiling: '#10172f', light: '#ffe9a8', panel: '#1b2550', panel2: '#222d5e', line: '#2c3a72', floor: '#0e1430', dim: '#0b1020', dimOp: .35},
+  paper: {ceiling: '#f1f1ec', light: '#ffe08a', panel: '#ffffff', panel2: '#f6f6f2', line: '#2b2f45', floor: '#ececE6', dim: '#ffffff', dimOp: .1},
   light: {ceiling: '#eadfca', light: '#fff3c4', panel: '#ffffff', panel2: '#f3ead9', line: '#d8cbb3', floor: '#e8dcc6', dim: '#f6f1e7', dimOp: .15},
 };
 let PAL = PALETTES.dark;

@@ -41,6 +41,11 @@ def load_plan_file(path: str):
     from .plan import VideoPlan
     data = json.loads(open(path).read())
     channel = load_channel(data["channel"])
+    # Style tests: a plan may override the channel's look and voice ({"visual_theme": "paper", "voice": ...}).
+    for key, value in data.get("channel_overrides", {}).items():
+        if not hasattr(channel, key):
+            raise SystemExit(f"{path}: unknown channel override {key!r}")
+        setattr(channel, key, value)
     plan = VideoPlan.model_validate(data["plan"])
     words = sum(len(s.narration.split()) for s in plan.segments)
     if not 0.6 * channel.target_words <= words <= 1.4 * channel.target_words:

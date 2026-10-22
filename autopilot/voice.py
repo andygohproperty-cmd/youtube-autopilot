@@ -5,7 +5,7 @@ import numpy as np
 import soundfile as sf
 from kokoro_onnx import Kokoro
 
-from .config import MODELS_DIR, Channel
+from .config import MODELS_DIR, ROOT, Channel
 
 PAUSE_S = 0.25  # silence between segments
 
@@ -40,7 +40,7 @@ def _chatterbox(channel: Channel):
     from chatterbox.tts import ChatterboxTTS
 
     model = ChatterboxTTS.from_pretrained(device="cpu")
-    ref = None if channel.voice == "default" else channel.voice
+    ref = None if channel.voice == "default" else str(ROOT / channel.voice)
 
     def speak(text):
         wav = model.generate(text, audio_prompt_path=ref, exaggeration=channel.exaggeration, cfg_weight=0.4)

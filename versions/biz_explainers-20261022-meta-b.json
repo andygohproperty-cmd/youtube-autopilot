@@ -1,0 +1,956 @@
+{
+ "channel": "biz_explainers",
+ "channel_overrides": {
+  "visual_theme": "dark",
+  "voice": "assets/voices/george-kokoro.wav",
+  "exaggeration": 0.4,
+  "music_mood": "documentary",
+  "target_minutes": 5
+ },
+ "research_notes": "Meta style test version B",
+ "plan": {
+  "title": "Meta's $140 Billion Gamble on AI",
+  "description": "Meta is spending up to $145 billion this year on AI data centers, even as a judge orders it to pay $25 billion. This is the story of the bet, the race and the risk.\nMeta's Q3 2026 results, the New Mexico ruling and its AI data centers, explained with real numbers from Meta's earnings release and court reporting.\n\nChapters:\n0:00 Hyperion\n0:41 The race\n1:23 The stumble\n2:15 The bill\n3:03 The engine\n3:39 The gamble\n\nSources:\nhttps://fortune.com/2026/10/21/meta-q3-earnings-mark-zuckerberg-capex-muse/\nhttps://www.stocktitan.net/news/META/meta-reports-third-quarter-2026-13ysmyjaxliq.html\nhttps://sourcenm.com/2026/10/21/new-mexico-judge-orders-meta-to-pay-state-25b/\nhttps://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder\nhttps://techcrunch.com/2025/07/14/mark-zuckerberg-says-meta-is-building-a-5gw-ai-data-center\nhttps://epoch.ai/data/ai-data-centers/directory/meta-hyperion\n\nNarration is AI-generated. Meta is expected to appeal the ruling. Educational content only, not financial advice.",
+  "tags": [
+   "meta",
+   "meta ai",
+   "meta earnings",
+   "meta fine",
+   "meta 25 billion",
+   "meta capex",
+   "zuckerberg",
+   "ai data centers",
+   "how meta makes money",
+   "business explained"
+  ],
+  "thumbnail_text": "THE $140B GAMBLE",
+  "segments": [
+   {
+    "narration": "In a quiet corner of northern Louisiana, on old farmland, something enormous is rising out of the ground.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [],
+     "items": [
+      {
+       "icon": "wheat",
+       "x": 0.3,
+       "y": 0.45,
+       "fall": false,
+       "at": 0.1,
+       "label": "Farmland",
+       "color": "yellow"
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "Rows of windowless buildings. New gas power stations. Hundreds of thousands of computer chips on their way.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "building-2",
+      "flame",
+      "cpu"
+     ],
+     "labels": [
+      "Windowless halls",
+      "Gas power",
+      "AI chips"
+     ]
+    }
+   },
+   {
+    "narration": "Mark Zuckerberg once said that when it's finished, it will cover most of Manhattan.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [],
+     "items": [
+      {
+       "icon": "map",
+       "x": 0.5,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "\u2248 most of Manhattan",
+       "color": "blue"
+      }
+     ],
+     "camera": "out"
+    }
+   },
+   {
+    "narration": "It's called Hyperion. And it is just one piece of the most expensive bet any social media company has ever made.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "HYPERION"
+     ],
+     "highlight": 0
+    }
+   },
+   {
+    "narration": "This year, Meta plans to spend up to a hundred and forty five billion dollars building the machines for artificial intelligence.",
+    "broll_query": "technology company",
+    "on_screen": "$140 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 145,
+     "label": "Meta's 2026 AI building budget, up to",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "In the same week it confirmed that number, a judge ordered it to pay twenty five billion dollars in penalties.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "gavel",
+      "label": "$25B penalty"
+     },
+     "right": {
+      "icon": "trending-up",
+      "label": "Spending raised"
+     }
+    }
+   },
+   {
+    "narration": "Meta didn't blink.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "Meta didn't",
+      "blink."
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "This is the story of a company betting its future on a race it cannot afford to lose.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "A race it",
+      "can't afford",
+      "to lose"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "To understand the bet, you have to understand the fear.",
+    "broll_query": "technology company",
+    "on_screen": "THE RACE",
+    "chapter": "The race",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "brain-circuit"
+     ],
+     "labels": [
+      "The fear"
+     ]
+    }
+   },
+   {
+    "narration": "For twenty years, Meta has owned the place where people spend their time. Facebook. Instagram. WhatsApp.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "users",
+      "camera",
+      "message-circle"
+     ],
+     "labels": [
+      "Facebook",
+      "Instagram",
+      "WhatsApp"
+     ],
+     "caption": "20 years of your time"
+    }
+   },
+   {
+    "narration": "But AI could change where that time goes. If people start asking an AI assistant instead of scrolling a feed, the feed loses.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "smartphone",
+      "label": "Scrolling a feed"
+     },
+     "right": {
+      "icon": "bot",
+      "label": "Asking an AI"
+     }
+    }
+   },
+   {
+    "narration": "And whoever owns the best AI could own the next decade of the internet.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "Own the AI.",
+      "Own the next decade."
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "So every tech giant is spending like never before.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "building",
+      "server",
+      "zap"
+     ],
+     "labels": [
+      "Every giant",
+      "Building",
+      "Spending"
+     ]
+    }
+   },
+   {
+    "narration": "This year, the biggest tech companies are expected to spend around seven hundred and ninety billion dollars on AI buildings and chips.",
+    "broll_query": "technology company",
+    "on_screen": "$790 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 790,
+     "label": "big tech AI spending in 2026 (expected)",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "That's nearly double last year.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "2025",
+       "value": 404,
+       "display": "$404B",
+       "color": "blue"
+      },
+      {
+       "label": "2026",
+       "value": 790,
+       "display": "~$790B",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And analysts expect it to pass one point two trillion dollars next year.",
+    "broll_query": "technology company",
+    "on_screen": "$1.2 TRILLION",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "2025",
+       "value": 404,
+       "display": "$404B",
+       "color": "blue"
+      },
+      {
+       "label": "2026",
+       "value": 790,
+       "display": "~$790B",
+       "color": "yellow"
+      },
+      {
+       "label": "2027",
+       "value": 1200,
+       "display": "$1.2T+",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Meta is right in the middle of it. And for a while, it was losing.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "trophy",
+      "label": "Rivals"
+     },
+     "right": {
+      "icon": "trending-down",
+      "label": "Meta, losing"
+     }
+    }
+   },
+   {
+    "narration": "Meta had been building its own AI models for years. But by 2025, rivals were pulling ahead.",
+    "broll_query": "technology company",
+    "on_screen": "THE STUMBLE",
+    "chapter": "The stumble",
+    "visual": {
+     "type": "list",
+     "items": [
+      "Years of AI models",
+      "Rivals pulling ahead"
+     ],
+     "icon": "triangle-alert"
+    }
+   },
+   {
+    "narration": "So Zuckerberg did something dramatic. He tore up the plan.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "He tore up",
+      "the plan."
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "He brought in Alexandr Wang, the founder of Scale AI, to reorganise Meta's entire AI effort.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "user-round-plus"
+     ],
+     "labels": [
+      "Alexandr Wang, Scale AI founder"
+     ],
+     "caption": "Brought in to reorganise"
+    }
+   },
+   {
+    "narration": "He created a new group with a name that tells you everything about the ambition. Meta Superintelligence Labs.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "Meta",
+      "Superintelligence",
+      "Labs"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "And he started building data centers on a scale the company had never attempted.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "server",
+      "server",
+      "server"
+     ],
+     "labels": [
+      "",
+      "",
+      ""
+     ],
+     "caption": "Data centers like never before"
+    }
+   },
+   {
+    "narration": "The first, called Prometheus, came online in Ohio this year.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [],
+     "items": [
+      {
+       "icon": "server",
+       "x": 0.5,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Prometheus, Ohio: online",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Inside it, Meta trained its answer to the competition.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "cpu",
+      "brain-circuit"
+     ],
+     "labels": [
+      "Training",
+      "Its answer"
+     ]
+    }
+   },
+   {
+    "narration": "On the twelfth of October, Meta released Muse Wonder. Its first true frontier AI model.",
+    "broll_query": "technology company",
+    "on_screen": "MUSE WONDER",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 12,
+     "label": "Muse Wonder released",
+     "prefix": "OCT ",
+     "suffix": "",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "Meta says it matches the best models from its rivals on key tests. And it's built around something Meta calls active memory. An AI that remembers you over time.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "scale",
+      "brain"
+     ],
+     "labels": [
+      "Matches rivals (Meta's tests)",
+      "Active memory"
+     ]
+    }
+   },
+   {
+    "narration": "For the first time in a while, Meta was back in the race. But staying in it costs a fortune.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "flag",
+      "label": "Back in the race"
+     },
+     "right": {
+      "icon": "badge-dollar-sign",
+      "label": "At a cost"
+     }
+    }
+   },
+   {
+    "narration": "Here is what the bet looks like on paper.",
+    "broll_query": "technology company",
+    "on_screen": "THE BILL",
+    "chapter": "The bill",
+    "visual": {
+     "type": "receipt",
+     "title": "THE BILL",
+     "items": [
+      [
+       "Buildings & chips, Q3",
+       "$34.9B"
+      ],
+      [
+       "Teen-safety settlement charge",
+       "$9.9B"
+      ],
+      [
+       "New Mexico penalty",
+       "$25B"
+      ]
+     ],
+     "total": "ON PAPER"
+    }
+   },
+   {
+    "narration": "In just the last three months, Meta spent almost thirty five billion dollars on buildings and equipment.",
+    "broll_query": "technology company",
+    "on_screen": "$34.9 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 34.9,
+     "label": "spent on buildings and equipment, 3 months",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 1
+    }
+   },
+   {
+    "narration": "A year earlier, it was under twenty billion.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Q3 2025",
+       "value": 19.4,
+       "display": "$19.4B",
+       "color": "blue"
+      },
+      {
+       "label": "Q3 2026",
+       "value": 34.9,
+       "display": "$34.9B",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And for the full year, that number could reach a hundred and forty five billion. Nearly double what it spent in 2025.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "2025",
+       "value": 72,
+       "display": "~$72B",
+       "color": "blue"
+      },
+      {
+       "label": "2026",
+       "value": 145,
+       "display": "$145B",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Then came the legal bills.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "Then came",
+      "the legal bills"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "A charge of almost ten billion dollars for a settlement with fifty two state attorneys general over teen safety.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "landmark",
+      "shield-alert"
+     ],
+     "labels": [
+      "52 attorneys general",
+      "Teen safety"
+     ],
+     "caption": "~$10B charge"
+    }
+   },
+   {
+    "narration": "And then the New Mexico ruling. Twenty five billion dollars, after a jury found Meta misled users about their privacy close to forty four million times.",
+    "broll_query": "technology company",
+    "on_screen": "$25 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 25,
+     "label": "New Mexico penalty, 44M violations",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "Meta is expected to appeal.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "gavel"
+     ],
+     "labels": [
+      "Appeal expected"
+     ]
+    }
+   },
+   {
+    "narration": "Put it all together, and something remarkable happened last quarter.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "Something",
+      "remarkable"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "For a company famous for printing money, Meta's free cash flow went negative. It spent about two point one billion dollars more than it brought in.",
+    "broll_query": "technology company",
+    "on_screen": "-$2.1 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "A year ago",
+       "value": 10.6,
+       "display": "+$10.6B",
+       "color": "teal"
+      },
+      {
+       "label": "Last quarter",
+       "value": 2.1,
+       "display": "-$2.1B",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So how can Meta afford any of this?",
+    "broll_query": "technology company",
+    "on_screen": "THE ENGINE",
+    "chapter": "The engine",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "How can Meta",
+      "afford this?"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "Because underneath it all, the old machine is still running at full speed.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "cog"
+     ],
+     "labels": [
+      "The old machine"
+     ],
+     "caption": "Still at full speed"
+    }
+   },
+   {
+    "narration": "Three point six four billion people use Meta's apps every day.",
+    "broll_query": "technology company",
+    "on_screen": "3.64 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 3.64,
+     "label": "people on Meta's apps every day",
+     "prefix": "",
+     "suffix": "B",
+     "decimals": 2
+    }
+   },
+   {
+    "narration": "Last quarter, Meta showed ten percent more ads than a year earlier. And charged fourteen percent more for each one.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Ads shown",
+       "value": 10,
+       "display": "+10%",
+       "color": "teal"
+      },
+      {
+       "label": "Price per ad",
+       "value": 14,
+       "display": "+14%",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Revenue hit sixty four point six billion dollars in three months. Up twenty six percent.",
+    "broll_query": "technology company",
+    "on_screen": "$64.6 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 64.6,
+     "label": "revenue in 3 months, up 26%",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 1
+    }
+   },
+   {
+    "narration": "And it still has more than eighty two billion dollars in cash and investments.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 82,
+     "label": "cash and investments",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "Zuckerberg's message to investors was simple. \"Our investments are paying off, the core business is strong.\"",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "Our investments are paying off, the core business is strong",
+     "who": "Mark Zuckerberg, Q3 2026 results"
+    }
+   },
+   {
+    "narration": "Every dollar of the AI gamble is being paid for by your scrolling.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "smartphone",
+      "label": "Your scrolling"
+     },
+     "right": {
+      "icon": "server",
+      "label": "The AI gamble"
+     }
+    }
+   },
+   {
+    "narration": "So, will it pay off?",
+    "broll_query": "technology company",
+    "on_screen": "THE GAMBLE",
+    "chapter": "The gamble",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "Will it",
+      "pay off?"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "The bull case is simple. Better AI makes Meta's ads even more precise. Its assistants live inside apps that billions of people already use. And no rival has that reach.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "list",
+     "items": [
+      "Sharper ads",
+      "AI inside apps billions use",
+      "Reach no rival has"
+     ],
+     "icon": "trending-up"
+    }
+   },
+   {
+    "narration": "The bear case is just as simple. The whole industry is spending as if AI will change everything. If it doesn't change things fast enough, a lot of very expensive buildings will be sitting in fields.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "list",
+     "items": [
+      "Industry-wide bet",
+      "If AI is slow to pay",
+      "Empty buildings in fields"
+     ],
+     "icon": "trending-down"
+    }
+   },
+   {
+    "narration": "Meta is also cutting people while it builds. It now has about fifteen percent fewer employees than a year ago.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 15,
+     "label": "fewer employees than a year ago",
+     "prefix": "-",
+     "suffix": "%",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "Fewer people. More machines. That's the bet in a single line.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "users",
+      "label": "Fewer people"
+     },
+     "right": {
+      "icon": "server",
+      "label": "More machines"
+     }
+    }
+   },
+   {
+    "narration": "Out in Louisiana, the construction crews keep working.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [],
+     "items": [
+      {
+       "icon": "hard-hat",
+       "x": 0.35,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.1,
+       "color": "yellow"
+      },
+      {
+       "icon": "construction",
+       "x": 0.65,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "color": "red"
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "In a few years, we'll know whether Hyperion was the foundation of Meta's next empire. Or the most expensive monument in tech history.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "crown",
+      "label": "Next empire"
+     },
+     "right": {
+      "icon": "landmark",
+      "label": "Priciest monument"
+     }
+    }
+   },
+   {
+    "narration": "If you want more stories about the money behind the world's biggest companies, subscribe. There's a lot more coming.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "bell"
+     ],
+     "labels": [
+      "Subscribe"
+     ],
+     "caption": "The money behind the giants"
+    }
+   }
+  ],
+  "sources": [
+   "https://fortune.com/2026/10/21/meta-q3-earnings-mark-zuckerberg-capex-muse/",
+   "https://www.stocktitan.net/news/META/meta-reports-third-quarter-2026-13ysmyjaxliq.html",
+   "https://sourcenm.com/2026/10/21/new-mexico-judge-orders-meta-to-pay-state-25b/",
+   "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder",
+   "https://techcrunch.com/2025/07/14/mark-zuckerberg-says-meta-is-building-a-5gw-ai-data-center",
+   "https://epoch.ai/data/ai-data-centers/directory/meta-hyperion"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Documentary angle on the AI arms race: Hyperion, Prometheus, Muse Wonder and the first negative free cash flow, told as a high-stakes gamble."
+ }
+}

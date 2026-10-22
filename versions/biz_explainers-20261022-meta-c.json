@@ -1,0 +1,1080 @@
+{
+ "channel": "biz_explainers",
+ "channel_overrides": {
+  "visual_theme": "paper",
+  "voice": "assets/voices/heart-kokoro.wav",
+  "exaggeration": 0.8,
+  "music_mood": "upbeat",
+  "target_minutes": 4
+ },
+ "research_notes": "Meta style test version C",
+ "plan": {
+  "title": "Meta Broke the Law 44 Million Times. The Fine? $25B",
+  "description": "A New Mexico jury found close to 44 million violations. The maths said $220 billion. The judge said $25 billion. Here's what Meta did and why it barely hurts.\nMeta's Q3 2026 results, the New Mexico ruling and its AI data centers, explained with real numbers from Meta's earnings release and court reporting.\n\nChapters:\n0:00 44 million tickets\n0:21 What Meta did\n1:05 The maths\n1:46 Does it hurt?\n2:50 Where the money goes\n3:18 So what now?\n\nSources:\nhttps://fortune.com/2026/10/21/meta-q3-earnings-mark-zuckerberg-capex-muse/\nhttps://www.stocktitan.net/news/META/meta-reports-third-quarter-2026-13ysmyjaxliq.html\nhttps://sourcenm.com/2026/10/21/new-mexico-judge-orders-meta-to-pay-state-25b/\nhttps://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder\nhttps://techcrunch.com/2025/07/14/mark-zuckerberg-says-meta-is-building-a-5gw-ai-data-center\nhttps://epoch.ai/data/ai-data-centers/directory/meta-hyperion\n\nNarration is AI-generated. Meta is expected to appeal the ruling. Educational content only, not financial advice.",
+  "tags": [
+   "meta",
+   "meta ai",
+   "meta earnings",
+   "meta fine",
+   "meta 25 billion",
+   "meta capex",
+   "zuckerberg",
+   "ai data centers",
+   "how meta makes money",
+   "business explained"
+  ],
+  "thumbnail_text": "44 MILLION VIOLATIONS",
+  "segments": [
+   {
+    "narration": "Imagine getting a parking ticket. Now imagine getting forty four million of them.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.3,
+       "pose": "shock",
+       "expr": "shock",
+       "prop": "ticket"
+      }
+     ],
+     "items": [
+      {
+       "icon": "ticket",
+       "x": 0.6,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "red"
+      },
+      {
+       "icon": "ticket",
+       "x": 0.72,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.4,
+       "color": "red"
+      },
+      {
+       "icon": "ticket",
+       "x": 0.84,
+       "y": 0.38,
+       "fall": true,
+       "at": 0.5,
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That's roughly what just happened to Meta. The company behind Facebook and Instagram.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.25,
+       "pose": "facepalm",
+       "expr": "worried",
+       "hair": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "users",
+       "x": 0.65,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.1,
+       "label": "Facebook",
+       "color": "blue"
+      },
+      {
+       "icon": "camera",
+       "x": 0.82,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.25,
+       "label": "Instagram",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "A judge in New Mexico ordered it to pay twenty five billion dollars.",
+    "broll_query": "technology company",
+    "on_screen": "$25,000,000,000",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 25,
+     "label": "ordered by a New Mexico judge",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "And somehow, that's the discount version.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.3,
+       "pose": "shrug",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "tag",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Discount?!",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So what did Meta do? Why only twenty five billion? And will it even notice?",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "list",
+     "items": [
+      "What did Meta do?",
+      "Why only $25B?",
+      "Will it notice?"
+     ],
+     "icon": "circle-help"
+    }
+   },
+   {
+    "narration": "Let's break it down. Very simply.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.5,
+       "pose": "wave",
+       "expr": "happy"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Okay. Quick flashback to 2018.",
+    "broll_query": "technology company",
+    "on_screen": "WHAT META DID",
+    "chapter": "What Meta did",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "2018"
+     ],
+     "highlight": 0
+    }
+   },
+   {
+    "narration": "The world found out that a company called Cambridge Analytica had scooped up data from millions of Facebook users.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.25,
+       "pose": "carry",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "database",
+       "x": 0.65,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "label": "Millions of users' data",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Most of those people had no idea. They'd just taken a quiz. Or had a friend who did.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.25,
+       "pose": "stand",
+       "expr": "happy",
+       "bubble": {
+        "text": "Fun quiz!",
+        "at": 0.2
+       }
+      },
+      {
+       "scale": 1.25,
+       "x": 0.65,
+       "pose": "wave",
+       "expr": "happy"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "It became one of the biggest privacy scandals ever.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "siren"
+     ],
+     "labels": [
+      "Huge privacy scandal"
+     ]
+    }
+   },
+   {
+    "narration": "Years later, New Mexico took Meta to court. Its argument? Facebook told people they were in control of their data. And that just wasn't true.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.2,
+       "pose": "point",
+       "expr": "neutral",
+       "talk": true,
+       "bubble": {
+        "text": "You're in control!",
+        "at": 0.2
+       }
+      }
+     ],
+     "items": [
+      {
+       "icon": "x",
+       "x": 0.75,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.55,
+       "label": "Not true",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The state also said Facebook misled people about how it handled hate speech and misinformation, and how fairly it enforced its own rules.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "list",
+     "items": [
+      "Hate speech",
+      "Misinformation",
+      "Enforcing its own rules"
+     ],
+     "icon": "x"
+    }
+   },
+   {
+    "narration": "In September, a jury agreed. It found close to forty four million violations of the state's consumer protection law.",
+    "broll_query": "technology company",
+    "on_screen": "44 MILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 44,
+     "label": "violations, jury found",
+     "prefix": "",
+     "suffix": "M",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "Forty four million! That's more than twenty times the number of people who live in New Mexico.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Violations",
+       "value": 44,
+       "display": "44M",
+       "color": "red"
+      },
+      {
+       "label": "People in NM",
+       "value": 2.1,
+       "display": "2.1M",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Now here's where it gets fun.",
+    "broll_query": "technology company",
+    "on_screen": "THE MATHS",
+    "chapter": "The maths",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.5,
+       "pose": "cheer",
+       "expr": "grin"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That law allows a penalty of up to five thousand dollars per violation.",
+    "broll_query": "technology company",
+    "on_screen": "$5,000 EACH",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 5000,
+     "label": "max penalty per violation",
+     "prefix": "$",
+     "suffix": "",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "Forty four million times five thousand dollars is about two hundred and twenty billion dollars.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "receipt",
+     "title": "CALCULATOR",
+     "items": [
+      [
+       "44,000,000",
+       "x"
+      ],
+      [
+       "$5,000",
+       "="
+      ]
+     ],
+     "total": "$220B"
+    }
+   },
+   {
+    "narration": "That would wipe out years of Meta's profit. Basically, game over.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.3,
+       "pose": "shock",
+       "expr": "shock",
+       "react": "jump"
+      }
+     ],
+     "items": [
+      {
+       "icon": "skull",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Game over",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The state actually asked for up to forty billion.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 40,
+     "label": "what the state asked for, up to",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "And the judge said, legally, New Mexico deserved something closer to that two hundred and twenty billion.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Deserved",
+       "value": 220,
+       "display": "~$220B",
+       "color": "red"
+      },
+      {
+       "label": "Asked",
+       "value": 40,
+       "display": "$40B",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "But then he ordered twenty five billion. Still the toughest level of penalty. Just not the whole pizza.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Deserved",
+       "value": 220,
+       "display": "~$220B",
+       "color": "red"
+      },
+      {
+       "label": "Asked",
+       "value": 40,
+       "display": "$40B",
+       "color": "blue"
+      },
+      {
+       "label": "Ordered",
+       "value": 25,
+       "display": "$25B",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Oh, and if Meta doesn't pay, the unpaid amount grows by fifteen percent a year. Like the world's most expensive credit card.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.3,
+       "pose": "point",
+       "expr": "smug"
+      }
+     ],
+     "items": [
+      {
+       "icon": "credit-card",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "15% a year",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "New Mexico's attorney general called it a historic day. Meta is expected to appeal.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.25,
+       "pose": "cheer",
+       "expr": "grin",
+       "bubble": {
+        "text": "Historic day!",
+        "at": 0.1
+       }
+      },
+      {
+       "scale": 1.25,
+       "x": 0.7,
+       "pose": "sad",
+       "expr": "sad"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Okay, so is twenty five billion dollars a lot for Meta?",
+    "broll_query": "technology company",
+    "on_screen": "DOES IT HURT?",
+    "chapter": "Does it hurt?",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.5,
+       "pose": "think",
+       "expr": "worried",
+       "bubble": {
+        "text": "Is $25B a lot?",
+        "think": true,
+        "at": 0.2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "narration": "For you and me, it's an unthinkable amount of money. For Meta, let's check.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "wallet",
+      "label": "You and me"
+     },
+     "right": {
+      "icon": "landmark",
+      "label": "Meta"
+     }
+    }
+   },
+   {
+    "narration": "First, quick reminder of how Meta makes money. Ads. That's basically it.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.25,
+       "pose": "point",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "megaphone",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Ads",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Three point six four billion people open its apps every day. That's almost half of humanity.",
+    "broll_query": "technology company",
+    "on_screen": "3.64 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 3.64,
+     "label": "people open its apps daily",
+     "prefix": "",
+     "suffix": "B",
+     "decimals": 2
+    }
+   },
+   {
+    "narration": "And advertisers pay to get in front of them. Last quarter, Meta charged fourteen percent more per ad than a year ago. And showed ten percent more ads.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Price per ad",
+       "value": 14,
+       "display": "+14%",
+       "color": "yellow"
+      },
+      {
+       "label": "Ads shown",
+       "value": 10,
+       "display": "+10%",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So the money machine is not slowing down. At all.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.3,
+       "pose": "push",
+       "expr": "grin"
+      }
+     ],
+     "items": [
+      {
+       "icon": "cog",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Not slowing",
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In the last three months alone, Meta made sixty four point six billion dollars in sales.",
+    "broll_query": "technology company",
+    "on_screen": "$64.6B IN 3 MONTHS",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 64.6,
+     "label": "sales in 3 months",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 1
+    }
+   },
+   {
+    "narration": "That's about seven hundred million dollars a day. So the fine is roughly five weeks of sales.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "receipt",
+     "title": "META'S WEEK",
+     "items": [
+      [
+       "Per day",
+       "~$700M"
+      ],
+      [
+       "Fine",
+       "$25B"
+      ]
+     ],
+     "total": "\u2248 5 WEEKS"
+    }
+   },
+   {
+    "narration": "Think of it like someone who earns sixty thousand a year getting a fine of six thousand. It stings. They grumble. They're fine.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Salary",
+       "value": 60000,
+       "display": "$60,000",
+       "color": "teal"
+      },
+      {
+       "label": "Fine",
+       "value": 6000,
+       "display": "$6,000",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And this isn't Meta's only bill. It already took a charge of almost ten billion dollars for a separate settlement with fifty two states about teen safety.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "landmark",
+      "shield-alert"
+     ],
+     "labels": [
+      "52 states",
+      "Teen safety"
+     ],
+     "caption": "~$10B charge"
+    }
+   },
+   {
+    "narration": "Even after all of that, Meta still made nearly ten billion dollars in profit last quarter.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 9.9,
+     "label": "profit last quarter, after all that",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 1
+    }
+   },
+   {
+    "narration": "So yes. It hurts. But it doesn't hurt much.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.5,
+       "pose": "shrug",
+       "expr": "smug"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And here's the part that really shows how big Meta is.",
+    "broll_query": "technology company",
+    "on_screen": "WHERE THE MONEY GOES",
+    "chapter": "Where the money goes",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.3,
+       "pose": "point",
+       "expr": "open",
+       "talk": true
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The same week as the fine, Meta told investors it's spending up to a hundred and forty five billion dollars this year. On AI.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 145,
+     "label": "AI spending this year, up to",
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 0
+    }
+   },
+   {
+    "narration": "That's almost six times the fine. In one year.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Fine",
+       "value": 25,
+       "display": "$25B",
+       "color": "red"
+      },
+      {
+       "label": "AI, one year",
+       "value": 145,
+       "display": "$145B",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "It's building data centers so big, one of them is planned to cover most of Manhattan.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.2,
+       "pose": "shock",
+       "expr": "shock"
+      }
+     ],
+     "items": [
+      {
+       "icon": "server",
+       "x": 0.6,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "\u2248 Manhattan",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Twenty five billion for breaking the rules. A hundred and forty billion for building AI that thinks. You can see what Meta cares about.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "gavel",
+      "label": "$25B: rules"
+     },
+     "right": {
+      "icon": "brain-circuit",
+      "label": "$140B: AI"
+     }
+    }
+   },
+   {
+    "narration": "So what happens next?",
+    "broll_query": "technology company",
+    "on_screen": "SO WHAT NOW?",
+    "chapter": "So what now?",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.5,
+       "pose": "think",
+       "expr": "worried"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Meta is expected to appeal, which could drag on for years. The final number could go down.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.25,
+       "pose": "carry",
+       "expr": "worried"
+      }
+     ],
+     "items": [
+      {
+       "icon": "hourglass",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Appeal: years",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "But other states will be paying attention. And New Mexico says it wants to make its consumer law even tougher.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.2,
+       "pose": "point",
+       "expr": "neutral"
+      }
+     ],
+     "items": [
+      {
+       "icon": "eye",
+       "x": 0.55,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Other states",
+       "color": "teal"
+      },
+      {
+       "icon": "gavel",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.4,
+       "label": "Tougher law",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So here's the takeaway. When an app is free, you're paying with your data. Read the settings. Check what you share.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "list",
+     "items": [
+      "Free app = your data",
+      "Read the settings",
+      "Check what you share"
+     ],
+     "icon": "lock"
+    }
+   },
+   {
+    "narration": "Because forty four million violations only happened because a lot of people trusted the fine print.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.3,
+       "pose": "facepalm",
+       "expr": "sad"
+      }
+     ],
+     "items": [
+      {
+       "icon": "file-warning",
+       "x": 0.7,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "label": "Fine print",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "If this made you a little smarter, subscribe. We explain the money behind big companies. Simply.",
+    "broll_query": "technology company",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "scale": 1.25,
+       "x": 0.5,
+       "pose": "wave",
+       "expr": "grin"
+      }
+     ],
+     "items": [
+      {
+       "icon": "bell",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.3,
+       "label": "Subscribe",
+       "color": "red"
+      }
+     ]
+    }
+   }
+  ],
+  "sources": [
+   "https://fortune.com/2026/10/21/meta-q3-earnings-mark-zuckerberg-capex-muse/",
+   "https://www.stocktitan.net/news/META/meta-reports-third-quarter-2026-13ysmyjaxliq.html",
+   "https://sourcenm.com/2026/10/21/new-mexico-judge-orders-meta-to-pay-state-25b/",
+   "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder",
+   "https://techcrunch.com/2025/07/14/mark-zuckerberg-says-meta-is-building-a-5gw-ai-data-center",
+   "https://epoch.ai/data/ai-data-centers/directory/meta-hyperion"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Simple, funny breakdown of the New Mexico ruling: the maths behind 44M violations, why $25B is about five weeks of Meta's sales, and what to do about your data."
+ }
+}
