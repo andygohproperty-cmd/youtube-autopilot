@@ -34,6 +34,7 @@ class Channel:
     language: str = "en"
     music_mood: str = ""                # folder under assets/music picked first
     visual_style: str = "stock"         # "stock" footage or "animated" motion graphics
+    visual_theme: str = "dark"          # animated look: "dark" or "light" (cartoon)
 
     @property
     def is_short(self) -> bool:

@@ -134,9 +134,10 @@ function blink(actor, at, end) {
 function bubble(svg, x, y, b, at, end) {
   const g = sv('g', {}, svg); const inner = sv('g', {transform: `translate(${x},${y})`}, g);
   const w = b.icon ? 190 : Math.min(760, 60 + (b.text || '').length * 28), hgt = b.icon ? 170 : 120;
-  sv('rect', {x: -w / 2, y: -hgt, width: w, height: hgt, rx: 40, fill: b.think ? '#f5f7ff' : '#ffffff'}, inner);
+  sv('rect', {x: -w / 2, y: -hgt, width: w, height: hgt, rx: 40, fill: b.think ? '#f5f7ff' : '#ffffff', stroke: '#1b1f3b', 'stroke-width': 5}, inner);
   if (b.think) { sv('circle', {cx: -30, cy: 26, r: 16, fill: '#f5f7ff'}, inner); sv('circle', {cx: -54, cy: 56, r: 9, fill: '#f5f7ff'}, inner); }
-  else sv('path', {d: 'M -40 -2 L -70 50 L 0 -2 Z', fill: '#ffffff'}, inner);
+  else { sv('path', {d: 'M -40 -2 L -70 50 L 0 -2', fill: '#ffffff', stroke: '#1b1f3b', 'stroke-width': 5, 'stroke-linejoin': 'round'}, inner);
+         sv('rect', {x: -46, y: -8, width: 52, height: 9, fill: '#ffffff'}, inner); }
   if (b.icon) {
     const holder = sv('foreignObject', {x: -60, y: -145, width: 120, height: 120}, inner);
     const ic = icon(b.icon, b.color || '#0b1020'); ic.setAttribute('width', 120); ic.setAttribute('height', 120);
@@ -151,17 +152,23 @@ function bubble(svg, x, y, b, at, end) {
   g.getAnimations()[1].effect.updateTiming({fill: 'forwards'});
 }
 
+const PALETTES = {
+  dark:  {ceiling: '#10172f', light: '#ffe9a8', panel: '#1b2550', panel2: '#222d5e', line: '#2c3a72', floor: '#0e1430', dim: '#0b1020', dimOp: .35},
+  light: {ceiling: '#eadfca', light: '#fff3c4', panel: '#ffffff', panel2: '#f3ead9', line: '#d8cbb3', floor: '#e8dcc6', dim: '#f6f1e7', dimOp: .15},
+};
+let PAL = PALETTES.dark;
+
 // --- illustrated sets -------------------------------------------------------------
 const SETS = {
   store(svg) {
-    sv('rect', {x: 0, y: 0, width: 1920, height: 120, fill: '#10172f'}, svg);
-    for (let i = 0; i < 6; i++) { sv('rect', {x: 120 + i * 300, y: 110, width: 160, height: 14, rx: 7, fill: '#ffe9a8', opacity: .8}, svg); }
+    sv('rect', {x: 0, y: 0, width: 1920, height: 120, fill: PAL.ceiling}, svg);
+    for (let i = 0; i < 6; i++) { sv('rect', {x: 120 + i * 300, y: 110, width: 160, height: 14, rx: 7, fill: PAL.light, opacity: .8}, svg); }
     const boxColors = ['#ff5e5b', '#ffc93c', '#2ec4b6', '#4d7cfe', '#f78c6b', '#a78bfa'];
     for (let s = 0; s < 4; s++) {
       const x0 = 30 + s * 480;
-      sv('rect', {x: x0, y: 230, width: 400, height: 570, fill: '#1b2550', stroke: '#2c3a72', 'stroke-width': 6}, svg);
+      sv('rect', {x: x0, y: 230, width: 400, height: 570, fill: PAL.panel, stroke: PAL.line, 'stroke-width': 6}, svg);
       for (let r = 0; r < 4; r++) {
-        sv('rect', {x: x0, y: 360 + r * 140, width: 400, height: 10, fill: '#2c3a72'}, svg);
+        sv('rect', {x: x0, y: 360 + r * 140, width: 400, height: 10, fill: PAL.line}, svg);
         for (let c = 0; c < 5; c++) {
           const hh = 60 + ((s * 7 + r * 3 + c * 5) % 4) * 14;
           sv('rect', {x: x0 + 14 + c * 77, y: 360 + r * 140 - hh, width: 66, height: hh, rx: 6,
@@ -169,30 +176,30 @@ const SETS = {
         }
       }
     }
-    sv('rect', {x: 0, y: GROUND, width: 1920, height: 80, fill: '#0e1430'}, svg);
+    sv('rect', {x: 0, y: GROUND, width: 1920, height: 80, fill: PAL.floor}, svg);
   },
   city(svg) {
     sv('circle', {cx: 1500, cy: 220, r: 110, fill: '#ffc93c', opacity: .9}, svg);
     const heights = [380, 520, 300, 610, 440, 350, 560, 410, 300, 480];
     heights.forEach((hh, i) => {
       const x = i * 196 - 20;
-      sv('rect', {x, y: GROUND - hh, width: 170, height: hh, fill: i % 2 ? '#1b2550' : '#222d5e'}, svg);
+      sv('rect', {x, y: GROUND - hh, width: 170, height: hh, fill: i % 2 ? PAL.panel : PAL.panel2}, svg);
       for (let wy = GROUND - hh + 30; wy < GROUND - 40; wy += 60)
         for (let wx = x + 22; wx < x + 150; wx += 50)
-          sv('rect', {x: wx, y: wy, width: 26, height: 30, fill: (wx * wy) % 7 < 3 ? '#ffe9a8' : '#2c3a72', opacity: .8}, svg);
+          sv('rect', {x: wx, y: wy, width: 26, height: 30, fill: (wx * wy) % 7 < 3 ? PAL.light : PAL.line, opacity: .8}, svg);
     });
-    sv('rect', {x: 0, y: GROUND, width: 1920, height: 80, fill: '#0e1430'}, svg);
+    sv('rect', {x: 0, y: GROUND, width: 1920, height: 80, fill: PAL.floor}, svg);
   },
   office(svg) {
-    sv('rect', {x: 1180, y: 120, width: 560, height: 380, rx: 16, fill: '#1b2550', stroke: '#2c3a72', 'stroke-width': 8}, svg);
+    sv('rect', {x: 1180, y: 120, width: 560, height: 380, rx: 16, fill: PAL.panel, stroke: PAL.line, 'stroke-width': 8}, svg);
     [180, 240, 150, 300, 260].forEach((hh, i) => sv('rect', {x: 1240 + i * 95, y: 470 - hh, width: 60, height: hh, rx: 6,
       fill: ['#2ec4b6', '#4d7cfe', '#ff5e5b', '#ffc93c', '#2ec4b6'][i]}, svg));
-    sv('rect', {x: 1100, y: 600, width: 700, height: 30, rx: 10, fill: '#2c3a72'}, svg);
-    sv('rect', {x: 1150, y: 630, width: 24, height: 170, fill: '#2c3a72'}, svg);
-    sv('rect', {x: 1730, y: 630, width: 24, height: 170, fill: '#2c3a72'}, svg);
-    sv('rect', {x: 0, y: GROUND, width: 1920, height: 80, fill: '#0e1430'}, svg);
+    sv('rect', {x: 1100, y: 600, width: 700, height: 30, rx: 10, fill: PAL.line}, svg);
+    sv('rect', {x: 1150, y: 630, width: 24, height: 170, fill: PAL.line}, svg);
+    sv('rect', {x: 1730, y: 630, width: 24, height: 170, fill: PAL.line}, svg);
+    sv('rect', {x: 0, y: GROUND, width: 1920, height: 80, fill: PAL.floor}, svg);
   },
-  plain(svg) { sv('rect', {x: 0, y: GROUND, width: 1920, height: 6, fill: '#2c3a72'}, svg); },
+  plain(svg) { sv('rect', {x: 0, y: GROUND, width: 1920, height: 6, fill: PAL.line}, svg); },
 };
 
 BUILD.scene = function (sec, s, t0, t1) {
@@ -204,11 +211,26 @@ BUILD.scene = function (sec, s, t0, t1) {
   const set = sv('g', {}, svg); (SETS[s.bg] || SETS.plain)(set);
   if (s.bg && s.bg !== 'plain') {    // parallax drift on the set
     anim(set, [{transform: 'translateX(0px)'}, {transform: `translateX(${s.pan === 'right' ? -60 : 60}px)`}], t0, t1 - t0, {easing: 'linear'});
-    sv('rect', {x: -200, y: -100, width: 2400, height: 1100, fill: '#0b1020', opacity: .35}, set);
+    sv('rect', {x: -200, y: -100, width: 2400, height: 1100, fill: PAL.dim, opacity: PAL.dimOp}, set);
   }
   const front = sv('g', {}, svg);
   const mid = (t0 + t1) / 2;
   (s.actors || []).forEach((a, i) => {
+    if (a.cast || a.body) {          // cartoon person (peeps.js)
+      const info = window.buildPeepActor(front, a, i, t0, t1);
+      if (a.cart) {
+        const cart = sv('foreignObject', {x: a.flip ? -380 : 120, y: GROUND - info.neckY - 250, width: 260, height: 260}, info.pos);
+        const ic = icon('shopping-cart', a.cart_color || 'teal'); ic.setAttribute('width', 260); ic.setAttribute('height', 260);
+        ic.style.strokeWidth = 1.6; cart.appendChild(ic);
+      }
+      if (a.bubble) {
+        const bw = a.bubble.icon ? 190 : Math.min(760, 60 + (a.bubble.text || '').length * 28);
+        const bx = info.x + (a.flip ? -1 : 1) * (bw / 2 + 90);
+        bubble(front, Math.min(1900 - bw / 2, Math.max(bw / 2 + 20, bx)), Math.max(150, info.headTopY - 10), a.bubble,
+               t0 + (a.bubble.at ?? .4) * (t1 - t0), t1);
+      }
+      return;
+    }
     const actor = makeActor(front, a);
     const x0 = (a.x ?? .5) * 1920, x1 = (a.to ?? a.x ?? .5) * 1920;
     const switchAt = a.then ? t0 + (t1 - t0) * (a.switch ?? .55) : t1;
@@ -274,7 +296,7 @@ BUILD.scene = function (sec, s, t0, t1) {
     const p = h('section'); p.style.cssText = 'position:absolute;opacity:1;left:auto;right:0;width:1100px;height:880px;transform-origin:center;';
     p.style.right = s.panel_side === 'left' ? 'auto' : '0'; if (s.panel_side === 'left') p.style.left = '0';
     stage.appendChild(p);
-    const card = h('div'); card.style.cssText = 'position:absolute;inset:60px 40px;border-radius:48px;background:rgba(13,19,44,.92);box-shadow:0 30px 80px rgba(0,0,0,.5),inset 0 0 0 4px rgba(255,255,255,.06)';
+    const card = h('div'); card.style.cssText = 'position:absolute;inset:60px 40px;border-radius:48px;background:var(--tile);box-shadow:0 30px 80px rgba(0,0,0,.5),inset 0 0 0 4px rgba(255,255,255,.06)';
     if (!['receipt'].includes(s.panel.type)) { p.appendChild(card); popIn(card, t0 + (s.panel_at ?? .3) * (t1 - t0) - .1); }
     const inner = h('div'); inner.style.cssText = 'position:relative;transform:scale(.78);display:flex;align-items:center;justify-content:center;width:100%;height:100%';
     p.appendChild(inner);

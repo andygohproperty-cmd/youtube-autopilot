@@ -200,7 +200,8 @@ def render(channel: Channel, segments: list[Segment], durations: list[float], le
     silent = workdir / "silent.mp4"
     if animated:
         from .animate import render_scenes
-        render_scenes(scenes_for(channel, segments, durations), sum(durations), (w, h), silent)
+        render_scenes(scenes_for(channel, segments, durations), sum(durations), (w, h), silent,
+                      channel.visual_theme)
     else:
         _stock_video(channel, segments, durations, workdir, silent)
 

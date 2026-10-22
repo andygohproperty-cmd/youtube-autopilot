@@ -42,7 +42,7 @@ def icon_exists(name: str) -> bool:
 
 
 def _render_range(args) -> None:
-    scenes, total, size, first, last, dest = args
+    scenes, total, size, first, last, dest, theme = args
     from playwright.sync_api import sync_playwright
 
     w, h = size
@@ -56,9 +56,10 @@ def _render_range(args) -> None:
         browser = p.chromium.launch(executable_path=exe, args=["--allow-file-access-from-files"])
         page = browser.new_page(viewport={"width": 1920, "height": 1080}, device_scale_factor=w / 1920)
         page.add_init_script(f"window.ICONS = {json.dumps(_icons_for(scenes))};")
+        page.add_init_script(f"window.PEEPS = {(ANIM_DIR / 'peeps.json').read_text()};")
         page.goto((ANIM_DIR / "engine.html").resolve().as_uri())
         page.evaluate("document.fonts.ready")
-        page.evaluate("([s, t]) => build(s, t)", [scenes, total])
+        page.evaluate("([s, t, th]) => build(s, t, th)", [scenes, total, theme])
         for i in range(first, last):
             page.evaluate("t => seek(t)", i / FPS)
             ff.stdin.write(page.screenshot(type="jpeg", quality=92))
@@ -68,7 +69,8 @@ def _render_range(args) -> None:
         raise RuntimeError("ffmpeg failed while encoding the animation")
 
 
-def render_scenes(scenes: list[dict], total: float, size: tuple[int, int], dest: Path) -> Path:
+def render_scenes(scenes: list[dict], total: float, size: tuple[int, int], dest: Path,
+                  theme: str = "dark") -> Path:
     """scenes: [{"start": s, "end": s, "spec": {...}}]; writes a silent MP4 of length `total`.
 
     Frames are captured by one headless browser per CPU core, each taking a slice of the timeline."""
@@ -78,7 +80,7 @@ def render_scenes(scenes: list[dict], total: float, size: tuple[int, int], dest:
     workers = max(1, min(os.cpu_count() or 1, 8, frames // 60 or 1))
     bounds = [frames * k // workers for k in range(workers + 1)]
     parts = [dest.with_name(f"{dest.stem}_part{k}.mp4") for k in range(workers)]
-    jobs = [(scenes, total, size, bounds[k], bounds[k + 1], parts[k]) for k in range(workers)]
+    jobs = [(scenes, total, size, bounds[k], bounds[k + 1], parts[k], theme) for k in range(workers)]
     with ProcessPoolExecutor(workers) as pool:
         list(pool.map(_render_range, jobs))
     listing = dest.with_name(f"{dest.stem}_parts.txt")

@@ -21,6 +21,13 @@
     background: radial-gradient(circle, rgba(77,124,254,.55) 0%, rgba(77,124,254,0) 65%); left: 10%; top: -20%; }
   #vignette { position: absolute; inset: 0; pointer-events: none;
     background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.55) 100%); }
+  body.light { --bg1: #f3ecdf; --bg2: #fffaf1; --tile: #ffffff; --line: #e0d4bf; --white: #1b1f3b; --muted: #6b6f8e;
+    --yellow: #f29e1f; --red: #e8504d; --teal: #17a398; --blue: #3d6bf2; }
+  body.light #glow { background: radial-gradient(circle, rgba(255,214,140,.55) 0%, rgba(255,214,140,0) 65%); }
+  body.light #grid { opacity: .35; }
+  body.light #vignette { background: radial-gradient(ellipse at center, transparent 60%, rgba(120,90,40,.18) 100%); }
+  body.light .tile { box-shadow: 0 18px 40px rgba(60,40,10,.15), inset 0 0 0 4px rgba(0,0,0,.04); }
+  body.light .big { text-shadow: none; }
   section { position: absolute; left: 0; top: 0; width: 1920px; height: 880px; display: flex;
     align-items: center; justify-content: center; opacity: 0; }
   .row { display: flex; gap: 70px; align-items: center; justify-content: center; }
@@ -213,7 +220,8 @@ const BUILD = {
   },
 };
 
-window.build = function (scenes, total) {
+window.build = function (scenes, total, theme) {
+  if (theme === 'light') { document.body.classList.add('light'); PAL = PALETTES.light; }
   const root = document.getElementById('scenes');
   for (const sc of scenes) {
     const sec = h('section'); root.appendChild(sec);
@@ -238,5 +246,6 @@ window.seek = function (t) {
 };
 </script>
 <script src="chars.js"></script>
+<script src="peeps.js"></script>
 </body>
 </html>
