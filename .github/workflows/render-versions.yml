@@ -61,6 +61,7 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN_BIZ: ${{ secrets.YT_REFRESH_TOKEN_BIZ }}
           YT_REFRESH_TOKEN_FACTS: ${{ secrets.YT_REFRESH_TOKEN_FACTS }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: python -m autopilot.run produce --plan-file "versions/${{ matrix.file }}"
       - name: Push a small preview copy (branch previews) for checking
         if: success()

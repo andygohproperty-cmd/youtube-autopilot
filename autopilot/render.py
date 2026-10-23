@@ -47,7 +47,15 @@ def _motion(move: str, w: int, h: int, length: float, amount: float = 0.12) -> s
     return f"scale={big_w}:{big_h},crop={w}:{h}:x='{x}':y='(ih-{h})/2'"
 
 
-def _shot(src: Path | None, frames: int, size: tuple[int, int], move: str, dest: Path) -> None:
+GRADES = {   # colour grade per channel `grade`
+    "natural": "eq=contrast=1.05:saturation=1.08",
+    "cinematic": "eq=contrast=1.18:saturation=0.78:brightness=-0.04:gamma=0.95,vignette=PI/4.5",
+    "bright": "eq=contrast=1.06:saturation=1.2:brightness=0.03",
+}
+
+
+def _shot(src: Path | None, frames: int, size: tuple[int, int], move: str, dest: Path,
+          grade: str = "natural") -> None:
     w, h = size
     length = frames / FPS
     enc = ["-frames:v", str(frames), "-c:v", "libx264", "-preset", "fast", "-crf", "15", "-an"]
@@ -58,7 +66,7 @@ def _shot(src: Path | None, frames: int, size: tuple[int, int], move: str, dest:
     span = _probe_seconds(src)
     start = random.uniform(0, max(0.0, span - length - 0.2)) if span > length + 0.5 else 0.0
     vf = (f"fps={FPS},scale={w}:{h}:force_original_aspect_ratio=increase:flags=lanczos,crop={w}:{h},"
-          f"{_motion(move, w, h, length, 0.08)},eq=contrast=1.05:saturation=1.08,unsharp=5:5:0.4,"
+          f"{_motion(move, w, h, length, 0.08)},{GRADES.get(grade, GRADES['natural'])},unsharp=5:5:0.4,"
           f"setsar=1,format=yuv420p")
     _ff("-ss", f"{start:.2f}", "-stream_loop", "-1", "-i", str(src), "-vf", vf, *enc, str(dest))
 
@@ -145,7 +153,7 @@ def _overlays(channel: Channel, segments: list[Segment], durations: list[float],
             cues.append((t + lead + 0.1, "pop"))
 
         # Word-by-word captions, timed by character share of the segment's speech.
-        words = seg.narration.split()
+        words = seg.narration.split() if channel.captions != "none" else []
         weights = [len(x) + 1 for x in words]
         span = max(speech_b - speech_a, 0.1)
         per = span / (sum(weights) or 1)
@@ -263,7 +271,7 @@ def _stock_video(channel: Channel, segments: list[Segment], durations: list[floa
             end = frame_pos + (seg_end - frame_pos) // (n - j)
             dest = clips_dir / f"shot_{i:03d}_{j}.mp4"
             src = sources[j % len(sources)] if sources else None
-            _shot(src, max(1, end - frame_pos), (w, h), moves[k % len(moves)], dest)
+            _shot(src, max(1, end - frame_pos), (w, h), moves[k % len(moves)], dest, channel.grade)
             shots.append(dest)
             frame_pos, k = end, k + 1
         t += dur
