@@ -128,7 +128,7 @@ def _styles(channel: Channel) -> list[str]:
     # Hook (first ~30-60 s of long videos): big kinetic captions and giant glowing key words.
     kin = "Kin,Anton,200,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1,9,4,5,80,80,0"
     giant = "Giant,Anton,290,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,4,0,1,8,0,5,60,60,0"
-    vtitle = "VTitle,Anton,150,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,3,0,1,8,0,5,140,140,0"
+    vtitle = "VTitle,Anton,190,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,3,0,1,8,0,5,140,140,0"
     return ["[V4+ Styles]", fmt] + [f"Style: {s}" for s in (cap, stat, banner, label, title, box, kin, giant, vtitle)]
 
 
@@ -195,13 +195,15 @@ def _overlays(channel: Channel, segments: list[Segment], durations: list[float],
                 b = a + TITLE_CARD
                 cues += [(a - 0.2, "whoosh"), (a + 0.1, "impact")]
                 add(6, a, b, "Box", "{\\fad(150,200)}" + _rect(w, h, "18"))
-                add(7, a, b, "Label", f"{{\\fad(150,200)\\pos({w // 2},{h // 2 - 190})}}{_esc(channel.name.upper())}")
+                words = title.upper().split()       # two balanced lines read bigger than one long one
+                cut = min(range(1, len(words) + 1) if len(words) > 3 else [len(words)],
+                          key=lambda k: abs(len(" ".join(words[:k])) - len(" ".join(words[k:]))))
+                title_lines = _esc(" ".join(words[:cut])) + ("\\N" + _esc(" ".join(words[cut:])) if words[cut:] else "")
+                add(7, a, b, "Label", f"{{\\fad(150,200)\\pos({w // 2},{h // 2 - 250})\\fs70}}{_esc(channel.name.upper())}")
                 add(7, a, b, "VTitle", f"{{\\fad(150,200)\\pos({w // 2},{h // 2 + 20})\\q0{glow}\\fscx80\\fscy80"
-                                       f"\\t(0,400,\\fscx100\\fscy100)\\t(400,{int(TITLE_CARD * 1000)},\\fscx106\\fscy106)}}"
-                                       f"{_esc(title.upper())}")
+                                       f"\\t(0,400,\\fscx100\\fscy100)\\t(400,{int(TITLE_CARD * 1000)},\\fscx106\\fscy106)}}" + title_lines)
                 add(8, a, b, "VTitle", f"{{\\fad(150,200)\\pos({w // 2},{h // 2 + 20})\\q0\\fscx80\\fscy80"
-                                       f"\\t(0,400,\\fscx100\\fscy100)\\t(400,{int(TITLE_CARD * 1000)},\\fscx106\\fscy106)}}"
-                                       f"{_esc(title.upper())}")
+                                       f"\\t(0,400,\\fscx100\\fscy100)\\t(400,{int(TITLE_CARD * 1000)},\\fscx106\\fscy106)}}" + title_lines)
                 a += TITLE_CARD
             b = a + CHAPTER_CARD
             cues += [(a - 0.2, "whoosh"), (a + 0.05, "impact")]
