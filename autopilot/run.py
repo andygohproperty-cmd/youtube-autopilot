@@ -48,8 +48,11 @@ def load_plan_file(path: str):
         setattr(channel, key, value)
     plan = VideoPlan.model_validate(data["plan"])
     words = sum(len(s.narration.split()) for s in plan.segments)
-    if not 0.6 * channel.target_words <= words <= 1.4 * channel.target_words:
-        raise SystemExit(f"{path}: {words} words, expected about {channel.target_words}")
+    low = 0.6 * channel.target_words
+    if not channel.is_short and 0 < channel.min_minutes <= channel.target_minutes:  # short style tests skip it
+        low = max(low, channel.target_words * channel.min_minutes / channel.target_minutes)
+    if not low <= words <= 1.4 * channel.target_words:
+        raise SystemExit(f"{path}: {words} words, expected about {channel.target_words} (at least {int(low)})")
     if not plan.sources:
         raise SystemExit(f"{path}: no sources")
     return channel, plan, data.get("research_notes", "")
@@ -71,6 +74,26 @@ def _real_chapter_times(description: str, segments, durations: list[float]) -> s
     lines = ([f"0:00 {first}"] if first else []) + [
         f"{'0:00' if i == 0 and not first else f'{int(s // 60)}:{int(s % 60):02d}'} {c}" for i, (s, c) in enumerate(starts)]
     return head + "Chapters:\n" + "\n".join(lines) + ("\n\n" + tail[1] if len(tail) > 1 else "")
+
+
+def _packaging_problems(channel, plan) -> list[str]:
+    """Title and thumbnail rules from WRITER.md ("Packaging"), checked before render."""
+    out = []
+    if len(plan.title) > 65:
+        out.append(f"title is {len(plan.title)} characters; keep it under 65 (ideally 40-60)")
+    words = plan.thumbnail_text.replace("*", "").split()
+    if not 1 <= len(words) <= 4:
+        out.append(f"thumbnail_text has {len(words)} words; use 2-4")
+    if plan.thumbnail_text.count("*") not in (0, 2):
+        out.append("thumbnail_text: mark exactly one word as *word*")
+    title_words = set(plan.title.upper().replace("?", "").split())
+    if len(words) > 1 and set(w.upper() for w in words) <= title_words:
+        out.append("thumbnail_text only repeats the title; it should add to it")
+    if not channel.is_short and len(plan.alt_titles) < 2:
+        out.append("give at least 2 alt_titles (runner-ups from the title shortlist)")
+    if not -1 <= plan.thumbnail_segment < len(plan.segments):
+        out.append(f"thumbnail_segment {plan.thumbnail_segment} is out of range")
+    return out
 
 
 def _visual_problems(channel, plan) -> list[str]:
@@ -135,8 +158,15 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
     leads = leads_for(channel, plan.segments)
     durations = narrate(channel, texts, work / "narration.wav", leads)
     video, tracks = render(channel, plan.segments, durations, leads, work / "narration.wav", work,
-                           hook_text=plan.thumbnail_text)
-    thumb = make_thumbnail(work / "silent.mp4", plan.thumbnail_text, work / "thumbnail.jpg")
+                           hook_text=plan.thumbnail_text.replace("*", ""))
+    thumb_at, side = None, "left"
+    if plan.thumbnail_segment >= 0:   # late in the chosen segment, once its scene has played out
+        i = plan.thumbnail_segment
+        thumb_at = sum(durations[:i]) + leads[i] + (durations[i] - leads[i]) * 0.6
+        actors = plan.segments[i].visual.get("actors") or []
+        if actors and sum(a.get("to", a.get("x", 0.5)) for a in actors) / len(actors) < 0.5:
+            side = "right"            # cartoon people on the left: words go on the right
+    thumb = make_thumbnail(work / "silent.mp4", plan.thumbnail_text, work / "thumbnail.jpg", thumb_at, side)
     if tracks:  # licensed tracks from assets/music may need credit (assets/music/credits.json)
         credits_file = ASSETS_DIR / "music" / "credits.json"
         credits = json.loads(credits_file.read_text()) if credits_file.exists() else {}
@@ -162,7 +192,7 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
 {"" if thumb_set or channel.is_short else "⚠️ Custom thumbnail not set: verify the channel at https://www.youtube.com/verify, then upload thumbnail.jpg in Studio."}
 
 **Why it's original:** {plan.originality_note}
-
+{"" if not plan.alt_titles else chr(10) + "**Other titles** (swap in Studio, or run them as a title test): " + " · ".join(plan.alt_titles) + chr(10)}
 **Description**
 {plan.description}
 
@@ -250,9 +280,10 @@ def main() -> None:
         produce(a.channel, a.dry_run, a.force, a.plan_file)
     elif a.cmd == "check-plan":
         channel, plan, _ = load_plan_file(a.plan_file)
-        problems = _visual_problems(channel, plan) if channel.visual_style == "animated" else []
+        problems = _packaging_problems(channel, plan)
+        problems += _visual_problems(channel, plan) if channel.visual_style == "animated" else []
         if problems:
-            raise SystemExit("Fix the visuals:\n" + "\n".join(problems))
+            raise SystemExit("Fix the plan:\n" + "\n".join(problems))
         print(f"OK: {channel.id} · {plan.title}")
     elif a.cmd == "approve":
         approve(a.issue)

@@ -61,7 +61,8 @@ def write_plan(channel: Channel, notes: str) -> VideoPlan:
                   f"(~{channel.target_words} spoken words) in 5-8 segments.")
     else:
         length = (f"A long-form video of about {channel.target_minutes:g} minutes "
-                  f"(~{channel.target_words} spoken words) in 25-45 segments.")
+                  f"(~{channel.target_words} spoken words) in 50-80 segments"
+                  + (f", never under {channel.min_minutes:g} minutes." if channel.min_minutes else "."))
     prompt = f"""Write the complete video plan for the YouTube channel "{channel.name}".
 
 Format: {length}
@@ -78,7 +79,7 @@ Research notes:
 Rules (YouTube policy, non-negotiable):
 - Use only facts from the research notes; never invent numbers or quotes.
 - Original script and structure; not a template others could swap a noun into.
-- Title and thumbnail text must be honest about what the video delivers. Title under 70 characters.
+- Title and thumbnail text must be honest about what the video delivers. Title under 65 characters.
 - Description: 2-3 sentence summary, then "Sources:" with the URLs{", then chapters with 0:00-style timestamps estimated at 150 words per minute" if not channel.is_short else ""}.
   Mention that narration is AI-generated.{" Add #Shorts at the end." if channel.is_short else ""}
 - broll_query: concrete things a stock library has (e.g. "container ship port", "city traffic night").
@@ -89,7 +90,17 @@ Rules (YouTube policy, non-negotiable):
 Style (what keeps viewers watching in this genre): open cold on the most surprising concrete detail,
 one idea per segment in 1-2 short sentences, open loops and a rehook every 60-90 seconds.
 Set on_screen to the key number or 1-4 word punchline on about 1 in 5 segments (only facts said in
-that segment).{" Set chapter on the segment where each of 5-7 curiosity-driven parts starts; the description's chapter list must use these titles." if not channel.is_short else ""}"""
+that segment).
+
+Packaging and hook (studied from the top faceless business channels):
+- Title: brand or subject in the first 3-4 words plus one tension word, 40-60 characters, e.g. "How X Really
+  Makes Money", "The Decline of X...What Happened?", "Why X Can't Survive", "If ... Who's Going To ...?".
+  Put 2 runner-up titles in alt_titles.
+- thumbnail_text: 2-4 words that add to the title (never repeat it); mark the key word or number as *word*.
+  thumbnail_segment: index of the segment with the clearest single subject for the thumbnail background.
+- First 30-60 s: line 1 states the title's promise as a question or paradox; say why it matters to the viewer;
+  one or two hard numbers; tease that the answer is darker or stranger than expected; then jump into the story
+  with a dated scene ("To understand why, we have to go back to 1983.").{" Set chapter on the segment where each of 5-7 curiosity-driven parts starts; the description's chapter list must use these titles." if not channel.is_short else ""}"""
     resp = client.messages.parse(
         model=MODEL,
         max_tokens=16000,

@@ -29,6 +29,7 @@ class Channel:
     production_days: list = field(default_factory=list)
     publish_hour_utc: int = 15
     target_minutes: float = 8
+    min_minutes: float = 0              # long videos: never shorter (8+ min allows mid-roll ads)
     target_seconds: int = 50
     speed: float = 1.0
     language: str = "en"

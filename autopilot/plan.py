@@ -14,8 +14,10 @@ class VideoPlan(BaseModel):
     title: str
     description: str
     tags: list[str]
-    thumbnail_text: str   # 2-5 words, all caps friendly
+    thumbnail_text: str   # 2-4 words, all caps friendly; *word* marks the one word on a yellow box
     segments: list[Segment]
     sources: list[str]    # URLs the facts came from
     uses_realistic_ai_media: bool
     originality_note: str  # what makes this video different from what's already on YouTube
+    alt_titles: list[str] = []      # runner-up titles (shown on the approval issue for a swap or a Studio A/B test)
+    thumbnail_segment: int = -1     # segment whose visual is the thumbnail background (-1: 30% into the video)
