@@ -25,7 +25,7 @@ You are the writer for this repo's YouTube channels. Each run:
 4. Commit only the queue files and `git push` to `main`. GitHub Actions renders and uploads them, then opens approval issues.
 
 ## Script rules (YouTube policy — non-negotiable)
-- Length: words per minute = 200 for channels with `tts: chatterbox`, else 150 (× `speed`). Shorts (`format: short`) ≈ `target_seconds`/60 × wpm words, ending the description with `#Shorts`. Long videos ≈ `target_minutes` × wpm words, with 0:00-style chapters in the description (estimates are fine: the renderer rewrites them from the real narration).
+- Length: words per minute = 215 for `tts: chatterbox` with `voice: default`, else 150 (× `speed`). Shorts (`format: short`) ≈ `target_seconds`/60 × wpm words, ending the description with `#Shorts`. Long videos ≈ `target_minutes` × wpm words, with 0:00-style chapters in the description (estimates are fine: the renderer rewrites them from the real narration).
 - Follow the channel's `style`. Hook in the first sentence. Written for the ear: short sentences, numbers explained in plain words.
 - Only facts from your research; never invent numbers or quotes. Original structure, not a fill-in template.
 - Honest title (< 65 chars) and thumbnail text (2–4 words) that the video delivers on. See "Packaging" below.

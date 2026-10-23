@@ -52,8 +52,13 @@ class Channel:
 
     @property
     def target_words(self) -> int:
-        # Kokoro narrates at roughly 150 words per minute at speed 1.0, Chatterbox at roughly 200.
-        wpm = (200 if self.tts == "chatterbox" else 150) * self.speed
+        # Measured (Oct 2026): Kokoro ~150 words per minute at speed 1.0; Chatterbox's own voice ~215;
+        # Chatterbox cloning a reference .wav ~150.
+        if self.tts == "chatterbox":
+            wpm = 215 if self.voice == "default" else 150
+        else:
+            wpm = 150
+        wpm *= self.speed
         if self.is_short:
             return int(self.target_seconds / 60 * wpm)
         return int(self.target_minutes * wpm)
