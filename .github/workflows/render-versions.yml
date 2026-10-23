@@ -19,7 +19,7 @@ jobs:
       matrix:
         file: ${{ fromJSON(github.event.inputs.files) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 355   # GitHub-hosted jobs stop at 360; ~8-min Chatterbox videos take ~4-5 h
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
