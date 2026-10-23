@@ -157,8 +157,8 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
     texts = [s.narration for s in plan.segments]
     leads = leads_for(channel, plan.segments)
     durations = narrate(channel, texts, work / "narration.wav", leads)
-    video, tracks = render(channel, plan.segments, durations, leads, work / "narration.wav", work,
-                           hook_text=plan.thumbnail_text.replace("*", ""))
+    video, tracks, photo_credits = render(channel, plan.segments, durations, leads, work / "narration.wav", work,
+                                          hook_text=plan.thumbnail_text.replace("*", ""), title=plan.title)
     thumb_at, side = None, "left"
     if plan.thumbnail_segment >= 0:   # late in the chosen segment, once its scene has played out
         i = plan.thumbnail_segment
@@ -171,6 +171,11 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
         credits_file = ASSETS_DIR / "music" / "credits.json"
         credits = json.loads(credits_file.read_text()) if credits_file.exists() else {}
         plan.description += "\n\nMusic: " + "; ".join(credits.get(t, t) for t in tracks)
+    if photo_credits:  # Wikimedia Commons photos: licences require credit
+        lines = [f"- {c}" for c in dict.fromkeys(photo_credits)]
+        while lines and len(plan.description) + sum(len(x) + 1 for x in lines) > 4700:   # YouTube max is 5000
+            lines.pop()
+        plan.description += "\n\nPhotos (Wikimedia Commons):\n" + "\n".join(lines)
     plan.description = _real_chapter_times(plan.description, plan.segments, durations)
     print(f"Rendered {video} ({sum(durations):.0f}s)")
     if dry_run:
