@@ -383,7 +383,10 @@ def _stock_video(channel: Channel, segments: list[Segment], durations: list[floa
     moves = ["in", "right", "out", "left"]
     t, frame_pos, k = 0.0, 0, 0
     last_sources: list[Path] = []
+    hook_until = hook_end(channel, segments, durations)
     for i, (seg, dur) in enumerate(zip(segments, durations)):
+        # "collage-hook": framed collage while the hook plays, then full-frame shots
+        look = "collage" if channel.look == "collage" or (channel.look == "collage-hook" and t < hook_until) else "full"
         n = max(1, round(dur / shot_length(channel, t)))
         photo = None
         if seg.image:   # a real, high-resolution photo of the subject leads the segment
@@ -405,7 +408,7 @@ def _stock_video(channel: Channel, segments: list[Segment], durations: list[floa
             dest = clips_dir / f"shot_{i:03d}_{j}.mp4"
             src = sources[j % len(sources)] if sources else None
             _shot(src, max(1, end - frame_pos), (w, h), moves[k % len(moves)], dest, channel.grade,
-                  channel.look, tint)
+                  look, tint)
             shots.append(dest)
             frame_pos, k = end, k + 1
         t += dur

@@ -39,7 +39,7 @@ class Channel:
     grade: str = "natural"              # stock footage colour: "natural", "cinematic" (dark, muted) or "bright"
     captions: str = "words"             # "words" (word-by-word burned in) or "none" (documentary look)
     hook_captions: bool = True          # long videos: big kinetic captions until the first chapter, then a title card
-    look: str = "full"                  # stock shots "full" frame or "collage" (framed photo on a tinted grid)
+    look: str = "full"                  # stock shots "full" frame, "collage" (framed photo on a tinted grid) or "collage-hook" (collage in the hook only)
     tint: str = "red"                   # collage background tint on segments with a key number
     tts: str = "kokoro"                 # "kokoro" (fast) or "chatterbox" (more natural, ~10x slower on CPU)
     exaggeration: float = 0.6           # Chatterbox expressiveness
