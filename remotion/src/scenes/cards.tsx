@@ -133,10 +133,11 @@ const fmt = (n: number, decimals: number, comma: boolean) => {
 export const Stat = ({scene}: SceneProps) => {
   const {t, at, dur} = useScene(scene);
   const start = at(scene.at, 0.1);
+  const early = Math.min(start, 0.6);   // never hold an empty screen waiting for the keyword
   const pv = parseValue(scene.value || "");
-  const k = prog(t, start, 1.1);
+  const k = prog(t, early, Math.max(start + 0.9 - early, 0.6));   // counts up, landing as the keyword is said
   const shown = pv ? `${pv.pre}${fmt(pv.num * k, pv.decimals, pv.comma)}${pv.post}` : scene.value;
-  const pop = prog(t, start, 0.35);
+  const pop = prog(t, early, 0.35);
   return (
     <AbsoluteFill>
       <Bg scene={scene} />

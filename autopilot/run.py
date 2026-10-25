@@ -174,7 +174,7 @@ def _share_thumbnails(video_id: str, files: list) -> list[str]:
             (tree / "thumbs").mkdir(exist_ok=True)
             (tree / name).write_bytes(f.read_bytes())
             names.append(name)
-        git = ["git", "-C", str(tree)]
+        git = ["git", "-C", str(tree), "-c", "user.name=autopilot", "-c", "user.email=autopilot@users.noreply.github.com"]
         subprocess.run(git + ["add", *names], check=True)
         subprocess.run(git + ["commit", "-qm", f"thumbnails: {video_id}"], check=True)
         for _ in range(5):
