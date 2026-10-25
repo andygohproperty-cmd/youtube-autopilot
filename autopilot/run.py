@@ -221,6 +221,8 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
         seg = plan.alt_thumbnail_segment if plan.alt_thumbnail_segment >= 0 else plan.thumbnail_segment
         thumb_b = _thumbnail(channel, plan, durations, leads, work, seg, plan.alt_thumbnail_text,
                              work / "thumbnail-b.jpg", fallback=0.55)
+    music = tracks
+    tracks = [t for t in tracks if not t.startswith("gen:")]   # generated music needs no credit
     if tracks:  # licensed tracks from assets/music may need credit (assets/music/credits.json)
         credits_file = ASSETS_DIR / "music" / "credits.json"
         credits = json.loads(credits_file.read_text()) if credits_file.exists() else {}
@@ -240,7 +242,7 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
                               plan.uses_realistic_ai_media)
     append_record("history", channel.id, {
         "video_id": video_id, "title": plan.title, "status": "awaiting_approval",
-        "synthetic": plan.uses_realistic_ai_media, "seconds": round(sum(durations)),
+        "synthetic": plan.uses_realistic_ai_media, "seconds": round(sum(durations)), "music": music,
     })
     meta = {"channel": channel.id, "video_id": video_id, "synthetic": plan.uses_realistic_ai_media}
     sources = "\n".join(f"- {u}" for u in plan.sources)

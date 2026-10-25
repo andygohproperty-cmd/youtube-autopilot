@@ -11,7 +11,7 @@ import random
 import subprocess
 from pathlib import Path
 
-from .config import ASSETS_DIR, Channel
+from .config import ASSETS_DIR, Channel, history
 from .footage import download, find_clips
 from .plan import Segment
 from .sound import mix
@@ -309,6 +309,11 @@ def leads_for(channel: Channel, segments: list[Segment]) -> list[float]:
     return leads
 
 
+def _recent_music(channel: Channel, last: int = 40) -> set[str]:
+    """Music used by this channel's recent videos, so every video gets a different bed."""
+    return {m for r in history(channel.id)[-last:] for m in r.get("music", [])}
+
+
 def render(channel: Channel, segments: list[Segment], durations: list[float], leads: list[float],
            narration: Path, workdir: Path, hook_text: str = "",
            title: str = "") -> tuple[Path, list[str], list[str]]:
@@ -322,7 +327,7 @@ def render(channel: Channel, segments: list[Segment], durations: list[float], le
         cues, credits = render_remotion(channel, segments, durations, leads, narration, workdir, title, silent)
         audio = workdir / "mix.wav"
         tracks = mix(narration, cues, _sections(segments, durations), channel.music_mood, audio,
-                     music_level=0.42)   # a low bed: documentaries keep music well under the voice
+                     music_level=0.42, avoid=_recent_music(channel))   # a low bed: documentaries keep music well under the voice
         out = workdir / "final.mp4"
         _ff("-i", str(silent), "-i", str(audio), "-map", "0:v", "-map", "1:a", "-c:v", "copy",
             "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out))
@@ -338,7 +343,8 @@ def render(channel: Channel, segments: list[Segment], durations: list[float], le
     cues = _overlays(channel, segments, durations, leads, hook_text, subs, cards=not animated,
                      title=title if channel.hook_captions else "")
     audio = workdir / "mix.wav"
-    tracks = mix(narration, cues, _sections(segments, durations), channel.music_mood, audio)
+    tracks = mix(narration, cues, _sections(segments, durations), channel.music_mood, audio,
+                 avoid=_recent_music(channel))
 
     out = workdir / "final.mp4"
     fonts = ASSETS_DIR / "fonts"

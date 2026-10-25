@@ -90,19 +90,32 @@ def music_tracks(prefer: str) -> list[Path]:
     return mood or rest
 
 
-def _generated(seconds: float, mood: str, seed: int) -> np.ndarray:
+def _generated(seconds: float, mood: str, seed: int, style: dict) -> np.ndarray:
     from . import musicgen
-    raw = musicgen.section(seconds, mood or "documentary", seed)
+    raw = musicgen.section(seconds, mood or "documentary", seed, style)
     x = np.linspace(0, len(raw) - 1, int(len(raw) * SR / musicgen.SR))
     return np.interp(x, np.arange(len(raw)), raw).astype(np.float32)
 
 
-def music_bed(total: float, sections: list[float], prefer: str) -> tuple[np.ndarray, list[str]]:
-    """One piece of music per section (chapter), crossfaded; returns audio and licensed tracks used.
+def music_bed(total: float, sections: list[float], prefer: str,
+              avoid: set[str] = frozenset()) -> tuple[np.ndarray, list[str]]:
+    """One piece of music per section (chapter), crossfaded; returns audio and the music used: licensed
+    track names, or "gen:<signature>" for original generated music.
 
-    Uses tracks from assets/music when present, otherwise original generated music."""
+    Uses tracks from assets/music when present (ones in `avoid`, used by recent videos, last), otherwise
+    original generated music in a style no recent video used."""
+    from . import musicgen
+
     tracks = music_tracks(prefer)
     random.shuffle(tracks)
+    tracks.sort(key=lambda p: p.stem in avoid)   # fresh tracks first
+    style = None
+    if not tracks:
+        rng = np.random.default_rng()
+        for _ in range(200):
+            style = musicgen.pick_style(prefer or "documentary", rng)
+            if f"gen:{style['signature']}" not in avoid:
+                break
     n = int(total * SR)
     bed = np.zeros(n, dtype=np.float32)
     used: list[str] = []
@@ -117,7 +130,7 @@ def music_bed(total: float, sections: list[float], prefer: str) -> tuple[np.ndar
             audio = _load(track)
             used.append(track.stem)
         else:
-            audio = _generated(b - a + 1.5, prefer, seed + k)
+            audio = _generated(b - a + 1.5, prefer, seed + k, style)
         audio = audio / (_rms(audio) + 1e-9) * 0.1        # equal loudness across sections
         start = random.randint(0, len(audio) - need) if len(audio) > need else 0
         piece = np.resize(audio[start:], need) if len(audio) - start < need else audio[start:start + need]
@@ -125,21 +138,23 @@ def music_bed(total: float, sections: list[float], prefer: str) -> tuple[np.ndar
         i = int(a * SR)
         piece = piece[: n - i]
         bed[i:i + len(piece)] += piece
+    if style:
+        used.append(f"gen:{style['signature']}")
     return bed, sorted(set(used))
 
 
 # --- mix -------------------------------------------------------------------------
 
 def mix(narration: Path, cues: list[tuple[float, str]], sections: list[float], prefer: str,
-        dest: Path, music_level: float = 0.55) -> list[str]:
-    """Write the final stereo mix; returns the music tracks used (for attribution)."""
+        dest: Path, music_level: float = 0.55, avoid: set[str] = frozenset()) -> list[str]:
+    """Write the final stereo mix; returns the music used (see music_bed)."""
     voice = _load(narration)
     total = len(voice) / SR + 1.0
     n = int(total * SR)
     out_voice = np.zeros(n, dtype=np.float32)
     out_voice[: len(voice)] = voice / (np.abs(voice).max() + 1e-9) * 0.85
 
-    bed, used = music_bed(total, sections, prefer)
+    bed, used = music_bed(total, sections, prefer, avoid)
     # Duck the music under speech: 50 ms envelope, smoothed, gain 1.0 -> 0.35 while talking.
     win = int(0.05 * SR)
     env = np.sqrt(np.convolve(out_voice ** 2, np.ones(win) / win, mode="same"))
