@@ -160,4 +160,24 @@ def mix(narration: Path, cues: list[tuple[float, str]], sections: list[float], p
     if peak > 0.98:
         master *= 0.98 / peak
     sf.write(dest, np.stack([master, master], axis=1), SR)
+    loudnorm(dest)
     return used
+
+
+def loudnorm(path: Path, target: float = -14.0) -> None:
+    """Two-pass FFmpeg loudness normalisation to YouTube's -14 LUFS (true peak -1.5 dB), in place."""
+    import json
+
+    f = f"loudnorm=I={target}:TP=-1.5:LRA=11"
+    try:
+        r = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-af", f + ":print_format=json", "-f", "null", "-"],
+                           capture_output=True, text=True, check=True)
+        m = json.loads(r.stderr[r.stderr.rindex("{"):r.stderr.rindex("}") + 1])
+        tmp = path.with_name(path.stem + "-ln" + path.suffix)
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(path), "-af",
+                        f"{f}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
+                        f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true",
+                        "-ar", str(SR), str(tmp)], check=True)
+        tmp.replace(path)
+    except (subprocess.CalledProcessError, OSError, ValueError, KeyError) as e:
+        print(f"loudness normalisation skipped: {e}")
