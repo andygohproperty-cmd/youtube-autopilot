@@ -1,0 +1,595 @@
+{
+ "channel": "biz_explainers",
+ "channel_overrides": {
+  "visual_style": "stock",
+  "grade": "bright",
+  "captions": "none",
+  "target_minutes": 8.5,
+  "music_mood": "upbeat"
+ },
+ "research_notes": "Facts and figures (see sources):\n- https://investor.amctheatres.com/sec-filings/all-sec-filings/content/0001411579-25-000037/amc-20250225xex99d1.htm\n- https://www.sec.gov/Archives/edgar/data/1411579/000141157925000042/amc-20241231x10k.htm\n- https://www.smithsonianmag.com/arts-culture/why-do-we-eat-popcorn-at-the-movies-475063/",
+ "plan": {
+  "title": "How Movie Theaters Really Make Money",
+  "alt_titles": [
+   "Why Movie Theater Popcorn Costs So Much",
+   "The Popcorn Business: Why Cinemas Need Your Snacks"
+  ],
+  "description": "AMC kept about as much money from popcorn and soda in 2024 as from every movie ticket it sold, and still lost $353 million. Here is how cinemas really make money, from the Great Depression to today.\n\nChapters:\n0:00 Intro\n1:01 The snack nobody wanted\n2:37 Where your ticket goes\n3:11 The real product\n5:10 So why is AMC losing money?\n7:09 The fight for every visitor\n\nSources:\nhttps://investor.amctheatres.com/sec-filings/all-sec-filings/content/0001411579-25-000037/amc-20250225xex99d1.htm\nhttps://www.sec.gov/Archives/edgar/data/1411579/000141157925000042/amc-20241231x10k.htm\nhttps://www.smithsonianmag.com/arts-culture/why-do-we-eat-popcorn-at-the-movies-475063/\n\nNarration is AI-generated. Educational content only, not financial advice.",
+  "tags": [
+   "how movie theaters make money",
+   "amc",
+   "movie theater popcorn",
+   "cinema business",
+   "box office",
+   "concessions",
+   "business explained",
+   "how it makes money",
+   "amc earnings",
+   "popcorn history"
+  ],
+  "thumbnail_text": "THE MOVIE IS *BAIT*",
+  "thumbnail_segment": 1,
+  "segments": [
+   {
+    "narration": "How does a movie theater actually make money? Not from the movie, it turns out. At least, not as much as you'd think.",
+    "broll_query": "movie theater seats",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "There's something about the smell of fresh popcorn in a cinema lobby. The butter, the salt, the warm paper bucket in your hands before the lights go down.",
+    "broll_query": "popcorn machine cinema",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "For most of us, it's part of the ritual. You don't really go to the movies without it.",
+    "broll_query": "family watching movie",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And that ritual is the whole business.",
+    "broll_query": "popcorn bucket close up",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Take AMC, one of the biggest cinema chains in the world. In 2024, it sold two point five six billion dollars of movie tickets.",
+    "broll_query": "cinema ticket booth",
+    "on_screen": "$2.56B TICKETS",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "It sold one point six two billion dollars of food and drinks. That's less, right?",
+    "broll_query": "cinema concession stand",
+    "on_screen": "$1.62B SNACKS",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "But once you take out what each one costs, the money AMC kept from popcorn and soda was almost exactly the same as the money it kept from every movie ticket it sold all year.",
+    "broll_query": "soda fountain drinks",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "About one point three two billion dollars each.",
+    "broll_query": "money counting",
+    "on_screen": "$1.32B = $1.32B",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Which raises a strange question. Is a movie theater really a cinema that sells snacks, or a snack bar that happens to show movies?",
+    "broll_query": "empty movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And why, if it's so good at selling popcorn, did AMC still lose money?",
+    "broll_query": "dark cinema hall",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "To understand it, we have to go back to a time when cinemas wanted nothing to do with popcorn.",
+    "broll_query": "vintage cinema facade",
+    "on_screen": "",
+    "chapter": "The snack nobody wanted",
+    "visual": {}
+   },
+   {
+    "narration": "In the early days of film, movie houses wanted to feel like grand theaters. Thick carpets, rugs, velvet seats.",
+    "broll_query": "ornate old theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Popcorn was messy and noisy, and owners didn't want it anywhere near their carpets.",
+    "broll_query": "spilled popcorn floor",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Silent films also had a problem. They used title cards, so you had to be able to read to follow them.",
+    "broll_query": "old film projector",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Then, in 1927, sound arrived. Suddenly, anyone could enjoy a movie. By 1930, weekly attendance had reached ninety million.",
+    "broll_query": "film reel projector",
+    "on_screen": "90 MILLION A WEEK",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Then the Great Depression hit. And popcorn had one huge advantage. It was cheap.",
+    "broll_query": "1930s street",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "A bag cost five to ten cents. A ten dollar bag of kernels could last a vendor for years.",
+    "broll_query": "corn kernels close up",
+    "on_screen": "5-10¢ A BAG",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Street vendors set up outside theaters and sold to people on their way in. Some theaters even posted signs asking customers to check their popcorn with their coats.",
+    "broll_query": "street food vendor cart",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Then owners realised they were watching money walk past the ticket booth. First they rented lobby space to vendors for a daily fee. Then they started selling popcorn themselves.",
+    "broll_query": "cinema lobby",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "One Dallas chain tested it. It put popcorn machines in eighty of its theaters, but not in its five best ones.",
+    "broll_query": "popcorn popping machine",
+    "on_screen": "80 VS 5",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Within two years, the eighty theaters with popcorn saw profits soar. The five best theaters, without it, went into the red.",
+    "broll_query": "rising bar chart",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Theaters that sold snacks survived the Depression. Most of the others eventually installed concession stands.",
+    "broll_query": "concession counter",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Think about how unusual that is. The product people paid to see didn't decide which theaters lived. The snack in their hands did.",
+    "broll_query": "vintage cinema audience",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "During World War Two, sugar rationing hit candy and soda, and popcorn took over. By 1945, more than half of all the popcorn eaten in America was eaten at the movies.",
+    "broll_query": "vintage popcorn box",
+    "on_screen": "OVER 50%",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "The business model hasn't changed much since. Let's look at why.",
+    "broll_query": "modern cinema lobby",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Start with the ticket. In 2024, the average AMC ticket in the United States cost twelve dollars and twenty-two cents.",
+    "broll_query": "buying movie ticket",
+    "on_screen": "$12.22",
+    "chapter": "Where your ticket goes",
+    "visual": {}
+   },
+   {
+    "narration": "Across all its markets, including Europe, it was eleven dollars and forty-two cents.",
+    "broll_query": "cinema in europe",
+    "on_screen": "$11.42",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "But AMC doesn't keep that. The studio that made the film takes a big cut.",
+    "broll_query": "film studio lot",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "AMC's film exhibition costs, mostly the share paid to film distributors, were one point two four billion dollars in 2024. That's about forty-eight percent of everything it took in from tickets.",
+    "broll_query": "hollywood film set",
+    "on_screen": "48% TO STUDIOS",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So out of an average ticket, AMC keeps roughly five dollars and ninety cents. Before paying for the building, the staff, the electricity or anything else.",
+    "broll_query": "cinema projector room",
+    "on_screen": "~$5.89 KEPT",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Now the snacks. The average AMC customer spent seven dollars and twenty-five cents on food and drinks.",
+    "broll_query": "nachos and soda cinema",
+    "on_screen": "$7.25",
+    "chapter": "The real product",
+    "visual": {}
+   },
+   {
+    "narration": "In the United States, it was eight dollars and thirty cents per person. Internationally, just four eighty.",
+    "broll_query": "large popcorn bucket",
+    "on_screen": "$8.30 US",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And here's the important part. AMC's food and beverage costs were three hundred and six million dollars, on one point six two billion of sales.",
+    "broll_query": "popcorn kernels bag",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That means the ingredients cost about nineteen cents for every dollar you spend at the counter.",
+    "broll_query": "soda cup ice",
+    "on_screen": "19¢ PER $1",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So from that seven twenty-five, AMC keeps about five dollars and ninety cents. The same as from the ticket.",
+    "broll_query": "cash register",
+    "on_screen": "~$5.89 KEPT",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "A ticket is a product AMC has to share with Hollywood. Popcorn is a product it gets to keep almost all of.",
+    "broll_query": "popcorn and ticket",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Let's make it real. Picture a family of four going to an AMC in the United States, paying the average price.",
+    "broll_query": "family at cinema",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Four tickets at twelve twenty-two each is about forty-nine dollars. Roughly half of that, around twenty-four dollars, goes to the studio.",
+    "broll_query": "movie tickets hand",
+    "on_screen": "$49 TICKETS",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Then they spend the average eight thirty each at the counter. That's about thirty-three dollars.",
+    "broll_query": "family buying snacks",
+    "on_screen": "$33 SNACKS",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "The popcorn, cups, syrup and ingredients behind that cost the theater around six dollars. So AMC keeps about twenty-seven dollars from the snacks.",
+    "broll_query": "popcorn kernels",
+    "on_screen": "~$27 KEPT",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And only around twenty-five dollars from the tickets. The cheaper purchase is the one that pays more.",
+    "broll_query": "cinema ticket stub",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "The Smithsonian has reported estimates that theaters make around eighty-five percent profit on concessions, and that concessions account for close to half of their profits.",
+    "broll_query": "cinema snack bar",
+    "on_screen": "~85% MARGIN",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That's why the movie is, in a sense, the advertisement. It's the reason you come. The lobby is where the money is made.",
+    "broll_query": "people entering cinema",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "The studio gets a share of every ticket. It gets nothing from your popcorn. That's the one part of your night out the theater doesn't have to split with Hollywood.",
+    "broll_query": "popcorn cinema screen",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And it explains a lot of things you've probably noticed.",
+    "broll_query": "cinema queue",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "It's why the staff are happy to upsize you. A large costs the theater only a little more to fill than a small.",
+    "broll_query": "large popcorn bucket",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Outside food is banned in many cinemas, because every bag of chips brought from home is profit walking past the counter.",
+    "broll_query": "no outside food sign",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And the lobby is designed so you walk past the smell of popcorn on the way to your seat.",
+    "broll_query": "cinema corridor",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Every extra person in a seat is another chance to sell a seven dollar snack.",
+    "broll_query": "full cinema audience",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So if both halves are this profitable, why does AMC keep losing money?",
+    "broll_query": "empty cinema seats",
+    "on_screen": "",
+    "chapter": "So why is AMC losing money?",
+    "visual": {}
+   },
+   {
+    "narration": "Because a cinema is one of the most expensive buildings in retail to run.",
+    "broll_query": "large cinema building",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "At the end of 2024, AMC had eight hundred and seventy-one theaters and nine thousand seven hundred and ninety-eight screens.",
+    "broll_query": "multiplex cinema exterior",
+    "on_screen": "871 THEATERS",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That's more than eleven screens per theater on average. Every screen needs its own projector, sound system and seats, whether the room is full or empty.",
+    "broll_query": "empty cinema screen",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Many of those buildings are leased. In 2024, AMC paid eight hundred seventy-four million dollars in rent.",
+    "broll_query": "shopping mall cinema",
+    "on_screen": "$874M RENT",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Spread across two hundred and twenty-four million visitors, that's about three dollars and ninety cents of rent for every person who walked in.",
+    "broll_query": "people walking mall",
+    "on_screen": "$3.90 / VISITOR",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Then there are staff, power, cleaning, projectors and screens. A theater costs almost the same to run on a quiet Tuesday as on a sold-out Saturday.",
+    "broll_query": "cinema staff cleaning",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So the problem isn't the price of popcorn or the price of a ticket. It's that every one of those buildings has to be paid for, every single day, whether a single person shows up or not.",
+    "broll_query": "empty cinema lobby night",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And then there's the debt. At the end of 2024, AMC had more than four billion dollars of corporate borrowings.",
+    "broll_query": "bank documents",
+    "on_screen": "$4.1B DEBT",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Interest on that debt eats into whatever is left. And it shows up at the bottom of the income statement.",
+    "broll_query": "financial statement",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "In 2024, AMC's total revenue was four point six four billion dollars. It still lost three hundred and fifty-three million.",
+    "broll_query": "falling chart",
+    "on_screen": "-$353M",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Tickets made up about fifty-five percent of that revenue. Food and drinks about thirty-five percent. Everything else, about four hundred fifty million dollars, made up the rest.",
+    "broll_query": "pie chart screen",
+    "on_screen": "55% / 35%",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That's roughly a dollar fifty-seven lost for every single visitor.",
+    "broll_query": "single cinema ticket",
+    "on_screen": "-$1.57 / VISITOR",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And the whole industry depends on something it can't control. How good the movies are.",
+    "broll_query": "film camera set",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "In 2024, the North American box office came to about eight point seven billion dollars, down around three percent from the year before.",
+    "broll_query": "box office sign",
+    "on_screen": "$8.7B",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Fewer people in seats means fewer tickets, but it also means fewer buckets of popcorn. The two engines rise and fall together.",
+    "broll_query": "half empty cinema",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "A big hit fills the seats, and the counter, for weeks. A weak month leaves the rent, the staff and the interest bills exactly where they were.",
+    "broll_query": "cinema marquee",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That's what makes cinemas so fragile. Their costs are fixed, but their customers are not.",
+    "broll_query": "rain outside cinema",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So what can a cinema do? The answer is to sell more to each visitor.",
+    "broll_query": "premium cinema seats",
+    "on_screen": "",
+    "chapter": "The fight for every visitor",
+    "visual": {}
+   },
+   {
+    "narration": "That's why you see reclining seats, giant premium screens, dine-in menus, and bars in the lobby.",
+    "broll_query": "luxury recliner cinema",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Each one is a way to charge a bit more for the ticket, or to get you to spend more at the counter, without needing more people.",
+    "broll_query": "cocktail bar lobby",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And it's why American customers matter so much. They spend about seventy percent more on snacks than AMC's international customers. Eight thirty versus four eighty.",
+    "broll_query": "popcorn combo meal",
+    "on_screen": "$8.30 VS $4.80",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Closing that gap, even a little, is worth far more to a cinema chain than almost any blockbuster.",
+    "broll_query": "cinema concession line",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Even one extra dollar per visitor, across two hundred and twenty-four million visits, would be worth more than two hundred million dollars a year in sales.",
+    "broll_query": "crowded cinema lobby",
+    "on_screen": "+$224M",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So here's how a movie theater really makes money.",
+    "broll_query": "cinema screen glowing",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "At the end of 2024, AMC had about six hundred and thirty-two million dollars in cash. Against four billion of borrowings, that's not much room for a bad year.",
+    "broll_query": "bank vault",
+    "on_screen": "$632M CASH",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "The film brings you in, but the studio takes about half of your ticket. The popcorn is where the theater keeps almost every cent.",
+    "broll_query": "popcorn in hand cinema",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And the building, the rent and the debt take most of what's left.",
+    "broll_query": "cinema building night",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "It's the same deal the Dallas theaters discovered in the 1930s. The movie is the reason you come. The snack bar is the reason the theater survives.",
+    "broll_query": "vintage marquee lights",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "If you want to know how other businesses make their real money, subscribe for the next one. Thanks for watching.",
+    "broll_query": "city at dusk",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   }
+  ],
+  "sources": [
+   "https://investor.amctheatres.com/sec-filings/all-sec-filings/content/0001411579-25-000037/amc-20250225xex99d1.htm",
+   "https://www.sec.gov/Archives/edgar/data/1411579/000141157925000042/amc-20241231x10k.htm",
+   "https://www.smithsonianmag.com/arts-culture/why-do-we-eat-popcorn-at-the-movies-475063/"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Style sample in the ModernMBA format: sensory personal opening, one business explained through real unit economics (per ticket, per snack), bright clean look, no burned captions."
+ }
+}

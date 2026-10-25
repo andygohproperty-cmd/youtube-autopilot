@@ -29,12 +29,18 @@ class Channel:
     production_days: list = field(default_factory=list)
     publish_hour_utc: int = 15
     target_minutes: float = 8
+    min_minutes: float = 0              # long videos: never shorter (8+ min allows mid-roll ads)
     target_seconds: int = 50
     speed: float = 1.0
     language: str = "en"
     music_mood: str = ""                # folder under assets/music picked first
-    visual_style: str = "stock"         # "stock" footage or "animated" motion graphics
+    visual_style: str = "stock"         # "stock" footage, "animated" motion graphics, or "remotion" documentary graphics (remotion/)
     visual_theme: str = "dark"          # animated look: "dark" or "light" (cartoon)
+    grade: str = "natural"              # stock footage colour: "natural", "cinematic" (dark, muted) or "bright"
+    captions: str = "words"             # "words" (word-by-word burned in) or "none" (documentary look)
+    hook_captions: bool = True          # long videos: big kinetic captions until the first chapter, then a title card
+    look: str = "full"                  # stock shots "full" frame, "collage" (framed photo on a tinted grid) or "collage-hook" (collage in the hook only)
+    tint: str = "red"                   # collage background tint on segments with a key number
     tts: str = "kokoro"                 # "kokoro" (fast) or "chatterbox" (more natural, ~10x slower on CPU)
     exaggeration: float = 0.6           # Chatterbox expressiveness
 
@@ -49,8 +55,13 @@ class Channel:
 
     @property
     def target_words(self) -> int:
-        # Kokoro narrates at roughly 150 words per minute at speed 1.0, Chatterbox at roughly 200.
-        wpm = (200 if self.tts == "chatterbox" else 150) * self.speed
+        # Measured (Oct 2026): Kokoro ~150 words per minute at speed 1.0; Chatterbox's own voice ~215;
+        # Chatterbox cloning a reference .wav ~150.
+        if self.tts == "chatterbox":
+            wpm = 215 if self.voice == "default" else 150
+        else:
+            wpm = 150
+        wpm *= self.speed
         if self.is_short:
             return int(self.target_seconds / 60 * wpm)
         return int(self.target_minutes * wpm)

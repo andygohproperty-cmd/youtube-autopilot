@@ -2,13 +2,13 @@ id: biz_explainers
 name: "How It Makes Money"
 secret_suffix: BIZ                   # uses secret YT_REFRESH_TOKEN_BIZ
 format: long                         # 1920x1080
-target_minutes: 8
+target_minutes: 10                   # top videos in this genre run 10-14 min (How Money Works, Company Man, Logically Answered)
+min_minutes: 8                       # never under 8: mid-roll ads need 8+ minutes
 tts: chatterbox                      # natural, expressive free voice (andy picked "voice 3" 2026-10-22)
 voice: default
 exaggeration: 0.6
 speed: 1.0
-visual_style: animated               # cartoon people + motion graphics
-visual_theme: light
+visual_style: remotion               # dark documentary graphics (REMOTION.md); andy picked it over stock 2026-10-25
 music_mood: documentary
 category_id: "27"                    # Education
 language: en
@@ -19,11 +19,15 @@ niche: >
   product or industry actually makes money, told as a clear story with real
   numbers from public sources (annual reports, earnings calls, reputable press).
 style: >
-  Story-driven business documentary in the style of the top channels in this genre: cold open on
-  one surprising concrete detail, then "this is how X really makes money". Confident, brisk narrator.
-  Short punchy sentences, open loops and a rehook every minute or so, 5-7 named chapters, every number
-  explained in plain words and shown as an on-screen stat. No hype, no investment advice. End with a
-  one-line takeaway and a soft prompt to subscribe.
+  Story-driven business documentary, modelled on How Money Works, Logically Answered, Company Man,
+  ModernMBA and MagnatesMedia (studied Oct 2026, see research/top-channel-playbook-2026-10-23.md).
+  Famous, everyday brands and industries viewers already have feelings about. Line one asks or states the
+  title's promise as a paradox or stakes ("If X loses money on Y, how is it worth Z?"),
+  then why it matters to the viewer, one or two hard numbers, a tease that the answer is darker or stranger
+  than expected, and a jump into the story ("To understand why, we have to go back to 1983."). Confident,
+  conversational narrator; short sentences. 5-7 named chapters as a story arc (origin, rise, the money
+  machine, the crack, now), a rehook every minute or so, every number explained in plain words and shown on
+  screen. No hype, no investment advice. End with a one-line verdict and a pointer to a related video.
 avoid: >
   Stock tips, crypto price predictions, health or legal advice, rumours,
   impersonating real people, clickbait the video does not deliver on.

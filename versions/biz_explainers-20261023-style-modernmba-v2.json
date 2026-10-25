@@ -1,0 +1,2122 @@
+{
+ "channel": "biz_explainers",
+ "channel_overrides": {
+  "visual_style": "animated",
+  "visual_theme": "light",
+  "captions": "words",
+  "hook_captions": true,
+  "target_minutes": 8.5,
+  "music_mood": "upbeat",
+  "speed": 0.92
+ },
+ "research_notes": "Facts and figures (see sources):\n- https://investor.amctheatres.com/sec-filings/all-sec-filings/content/0001411579-25-000037/amc-20250225xex99d1.htm\n- https://www.sec.gov/Archives/edgar/data/1411579/000141157925000042/amc-20241231x10k.htm\n- https://www.smithsonianmag.com/arts-culture/why-do-we-eat-popcorn-at-the-movies-475063/",
+ "plan": {
+  "title": "How Movie Theaters Really Make Money",
+  "alt_titles": [
+   "Why Movie Theater Popcorn Costs So Much",
+   "The Popcorn Business: Why Cinemas Need Your Snacks"
+  ],
+  "description": "AMC kept about as much money from popcorn and soda in 2024 as from every movie ticket it sold, and still lost $353 million. Here is how cinemas really make money, from the Great Depression to today.\n\nChapters:\n0:00 Intro\n1:01 The snack nobody wanted\n2:37 Where your ticket goes\n3:11 The real product\n5:10 So why is AMC losing money?\n7:09 The fight for every visitor\n\nSources:\nhttps://investor.amctheatres.com/sec-filings/all-sec-filings/content/0001411579-25-000037/amc-20250225xex99d1.htm\nhttps://www.sec.gov/Archives/edgar/data/1411579/000141157925000042/amc-20241231x10k.htm\nhttps://www.smithsonianmag.com/arts-culture/why-do-we-eat-popcorn-at-the-movies-475063/\n\nNarration is AI-generated. Educational content only, not financial advice.",
+  "tags": [
+   "how movie theaters make money",
+   "amc",
+   "movie theater popcorn",
+   "cinema business",
+   "box office",
+   "concessions",
+   "business explained",
+   "how it makes money",
+   "amc earnings",
+   "popcorn history"
+  ],
+  "thumbnail_text": "THE MOVIE IS *BAIT*",
+  "thumbnail_segment": 1,
+  "segments": [
+   {
+    "narration": "How does a movie theater actually make money? Not from the movie, it turns out. At least, not as much as you'd think.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.25,
+       "pose": "stand",
+       "expr": "think",
+       "then": "point",
+       "then_expr": "shock",
+       "switch": 0.55,
+       "react": "jump",
+       "bubble": {
+        "text": "Not the movie?",
+        "at": 0.6
+       }
+      }
+     ],
+     "items": [
+      {
+       "icon": "popcorn",
+       "x": 0.72,
+       "y": 0.38,
+       "fall": true,
+       "at": 0.3,
+       "color": "yellow",
+       "label": "Popcorn"
+      },
+      {
+       "icon": "film",
+       "x": 0.86,
+       "y": 0.32,
+       "fall": true,
+       "at": 0.2,
+       "color": "blue",
+       "label": "Movie"
+      }
+     ],
+     "camera": "in"
+    }
+   },
+   {
+    "narration": "There's something about the smell of fresh popcorn in a cinema lobby. The butter, the salt, the warm paper bucket in your hands before the lights go down.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.15,
+       "to": 0.45,
+       "pose": "walk",
+       "expr": "love",
+       "then": "stand",
+       "switch": 0.5
+      }
+     ],
+     "items": [
+      {
+       "icon": "popcorn",
+       "x": 0.78,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.5,
+       "color": "yellow",
+       "label": "Fresh popcorn"
+      }
+     ],
+     "pan": "right"
+    }
+   },
+   {
+    "narration": "For most of us, it's part of the ritual. You don't really go to the movies without it.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "ticket",
+      "popcorn",
+      "armchair"
+     ],
+     "labels": [
+      "Ticket",
+      "Popcorn",
+      "Seat"
+     ],
+     "caption": "The ritual"
+    }
+   },
+   {
+    "narration": "And that ritual is the whole business.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.3,
+       "pose": "easy",
+       "expr": "smug",
+       "talk": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "dollar-sign",
+       "x": 0.7,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "teal",
+       "label": "The business"
+      }
+     ],
+     "punch": 0.7
+    }
+   },
+   {
+    "narration": "Take AMC, one of the biggest cinema chains in the world. In 2024, it sold two point five six billion dollars of movie tickets.",
+    "broll_query": "movie theater",
+    "on_screen": "$2.56B TICKETS",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 2.56,
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 2,
+     "label": "AMC tickets, 2024"
+    }
+   },
+   {
+    "narration": "It sold one point six two billion dollars of food and drinks. That's less, right?",
+    "broll_query": "movie theater",
+    "on_screen": "$1.62B SNACKS",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Tickets",
+       "value": 2.56,
+       "display": "$2.56B",
+       "color": "blue"
+      },
+      {
+       "label": "Snacks",
+       "value": 1.62,
+       "display": "$1.62B",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "But once you take out what each one costs, the money AMC kept from popcorn and soda was almost exactly the same as the money it kept from every movie ticket it sold all year.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.25,
+       "pose": "explain",
+       "expr": "serious",
+       "talk": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "ticket",
+       "x": 0.62,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "blue",
+       "label": "Kept"
+      },
+      {
+       "icon": "popcorn",
+       "x": 0.82,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.6,
+       "color": "yellow",
+       "label": "Kept"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "About one point three two billion dollars each.",
+    "broll_query": "movie theater",
+    "on_screen": "$1.32B = $1.32B",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "ticket",
+      "label": "$1.32B kept"
+     },
+     "right": {
+      "icon": "popcorn",
+      "label": "$1.32B kept"
+     }
+    }
+   },
+   {
+    "narration": "Which raises a strange question. Is a movie theater really a cinema that sells snacks, or a snack bar that happens to show movies?",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.3,
+       "pose": "shrug",
+       "expr": "think",
+       "bubble": {
+        "text": "Cinema or snack bar?",
+        "at": 0.3,
+        "think": true
+       }
+      }
+     ],
+     "items": [
+      {
+       "icon": "clapperboard",
+       "x": 0.68,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "blue",
+       "label": "Cinema"
+      },
+      {
+       "icon": "popcorn",
+       "x": 0.85,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.5,
+       "color": "yellow",
+       "label": "Snack bar"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And why, if it's so good at selling popcorn, did AMC still lose money?",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "Still losing",
+      "money?"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "To understand it, we have to go back to a time when cinemas wanted nothing to do with popcorn.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "The snack nobody wanted",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.3,
+       "pose": "cross",
+       "expr": "angry",
+       "bubble": {
+        "text": "No popcorn here!",
+        "at": 0.3
+       }
+      }
+     ],
+     "items": [
+      {
+       "icon": "ban",
+       "x": 0.72,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.4,
+       "color": "red",
+       "label": "Popcorn"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In the early days of film, movie houses wanted to feel like grand theaters. Thick carpets, rugs, velvet seats.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "sofa",
+      "armchair",
+      "crown"
+     ],
+     "labels": [
+      "Thick carpets",
+      "Velvet seats",
+      "Grand theaters"
+     ]
+    }
+   },
+   {
+    "narration": "Popcorn was messy and noisy, and owners didn't want it anywhere near their carpets.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "point",
+       "expr": "rage",
+       "then_expr": "angry",
+       "switch": 0.5,
+       "react": "shake"
+      }
+     ],
+     "items": [
+      {
+       "icon": "popcorn",
+       "x": 0.65,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.2,
+       "color": "red",
+       "label": "Messy"
+      },
+      {
+       "icon": "volume-2",
+       "x": 0.82,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.45,
+       "color": "red",
+       "label": "Noisy"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Silent films also had a problem. They used title cards, so you had to be able to read to follow them.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "film",
+      "book-open"
+     ],
+     "labels": [
+      "Title cards",
+      "Must read"
+     ],
+     "caption": "Silent films"
+    }
+   },
+   {
+    "narration": "Then, in 1927, sound arrived. Suddenly, anyone could enjoy a movie. By 1930, weekly attendance had reached ninety million.",
+    "broll_query": "movie theater",
+    "on_screen": "90 MILLION A WEEK",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 90,
+     "prefix": "",
+     "suffix": "M",
+     "decimals": 0,
+     "label": "people a week by 1930"
+    }
+   },
+   {
+    "narration": "Then the Great Depression hit. And popcorn had one huge advantage. It was cheap.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.3,
+       "pose": "stand",
+       "expr": "worried",
+       "then": "shrug",
+       "then_expr": "sad",
+       "switch": 0.5
+      }
+     ],
+     "items": [
+      {
+       "icon": "trending-down",
+       "x": 0.72,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "color": "red",
+       "label": "Depression"
+      },
+      {
+       "icon": "popcorn",
+       "x": 0.85,
+       "y": 0.42,
+       "fall": true,
+       "at": 0.6,
+       "color": "yellow",
+       "label": "Cheap!"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "A bag cost five to ten cents. A ten dollar bag of kernels could last a vendor for years.",
+    "broll_query": "movie theater",
+    "on_screen": "5-10¢ A BAG",
+    "chapter": "",
+    "visual": {
+     "type": "receipt",
+     "title": "1930s POPCORN",
+     "items": [
+      [
+       "One bag",
+       "5-10¢"
+      ],
+      [
+       "Bag of kernels",
+       "$10"
+      ]
+     ],
+     "total": "Lasts years"
+    }
+   },
+   {
+    "narration": "Street vendors set up outside theaters and sold to people on their way in. Some theaters even posted signs asking customers to check their popcorn with their coats.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.2,
+       "pose": "carry",
+       "expr": "grin",
+       "bubble": {
+        "text": "Popcorn! 5 cents!",
+        "at": 0.2
+       }
+      },
+      {
+       "cast": "you",
+       "x": 0.55,
+       "to": 0.75,
+       "pose": "walk",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "popcorn",
+       "x": 0.38,
+       "y": 0.45,
+       "fall": true,
+       "at": 0.1,
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Then owners realised they were watching money walk past the ticket booth. First they rented lobby space to vendors for a daily fee. Then they started selling popcorn themselves.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "stand",
+       "expr": "think",
+       "then": "idea",
+       "then_expr": "driven",
+       "switch": 0.5
+      }
+     ],
+     "items": [
+      {
+       "icon": "lightbulb",
+       "x": 0.7,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.55,
+       "color": "yellow",
+       "label": "Sell it ourselves"
+      }
+     ],
+     "punch": 0.55
+    }
+   },
+   {
+    "narration": "One Dallas chain tested it. It put popcorn machines in eighty of its theaters, but not in its five best ones.",
+    "broll_query": "movie theater",
+    "on_screen": "80 VS 5",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "popcorn",
+      "label": "80 theaters"
+     },
+     "right": {
+      "icon": "ban",
+      "label": "5 best, no popcorn"
+     }
+    }
+   },
+   {
+    "narration": "Within two years, the eighty theaters with popcorn saw profits soar. The five best theaters, without it, went into the red.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "80 with popcorn",
+       "value": 9,
+       "display": "Profits soar",
+       "color": "teal"
+      },
+      {
+       "label": "5 best, none",
+       "value": 2,
+       "display": "In the red",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Theaters that sold snacks survived the Depression. Most of the others eventually installed concession stands.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "easy",
+       "expr": "laugh"
+      }
+     ],
+     "items": [
+      {
+       "icon": "popcorn",
+       "x": 0.62,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "color": "yellow"
+      },
+      {
+       "icon": "cup-soda",
+       "x": 0.76,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.35,
+       "color": "red"
+      },
+      {
+       "icon": "candy",
+       "x": 0.88,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.5,
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Think about how unusual that is. The product people paid to see didn't decide which theaters lived. The snack in their hands did.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "The snack",
+      "decided"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "During World War Two, sugar rationing hit candy and soda, and popcorn took over. By 1945, more than half of all the popcorn eaten in America was eaten at the movies.",
+    "broll_query": "movie theater",
+    "on_screen": "OVER 50%",
+    "chapter": "",
+    "visual": {
+     "type": "pie",
+     "fraction": 0.5,
+     "display": "50%+",
+     "label": "of US popcorn, 1945",
+     "color": "yellow"
+    }
+   },
+   {
+    "narration": "The business model hasn't changed much since. Let's look at why.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.3,
+       "pose": "explain",
+       "expr": "neutral",
+       "talk": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "clock",
+       "x": 0.72,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "blue",
+       "label": "Same model"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Start with the ticket. In 2024, the average AMC ticket in the United States cost twelve dollars and twenty-two cents.",
+    "broll_query": "movie theater",
+    "on_screen": "$12.22",
+    "chapter": "Where your ticket goes",
+    "visual": {
+     "type": "stat",
+     "value": 12.22,
+     "prefix": "$",
+     "suffix": "",
+     "decimals": 2,
+     "label": "average US ticket, 2024"
+    }
+   },
+   {
+    "narration": "Across all its markets, including Europe, it was eleven dollars and forty-two cents.",
+    "broll_query": "movie theater",
+    "on_screen": "$11.42",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.25,
+       "pose": "paper",
+       "expr": "neutral",
+       "talk": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "globe",
+       "x": 0.72,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "blue",
+       "label": "$11.42 worldwide"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "But AMC doesn't keep that. The studio that made the film takes a big cut.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.22,
+       "pose": "stand",
+       "expr": "worried"
+      },
+      {
+       "cast": "expert",
+       "x": 0.6,
+       "pose": "point",
+       "expr": "smug",
+       "talk": true,
+       "bubble": {
+        "text": "Our cut, please",
+        "at": 0.3
+       }
+      }
+     ],
+     "items": [
+      {
+       "icon": "film",
+       "x": 0.85,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.5,
+       "color": "red",
+       "label": "Studio"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "AMC's film exhibition costs, mostly the share paid to film distributors, were one point two four billion dollars in 2024. That's about forty-eight percent of everything it took in from tickets.",
+    "broll_query": "movie theater",
+    "on_screen": "48% TO STUDIOS",
+    "chapter": "",
+    "visual": {
+     "type": "pie",
+     "fraction": 0.48,
+     "display": "48%",
+     "label": "of ticket money to studios",
+     "color": "red"
+    }
+   },
+   {
+    "narration": "So out of an average ticket, AMC keeps roughly five dollars and ninety cents. Before paying for the building, the staff, the electricity or anything else.",
+    "broll_query": "movie theater",
+    "on_screen": "~$5.89 KEPT",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.25,
+       "pose": "shrug",
+       "expr": "worried"
+      }
+     ],
+     "items": [
+      {
+       "icon": "ticket",
+       "x": 0.7,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.1,
+       "color": "blue",
+       "label": "$12.22"
+      },
+      {
+       "icon": "hand-coins",
+       "x": 0.85,
+       "y": 0.42,
+       "fall": true,
+       "at": 0.5,
+       "color": "teal",
+       "label": "~$5.89 kept"
+      }
+     ],
+     "panel_side": "right"
+    }
+   },
+   {
+    "narration": "Now the snacks. The average AMC customer spent seven dollars and twenty-five cents on food and drinks.",
+    "broll_query": "movie theater",
+    "on_screen": "$7.25",
+    "chapter": "The real product",
+    "visual": {
+     "type": "stat",
+     "value": 7.25,
+     "prefix": "$",
+     "suffix": "",
+     "decimals": 2,
+     "label": "food and drinks per visitor"
+    }
+   },
+   {
+    "narration": "In the United States, it was eight dollars and thirty cents per person. Internationally, just four eighty.",
+    "broll_query": "movie theater",
+    "on_screen": "$8.30 US",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "flag-triangle-right",
+      "label": "US $8.30"
+     },
+     "right": {
+      "icon": "globe",
+      "label": "Abroad $4.80"
+     }
+    }
+   },
+   {
+    "narration": "And here's the important part. AMC's food and beverage costs were three hundred and six million dollars, on one point six two billion of sales.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.25,
+       "pose": "laptop",
+       "expr": "think"
+      }
+     ],
+     "items": [
+      {
+       "icon": "receipt",
+       "x": 0.65,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "red",
+       "label": "$306M costs"
+      },
+      {
+       "icon": "coins",
+       "x": 0.83,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.55,
+       "color": "teal",
+       "label": "$1.62B sales"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That means the ingredients cost about nineteen cents for every dollar you spend at the counter.",
+    "broll_query": "movie theater",
+    "on_screen": "19¢ PER $1",
+    "chapter": "",
+    "visual": {
+     "type": "pie",
+     "fraction": 0.19,
+     "display": "19¢",
+     "label": "per $1 of snacks",
+     "color": "teal"
+    }
+   },
+   {
+    "narration": "So from that seven twenty-five, AMC keeps about five dollars and ninety cents. The same as from the ticket.",
+    "broll_query": "movie theater",
+    "on_screen": "~$5.89 KEPT",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "easy",
+       "expr": "grin"
+      }
+     ],
+     "items": [
+      {
+       "icon": "popcorn",
+       "x": 0.7,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.1,
+       "color": "yellow",
+       "label": "$7.25"
+      },
+      {
+       "icon": "hand-coins",
+       "x": 0.86,
+       "y": 0.42,
+       "fall": true,
+       "at": 0.5,
+       "color": "teal",
+       "label": "~$5.89 kept"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "A ticket is a product AMC has to share with Hollywood. Popcorn is a product it gets to keep almost all of.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "ticket",
+      "label": "Shared with Hollywood"
+     },
+     "right": {
+      "icon": "popcorn",
+      "label": "Kept by theater"
+     }
+    }
+   },
+   {
+    "narration": "Let's make it real. Picture a family of four going to an AMC in the United States, paying the average price.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.15,
+       "to": 0.35,
+       "pose": "walk",
+       "expr": "happy"
+      },
+      {
+       "cast": "friend",
+       "x": 0.05,
+       "to": 0.55,
+       "pose": "walk",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "users",
+       "x": 0.82,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "blue",
+       "label": "Family of 4"
+      }
+     ],
+     "pan": "right"
+    }
+   },
+   {
+    "narration": "Four tickets at twelve twenty-two each is about forty-nine dollars. Roughly half of that, around twenty-four dollars, goes to the studio.",
+    "broll_query": "movie theater",
+    "on_screen": "$49 TICKETS",
+    "chapter": "",
+    "visual": {
+     "type": "receipt",
+     "title": "4 TICKETS",
+     "items": [
+      [
+       "4 x $12.22",
+       "$49"
+      ],
+      [
+       "To the studio",
+       "-$24"
+      ]
+     ],
+     "total": "$25 kept"
+    }
+   },
+   {
+    "narration": "Then they spend the average eight thirty each at the counter. That's about thirty-three dollars.",
+    "broll_query": "movie theater",
+    "on_screen": "$33 SNACKS",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.25,
+       "pose": "stand",
+       "expr": "shock",
+       "then_expr": "sad",
+       "switch": 0.6,
+       "bubble": {
+        "text": "$33 on snacks?!",
+        "at": 0.3
+       }
+      }
+     ],
+     "items": [
+      {
+       "icon": "popcorn",
+       "x": 0.7,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "color": "yellow"
+      },
+      {
+       "icon": "cup-soda",
+       "x": 0.84,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.35,
+       "color": "red"
+      }
+     ],
+     "punch": 0.3
+    }
+   },
+   {
+    "narration": "The popcorn, cups, syrup and ingredients behind that cost the theater around six dollars. So AMC keeps about twenty-seven dollars from the snacks.",
+    "broll_query": "movie theater",
+    "on_screen": "~$27 KEPT",
+    "chapter": "",
+    "visual": {
+     "type": "receipt",
+     "title": "SNACKS",
+     "items": [
+      [
+       "4 x $8.30",
+       "$33"
+      ],
+      [
+       "Ingredients",
+       "-$6"
+      ]
+     ],
+     "total": "$27 kept"
+    }
+   },
+   {
+    "narration": "And only around twenty-five dollars from the tickets. The cheaper purchase is the one that pays more.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Tickets kept",
+       "value": 25,
+       "display": "$25",
+       "color": "blue"
+      },
+      {
+       "label": "Snacks kept",
+       "value": 27,
+       "display": "$27",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The Smithsonian has reported estimates that theaters make around eighty-five percent profit on concessions, and that concessions account for close to half of their profits.",
+    "broll_query": "movie theater",
+    "on_screen": "~85% MARGIN",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 85,
+     "prefix": "~",
+     "suffix": "%",
+     "decimals": 0,
+     "label": "estimated concession margin"
+    }
+   },
+   {
+    "narration": "That's why the movie is, in a sense, the advertisement. It's the reason you come. The lobby is where the money is made.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "point",
+       "expr": "smug",
+       "talk": true,
+       "bubble": {
+        "text": "The movie is the ad",
+        "at": 0.3
+       }
+      }
+     ],
+     "items": [
+      {
+       "icon": "film",
+       "x": 0.7,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "color": "blue",
+       "label": "Ad"
+      },
+      {
+       "icon": "popcorn",
+       "x": 0.85,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.55,
+       "color": "yellow",
+       "label": "Profit"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The studio gets a share of every ticket. It gets nothing from your popcorn. That's the one part of your night out the theater doesn't have to split with Hollywood.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "ticket",
+      "popcorn"
+     ],
+     "labels": [
+      "Studio gets a share",
+      "Studio gets nothing"
+     ]
+    }
+   },
+   {
+    "narration": "And it explains a lot of things you've probably noticed.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.3,
+       "pose": "idea",
+       "expr": "think",
+       "bubble": {
+        "text": "Oh, that's why...",
+        "at": 0.3,
+        "think": true
+       }
+      }
+     ]
+    }
+   },
+   {
+    "narration": "It's why the staff are happy to upsize you. A large costs the theater only a little more to fill than a small.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.25,
+       "pose": "point",
+       "expr": "grin",
+       "talk": true,
+       "bubble": {
+        "text": "Make it a large?",
+        "at": 0.2
+       }
+      },
+      {
+       "cast": "you",
+       "x": 0.65,
+       "pose": "stand",
+       "expr": "think"
+      }
+     ],
+     "items": [
+      {
+       "icon": "popcorn",
+       "x": 0.88,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.5,
+       "color": "yellow",
+       "label": "Large"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Outside food is banned in many cinemas, because every bag of chips brought from home is profit walking past the counter.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.25,
+       "pose": "stand",
+       "expr": "sad"
+      }
+     ],
+     "items": [
+      {
+       "icon": "sandwich",
+       "x": 0.65,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "color": "red",
+       "label": "From home"
+      },
+      {
+       "icon": "ban",
+       "x": 0.82,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.5,
+       "color": "red",
+       "label": "Not allowed"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And the lobby is designed so you walk past the smell of popcorn on the way to your seat.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "floorplan",
+     "corners": [
+      "door-open",
+      "ticket",
+      "armchair",
+      "film"
+     ],
+     "center": [
+      "popcorn",
+      "cup-soda"
+     ]
+    }
+   },
+   {
+    "narration": "Every extra person in a seat is another chance to sell a seven dollar snack.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "user",
+      "popcorn"
+     ],
+     "labels": [
+      "One more seat",
+      "One more $7 snack"
+     ]
+    }
+   },
+   {
+    "narration": "So if both halves are this profitable, why does AMC keep losing money?",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "So why is AMC losing money?",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.3,
+       "pose": "arms",
+       "expr": "worried"
+      }
+     ],
+     "items": [
+      {
+       "icon": "trending-down",
+       "x": 0.72,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.4,
+       "color": "red",
+       "label": "Still losing money"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Because a cinema is one of the most expensive buildings in retail to run.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.25,
+       "pose": "point",
+       "expr": "serious",
+       "talk": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "building-2",
+       "x": 0.72,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "red",
+       "label": "Expensive to run"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "At the end of 2024, AMC had eight hundred and seventy-one theaters and nine thousand seven hundred and ninety-eight screens.",
+    "broll_query": "movie theater",
+    "on_screen": "871 THEATERS",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Theaters",
+       "value": 871,
+       "display": "871",
+       "color": "blue"
+      },
+      {
+       "label": "Screens",
+       "value": 9798,
+       "display": "9,798",
+       "color": "yellow"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That's more than eleven screens per theater on average. Every screen needs its own projector, sound system and seats, whether the room is full or empty.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "projector",
+      "speaker",
+      "armchair"
+     ],
+     "labels": [
+      "Projector",
+      "Sound",
+      "Seats"
+     ],
+     "caption": "Every screen, full or empty"
+    }
+   },
+   {
+    "narration": "Many of those buildings are leased. In 2024, AMC paid eight hundred seventy-four million dollars in rent.",
+    "broll_query": "movie theater",
+    "on_screen": "$874M RENT",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "paper",
+       "expr": "fear",
+       "then_expr": "shock",
+       "switch": 0.5,
+       "react": "shake"
+      }
+     ],
+     "items": [
+      {
+       "icon": "home",
+       "x": 0.7,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.4,
+       "color": "red",
+       "label": "$874M rent"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Spread across two hundred and twenty-four million visitors, that's about three dollars and ninety cents of rent for every person who walked in.",
+    "broll_query": "movie theater",
+    "on_screen": "$3.90 / VISITOR",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 3.9,
+     "prefix": "$",
+     "suffix": "",
+     "decimals": 2,
+     "label": "rent per visitor"
+    }
+   },
+   {
+    "narration": "Then there are staff, power, cleaning, projectors and screens. A theater costs almost the same to run on a quiet Tuesday as on a sold-out Saturday.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "friend",
+       "x": 0.2,
+       "pose": "whatever",
+       "expr": "tired"
+      },
+      {
+       "cast": "exec",
+       "x": 0.55,
+       "pose": "shrug",
+       "expr": "sad"
+      }
+     ],
+     "items": [
+      {
+       "icon": "zap",
+       "x": 0.82,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.2,
+       "color": "yellow",
+       "label": "Power"
+      },
+      {
+       "icon": "users",
+       "x": 0.92,
+       "y": 0.45,
+       "fall": true,
+       "at": 0.4,
+       "color": "teal",
+       "label": "Staff"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So the problem isn't the price of popcorn or the price of a ticket. It's that every one of those buildings has to be paid for, every single day, whether a single person shows up or not.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "Paid for",
+      "every single day"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "And then there's the debt. At the end of 2024, AMC had more than four billion dollars of corporate borrowings.",
+    "broll_query": "movie theater",
+    "on_screen": "$4.1B DEBT",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 4.1,
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 1,
+     "label": "corporate borrowings"
+    }
+   },
+   {
+    "narration": "Interest on that debt eats into whatever is left. And it shows up at the bottom of the income statement.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "laptop",
+       "expr": "worried"
+      }
+     ],
+     "items": [
+      {
+       "icon": "percent",
+       "x": 0.7,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "red",
+       "label": "Interest"
+      },
+      {
+       "icon": "trending-down",
+       "x": 0.85,
+       "y": 0.42,
+       "fall": true,
+       "at": 0.55,
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In 2024, AMC's total revenue was four point six four billion dollars. It still lost three hundred and fifty-three million.",
+    "broll_query": "movie theater",
+    "on_screen": "-$353M",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "Revenue",
+       "value": 4640,
+       "display": "$4.64B",
+       "color": "teal"
+      },
+      {
+       "label": "Loss",
+       "value": 353,
+       "display": "-$353M",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Tickets made up about fifty-five percent of that revenue. Food and drinks about thirty-five percent. Everything else, about four hundred fifty million dollars, made up the rest.",
+    "broll_query": "movie theater",
+    "on_screen": "55% / 35%",
+    "chapter": "",
+    "visual": {
+     "type": "pie",
+     "fraction": 0.55,
+     "display": "55%",
+     "label": "of revenue from tickets",
+     "color": "blue"
+    }
+   },
+   {
+    "narration": "That's roughly a dollar fifty-seven lost for every single visitor.",
+    "broll_query": "movie theater",
+    "on_screen": "-$1.57 / VISITOR",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.25,
+       "pose": "stand",
+       "expr": "shock",
+       "react": "jump",
+       "switch": 0.3
+      }
+     ],
+     "items": [
+      {
+       "icon": "user",
+       "x": 0.7,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "red",
+       "label": "-$1.57 each"
+      }
+     ],
+     "punch": 0.3
+    }
+   },
+   {
+    "narration": "And the whole industry depends on something it can't control. How good the movies are.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.3,
+       "pose": "cross",
+       "expr": "worried",
+       "bubble": {
+        "text": "Is the movie good?",
+        "at": 0.3,
+        "think": true
+       }
+      }
+     ],
+     "items": [
+      {
+       "icon": "film",
+       "x": 0.75,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In 2024, the North American box office came to about eight point seven billion dollars, down around three percent from the year before.",
+    "broll_query": "movie theater",
+    "on_screen": "$8.7B",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 8.7,
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 1,
+     "label": "North American box office, 2024"
+    }
+   },
+   {
+    "narration": "Fewer people in seats means fewer tickets, but it also means fewer buckets of popcorn. The two engines rise and fall together.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "ticket",
+      "popcorn",
+      "trending-down"
+     ],
+     "labels": [
+      "Fewer tickets",
+      "Fewer buckets",
+      "Together"
+     ]
+    }
+   },
+   {
+    "narration": "A big hit fills the seats, and the counter, for weeks. A weak month leaves the rent, the staff and the interest bills exactly where they were.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "city",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.15,
+       "to": 0.4,
+       "pose": "walk",
+       "expr": "laugh"
+      },
+      {
+       "cast": "friend",
+       "x": 0.05,
+       "to": 0.6,
+       "pose": "walk",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "star",
+       "x": 0.85,
+       "y": 0.3,
+       "fall": true,
+       "at": 0.3,
+       "color": "yellow",
+       "label": "Big hit"
+      }
+     ],
+     "pan": "right"
+    }
+   },
+   {
+    "narration": "That's what makes cinemas so fragile. Their costs are fixed, but their customers are not.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "building-2",
+      "label": "Costs fixed"
+     },
+     "right": {
+      "icon": "users",
+      "label": "Customers not"
+     }
+    }
+   },
+   {
+    "narration": "So what can a cinema do? The answer is to sell more to each visitor.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "The fight for every visitor",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "idea",
+       "expr": "driven",
+       "talk": true,
+       "bubble": {
+        "text": "Sell more per visitor",
+        "at": 0.3
+       }
+      }
+     ],
+     "items": [
+      {
+       "icon": "trending-up",
+       "x": 0.78,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.5,
+       "color": "teal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That's why you see reclining seats, giant premium screens, dine-in menus, and bars in the lobby.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "icons",
+     "icons": [
+      "armchair",
+      "monitor",
+      "utensils",
+      "martini"
+     ],
+     "labels": [
+      "Recliners",
+      "Premium screens",
+      "Dine-in",
+      "Bars"
+     ]
+    }
+   },
+   {
+    "narration": "Each one is a way to charge a bit more for the ticket, or to get you to spend more at the counter, without needing more people.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "coffee",
+       "expr": "happy"
+      }
+     ],
+     "items": [
+      {
+       "icon": "ticket",
+       "x": 0.62,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "color": "blue",
+       "label": "A bit more"
+      },
+      {
+       "icon": "popcorn",
+       "x": 0.82,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.5,
+       "color": "yellow",
+       "label": "A bit more"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And it's why American customers matter so much. They spend about seventy percent more on snacks than AMC's international customers. Eight thirty versus four eighty.",
+    "broll_query": "movie theater",
+    "on_screen": "$8.30 VS $4.80",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "items": [
+      {
+       "label": "US",
+       "value": 8.3,
+       "display": "$8.30",
+       "color": "yellow"
+      },
+      {
+       "label": "Abroad",
+       "value": 4.8,
+       "display": "$4.80",
+       "color": "blue"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Closing that gap, even a little, is worth far more to a cinema chain than almost any blockbuster.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "expert",
+       "x": 0.25,
+       "pose": "explain",
+       "expr": "serious",
+       "talk": true
+      }
+     ],
+     "items": [
+      {
+       "icon": "popcorn",
+       "x": 0.68,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.3,
+       "color": "yellow",
+       "label": "Close the gap"
+      },
+      {
+       "icon": "film",
+       "x": 0.86,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.55,
+       "color": "blue",
+       "label": "Beats a blockbuster"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Even one extra dollar per visitor, across two hundred and twenty-four million visits, would be worth more than two hundred million dollars a year in sales.",
+    "broll_query": "movie theater",
+    "on_screen": "+$224M",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": 224,
+     "prefix": "+$",
+     "suffix": "M",
+     "decimals": 0,
+     "label": "a year from +$1 per visitor"
+    }
+   },
+   {
+    "narration": "So here's how a movie theater really makes money.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      "How theaters",
+      "really make money"
+     ],
+     "highlight": 1
+    }
+   },
+   {
+    "narration": "At the end of 2024, AMC had about six hundred and thirty-two million dollars in cash. Against four billion of borrowings, that's not much room for a bad year.",
+    "broll_query": "movie theater",
+    "on_screen": "$632M CASH",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "icon": "wallet",
+      "label": "$632M cash"
+     },
+     "right": {
+      "icon": "landmark",
+      "label": "$4B+ debt"
+     }
+    }
+   },
+   {
+    "narration": "The film brings you in, but the studio takes about half of your ticket. The popcorn is where the theater keeps almost every cent.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "list",
+     "items": [
+      "Film brings you in",
+      "Studio takes ~half",
+      "Popcorn is kept"
+     ],
+     "icon": "check"
+    }
+   },
+   {
+    "narration": "And the building, the rent and the debt take most of what's left.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "office",
+     "actors": [
+      {
+       "cast": "exec",
+       "x": 0.25,
+       "pose": "arms",
+       "expr": "tired"
+      }
+     ],
+     "items": [
+      {
+       "icon": "home",
+       "x": 0.62,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.2,
+       "color": "red",
+       "label": "Rent"
+      },
+      {
+       "icon": "landmark",
+       "x": 0.8,
+       "y": 0.4,
+       "fall": true,
+       "at": 0.45,
+       "color": "red",
+       "label": "Debt"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "It's the same deal the Dallas theaters discovered in the 1930s. The movie is the reason you come. The snack bar is the reason the theater survives.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "store",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.2,
+       "pose": "stand",
+       "expr": "happy"
+      },
+      {
+       "cast": "exec",
+       "x": 0.55,
+       "pose": "easy",
+       "expr": "grin"
+      }
+     ],
+     "items": [
+      {
+       "icon": "popcorn",
+       "x": 0.82,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.4,
+       "color": "yellow",
+       "label": "Why it survives"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "If you want to know how other businesses make their real money, subscribe for the next one. Thanks for watching.",
+    "broll_query": "movie theater",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "scene",
+     "bg": "plain",
+     "actors": [
+      {
+       "cast": "you",
+       "x": 0.3,
+       "pose": "point",
+       "expr": "happy",
+       "talk": true,
+       "bubble": {
+        "text": "Subscribe!",
+        "at": 0.3
+       }
+      }
+     ],
+     "items": [
+      {
+       "icon": "thumbs-up",
+       "x": 0.75,
+       "y": 0.35,
+       "fall": true,
+       "at": 0.4,
+       "color": "yellow"
+      }
+     ]
+    }
+   }
+  ],
+  "sources": [
+   "https://investor.amctheatres.com/sec-filings/all-sec-filings/content/0001411579-25-000037/amc-20250225xex99d1.htm",
+   "https://www.sec.gov/Archives/edgar/data/1411579/000141157925000042/amc-20241231x10k.htm",
+   "https://www.smithsonianmag.com/arts-culture/why-do-we-eat-popcorn-at-the-movies-475063/"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Style sample in the ModernMBA format: sensory personal opening, one business explained through real unit economics (per ticket, per snack), bright clean look, no burned captions.",
+  "originality": "Style sample in the ModernMBA format, fully animated: original cartoon characters and motion graphics, no stock footage."
+ }
+}

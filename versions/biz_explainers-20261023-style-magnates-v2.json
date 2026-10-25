@@ -1,0 +1,690 @@
+{
+ "channel": "biz_explainers",
+ "channel_overrides": {
+  "visual_style": "stock",
+  "grade": "cinematic",
+  "captions": "none",
+  "target_minutes": 8.5,
+  "music_mood": "documentary",
+  "voice": "assets/voices/george-kokoro.wav",
+  "exaggeration": 0.5,
+  "look": "collage",
+  "tint": "red",
+  "hook_captions": true
+ },
+ "research_notes": "Facts and figures (see sources):\n- https://en.wikipedia.org/wiki/Luxottica\n- https://en.wikipedia.org/wiki/Leonardo_Del_Vecchio\n- https://www.encyclopedia.com/economics/economics-magazines/luxottica-group-spa\n- https://moodiedavittreport.com/essilorluxottica-records-solid-revenue-and-profits-growth-in-2024-despite-industry-headwinds/\n- https://www.nbcnewyork.com/news/business/money-report/shares-of-ray-ban-maker-essilorluxottica-jump-5-on-reported-meta-stake-in-ai-push/6329814/",
+ "plan": {
+  "title": "The Secret Empire Behind Your Glasses",
+  "alt_titles": [
+   "The Orphan Who Built a $70 Billion Eyewear Empire",
+   "Why Your Glasses Cost So Much: The Luxottica Story"
+  ],
+  "description": "Ray-Ban, Oakley, LensCrafters, Sunglass Hut and a vision insurer: many of the eyewear names you know lead back to one company. This is how an orphan from Milan built EssilorLuxottica, and why glasses cost what they cost.\n\nChapters:\n0:00 Intro\n0:42 The orphan\n1:49 Own every step\n2:57 The takeover machine\n4:01 The rival who said no\n5:12 Sticker shock\n6:19 Frames meet lenses\n7:07 The next frontier\n\nSources:\nhttps://en.wikipedia.org/wiki/Luxottica\nhttps://en.wikipedia.org/wiki/Leonardo_Del_Vecchio\nhttps://www.encyclopedia.com/economics/economics-magazines/luxottica-group-spa\nhttps://moodiedavittreport.com/essilorluxottica-records-solid-revenue-and-profits-growth-in-2024-despite-industry-headwinds/\nhttps://www.nbcnewyork.com/news/business/money-report/shares-of-ray-ban-maker-essilorluxottica-jump-5-on-reported-meta-stake-in-ai-push/6329814/\n\nNarration is AI-generated. Educational content only, not financial advice.",
+  "tags": [
+   "luxottica",
+   "essilorluxottica",
+   "why are glasses so expensive",
+   "ray-ban",
+   "oakley",
+   "leonardo del vecchio",
+   "business documentary",
+   "monopoly",
+   "eyewear industry",
+   "company history"
+  ],
+  "thumbnail_text": "WHO OWNS YOUR *GLASSES*?",
+  "thumbnail_segment": 1,
+  "segments": [
+   {
+    "narration": "Take off your glasses, or your sunglasses, and look at the name on the side.",
+    "broll_query": "sunglasses on table",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Ray-Ban Aviator Shooter RB3139-001 3N (G-15 lenses) Size 62 09 160 Lens base 6.jpg"
+   },
+   {
+    "narration": "Ray-Ban. Oakley. Persol. Maybe Prada, Chanel or Armani.",
+    "broll_query": "luxury sunglasses display",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:SeaDream II — Shop (sunglasses).JPG"
+   },
+   {
+    "narration": "Now think about where you bought them. Maybe LensCrafters, or Sunglass Hut, or Pearle Vision. Maybe your vision insurance helped pay.",
+    "broll_query": "optical store interior",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:LensCrafters San Rafael - August 2022 - Sarah Stierch.jpg"
+   },
+   {
+    "narration": "It feels like a choice between dozens of rival brands and stores. It isn't.",
+    "broll_query": "shopping mall corridor",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:SunglassHutVaughanMills-DLighting.jpg"
+   },
+   {
+    "narration": "A huge share of that path, the frame, the lens, the store and even the insurance, leads back to one company.",
+    "broll_query": "dark corporate building",
+    "on_screen": "ONE COMPANY",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "It's called EssilorLuxottica. In 2024 it brought in twenty-six and a half billion euros.",
+    "broll_query": "glass skyscraper night",
+    "on_screen": "€26.5 BILLION",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And it was built by a man who grew up in an orphanage in Milan.",
+    "broll_query": "old city street black and white",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Milano, Tallero Peter Witt 1935.jpg"
+   },
+   {
+    "narration": "This is the story of how he did it, how he crushed a rival that dared to say no, and why your glasses cost what they cost.",
+    "broll_query": "eyeglasses dark background",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "To understand it, we have to go back to 1935.",
+    "broll_query": "vintage film grain",
+    "on_screen": "",
+    "chapter": "The orphan",
+    "visual": {}
+   },
+   {
+    "narration": "Leonardo Del Vecchio was born in Milan in May 1935, to a poor family from the south of Italy.",
+    "broll_query": "milan cathedral",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Milano - Duomo di Milano - Guglie, composizione - 2026-09-08 20-59-21 001.jpg"
+   },
+   {
+    "narration": "His father, a street vendor who sold vegetables, died before he was born.",
+    "broll_query": "old market street",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "His mother already had four other children, and could not raise another. So Leonardo grew up in an orphanage.",
+    "broll_query": "empty old building corridor",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "As a teenager, he became an apprentice to a tool and die maker in Milan. He learned to shape metal with extreme precision.",
+    "broll_query": "metal workshop sparks",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Metal lathe. School workshop.jpg"
+   },
+   {
+    "narration": "And he noticed that the tiny metal parts inside a pair of glasses were exactly the kind of thing he was good at making.",
+    "broll_query": "eyeglasses hinge close up",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Ic berlin hinge-kate m.jpg"
+   },
+   {
+    "narration": "In 1961, at twenty-six, he moved to Agordo, a small mountain town in the Dolomites.",
+    "broll_query": "dolomites mountain village",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Agordo (BL) Italy village.jpg"
+   },
+   {
+    "narration": "With two partners, he opened a workshop called Luxottica. It had ten employees, and it didn't make glasses. It made parts for other companies' glasses.",
+    "broll_query": "small factory workers",
+    "on_screen": "10 EMPLOYEES",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That's the detail that explains everything that came later.",
+    "broll_query": "factory machine close up",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Most people in his position would have been happy to be a reliable supplier. Del Vecchio saw it differently. Being a supplier meant someone else decided how much you were worth.",
+    "broll_query": "craftsman workbench",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Del Vecchio hated depending on other people. If someone else made a part, someone else could raise the price or let you down.",
+    "broll_query": "assembly line",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Ducati 98 assembly line (ca. 1957).jpg"
+   },
+   {
+    "narration": "So in 1967 he started making complete frames himself. By 1971, he stopped selling parts to anyone else.",
+    "broll_query": "eyeglass frames production",
+    "on_screen": "",
+    "chapter": "Own every step",
+    "visual": {}
+   },
+   {
+    "narration": "From then on, every component of every frame was made inside his own company.",
+    "broll_query": "industrial factory",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Hinges, screws, fronts, temples. While rivals bought parts from dozens of small suppliers, Luxottica answered only to itself.",
+    "broll_query": "precision machining",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That meant he controlled quality, cost and speed. If a design sold well, he could make more of it, faster, without asking anyone.",
+    "broll_query": "warehouse boxes",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Then he went after the next link in the chain. In 1974 he bought Scarrone, the company that distributed his frames.",
+    "broll_query": "delivery trucks warehouse",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "In 1981 he opened his first foreign subsidiary, in Germany. In 1988 he signed his first designer deal, with Giorgio Armani.",
+    "broll_query": "fashion runway",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That deal was a turning point. A plain frame is a commodity. A frame with a fashion name on it can sell for many times the price.",
+    "broll_query": "luxury boutique",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "In 1990, Luxottica listed on the New York Stock Exchange and raised eighty million dollars.",
+    "broll_query": "stock exchange trading floor",
+    "on_screen": "$80 MILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:New York Stock Exchange August 2017 02.jpg"
+   },
+   {
+    "narration": "The same year, he bought Vogue Eyewear. The brand machine had started.",
+    "broll_query": "fashion magazine",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And the business worked. In 1994, Luxottica recorded a profit margin of fifteen point four percent, a record for the company at the time.",
+    "broll_query": "rising chart office",
+    "on_screen": "15.4%",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And now he had the money to do something much bigger. Stop being a supplier to the stores, and own the stores.",
+    "broll_query": "shopping mall",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "In 1995, Luxottica launched a hostile takeover of U.S. Shoe. The shoes didn't matter. What mattered was the company it owned: LensCrafters.",
+    "broll_query": "shoe store",
+    "on_screen": "$1.4 BILLION",
+    "chapter": "The takeover machine",
+    "visual": {}
+   },
+   {
+    "narration": "The price was one point four billion dollars. And the effect showed up on the shelves.",
+    "broll_query": "optical shop shelves",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Before the takeover, about five percent of the frames LensCrafters sold were made by Luxottica. By 2002 it was seventy percent.",
+    "broll_query": "eyeglasses display rack",
+    "on_screen": "5% TO 70%",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "The same year, he bought Persol. In 1999, he bought Ray-Ban from Bausch and Lomb for six hundred forty million dollars.",
+    "broll_query": "aviator sunglasses",
+    "on_screen": "$640 MILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Bausch & Lomb Place, World Headquarters Building, Rochester, New York.jpg"
+   },
+   {
+    "narration": "In 2001, Sunglass Hut, for four hundred sixty-two million. In 2003, OPSM in Australia. In 2004, Pearle Vision.",
+    "broll_query": "sunglasses store",
+    "on_screen": "$462 MILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:VINTAGE Sunglass Hut Kiosk; Oxford Valley Mall.jpg"
+   },
+   {
+    "narration": "Each deal did the same thing. It took a place where Luxottica had to compete for shelf space, and turned it into a place where Luxottica owned the shelf.",
+    "broll_query": "retail shelf display",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "By 2001, Luxottica's sales had reached two point eight billion dollars, up twenty-seven percent in a single year. Profit was two hundred ninety million.",
+    "broll_query": "money counting",
+    "on_screen": "$2.8 BILLION",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And every new store it bought became a new customer for its own factories.",
+    "broll_query": "factory conveyor",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And the designer licences kept coming. Chanel, Prada, Burberry, Versace, Dolce and Gabbana, Michael Kors, Coach.",
+    "broll_query": "fashion store window",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Boutique Chanel - Saint-Tropez.jpg"
+   },
+   {
+    "narration": "To shoppers, these looked like competing luxury brands. Behind the scenes, many came from the same factories.",
+    "broll_query": "factory production line",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Almost everyone played along. Except one company.",
+    "broll_query": "dark storm clouds",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Dark clouds over Towers of Channelside, Tampa, FL.jpg"
+   },
+   {
+    "narration": "Oakley was the rebel of eyewear. Big, loud, sporty glasses, worn by athletes, made by its own company in California.",
+    "broll_query": "sport sunglasses athlete",
+    "on_screen": "",
+    "chapter": "The rival who said no",
+    "visual": {}
+   },
+   {
+    "narration": "And Luxottica was one of its biggest sellers, through Sunglass Hut.",
+    "broll_query": "sunglasses shop counter",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "According to accounts of the fight, Oakley disputed the prices Luxottica wanted to pay. Oakley pushed back.",
+    "broll_query": "business meeting tense",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Luxottica's answer was simple. It dropped Oakley from its stores.",
+    "broll_query": "empty store shelf",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Overnight, Oakley lost a huge part of where its glasses were sold. Its stock price fell.",
+    "broll_query": "stock market falling",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Think about the position that put Oakley in. Its biggest customer was also the owner of competing brands, like Ray-Ban.",
+    "broll_query": "two sunglasses side by side",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Every shelf in Sunglass Hut that didn't hold an Oakley could hold something Luxottica made itself.",
+    "broll_query": "store shelf sunglasses",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And then, with Oakley weakened, Luxottica made a takeover offer.",
+    "broll_query": "chess board move",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "In November 2007, Oakley became part of Luxottica, for two point one billion dollars.",
+    "broll_query": "signing contract",
+    "on_screen": "$2.1 BILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Oakleyheadquarters.jpg"
+   },
+   {
+    "narration": "The lesson for everyone else in the industry was hard to miss. If you control the store, you control the brand.",
+    "broll_query": "dark office window",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Oakley kept its name, its look and its California image. Most buyers never knew anything had changed.",
+    "broll_query": "california beach",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Ruby's, Huntington Beach pier, California.jpg"
+   },
+   {
+    "narration": "By now, the company also owned a vision insurance business, EyeMed. By 2014 it was the second largest vision benefits company in the United States.",
+    "broll_query": "insurance paperwork",
+    "on_screen": "#2 IN US",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Think about what that means. The insurer could steer you to a store that the same company owned, to buy a frame that the same company made.",
+    "broll_query": "optical exam room",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:US Navy 050425-N-8629M-218 Lt. Robert Senko, an optometrist assigned to the Military Sealift Command (MSC) hospital ship USNS Mercy (T-AH 19), performs an eye exam on an Indonesian woman.jpg"
+   },
+   {
+    "narration": "Which raises the question everyone eventually asks. Why are glasses so expensive?",
+    "broll_query": "price tag glasses",
+    "on_screen": "",
+    "chapter": "Sticker shock",
+    "visual": {}
+   },
+   {
+    "narration": "In 2012, the TV program 60 Minutes asked exactly that, in a report called Sticker Shock, and looked hard at Luxottica's grip on the market.",
+    "broll_query": "television news studio",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Cbs-57.jpg"
+   },
+   {
+    "narration": "Then, in 2019, an unlikely critic spoke up. E. Dean Butler, the man who founded LensCrafters, the chain Luxottica had taken over.",
+    "broll_query": "older businessman portrait",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "He told the Los Angeles Times that glasses carried markups of nearly one thousand percent. He called it a complete rip-off.",
+    "broll_query": "newspaper printing",
+    "on_screen": "~1,000% MARKUP",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Luxottica has always said its prices reflect design, quality and service. But the numbers on how much of the market it held are hard to ignore.",
+    "broll_query": "corporate boardroom",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "The company said its frames made up about ten percent of sales worldwide, and around twenty percent in the United States.",
+    "broll_query": "eyeglasses close up",
+    "on_screen": "~20% OF US",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "In 2015, it was the largest optical retailer in America. But the biggest move was still to come.",
+    "broll_query": "storefront night",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Pearle Vision.JPG"
+   },
+   {
+    "narration": "By then, Luxottica's retail arm ran about nine thousand one hundred stores around the world.",
+    "broll_query": "shopping street night",
+    "on_screen": "~9,100 STORES",
+    "chapter": "",
+    "visual": {},
+    "image": "File:LensCrafters Columbus Center NYC.jpg"
+   },
+   {
+    "narration": "In 2014, it even teamed up with Google to work on Google Glass, the company's first big attempt at a computer you wear on your face.",
+    "broll_query": "wearable tech glasses",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Google Glass Explorer Edition.jpeg"
+   },
+   {
+    "narration": "It was a sign of how Luxottica saw itself. Not as a frame maker, but as the gatekeeper of anything people put on their face.",
+    "broll_query": "face close up glasses",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Glasses have two parts. The frame, and the lens. Del Vecchio owned frames. A French company, Essilor, ruled lenses.",
+    "broll_query": "lens manufacturing",
+    "on_screen": "",
+    "chapter": "Frames meet lenses",
+    "visual": {}
+   },
+   {
+    "narration": "In 2017, Essilor held about forty-one percent of the prescription lens market.",
+    "broll_query": "optical lens close up",
+    "on_screen": "41%",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Essilor Ligny-en-Barrois.jpg"
+   },
+   {
+    "narration": "Market research firm Euromonitor put Luxottica's global share at fourteen percent, and Essilor's at thirteen. Their nearest rival, Johnson and Johnson, had under four.",
+    "broll_query": "market share chart",
+    "on_screen": "14% + 13%",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That same year, the two companies announced they would merge. Regulators in Europe approved it in March 2018, without conditions.",
+    "broll_query": "european parliament building",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Belgique - Bruxelles - Schuman - Berlaymont - 01.jpg"
+   },
+   {
+    "narration": "On October first, 2018, EssilorLuxottica was born. Worth about seventy billion dollars on day one.",
+    "broll_query": "stock ticker screen",
+    "on_screen": "$70 BILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Palazzo Mezzanotte - Piazza Affari - Milano - Italy.JPG"
+   },
+   {
+    "narration": "Together, the combined company held nearly thirty percent of the global eyewear market.",
+    "broll_query": "world map lights",
+    "on_screen": "~30%",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "By 2019, it employed eighty-nine thousand people.",
+    "broll_query": "office workers",
+    "on_screen": "89,000 STAFF",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Frames, lenses, stores, insurance, designer licences. Almost every step between your eyes and your wallet.",
+    "broll_query": "eye exam machine",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Leonardo Del Vecchio, the boy from the orphanage, died in June 2022, at eighty-seven.",
+    "broll_query": "candle dark",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "He was worth about twenty-four billion dollars, the second richest person in Italy.",
+    "broll_query": "lake como villa",
+    "on_screen": "$24.1 BILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Villa Carlotta, Lake Como, Lily 24.jpg"
+   },
+   {
+    "narration": "But the machine he built kept running.",
+    "broll_query": "factory at night",
+    "on_screen": "",
+    "chapter": "The next frontier",
+    "visual": {},
+    "image": "File:Lauriano stabilimento luxottica.jpg"
+   },
+   {
+    "narration": "In 2024, EssilorLuxottica's revenue grew to twenty-six and a half billion euros, with an adjusted profit of three point one billion.",
+    "broll_query": "financial charts screen",
+    "on_screen": "€3.1B PROFIT",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And it's already moving into the next thing your face might wear. Smart glasses.",
+    "broll_query": "smart glasses technology",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Brickell Ray Ban Meta Wayfarer Smart Glasses - Colorful facade.jpg"
+   },
+   {
+    "narration": "Its Ray-Ban smart glasses, built with Meta, had sold more than two million pairs by early 2025.",
+    "broll_query": "wearable technology",
+    "on_screen": "2 MILLION PAIRS",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Brickell Ray Ban Meta Wayfarer Smart Glasses - 2 May 2026.jpg"
+   },
+   {
+    "narration": "A few months later, Meta took a stake in EssilorLuxottica, reported at around three billion euros.",
+    "broll_query": "tech company campus",
+    "on_screen": "€3 BILLION STAKE",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Meta Platforms Headquarters Menlo Park California.jpg"
+   },
+   {
+    "narration": "So even if the future of computing ends up on your face, there's a good chance the frame will come from the same company.",
+    "broll_query": "futuristic city night",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Look at what that deal really is. One of the biggest tech companies in the world seemingly decided it was easier to buy into this empire than to compete with it.",
+    "broll_query": "corporate handshake",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Because to sell glasses at scale, you need the brands, the factories, the lenses and the stores. And one company already has all four.",
+    "broll_query": "eyewear store",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Selection of stylish eyeglasses displayed in organized trays for customers in an optical store during daylight hours.jpg"
+   },
+   {
+    "narration": "That's the real story of your glasses. Not a crowded market of rival brands, but an empire built one step at a time, by a man who never wanted to depend on anyone.",
+    "broll_query": "sunglasses reflection",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "He started by making the smallest parts. He ended up owning almost the whole chain.",
+    "broll_query": "eyeglasses on book",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Whether that's brilliant business or a market with too little choice probably depends on which side of the counter you're standing on.",
+    "broll_query": "store counter",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "But the next time a pair of glasses costs more than you expected, you'll know exactly who to thank.",
+    "broll_query": "receipt checkout",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "If you want more stories like this, about the companies hiding behind the brands you use every day, subscribe. Thanks for watching.",
+    "broll_query": "city skyline dusk",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Milan skyline skyscrapers of Porta Nuova business district.jpg"
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Luxottica",
+   "https://en.wikipedia.org/wiki/Leonardo_Del_Vecchio",
+   "https://www.encyclopedia.com/economics/economics-magazines/luxottica-group-spa",
+   "https://moodiedavittreport.com/essilorluxottica-records-solid-revenue-and-profits-growth-in-2024-despite-industry-headwinds/",
+   "https://www.nbcnewyork.com/news/business/money-report/shares-of-ray-ban-maker-essilorluxottica-jump-5-on-reported-meta-stake-in-ai-push/6329814/"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Style sample in the MagnatesMedia format: dark cinematic grade, rags-to-riches story with a dated time jump, a rival as antagonist, no burned captions."
+ }
+}

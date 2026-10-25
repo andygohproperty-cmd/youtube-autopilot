@@ -48,8 +48,11 @@ def load_plan_file(path: str):
         setattr(channel, key, value)
     plan = VideoPlan.model_validate(data["plan"])
     words = sum(len(s.narration.split()) for s in plan.segments)
-    if not 0.6 * channel.target_words <= words <= 1.4 * channel.target_words:
-        raise SystemExit(f"{path}: {words} words, expected about {channel.target_words}")
+    low = 0.6 * channel.target_words
+    if not channel.is_short and 0 < channel.min_minutes <= channel.target_minutes:  # short style tests skip it
+        low = max(low, channel.target_words * channel.min_minutes / channel.target_minutes)
+    if not low <= words <= 1.4 * channel.target_words:
+        raise SystemExit(f"{path}: {words} words, expected about {channel.target_words} (at least {int(low)})")
     if not plan.sources:
         raise SystemExit(f"{path}: no sources")
     return channel, plan, data.get("research_notes", "")
@@ -71,6 +74,35 @@ def _real_chapter_times(description: str, segments, durations: list[float]) -> s
     lines = ([f"0:00 {first}"] if first else []) + [
         f"{'0:00' if i == 0 and not first else f'{int(s // 60)}:{int(s % 60):02d}'} {c}" for i, (s, c) in enumerate(starts)]
     return head + "Chapters:\n" + "\n".join(lines) + ("\n\n" + tail[1] if len(tail) > 1 else "")
+
+
+def _packaging_problems(channel, plan) -> list[str]:
+    """Title and thumbnail rules from WRITER.md ("Packaging"), checked before render."""
+    out = []
+    if len(plan.title) > 65:
+        out.append(f"title is {len(plan.title)} characters; keep it under 65 (ideally 40-60)")
+    title_words = set(plan.title.upper().replace("?", "").split())
+    for field, text in (("thumbnail_text", plan.thumbnail_text), ("alt_thumbnail_text", plan.alt_thumbnail_text)):
+        if field == "alt_thumbnail_text" and not text:
+            continue
+        words = text.replace("*", "").split()
+        if not 1 <= len(words) <= 4:
+            out.append(f"{field} has {len(words)} words; use 2-4")
+        if text.count("*") not in (0, 2):
+            out.append(f"{field}: mark exactly one word as *word*")
+        if len(words) > 1 and set(w.upper() for w in words) <= title_words:
+            out.append(f"{field} only repeats the title; it should add to it")
+    if plan.alt_thumbnail_text and plan.alt_thumbnail_text.replace("*", "").upper() == plan.thumbnail_text.replace("*", "").upper():
+        out.append("alt_thumbnail_text must differ from thumbnail_text (it is option B for Test & Compare)")
+    if not channel.is_short and not plan.alt_thumbnail_text:
+        out.append("give alt_thumbnail_text (thumbnail option B for Test & Compare)")
+    if not channel.is_short and len(plan.alt_titles) < 2:
+        out.append("give at least 2 alt_titles (runner-ups from the title shortlist)")
+    if not -1 <= plan.thumbnail_segment < len(plan.segments):
+        out.append(f"thumbnail_segment {plan.thumbnail_segment} is out of range")
+    if not -1 <= plan.alt_thumbnail_segment < len(plan.segments):
+        out.append(f"alt_thumbnail_segment {plan.alt_thumbnail_segment} is out of range")
+    return out
 
 
 def _visual_problems(channel, plan) -> list[str]:
@@ -109,10 +141,56 @@ def _names(x) -> set[str]:
     return found
 
 
+def _thumbnail(channel, plan, durations, leads, work, segment, text, dest, fallback=0.3):
+    """A thumbnail from a frame late in `segment` (or `fallback` of the way in), with `text` on it."""
+    from .thumbnail import make_thumbnail
+
+    at, side = None, "left"
+    if segment >= 0:   # late in the chosen segment, once its scene has played out
+        at = sum(durations[:segment]) + leads[segment] + (durations[segment] - leads[segment]) * 0.6
+        actors = plan.segments[segment].visual.get("actors") or []
+        if actors and sum(a.get("to", a.get("x", 0.5)) for a in actors) / len(actors) < 0.5:
+            side = "right"            # cartoon people on the left: words go on the right
+    src = work / "silent.mp4"
+    if channel.visual_style == "remotion":   # the picture has captions burned in: take a clean frame
+        from .remotion import remotion_still
+        src, at = remotion_still(work, sum(durations) * fallback if at is None else at,
+                                 dest.with_name(dest.stem + "-src.png")), 0.0
+    return make_thumbnail(src, text, dest, at, side)
+
+
+def _share_thumbnails(video_id: str, files: list) -> list[str]:
+    """Put the thumbnail options on the `previews` branch so the approval issue can show them."""
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    if not repo:
+        return []
+    tree = OUT_DIR / "previews-tree"
+    try:
+        subprocess.run(["git", "fetch", "-q", "origin", "previews"], check=True)
+        subprocess.run(["git", "worktree", "add", "-q", "-f", "-B", "previews", str(tree), "origin/previews"], check=True)
+        names = []
+        for i, f in enumerate(files):
+            name = f"thumbs/{video_id}-{'ab'[i]}.jpg"
+            (tree / "thumbs").mkdir(exist_ok=True)
+            (tree / name).write_bytes(f.read_bytes())
+            names.append(name)
+        git = ["git", "-C", str(tree), "-c", "user.name=autopilot", "-c", "user.email=autopilot@users.noreply.github.com"]
+        subprocess.run(git + ["add", *names], check=True)
+        subprocess.run(git + ["commit", "-qm", f"thumbnails: {video_id}"], check=True)
+        for _ in range(5):
+            subprocess.run(git + ["pull", "-q", "--rebase", "origin", "previews"])
+            if subprocess.run(git + ["push", "-q", "origin", "HEAD:previews"]).returncode == 0:
+                return [f"https://github.com/{repo}/blob/previews/{n}?raw=true" for n in names]
+    except (subprocess.CalledProcessError, OSError) as e:
+        print(f"Could not share thumbnails: {e}")
+    finally:
+        subprocess.run(["git", "worktree", "remove", "-f", str(tree)], capture_output=True)
+    return []
+
+
 def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str | None = None) -> None:
     from .render import render
-    from .thumbnail import make_thumbnail
-    from .voice import narrate
+    from .voice import narrate_cached as narrate
 
     if plan_file:
         channel, plan, notes = load_plan_file(plan_file)
@@ -134,13 +212,26 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
     texts = [s.narration for s in plan.segments]
     leads = leads_for(channel, plan.segments)
     durations = narrate(channel, texts, work / "narration.wav", leads)
-    video, tracks = render(channel, plan.segments, durations, leads, work / "narration.wav", work,
-                           hook_text=plan.thumbnail_text)
-    thumb = make_thumbnail(work / "silent.mp4", plan.thumbnail_text, work / "thumbnail.jpg")
+    video, tracks, photo_credits = render(channel, plan.segments, durations, leads, work / "narration.wav", work,
+                                          hook_text=plan.thumbnail_text.replace("*", ""), title=plan.title)
+    thumb = _thumbnail(channel, plan, durations, leads, work, plan.thumbnail_segment, plan.thumbnail_text,
+                       work / "thumbnail.jpg")
+    thumb_b = None
+    if plan.alt_thumbnail_text:   # option B for YouTube's thumbnail Test & Compare
+        seg = plan.alt_thumbnail_segment if plan.alt_thumbnail_segment >= 0 else plan.thumbnail_segment
+        thumb_b = _thumbnail(channel, plan, durations, leads, work, seg, plan.alt_thumbnail_text,
+                             work / "thumbnail-b.jpg", fallback=0.55)
+    music = tracks
+    tracks = [t for t in tracks if not t.startswith("gen:")]   # generated music needs no credit
     if tracks:  # licensed tracks from assets/music may need credit (assets/music/credits.json)
         credits_file = ASSETS_DIR / "music" / "credits.json"
         credits = json.loads(credits_file.read_text()) if credits_file.exists() else {}
         plan.description += "\n\nMusic: " + "; ".join(credits.get(t, t) for t in tracks)
+    if photo_credits:  # Wikimedia Commons photos: licences require credit
+        lines = [f"- {c}" for c in dict.fromkeys(photo_credits)]
+        while lines and len(plan.description) + sum(len(x) + 1 for x in lines) > 4700:   # YouTube max is 5000
+            lines.pop()
+        plan.description += "\n\nPhotos (Wikimedia Commons):\n" + "\n".join(lines)
     plan.description = _real_chapter_times(plan.description, plan.segments, durations)
     print(f"Rendered {video} ({sum(durations):.0f}s)")
     if dry_run:
@@ -151,10 +242,16 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
                               plan.uses_realistic_ai_media)
     append_record("history", channel.id, {
         "video_id": video_id, "title": plan.title, "status": "awaiting_approval",
-        "synthetic": plan.uses_realistic_ai_media, "seconds": round(sum(durations)),
+        "synthetic": plan.uses_realistic_ai_media, "seconds": round(sum(durations)), "music": music,
     })
     meta = {"channel": channel.id, "video_id": video_id, "synthetic": plan.uses_realistic_ai_media}
     sources = "\n".join(f"- {u}" for u in plan.sources)
+    thumbs = ""
+    if thumb_b:
+        urls = _share_thumbnails(video_id, [thumb, thumb_b])
+        pics = " ".join(f"![{k}]({u})" for k, u in zip("AB", urls)) if urls else "(thumbnail.jpg and thumbnail-b.jpg in the run)"
+        thumbs = (f"\n**Thumbnails** A (set) and B: {pics}\nRun both in Studio > Test & Compare: "
+                  f"https://studio.youtube.com/video/{video_id}/edit\n")
     body = f"""**{channel.name}** · {"Short" if channel.is_short else "Long video"} · {sum(durations) / 60:.1f} min
 
 ▶️ Watch (private): https://youtu.be/{video_id}
@@ -162,7 +259,7 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
 {"" if thumb_set or channel.is_short else "⚠️ Custom thumbnail not set: verify the channel at https://www.youtube.com/verify, then upload thumbnail.jpg in Studio."}
 
 **Why it's original:** {plan.originality_note}
-
+{thumbs}{"" if not plan.alt_titles else chr(10) + "**Other titles** (swap in Studio, or run them as a title test): " + " · ".join(plan.alt_titles) + chr(10)}
 **Description**
 {plan.description}
 
@@ -241,6 +338,8 @@ def main() -> None:
     rj.add_argument("--issue", type=int, required=True)
     rj.add_argument("--reason", default="")
     sub.add_parser("release-pending")
+    na = sub.add_parser("narrate")       # voice only (fills NARRATION_CACHE for a later render job)
+    na.add_argument("--plan-file", required=True)
     cp = sub.add_parser("check-plan")
     cp.add_argument("plan_file")
     a = p.parse_args()
@@ -248,11 +347,23 @@ def main() -> None:
         if not (a.channel or a.plan_file):
             p.error("produce needs --channel or --plan-file")
         produce(a.channel, a.dry_run, a.force, a.plan_file)
+    elif a.cmd == "narrate":
+        from .render import leads_for
+        from .voice import narrate_cached
+        channel, plan, _ = load_plan_file(a.plan_file)
+        out = OUT_DIR / "narration.wav"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        durations = narrate_cached(channel, [s.narration for s in plan.segments], out, leads_for(channel, plan.segments))
+        print(f"narrated {sum(durations):.0f}s")
     elif a.cmd == "check-plan":
         channel, plan, _ = load_plan_file(a.plan_file)
-        problems = _visual_problems(channel, plan) if channel.visual_style == "animated" else []
+        problems = _packaging_problems(channel, plan)
+        problems += _visual_problems(channel, plan) if channel.visual_style == "animated" else []
+        if channel.visual_style == "remotion":
+            from .remotion import plan_problems
+            problems += plan_problems(plan)
         if problems:
-            raise SystemExit("Fix the visuals:\n" + "\n".join(problems))
+            raise SystemExit("Fix the plan:\n" + "\n".join(problems))
         print(f"OK: {channel.id} · {plan.title}")
     elif a.cmd == "approve":
         approve(a.issue)

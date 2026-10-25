@@ -1,0 +1,662 @@
+{
+ "channel": "biz_explainers",
+ "channel_overrides": {
+  "visual_style": "stock",
+  "grade": "natural",
+  "captions": "none",
+  "target_minutes": 8.5,
+  "music_mood": "documentary",
+  "speed": 0.88,
+  "hook_captions": true,
+  "look": "full"
+ },
+ "research_notes": "Facts and figures (see sources):\n- https://www.uscurrency.gov/vi/node/89\n- https://www.federalreserve.gov/paymentsystems/coin_currcircvolume.htm\n- https://fred.stlouisfed.org/series/CURRVAL100\n- https://www.frbservices.org/news/research/2025-findings-from-the-diary-of-consumer-payment-choice\n- https://www.stlouisfed.org/on-the-economy/2019/may/foreign-demand-currency-fed-balance-sheet\n- https://www.federalreserve.gov/paymentsystems/2025_currency_print_order.htm\n- https://federalreserve.gov/faqs/currency_12771.htm",
+ "plan": {
+  "title": "If Nobody Uses Cash... Why Is There More Of It Than Ever?",
+  "alt_titles": [
+   "Where Did All The $100 Bills Go?",
+   "The (Strange) Rise of the $100 Bill"
+  ],
+  "description": "Cash is used for only 14% of US payments, yet there is more paper money than ever: $2.3 trillion, most of it in $100 bills. Here is where it goes, why people hold it, and who benefits.\n\nChapters:\n0:00 Intro\n0:54 The cash paradox\n1:56 The hundred dollar takeover\n3:58 Where the hundreds go\n5:23 Cash follows fear\n6:33 Who wins\n7:36 What it means for you\n\nSources:\nhttps://www.uscurrency.gov/vi/node/89\nhttps://www.federalreserve.gov/paymentsystems/coin_currcircvolume.htm\nhttps://fred.stlouisfed.org/series/CURRVAL100\nhttps://www.frbservices.org/news/research/2025-findings-from-the-diary-of-consumer-payment-choice\nhttps://www.stlouisfed.org/on-the-economy/2019/may/foreign-demand-currency-fed-balance-sheet\nhttps://www.federalreserve.gov/paymentsystems/2025_currency_print_order.htm\nhttps://federalreserve.gov/faqs/currency_12771.htm\n\nNarration is AI-generated. Educational content only, not financial advice.",
+  "tags": [
+   "cash",
+   "why is there more cash",
+   "100 dollar bill",
+   "currency in circulation",
+   "federal reserve",
+   "cashless society",
+   "us dollar abroad",
+   "how money works",
+   "money explained",
+   "economics explained"
+  ],
+  "thumbnail_text": "19.9 BILLION *$100* BILLS",
+  "thumbnail_segment": 25,
+  "segments": [
+   {
+    "narration": "Nobody uses cash anymore. You probably tap a card or your phone for almost everything.",
+    "broll_query": "contactless card payment",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:ポータブルなキャッシュレス決済端末 Portable cashless payment device.jpg"
+   },
+   {
+    "narration": "So here's a question that should not have an answer. If nobody uses cash, why is there more of it than ever?",
+    "broll_query": "stack of dollar bills",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:US banknotes including large denominations.png"
+   },
+   {
+    "narration": "At the end of 2024, there was two point three trillion dollars of American paper money out in the world.",
+    "broll_query": "money printing press",
+    "on_screen": "$2.3 TRILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Printing presses at Bureau of Engraving and Printing - NARA - 530059.jpg"
+   },
+   {
+    "narration": "That's fifty-five billion individual notes. Seven for every person on the planet.",
+    "broll_query": "crowded city street",
+    "on_screen": "55.4 BILLION NOTES",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Crowd at Times Square, March 23, 2008.jpg"
+   },
+   {
+    "narration": "And the number isn't shrinking. It goes up almost every single year.",
+    "broll_query": "rising graph screen",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Meanwhile, the Federal Reserve says cash was used for just fourteen percent of payments in 2024.",
+    "broll_query": "credit card terminal store",
+    "on_screen": "14% OF PAYMENTS",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Credit card terminal in Laos.jpg"
+   },
+   {
+    "narration": "Credit cards took thirty-five percent. Debit cards took thirty.",
+    "broll_query": "person paying with phone",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So someone is holding trillions of dollars in cash that they are not spending at the shops.",
+    "broll_query": "safe deposit boxes",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Zürich Switzerland-Safe-deposit-boxes-01.jpg"
+   },
+   {
+    "narration": "And when I went looking for who that someone is, the answer turned out to be a lot stranger than people stuffing money under the mattress.",
+    "broll_query": "dark vault door",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Porta caveau banca - Bank vault door - 1967.png"
+   },
+   {
+    "narration": "It involves the most popular banknote in the world, a printing budget worth billions, and a lot of money that has quietly left the country.",
+    "broll_query": "banknotes counting machine",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Magner 35S.jpg"
+   },
+   {
+    "narration": "To understand it, we need to start with the boring part. How much cash people actually use.",
+    "broll_query": "wallet with cash",
+    "on_screen": "",
+    "chapter": "The cash paradox",
+    "visual": {}
+   },
+   {
+    "narration": "Every year, the Federal Reserve asks thousands of Americans to keep a diary of every single payment they make.",
+    "broll_query": "person writing in notebook",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Eccles Building (26088200676).jpg"
+   },
+   {
+    "narration": "In 2024, the average person still made about seven cash payments a month.",
+    "broll_query": "coffee shop counter",
+    "on_screen": "7 A MONTH",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Food display case at the counter of French Coffee Shop, Dieppe 2026-05-11.jpg"
+   },
+   {
+    "narration": "That number has not changed since 2020. Cash isn't dying. It's just stuck.",
+    "broll_query": "street vendor food cart",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "It's still the third most used way to pay, behind credit and debit cards, and it has been for five years.",
+    "broll_query": "supermarket checkout",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Supermarket checkout Tegut Tauberbischofsheim.jpg"
+   },
+   {
+    "narration": "And here's the odd part. Nearly two thirds of those cash payments were made by people who say they'd rather pay some other way.",
+    "broll_query": "person counting coins",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "They don't love cash. They just use it when the card machine is down, when the place is cash only, or when they're splitting a bill.",
+    "broll_query": "cash only sign",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Nearly eighty percent of people held some cash for at least one day of the month, in every one of these surveys since 2018.",
+    "broll_query": "money in wallet",
+    "on_screen": "80% KEEP CASH",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And more than ninety percent say they expect to keep using cash, either to pay or to store value.",
+    "broll_query": "piggy bank coins",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That last bit, to store value, is the clue. Because people aren't keeping fives and tens. They're keeping something else.",
+    "broll_query": "hundred dollar bills",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Let's look at what's actually out there. Not in dollars, but in notes.",
+    "broll_query": "banknotes close up",
+    "on_screen": "",
+    "chapter": "The hundred dollar takeover",
+    "visual": {}
+   },
+   {
+    "narration": "In 2015, there were about thirty-eight billion American banknotes in circulation.",
+    "broll_query": "printing press paper",
+    "on_screen": "38.1 BILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:The Bureau of Engraving and Printing (BEP) in Washington, D.C.jpg"
+   },
+   {
+    "narration": "Ten years later, at the end of 2025, there were fifty-six point six billion.",
+    "broll_query": "money printing machine",
+    "on_screen": "56.6 BILLION",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That's an increase of almost half, in the same decade that phones replaced wallets.",
+    "broll_query": "smartphone payment app",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Now, the one dollar bill did grow, from eleven point four billion notes to fifteen point two billion.",
+    "broll_query": "one dollar bill",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "But the hundred dollar bill nearly doubled. From ten point eight billion notes to nineteen point nine billion.",
+    "broll_query": "hundred dollar bills stack",
+    "on_screen": "19.9 BILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:US100DollarBills-Old&2013.jpg"
+   },
+   {
+    "narration": "Which means there are now more hundred dollar bills in existence than one dollar bills.",
+    "broll_query": "dollar bills fan",
+    "on_screen": "$100s > $1s",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Think about how often you've actually held a hundred dollar bill. Now think about how often you've held a one.",
+    "broll_query": "hand holding money",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Something about that doesn't add up, and that's because most hundreds are not being used to buy things.",
+    "broll_query": "cash in envelope",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "By value, the gap is even more extreme. The hundreds alone are worth nearly two trillion dollars.",
+    "broll_query": "gold vault",
+    "on_screen": "$1.99 TRILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Federal Reserve Bank of New York, Manhattan, New York (7237032812).jpg"
+   },
+   {
+    "narration": "At the end of 2024, they made up one point nine trillion of the two point three trillion dollars out there.",
+    "broll_query": "banknotes on table",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "In other words, more than eighty percent of all American cash, by value, is hundreds.",
+    "broll_query": "hundred dollar bill macro",
+    "on_screen": "82%",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "A researcher at the Saint Louis Fed looked at this trend and put it bluntly. The recent growth in cash is due solely to the rise in hundred dollar bills.",
+    "broll_query": "economist reading report",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And the Fed keeps printing them. For 2025, it ordered between seven hundred fifty-two million and eight hundred sixty-seven million new hundred dollar notes.",
+    "broll_query": "printing press money",
+    "on_screen": "752-867 MILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Printing the new small size currency at the Bureau of Printing and Engraving LCCN2006691534.jpg"
+   },
+   {
+    "narration": "Each one costs about eleven cents to print, and has a face value of a hundred dollars.",
+    "broll_query": "coins on table",
+    "on_screen": "11.3¢ EACH",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And it's not a rounding error in the budget. The whole 2025 order was worth somewhere between eighty-three and a hundred and thirteen billion dollars at face value.",
+    "broll_query": "money printing factory",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Up to eighty-seven billion of that was hundreds. The twenties, the bill that actually comes out of ATMs, could be as low as zero.",
+    "broll_query": "atm machine cash",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:One of Cardtronics Cashzone Automated Teller Machines - geograph.org.uk - 5767790.jpg"
+   },
+   {
+    "narration": "On top of the per note cost, the Fed budgeted six hundred eighty-eight million dollars of fixed printing costs for the year.",
+    "broll_query": "factory machinery",
+    "on_screen": "$688.6M",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That's a serious amount of money to spend on a product that, supposedly, nobody uses.",
+    "broll_query": "empty shop counter",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So who wants a stack of paper that pays zero interest, can be stolen, and loses value to inflation every year?",
+    "broll_query": "burning money",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "A lot of people. Most of them just don't live here.",
+    "broll_query": "world map",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Measuring where cash goes is hard. Nobody tracks a banknote after it leaves the bank.",
+    "broll_query": "airport passport control",
+    "on_screen": "",
+    "chapter": "Where the hundreds go",
+    "visual": {},
+    "image": "File:Passport control at Bucharest Airport (23rd May 2024).jpg"
+   },
+   {
+    "narration": "When a bank needs more cash, it orders it from the Federal Reserve. When it has too much, it sends it back.",
+    "broll_query": "armored truck",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Brinks Geldtransporter 04.jpg"
+   },
+   {
+    "narration": "If the money goes out and never comes back, it's somewhere. Either in someone's home, or in someone's suitcase.",
+    "broll_query": "suitcase airport",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "But the Federal Reserve has spent decades trying, using shipping records, seasonal patterns, and even the wear and tear on returned notes.",
+    "broll_query": "shipping containers port",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Container-Terminal Bremerhaven 02.jpg"
+   },
+   {
+    "narration": "The US government's own currency site says that as much as half the value of American cash is estimated to be circulating abroad.",
+    "broll_query": "globe spinning",
+    "on_screen": "HALF ABROAD",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "An economist at the Federal Reserve, Ruth Judson, estimated that before 1990, around twenty percent of US cash was held abroad.",
+    "broll_query": "old city street",
+    "on_screen": "~20% BEFORE 1990",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "By her later work, that had climbed to between fifty and sixty percent.",
+    "broll_query": "airplane taking off",
+    "on_screen": "50-60%",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Aerial view of the Treasury Dept Washington DC 2026-10-12 11-29-23.jpg"
+   },
+   {
+    "narration": "And for hundred dollar bills specifically, as much as seventy percent were held outside the United States in 2011.",
+    "broll_query": "foreign currency exchange",
+    "on_screen": "70% OF $100s",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Why would someone in another country want American paper money?",
+    "broll_query": "busy market abroad",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:International Currency Exchange (ICE) office at Toronto Pearson (YYZ) Terminal 3.jpg"
+   },
+   {
+    "narration": "Because in a lot of places, the local currency is the risk. If prices double, your savings in the local money can be cut in half.",
+    "broll_query": "inflation price tags",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Aerial view of a busy tomato market in Lagos Nigeria.jpg"
+   },
+   {
+    "narration": "A US hundred dollar bill is the opposite. It's small, it's recognised almost everywhere, and it has held its value better than most.",
+    "broll_query": "dollar bill close up",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Zimbabwe Hyperinflation 2008 notes.jpg"
+   },
+   {
+    "narration": "It's not a payment method there. It's a savings account you can hold in your hand.",
+    "broll_query": "hands holding money",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And because it's paper, it doesn't need a bank account, a phone signal or a working payment network. It just needs to be trusted.",
+    "broll_query": "rural village market",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And that's the same reason people hoard cash at home, just on a much bigger scale.",
+    "broll_query": "house at night",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Look at when cash demand jumps. It doesn't follow shopping. It follows fear.",
+    "broll_query": "stock market crash screen",
+    "on_screen": "",
+    "chapter": "Cash follows fear",
+    "visual": {},
+    "image": "File:No Known Restrictions Trading Floor, New York Stock Exchange (Highsmith LOC) (6718386525).jpg"
+   },
+   {
+    "narration": "At the end of 2007, right before the financial crisis, there was seven hundred sixty-two billion dollars of US cash, about five percent of the economy.",
+    "broll_query": "wall street building",
+    "on_screen": "$762 BILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Wall-Street-Sign-New-York.jpg"
+   },
+   {
+    "narration": "By the end of 2018, it had more than doubled to one point six trillion, close to eight percent of the economy.",
+    "broll_query": "money stack growing",
+    "on_screen": "$1.6 TRILLION",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Lehman Brothers Times Square by David Shankbone.jpg"
+   },
+   {
+    "narration": "So during the decade that card payments took over, cash grew faster than the economy itself.",
+    "broll_query": "card payment terminal",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And it kept going. The hundreds were worth one point seven seven trillion dollars in 2021, and nearly two trillion by 2025.",
+    "broll_query": "banknotes vault",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "When banks look shaky or the world feels uncertain, people don't want an app balance. They want something physical.",
+    "broll_query": "bank building",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Northern Rock Queue.jpg"
+   },
+   {
+    "narration": "That's also why cash still matters most to people with the least room for error.",
+    "broll_query": "elderly person shopping",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "The Fed's diary found that households earning under twenty-five thousand dollars a year, and adults over fifty-five, rely on cash more than anyone else.",
+    "broll_query": "small grocery store",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "For them it's a budget tool. You can see exactly how much is left, and there's no overdraft fee.",
+    "broll_query": "budget envelopes cash",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Cashier at work in a Nigerian Grocery store.jpg"
+   },
+   {
+    "narration": "And when the power goes out or the card network fails, cash is the only thing that still works at the checkout.",
+    "broll_query": "power outage dark street",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That's why so many people who say they prefer cards still keep a few notes in their wallet. It's a backup system.",
+    "broll_query": "wallet close up",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So who actually benefits from all this paper?",
+    "broll_query": "federal reserve building",
+    "on_screen": "",
+    "chapter": "Who wins",
+    "visual": {}
+   },
+   {
+    "narration": "Think about what a banknote is. It's a promise from the Federal Reserve that it pays no interest on.",
+    "broll_query": "dollar bill macro",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Federal Reserve Bank of New York 006.jpg"
+   },
+   {
+    "narration": "When someone abroad holds a hundred dollar bill for twenty years, the United States has essentially been handed real goods and services in exchange for an eleven cent piece of paper.",
+    "broll_query": "cargo ship ocean",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "A Saint Louis Fed analysis estimated that if all the growth in hundred dollar bills came from foreign demand, it would explain about a quarter of the rise in the Fed's liabilities since the financial crisis.",
+    "broll_query": "economic chart screen",
+    "on_screen": "~1/4",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "That's a quiet, interest free loan from the rest of the world. And it keeps growing every year.",
+    "broll_query": "world map lights",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:MSC HARMONY III (container ship, 2006) in Port Koper (SIKOP, 2024).jpg"
+   },
+   {
+    "narration": "Compare that with a bank. If you leave money in a savings account, the bank pays you something for it. Cash pays you nothing.",
+    "broll_query": "bank teller counter",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So every year a hundred dollar bill sits in a drawer, its owner gives up the interest they could have earned. That's the real price of feeling safe.",
+    "broll_query": "drawer with money",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And inflation takes a cut too. A hundred dollar bill buys less every year, but it's still a hundred dollar bill, so it never feels like a loss.",
+    "broll_query": "grocery prices",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "So here's the answer to the paradox.",
+    "broll_query": "person looking at city",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "What does this mean for you? Probably that the cashless future people keep predicting is further away than it looks.",
+    "broll_query": "people walking city",
+    "on_screen": "",
+    "chapter": "What it means for you",
+    "visual": {}
+   },
+   {
+    "narration": "Card payments will keep winning at the checkout. But as long as people around the world don't trust their banks or their currency, demand for paper dollars will keep growing.",
+    "broll_query": "currency exchange board",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "It also means the cash in circulation tells you more about fear than about shopping. When that number jumps, people are nervous.",
+    "broll_query": "news headlines screen",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "And if you are one of the people keeping a stack at home, you're in good company. You're just paying for that comfort in lost interest.",
+    "broll_query": "home safe",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "Nobody uses cash, at least not at the checkout. But a huge number of people still hold it, as insurance, as savings, and as an escape hatch from a currency they don't trust.",
+    "broll_query": "safe with money",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Tokyo Shibuya Scramble Crossing 2018-10-09.jpg"
+   },
+   {
+    "narration": "The cash in your wallet is the small part of the story. The real story is a two trillion dollar pile of hundreds, much of it sitting in drawers and safes far from America.",
+    "broll_query": "money in drawer",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {},
+    "image": "File:Exchange rates sign.jpg"
+   },
+   {
+    "narration": "Cash didn't die. It just stopped being money you spend, and became money you keep.",
+    "broll_query": "hundred dollar bill",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   },
+   {
+    "narration": "If you want more stories about where money really goes, subscribe. Thanks for watching.",
+    "broll_query": "bank interior",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {}
+   }
+  ],
+  "sources": [
+   "https://www.uscurrency.gov/vi/node/89",
+   "https://www.federalreserve.gov/paymentsystems/coin_currcircvolume.htm",
+   "https://fred.stlouisfed.org/series/CURRVAL100",
+   "https://www.frbservices.org/news/research/2025-findings-from-the-diary-of-consumer-payment-choice",
+   "https://www.stlouisfed.org/on-the-economy/2019/may/foreign-demand-currency-fed-balance-sheet",
+   "https://www.federalreserve.gov/paymentsystems/2025_currency_print_order.htm",
+   "https://federalreserve.gov/faqs/currency_12771.htm"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Style sample in the How Money Works format: paradox hook, money question about the viewer's life, stock footage and stat cards, no burned captions."
+ }
+}
