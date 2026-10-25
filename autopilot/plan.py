@@ -22,3 +22,5 @@ class VideoPlan(BaseModel):
     originality_note: str  # what makes this video different from what's already on YouTube
     alt_titles: list[str] = []      # runner-up titles (shown on the approval issue for a swap or a Studio A/B test)
     thumbnail_segment: int = -1     # segment whose visual is the thumbnail background (-1: 30% into the video)
+    alt_thumbnail_text: str = ""    # thumbnail B for YouTube's Test & Compare (same rules as thumbnail_text)
+    alt_thumbnail_segment: int = -1

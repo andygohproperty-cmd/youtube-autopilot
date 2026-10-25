@@ -76,7 +76,8 @@ def riser(length: float = 1.6) -> np.ndarray:
     return ((tone + noise) * (t / length) ** 2 * 0.5).astype(np.float32)
 
 
-SFX = {"whoosh": whoosh, "pop": pop, "impact": impact, "riser": riser}
+SFX = {"whoosh": whoosh, "pop": pop, "impact": impact, "riser": riser,
+       "swish": lambda: whoosh(0.35) * 0.45}   # soft, for ordinary scene changes
 
 
 # --- music -----------------------------------------------------------------------

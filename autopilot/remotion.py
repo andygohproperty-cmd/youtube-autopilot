@@ -5,7 +5,8 @@ brands, empire, chain, ledger, bars, waffle, donut, line, quote, versus, text, c
 scene ({"type": ...}) or several ({"shots": [...]}, each later shot starting when its `cue` word is
 said). Asset fields are fetched here: `image`/`bgImage` (Wikimedia Commons), `broll`/`bgBroll`
 (stock footage). With no visual, a segment shows its `image`, its `on_screen` stat, or stock b-roll.
-Captions are timed per word from the real narration (faster-whisper), falling back to an estimate.
+Captions are timed per word by aligning the script to the narration (align.py), else faster-whisper,
+else an estimate. Small photos are upscaled with Real-ESRGAN (upscale.py).
 """
 import json
 import os
@@ -59,39 +60,61 @@ def _whisper_words(narration: Path) -> list[tuple[str, float, float]]:
         return []
 
 
+def _fill(got: dict[int, tuple[float, float]], n: int, a: float, b: float) -> list[tuple[float, float]]:
+    """Words without a time (numbers spelled differently, etc.) share the gaps between timed words."""
+    idx = sorted(got)
+    out = dict(got)
+    for i in range(n):
+        if i in got:
+            continue
+        prev = max([j for j in idx if j < i], default=None)
+        nxt = min([j for j in idx if j > i], default=None)
+        lo = got[prev][1] if prev is not None else a
+        hi = got[nxt][0] if nxt is not None else b
+        run = [j for j in range(n) if (prev is None or j > prev) and (nxt is None or j < nxt)]
+        pos = run.index(i)
+        step = max(hi - lo, 0.05) / len(run)
+        out[i] = (lo + pos * step, lo + (pos + 1) * step)
+    return [out[i] for i in range(n)]
+
+
 def word_times(narration: Path, segments: list[Segment], durations: list[float],
                leads: list[float]) -> list[dict]:
-    """Every script word with its start/end, using the script's spelling and whisper's timing."""
-    heard = _whisper_words(narration)
-    out, t = [], 0.0
+    """Every script word with its start/end: forced alignment of the script (align.py), else whisper's
+    timing matched to the script's spelling, else an estimate."""
+    from .align import load_aligner
+
+    aligner = load_aligner() if os.environ.get("FORCED_ALIGN", "1") != "0" else None
+    wave = aligner.load(narration) if aligner else None
+    heard = None
+    out, t, aligned = [], 0.0, 0
     for seg, dur, lead in zip(segments, durations, leads):
         a, b = t + lead, t + dur - PAUSE_S
         words = seg.narration.split()
         times = _spread(words, a, b)
-        near = [h for h in heard if a - 0.15 <= (h[1] + h[2]) / 2 <= b + 0.15]
-        if near:
-            sm = SequenceMatcher(None, [_norm(w) for w in words], [_norm(h[0]) for h in near], autojunk=False)
-            got: dict[int, tuple[float, float]] = {}
-            for blk in sm.get_matching_blocks():
-                for k in range(blk.size):
-                    got[blk.a + k] = (near[blk.b + k][1], near[blk.b + k][2])
-            if len(got) >= len(words) * 0.5:
-                # unmatched words (numbers spelled differently, etc.) fill the gaps between matches
-                idx = sorted(got)
-                for i in range(len(words)):
-                    if i in got:
-                        continue
-                    prev = max([j for j in idx if j < i], default=None)
-                    nxt = min([j for j in idx if j > i], default=None)
-                    lo = got[prev][1] if prev is not None else a
-                    hi = got[nxt][0] if nxt is not None else b
-                    run = [j for j in range(len(words)) if (prev is None or j > prev) and (nxt is None or j < nxt)]
-                    pos = run.index(i)
-                    step = max(hi - lo, 0.05) / len(run)
-                    got[i] = (lo + pos * step, lo + (pos + 1) * step)
-                times = [got[i] for i in range(len(words))]
+        got: dict[int, tuple[float, float]] = {}
+        if aligner and words:
+            try:
+                got = {i: x for i, x in enumerate(aligner.align(wave, a, b, words)) if x}
+            except Exception as e:   # never fail a render over captions
+                print(f"alignment failed for a segment ({e}); using whisper there")
+        if len(got) >= len(words) * 0.5:
+            aligned += 1
+        else:
+            if heard is None:
+                heard = _whisper_words(narration)
+            got = {}
+            near = [h for h in heard if a - 0.15 <= (h[1] + h[2]) / 2 <= b + 0.15]
+            if near:
+                sm = SequenceMatcher(None, [_norm(w) for w in words], [_norm(h[0]) for h in near], autojunk=False)
+                for blk in sm.get_matching_blocks():
+                    for k in range(blk.size):
+                        got[blk.a + k] = (near[blk.b + k][1], near[blk.b + k][2])
+        if words and len(got) >= len(words) * 0.5:
+            times = _fill(got, len(words), a, b)
         out += [{"text": w, "start": round(s, 3), "end": round(e, 3)} for w, (s, e) in zip(words, times)]
         t += dur
+    print(f"word timing: {aligned}/{len(segments)} segments force-aligned")
     return out
 
 
@@ -122,6 +145,9 @@ class Assets:
             return {}
         path, credit = got
         self.credits.append(credit)
+        if os.environ.get("UPSCALE", "1") != "0":
+            from .upscale import upscale
+            upscale(path)
         with Image.open(path) as im:
             w, h = im.size
         self.photos[query] = {"photo": f"run/{path.name}", "pw": w, "ph": h,
@@ -206,7 +232,7 @@ def build_props(channel: Channel, segments: list[Segment], durations: list[float
                 words: list[dict], title: str, workdir: Path) -> tuple[dict, list[tuple[float, str]], list[str]]:
     assets = Assets(channel, workdir)
     scenes, cues, cuts, quiet = [], [(0.0, "impact")], [], []
-    t, chapter_no, hook_end = 0.0, 0, None
+    t, chapter_no, hook_end, last_fx = 0.0, 0, None, 0.0
     for i, (seg, dur, lead) in enumerate(zip(segments, durations, leads)):
         start, end = t, t + dur
         if seg.chapter:
@@ -221,6 +247,7 @@ def build_props(channel: Channel, segments: list[Segment], durations: list[float
             card_end = min(start + CHAPTER_CARD, end - 1.0)
             scenes.append({"type": "chapter", "start": start, "end": card_end, "number": chapter_no, "title": seg.chapter})
             cues += [(start - 0.2, "whoosh"), (start + 0.05, "impact")]
+            last_fx = card_end
             cuts.append(start)
             quiet.append([start, card_end])
             start = card_end
@@ -245,6 +272,9 @@ def build_props(channel: Channel, segments: list[Segment], durations: list[float
             spec.update(start=round(a, 3), end=round(b, 3),
                         words=[w for w in seg_words if a - 0.05 <= w["start"] < b])
             scenes.append(spec)
+            if a - last_fx > 3.5 and a > 0.5:   # a soft swish on scene changes, never back to back
+                cues.append((a - 0.12, "swish"))
+                last_fx = a
             if spec["type"] == "text" and hook_end is None:
                 quiet.append([a, b])        # hook: the big words are already on screen
             if spec["type"] in ("stat", "donut", "waffle"):

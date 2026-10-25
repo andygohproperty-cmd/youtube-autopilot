@@ -95,7 +95,10 @@ jobs:
       - name: Install FFmpeg, Python and Remotion packages
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          pip install -r requirements.txt faster-whisper
+          pip install -r requirements.txt faster-whisper num2words
+          # Real-ESRGAN upscaling + forced alignment (torchaudio < 2.9 still has forced_align)
+          pip install --index-url https://download.pytorch.org/whl/cpu torch==2.6.0 torchaudio==2.6.0 torchvision==0.21.0
+          pip install spandrel
           python -m playwright install --with-deps chromium
           cd remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: Cache voice model

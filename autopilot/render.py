@@ -321,7 +321,8 @@ def render(channel: Channel, segments: list[Segment], durations: list[float], le
         from .remotion import render_remotion
         cues, credits = render_remotion(channel, segments, durations, leads, narration, workdir, title, silent)
         audio = workdir / "mix.wav"
-        tracks = mix(narration, cues, _sections(segments, durations), channel.music_mood, audio)
+        tracks = mix(narration, cues, _sections(segments, durations), channel.music_mood, audio,
+                     music_level=0.42)   # a low bed: documentaries keep music well under the voice
         out = workdir / "final.mp4"
         _ff("-i", str(silent), "-i", str(audio), "-map", "0:v", "-map", "1:a", "-c:v", "copy",
             "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out))

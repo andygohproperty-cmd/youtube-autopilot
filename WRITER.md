@@ -15,7 +15,7 @@ You are the writer for this repo's YouTube channels. Each run:
      ```json
      {"channel": "<id>", "research_notes": "<facts with URLs>", "plan": {
        "title": "...", "alt_titles": ["...", "..."], "description": "...", "tags": ["..."],
-       "thumbnail_text": "...", "thumbnail_segment": 12,
+       "thumbnail_text": "...", "thumbnail_segment": 12, "alt_thumbnail_text": "...", "alt_thumbnail_segment": 40,
        "segments": [{"narration": "...", "broll_query": "...", "on_screen": "", "chapter": "", "visual": {}}],
        "sources": ["https://..."], "uses_realistic_ai_media": false, "originality_note": "..."}}
      ```
@@ -27,6 +27,18 @@ You are the writer for this repo's YouTube channels. Each run:
      (`image`, "File:..." title) of the actual place, product or building, and `shots` with a `cue` word when
      one line covers two ideas. Keep recurring motifs (e.g. a `chain` of what the company owns) coming back.
      Use stock `broll` only for mood; never a stranger's face that implies a real person.
+   - **Script pass before saving** (long videos): load and apply these skills in order, then rewrite:
+     `social-media-skills:youtube-long-form` (structure, chapters, mid-video rehooks),
+     `social-media-skills:hook-writer` (line 1 answers or sharpens the title's promise, no throat-clearing),
+     `social-media-skills:scripting-and-storyboarding` (a pattern break every 30-60 s: new visual type,
+     question, number or time jump; open loops that pay off later, each `visual` matched to its line), then
+     `humanizer:humanizer` on the narration (no AI tells: no "delve", "in today's world", "let's dive in",
+     rule-of-three padding or em-dash chains; varied sentence length; spoken, not written). Facts and numbers
+     must stay exactly as sourced.
+   - **Two thumbnails** for YouTube's Test & Compare: `thumbnail_text` + `thumbnail_segment` (A) and
+     `alt_thumbnail_text` + `alt_thumbnail_segment` (B): a different subject AND a different angle on the
+     words (e.g. A a number, B a question or contrast), same style rules below. Load
+     `social-media-skills:thumbnail-design` first (one subject, 2-4 huge words, one *yellow* key word).
 3. Run `pip install -q pydantic pyyaml && python -m autopilot.run check-plan <file>` for each file and fix until it prints OK.
 4. Commit only the queue files and `git push` to `main`. GitHub Actions renders and uploads them, then opens approval issues.
 

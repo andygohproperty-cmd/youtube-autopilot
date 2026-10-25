@@ -43,7 +43,8 @@ jobs:
           pip install -r requirements.txt
           pip install --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts
           python -m playwright install --with-deps chromium
-          pip install faster-whisper
+          pip install faster-whisper num2words
+          pip install --extra-index-url https://download.pytorch.org/whl/cpu torchvision==0.21.0 spandrel   # torch 2.6 comes with chatterbox
           cd remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: Cache Chatterbox model
         uses: actions/cache@v4
