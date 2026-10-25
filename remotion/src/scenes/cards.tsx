@@ -87,7 +87,7 @@ export const Text = ({scene}: SceneProps) => {
       <Bg scene={scene} />
       <AbsoluteFill style={{justifyContent: "center", alignItems: "center", paddingBottom: 60}}>
         {lines.map((l, i) => {
-          const start = at(l.at, i * 0.5);
+          const start = i === 0 ? 0 : at(l.at, i * 0.5);   // never open on an empty screen
           const s = spring({frame: Math.round((t - start) * fps), fps, config: {damping: 15, stiffness: 180}});
           return (
             <div
@@ -253,7 +253,7 @@ export const Versus = ({scene}: SceneProps) => {
     <AbsoluteFill>
       <Bg scene={scene} />
       <AbsoluteFill style={{flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 60, paddingBottom: 80}}>
-        {side(scene.left, -1, at(scene.left.at, 0))}
+        {side(scene.left, -1, 0)}
         <div style={{fontFamily: F.display, fontSize: 110, color: C.gold, opacity: vs, scale: interpolate(vs, [0, 1], [2, 1])}}>{scene.vs || "VS"}</div>
         {side(scene.right, 1, at(scene.right.at, 0.3))}
       </AbsoluteFill>
