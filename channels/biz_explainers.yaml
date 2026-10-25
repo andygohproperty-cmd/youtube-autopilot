@@ -8,8 +8,7 @@ tts: chatterbox                      # natural, expressive free voice (andy pick
 voice: default
 exaggeration: 0.6
 speed: 1.0
-visual_style: animated               # cartoon people + motion graphics
-visual_theme: light
+visual_style: remotion               # dark documentary graphics (REMOTION.md); andy picked it over stock 2026-10-25
 music_mood: documentary
 category_id: "27"                    # Education
 language: en

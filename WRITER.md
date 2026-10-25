@@ -21,6 +21,12 @@ You are the writer for this repo's YouTube channels. Each run:
      ```
    - Channels with `visual_style: animated` (cartoon people + motion graphics): give every segment a `visual`
      scene exactly as described in `ANIMATION.md`, matched to what that line says.
+   - Channels with `visual_style: remotion` (dark documentary graphics): give nearly every segment a `visual`
+     from `REMOTION.md`, matched to what that line says: a map when a place is named, a timeline on a year
+     jump, a stat/bars/donut/waffle on every number, a quote card for quotes, a real Commons photo
+     (`image`, "File:..." title) of the actual place, product or building, and `shots` with a `cue` word when
+     one line covers two ideas. Keep recurring motifs (e.g. a `chain` of what the company owns) coming back.
+     Use stock `broll` only for mood; never a stranger's face that implies a real person.
 3. Run `pip install -q pydantic pyyaml && python -m autopilot.run check-plan <file>` for each file and fix until it prints OK.
 4. Commit only the queue files and `git push` to `main`. GitHub Actions renders and uploads them, then opens approval issues.
 
@@ -103,6 +109,7 @@ the formulas above, so viewers learn what the channel is.
   strong reaction (`shock`, `angry`, `smug`) or the product itself, and room on the left for the words.
   For animated channels pick a `scene` segment WITHOUT a `panel` (its numbers would clash with the words) and
   make it an obvious, uncluttered moment. Words go on the side away from the actors automatically.
+  For remotion channels pick a `photo` segment with one clear subject (the product or building).
 - No logos or real people's faces (we can't use them); the product, place or reaction carries it.
 
 **Hook: the first 30-60 seconds follow this shape (every top video did some version of it).**

@@ -30,6 +30,11 @@ jobs:
         with:
           python-version: "3.11"   # Chatterbox's watermark library fails to load on 3.12
           cache: pip
+      - uses: actions/setup-node@v4   # Remotion (visual_style: remotion)
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: remotion/package-lock.json
       - name: Free runner disk (PyTorch for Chatterbox needs room)
         run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
       - name: Install FFmpeg and Python packages
@@ -38,6 +43,8 @@ jobs:
           pip install -r requirements.txt
           pip install --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts
           python -m playwright install --with-deps chromium
+          pip install faster-whisper
+          cd remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: Cache Chatterbox model
         uses: actions/cache@v4
         with:
