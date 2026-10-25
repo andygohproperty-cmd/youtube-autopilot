@@ -29,6 +29,32 @@ def narrate(channel: Channel, texts: list[str], out_wav: Path,
     return durations
 
 
+def narrate_cached(channel: Channel, texts: list[str], out_wav: Path,
+                   leads: list[float] | None = None) -> list[float]:
+    """`narrate`, reusing an earlier run's track for the same words and voice when NARRATION_CACHE
+    names a folder (kept between workflow runs), so a picture-only change skips hours of TTS."""
+    import hashlib
+    import json
+    import os
+    import shutil
+
+    cache = os.environ.get("NARRATION_CACHE")
+    if not cache:
+        return narrate(channel, texts, out_wav, leads)
+    key = hashlib.sha1(json.dumps([texts, leads, channel.tts, channel.voice, channel.speed,
+                                   channel.exaggeration]).encode()).hexdigest()[:16]
+    wav, meta = Path(cache) / f"{key}.wav", Path(cache) / f"{key}.json"
+    if wav.exists() and meta.exists():
+        print(f"narration: reusing cached track {key}")
+        shutil.copy(wav, out_wav)
+        return json.loads(meta.read_text())
+    durations = narrate(channel, texts, out_wav, leads)
+    wav.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy(out_wav, wav)
+    meta.write_text(json.dumps(durations))
+    return durations
+
+
 def _kokoro(channel: Channel):
     tts = Kokoro(str(MODELS_DIR / "kokoro-v1.0.int8.onnx"), str(MODELS_DIR / "voices-v1.0.bin"))
     return lambda text: tts.create(text, voice=channel.voice, speed=channel.speed, lang="en-us")

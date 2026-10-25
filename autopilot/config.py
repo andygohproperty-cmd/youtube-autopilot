@@ -34,7 +34,7 @@ class Channel:
     speed: float = 1.0
     language: str = "en"
     music_mood: str = ""                # folder under assets/music picked first
-    visual_style: str = "stock"         # "stock" footage or "animated" motion graphics
+    visual_style: str = "stock"         # "stock" footage, "animated" motion graphics, or "remotion" documentary graphics (remotion/)
     visual_theme: str = "dark"          # animated look: "dark" or "light" (cartoon)
     grade: str = "natural"              # stock footage colour: "natural", "cinematic" (dark, muted) or "bright"
     captions: str = "words"             # "words" (word-by-word burned in) or "none" (documentary look)

@@ -1,0 +1,28 @@
+{
+  "name": "autopilot-remotion",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render"
+  },
+  "dependencies": {
+    "@fontsource/anton": "5.2.6",
+    "@fontsource/inter": "5.2.8",
+    "@fontsource/playfair-display": "5.2.8",
+    "@remotion/cli": "4.0.538",
+    "@remotion/media": "4.0.538",
+    "@remotion/transitions": "4.0.538",
+    "d3-geo": "3.1.1",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.538",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  },
+  "devDependencies": {
+    "@types/d3-geo": "3.1.0",
+    "@types/react": "19.1.12",
+    "@types/topojson-client": "3.1.5",
+    "typescript": "5.9.2"
+  }
+}

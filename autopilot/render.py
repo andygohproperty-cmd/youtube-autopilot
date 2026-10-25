@@ -317,6 +317,15 @@ def render(channel: Channel, segments: list[Segment], durations: list[float], le
     animated = channel.visual_style == "animated"
     silent = workdir / "silent.mp4"
     credits: list[str] = []
+    if channel.visual_style == "remotion":   # React motion graphics with captions built in
+        from .remotion import render_remotion
+        cues, credits = render_remotion(channel, segments, durations, leads, narration, workdir, title, silent)
+        audio = workdir / "mix.wav"
+        tracks = mix(narration, cues, _sections(segments, durations), channel.music_mood, audio)
+        out = workdir / "final.mp4"
+        _ff("-i", str(silent), "-i", str(audio), "-map", "0:v", "-map", "1:a", "-c:v", "copy",
+            "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out))
+        return out, tracks, credits
     if animated:
         from .animate import render_scenes
         render_scenes(scenes_for(channel, segments, durations, bool(title)), sum(durations), (w, h), silent,
@@ -327,13 +336,8 @@ def render(channel: Channel, segments: list[Segment], durations: list[float], le
     subs = workdir / "overlays.ass"
     cues = _overlays(channel, segments, durations, leads, hook_text, subs, cards=not animated,
                      title=title if channel.hook_captions else "")
-    sections, t = [], 0.0
-    for seg, dur in zip(segments, durations):
-        if seg.chapter and t > 0:
-            sections.append(t)
-        t += dur
     audio = workdir / "mix.wav"
-    tracks = mix(narration, cues, sections, channel.music_mood, audio)
+    tracks = mix(narration, cues, _sections(segments, durations), channel.music_mood, audio)
 
     out = workdir / "final.mp4"
     fonts = ASSETS_DIR / "fonts"
@@ -342,6 +346,16 @@ def render(channel: Channel, segments: list[Segment], durations: list[float], le
         "-tune", "film", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out))
     return out, tracks, credits
+
+
+def _sections(segments: list[Segment], durations: list[float]) -> list[float]:
+    """Chapter start times (the music changes there)."""
+    sections, t = [], 0.0
+    for seg, dur in zip(segments, durations):
+        if seg.chapter and t > 0:
+            sections.append(t)
+        t += dur
+    return sections
 
 
 def scenes_for(channel: Channel, segments: list[Segment], durations: list[float],

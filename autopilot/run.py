@@ -135,7 +135,7 @@ def _names(x) -> set[str]:
 def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str | None = None) -> None:
     from .render import render
     from .thumbnail import make_thumbnail
-    from .voice import narrate
+    from .voice import narrate_cached as narrate
 
     if plan_file:
         channel, plan, notes = load_plan_file(plan_file)
@@ -166,7 +166,13 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
         actors = plan.segments[i].visual.get("actors") or []
         if actors and sum(a.get("to", a.get("x", 0.5)) for a in actors) / len(actors) < 0.5:
             side = "right"            # cartoon people on the left: words go on the right
-    thumb = make_thumbnail(work / "silent.mp4", plan.thumbnail_text, work / "thumbnail.jpg", thumb_at, side)
+    thumb_src = work / "silent.mp4"
+    if channel.visual_style == "remotion":   # the picture has captions burned in: take a clean frame
+        from .remotion import remotion_still
+        if thumb_at is None:
+            thumb_at = sum(durations) * 0.3
+        thumb_src, thumb_at = remotion_still(work, thumb_at, work / "thumb-src.png"), 0.0
+    thumb = make_thumbnail(thumb_src, plan.thumbnail_text, work / "thumbnail.jpg", thumb_at, side)
     if tracks:  # licensed tracks from assets/music may need credit (assets/music/credits.json)
         credits_file = ASSETS_DIR / "music" / "credits.json"
         credits = json.loads(credits_file.read_text()) if credits_file.exists() else {}
@@ -276,6 +282,8 @@ def main() -> None:
     rj.add_argument("--issue", type=int, required=True)
     rj.add_argument("--reason", default="")
     sub.add_parser("release-pending")
+    na = sub.add_parser("narrate")       # voice only (fills NARRATION_CACHE for a later render job)
+    na.add_argument("--plan-file", required=True)
     cp = sub.add_parser("check-plan")
     cp.add_argument("plan_file")
     a = p.parse_args()
@@ -283,10 +291,21 @@ def main() -> None:
         if not (a.channel or a.plan_file):
             p.error("produce needs --channel or --plan-file")
         produce(a.channel, a.dry_run, a.force, a.plan_file)
+    elif a.cmd == "narrate":
+        from .render import leads_for
+        from .voice import narrate_cached
+        channel, plan, _ = load_plan_file(a.plan_file)
+        out = OUT_DIR / "narration.wav"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        durations = narrate_cached(channel, [s.narration for s in plan.segments], out, leads_for(channel, plan.segments))
+        print(f"narrated {sum(durations):.0f}s")
     elif a.cmd == "check-plan":
         channel, plan, _ = load_plan_file(a.plan_file)
         problems = _packaging_problems(channel, plan)
         problems += _visual_problems(channel, plan) if channel.visual_style == "animated" else []
+        if channel.visual_style == "remotion":
+            from .remotion import plan_problems
+            problems += plan_problems(plan)
         if problems:
             raise SystemExit("Fix the plan:\n" + "\n".join(problems))
         print(f"OK: {channel.id} · {plan.title}")
