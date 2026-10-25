@@ -26,7 +26,10 @@ You are the writer for this repo's YouTube channels. Each run:
      jump, a stat/bars/donut/waffle on every number, a quote card for quotes, a real Commons photo
      (`image`, "File:..." title) of the actual place, product or building, and `shots` with a `cue` word when
      one line covers two ideas. Keep recurring motifs (e.g. a `chain` of what the company owns) coming back.
-     Use stock `broll` only for mood; never a stranger's face that implies a real person.
+     **Motion, not a slideshow:** about 1 in 3 shots must move: a `clip` (stock video `broll`) or a card with
+     a `bgBroll` background, at least one every ~25 s, and never 3 photo/collage shots in a row. Good clips:
+     the product being made or used, stores, crowds, city streets, money, factories, shipping, screens.
+     Never a stranger's face that implies a real person. `check-plan` enforces this.
    - **Script pass before saving** (long videos): load and apply these skills in order, then rewrite:
      `social-media-skills:youtube-long-form` (structure, chapters, mid-video rehooks),
      `social-media-skills:hook-writer` (line 1 answers or sharpens the title's promise, no throat-clearing),
@@ -100,6 +103,17 @@ From the most-viewed videos of How Money Works, Logically Answered, Company Man,
 cruises, Chuck E. Cheese), plus a tension: decline, a hidden money machine, a scandal, a paradox. Evergreen
 beats news. Never a company most viewers haven't heard of.
 
+**Controversial angle (owner's call, 2026-10-25): every long video takes a side on something people argue
+about.** Pick the debate first ("Is Costco membership a trap?", "Are glasses a rip-off?", "Is Shein
+unstoppable or doomed?"), then argue one side hard with sourced evidence, name the villain or the hidden
+loser (the customer, the worker, the rival), and give the other side one fair line before knocking it down.
+Save the most shocking sourced fact for the middle so people stay. Stay inside YouTube policy and the law:
+- Every claim about a real company or person is a sourced fact or clearly attributed ("regulators fined
+  them $X", "critics call it...", "the lawsuit alleged..."). Never say a company or person committed a crime
+  unless a court or regulator found it. Opinion is labelled as opinion ("I think", "the verdict").
+- No hate or harassment, no health, money or election misinformation, no "they're lying to you" without proof.
+- The title's controversy must be what the video actually argues (no bait-and-switch).
+
 **Title: write 8, keep 1 + 2 runner-ups (`alt_titles`).** Brand or subject in the first 3-4 words, one tension
 word, 40-60 characters, no clickbait the video doesn't pay off. Formulas that carry these channels:
 - Paradox question: "If Nobody Can Afford A Home... Who's Going To Buy Them?"
@@ -109,6 +123,9 @@ word, 40-60 characters, no clickbait the video doesn't pay off. Formulas that ca
 - Rise and fall with money: "From $10 Billion To Nothing: How Wish.com Lost Everything"
 - Why X can't / won't: "Why Crumbl Cookies Can't Survive", "Why Airbnb Fails to Disrupt the Hotel Industry"
 - Hidden truth: "The Disturbing History of Coca-Cola" (only when the facts really are disturbing)
+- Take a side: "Costco Isn't Your Friend", "Why Glasses Cost $400 (It's Not The Lenses)",
+  "Is X A Scam?", "The X Lie Everyone Believes", "X Is Ripping You Off (Legally)"
+Prefer the take-a-side formulas: a title should make half the audience want to argue in the comments.
 Ellipses and a small hedge in brackets ("(probably)", "(sort of)") read as human and honest; use rarely.
 Keep a repeatable franchise: most titles on this channel should fit "How X (Really) Makes Money" or one of
 the formulas above, so viewers learn what the channel is.

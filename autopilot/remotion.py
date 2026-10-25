@@ -205,6 +205,17 @@ def plan_problems(plan) -> list[str]:
         for sh in (seg.visual.get("shots") or [seg.visual]) if seg.visual else []:
             if sh.get("type") not in SCENE_TYPES:
                 out.append(f"segment {i}: unknown scene type {sh.get('type')!r}")
+    # motion, not a slideshow: ~1 in 3 shots is video, and never 3 still photos in a row
+    shots = [(i, sh) for i, seg in enumerate(plan.segments)
+             for sh in ((seg.visual.get("shots") or [seg.visual]) if seg.visual else [])]
+    moving = sum(1 for _, sh in shots if sh.get("type") == "clip" or sh.get("bgBroll"))
+    if len(shots) >= 12 and moving < len(shots) * 0.3:
+        out.append(f"only {moving} of {len(shots)} shots are video (clip or bgBroll); make about 1 in 3 move")
+    run = 0
+    for i, sh in shots:
+        run = run + 1 if sh.get("type") in ("photo", "collage") else 0
+        if run == 3:
+            out.append(f"segment {i}: 3 photo/collage shots in a row; swap one for a clip or a graphic")
     return out
 
 
