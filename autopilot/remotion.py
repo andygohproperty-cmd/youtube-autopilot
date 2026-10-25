@@ -252,7 +252,7 @@ def build_props(channel: Channel, segments: list[Segment], durations: list[float
         t = end
     total = t
     props = {
-        "fps": FPS, "width": 1920, "height": 1080, "duration": round(total, 3), "title": title,
+        "fps": FPS, "width": channel.size[0], "height": channel.size[1], "duration": round(total, 3), "title": title,
         "channel": channel.name.upper(), "hookEnd": round(hook_end if hook_end is not None else min(30.0, total), 3),
         "noCaptions": quiet, "scenes": scenes, "words": words, "cuts": cuts,
     }
@@ -276,9 +276,8 @@ def render_remotion(channel: Channel, segments: list[Segment], durations: list[f
     props_file.write_text(json.dumps(props))
     if not (RDIR / "node_modules").exists():
         subprocess.run(["npm", "ci", "--no-audit", "--no-fund"], cwd=RDIR, check=True)
-    w, _ = channel.size
     cmd = ["npx", "remotion", "render", "src/index.ts", "Doc", str(dest.resolve()), f"--props={props_file.resolve()}",
-           f"--scale={w / 1920:.4f}", f"--concurrency={os.cpu_count() or 2}", "--codec=h264", "--crf=16",
+           f"--concurrency={os.cpu_count() or 2}", "--codec=h264", "--crf=16",
            "--muted", "--log=info"]
     if os.environ.get("REMOTION_BROWSER"):
         cmd.append(f"--browser-executable={os.environ['REMOTION_BROWSER']}")
