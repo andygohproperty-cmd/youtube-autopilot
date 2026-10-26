@@ -1,0 +1,2061 @@
+{
+ "channel": "biz_explainers",
+ "channel_overrides": {
+  "grade": "cinematic"
+ },
+ "research_notes": "Delta: $8.2B cash from Amex in 2025 = ~14% of adjusted operating revenue, ~1.4x adjusted operating income; American: $6.2B from co-brand/partners = ~4x adjusted operating income; IdeaWorks 2025: reward payback fell ~half since 2019, tied to cutting/ending earning on cheapest fares; Breyault quote; Alaska Kevin Scott paraphrase; Delta recognises part of Amex cash immediately, rest deferred; Durbin-Marshall + Airlines for America warning (Reuters, Mar 13 2026, investing.com link).\n2024: Delta $7.4B from Amex; ~$186B spent on Delta cards = ~12% of Amex global spend; Sorensen and de Boer quotes; United 2008-09 revenue -19% vs loyalty -2% (NYT Sept 6 2025, ideaworks PDF). $10B target (Skift Oct 2025).\nTexas International first program 1979; AAdvantage May 1 1981; SABRE repeat phone numbers; 130k flyers + 60k Admirals Club = ~190k pre-enrolled; 1978 Deregulation Act (Wikipedia AAdvantage).\nUnited 8-K June 15 2020: $5B term loan; MileagePlus ~$21.9B (12x 2019 EBITDA); 2019 cash from sales $5.33B, $3.80B from third parties (71%). Market cap $11.7B (Executive Traveller June 17 2020).\nDelta Sept 17 2020: $9B SkyMiles financing, upsized from $6.5B (Delta IR). Collateral incl. co-brand agreements/payments, deposit accounts, IP incl. member profile data (Wolf Street, from filings).\nAmerican Mar 10 2021: $10B AAdvantage financing, up from $7.5B, repays Treasury loan (SEC 8-K ex99.1).\nDelta Sept 2023 SkyMiles: spend-based MQDs, Diamond 35,000 proposal, was 20,000 + flights, revised Oct 18 2023 to 28,000; lounge caps for premium cardholders; Bastian 'probably went too far' (Business Traveller Sept 28 2023; AP Oct 18 2023).\nDOT Sept 5 2024 probe of American, Delta, Southwest, United: devaluation, hidden/dynamic pricing, extra fees, reduced competition; Buttigieg quote (transportation.gov).",
+ "plan": {
+  "title": "Airlines Make More From Your Credit Card Than Flying",
+  "alt_titles": [
+   "Your Airline Miles Are a Bad Deal (Here's Why)",
+   "Airlines Are Banks That Happen to Fly Planes"
+  ],
+  "description": "Delta got $8.2 billion from American Express in 2025, more than its operating profit. This is how airline credit cards and frequent flyer miles became the real business behind US airlines, why the points were once worth more than the planes, and why I think miles are now a bad deal for most people.\n\nHow airlines make money from credit cards, loyalty programs and miles: from American's 1981 phone-number trick to the $24 billion airlines borrowed against their programs in 2020-21.\n\nChapters:\n0:00 Intro\n0:55 The phone number trick\n2:15 Enter the banks\n3:45 Worth more than the airline\n5:05 You're the collateral\n6:05 Moving the goalposts\n7:40 Who really pays\n9:00 The verdict\n\nSources:\nhttps://www.investing.com/news/stock-market-news/creditcard-cash-reshapes-us-airline-loyalty--and-profit-4559355\nhttps://ideaworkscompany.com/wp-content/uploads/2025/09/2025-09-06-New-York-Times.pdf\nhttps://skift.com/2025/10/13/delta-amex-numbers-show-its-growing-bet-on-wealthy-travelers/\nhttps://en.wikipedia.org/wiki/AAdvantage\nhttps://ir.united.com/node/23771/html\nhttps://www.executivetraveller.com/news/how-united-airlines-took-a-7bn-mortgage-on-its-frequent-flyer-scheme\nhttps://ir.delta.com/news/news-details/2020/Delta-Air-Lines-Announces-Upsize-of-SkyMiles-Financing-to-9-Billion/default.aspx\nhttps://wolfstreet.com/2020/10/15/whats-behind-the-billions-that-airlines-raised-via-frequent-flier-programs-youre-the-collateral/\nhttps://www.sec.gov/Archives/edgar/data/4515/000000620121000024/aex991securednotespricingp.htm\nhttps://www.businesstraveller.com/news/delta-ceo-skymiles-changes-reaction/\nhttps://mynews13.com/fl/orlando/ap-top-news/2023/10/18/delta-air-lines-scales-back-changes-to-its-loyalty-program-after-a-revolt-by-customers\nhttps://www.transportation.gov/briefing-room/usdot-seeks-protect-consumers-airline-rewards-probe-four-largest-us-airlines-rewards\n\nNarration is AI-generated. Educational content and opinion only, not financial advice.",
+  "tags": [
+   "how airlines make money",
+   "airline credit cards",
+   "frequent flyer miles",
+   "airline loyalty programs",
+   "delta amex",
+   "skymiles",
+   "mileageplus",
+   "aadvantage",
+   "are airline miles worth it",
+   "business documentary",
+   "credit card rewards"
+  ],
+  "thumbnail_text": "*$8.2B* FROM A CARD",
+  "thumbnail_segment": 5,
+  "alt_thumbnail_text": "YOU'RE THE *COLLATERAL*",
+  "alt_thumbnail_segment": 41,
+  "segments": [
+   {
+    "narration": "Last year, Delta Air Lines got eight point two billion dollars from one company. And not for flying anyone anywhere.",
+    "broll_query": "airplane takeoff sunset",
+    "on_screen": "$8.2 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$8.2 BILLION",
+     "label": "Paid to Delta, 2025",
+     "sub": "not for a single flight",
+     "bgBroll": "airplane takeoff sunset"
+    }
+   },
+   {
+    "narration": "The money came from American Express. It was paying for miles.",
+    "broll_query": "credit card payment",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "clip",
+       "broll": "credit card payment terminal",
+       "tag": "American Express"
+      },
+      {
+       "cue": "paying for miles",
+       "type": "text",
+       "lines": [
+        {
+         "text": "IT BOUGHT *MILES*",
+         "size": 200
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "narration": "By Delta's own adjusted numbers, that's about one and a half times what the whole airline made in operating profit.",
+    "broll_query": "airline profit chart",
+    "on_screen": "1.4× PROFIT",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "1.4×",
+     "label": "Amex cash vs. Delta's operating profit",
+     "sub": "adjusted, 2025",
+     "bgBroll": "stock chart screen"
+    }
+   },
+   {
+    "narration": "American Airlines is even stranger. Its card and loyalty partners paid it six point two billion dollars.",
+    "broll_query": "airport terminal planes",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$6.2 BILLION",
+     "label": "Partner cash to American, 2025",
+     "bgBroll": "airport terminal planes"
+    }
+   },
+   {
+    "narration": "That's roughly four times its operating profit.",
+    "broll_query": "jet engine close up",
+    "on_screen": "4× PROFIT",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "4×",
+       "size": 300,
+       "color": "red"
+      },
+      {
+       "text": "ITS OPERATING *PROFIT*",
+       "at": "operating",
+       "size": 120
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So if an airline makes more from your credit card than from your flight... is it still an airline?",
+    "broll_query": "airplane window clouds",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "photo",
+     "image": "airplane wing above clouds",
+     "move": "in",
+     "tag": "Still an airline?"
+    }
+   },
+   {
+    "narration": "A consumer advocate put it bluntly to Reuters this year.",
+    "broll_query": "newspaper printing press",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "newspaper printing press",
+     "tag": "Reuters · March 2026"
+    }
+   },
+   {
+    "narration": "He said the modern airline is a gigantic rewards program that just happens to fly airplanes.",
+    "broll_query": "airplane taxiing runway",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "The modern airline is a gigantic *rewards program* that just happens to fly airplanes.",
+     "who": "John Breyault, National Consumers League",
+     "kicker": "Reuters, 2026",
+     "hlAt": "rewards",
+     "bgBroll": "airplane taxiing runway"
+    }
+   },
+   {
+    "narration": "And if you have ever swiped a card to earn miles, you're part of that business. Maybe more than you think.",
+    "broll_query": "shopping checkout card",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "supermarket checkout card payment",
+     "tag": "You're in the business"
+    }
+   },
+   {
+    "narration": "Because the deal you signed up for has been shrinking. One industry study says the value you get back for your loyalty has fallen by about half since 2019.",
+    "broll_query": "falling graph",
+    "on_screen": "ABOUT HALF",
+    "chapter": "",
+    "visual": {
+     "type": "line",
+     "direction": "down",
+     "at": "fallen",
+     "label": "Reward payback since 2019",
+     "tag": "IdeaWorks, 2025"
+    }
+   },
+   {
+    "narration": "I think frequent flyer miles have become a bad deal for most people. By the end, you can decide if I'm right.",
+    "broll_query": "airport crowd walking",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "MILES ARE A",
+       "size": 120
+      },
+      {
+       "text": "*BAD DEAL*",
+       "at": "bad deal",
+       "size": 230,
+       "mark": "red"
+      },
+      {
+       "text": "(FOR MOST PEOPLE)",
+       "at": "most people",
+       "size": 70
+      }
+     ],
+     "bgBroll": "airport crowd walking"
+    }
+   },
+   {
+    "narration": "To see how we got here, we have to go back to 1981. And to a list of phone numbers.",
+    "broll_query": "vintage telephone",
+    "on_screen": "",
+    "chapter": "The phone number trick",
+    "visual": {
+     "shots": [
+      {
+       "type": "timeline",
+       "from": 2026,
+       "to": 1981,
+       "at": "1981",
+       "label": "Dallas, Texas"
+      },
+      {
+       "cue": "list of phone",
+       "type": "clip",
+       "broll": "vintage rotary telephone",
+       "bw": true
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In 1978, America deregulated its airlines. Carriers could suddenly fight over routes and prices, and they did.",
+    "broll_query": "vintage airport 1970s",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "timeline",
+       "from": 1981,
+       "to": 1978,
+       "at": 0.0,
+       "label": "Airline Deregulation Act"
+      },
+      {
+       "cue": "fight",
+       "type": "clip",
+       "broll": "vintage airport 1970s",
+       "bw": true,
+       "tag": "A price war"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Airlines needed a way to stop people from just booking whoever was cheapest that day.",
+    "broll_query": "airport ticket counter",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "HOW DO YOU STOP",
+       "size": 120
+      },
+      {
+       "text": "*PRICE* SHOPPING?",
+       "at": "cheapest",
+       "size": 200
+      }
+     ],
+     "bgBroll": "airport ticket counter"
+    }
+   },
+   {
+    "narration": "Texas International tried a frequent flyer scheme first, in 1979. American Airlines turned the idea into a machine.",
+    "broll_query": "old jet airliner",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "photo",
+       "image": "Texas International Airlines DC-9",
+       "tag": "Texas International · 1979"
+      },
+      {
+       "cue": "American Airlines",
+       "type": "text",
+       "lines": [
+        {
+         "text": "AMERICAN AIRLINES",
+         "size": 150
+        },
+        {
+         "text": "BUILT THE *MACHINE*",
+         "at": "machine",
+         "size": 150
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Its trick was clever. It searched its SABRE booking computer for phone numbers that kept showing up again and again.",
+    "broll_query": "old mainframe computer",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "old mainframe computer",
+     "bw": true,
+     "tag": "SABRE booking system"
+    }
+   },
+   {
+    "narration": "Every repeat number was a frequent traveler. It found about a hundred and thirty thousand of them.",
+    "broll_query": "phone book pages",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "130,000",
+     "label": "Frequent flyers found by phone number",
+     "bgBroll": "phone book pages"
+    }
+   },
+   {
+    "narration": "Add sixty thousand airport lounge members, and AAdvantage launched on May first, 1981, with about a hundred and ninety thousand people already enrolled.",
+    "broll_query": "airport lounge vintage",
+    "on_screen": "190,000",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "190,000",
+       "label": "Members on day one",
+       "sub": "May 1, 1981"
+      },
+      {
+       "cue": "already enrolled",
+       "type": "clip",
+       "broll": "airport lounge",
+       "tag": "AAdvantage"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The pitch was simple. Fly with us, collect miles, earn a free trip.",
+    "broll_query": "passengers boarding plane",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "Fly",
+       "owned": "Fly"
+      },
+      {
+       "label": "Collect miles",
+       "owned": "collect"
+      },
+      {
+       "label": "Free trip",
+       "owned": "free trip"
+      }
+     ],
+     "tag": "1981",
+     "ownedText": "THE DEAL"
+    }
+   },
+   {
+    "narration": "Within days, United launched its own program. Soon every big airline had one.",
+    "broll_query": "airport departure board",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "brands",
+     "items": [
+      "AAdvantage",
+      "MileagePlus",
+      "SkyMiles",
+      "Rapid Rewards"
+     ],
+     "cols": 2,
+     "tag": "Everyone copies",
+     "bgBroll": "airport departure board"
+    }
+   },
+   {
+    "narration": "And almost from the start, the airline could change the rules. In 1988, American ran triple-mile promotions, then raised the number of miles you needed for a reward.",
+    "broll_query": "vintage airplane 1980s",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "timeline",
+       "from": 1981,
+       "to": 1988,
+       "at": "1988",
+       "label": "Triple miles"
+      },
+      {
+       "cue": "then raised",
+       "type": "text",
+       "lines": [
+        {
+         "text": "MORE MILES",
+         "size": 150
+        },
+        {
+         "text": "FOR THE SAME *SEAT*",
+         "at": "reward",
+         "size": 150
+        }
+       ],
+       "bgBroll": "vintage airplane cabin"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "A year later, in 1989, miles started to expire.",
+    "broll_query": "hourglass sand",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "hourglass sand",
+     "tag": "1989 · miles expire"
+    }
+   },
+   {
+    "narration": "Still, for years, that's mostly what miles were. A thank-you for flying a lot.",
+    "broll_query": "airplane cabin passengers",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "airplane cabin passengers",
+     "tag": "A thank-you"
+    }
+   },
+   {
+    "narration": "Then the banks showed up.",
+    "broll_query": "bank building skyline",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "THEN THE *BANKS*",
+       "size": 220
+      },
+      {
+       "text": "SHOWED UP",
+       "size": 160
+      }
+     ],
+     "bgBroll": "city bank skyline"
+    }
+   },
+   {
+    "narration": "Here's the move that changed everything. Airlines started selling their miles to other companies.",
+    "broll_query": "money counting machine",
+    "on_screen": "",
+    "chapter": "Enter the banks",
+    "visual": {
+     "type": "clip",
+     "broll": "money counting machine",
+     "tag": "Miles for sale"
+    }
+   },
+   {
+    "narration": "A bank puts the airline's name on a credit card. Every time you buy groceries with it, the bank buys miles from the airline and passes them to you.",
+    "broll_query": "grocery shopping card",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "You swipe",
+       "owned": "groceries"
+      },
+      {
+       "label": "Bank buys miles",
+       "owned": "bank buys"
+      },
+      {
+       "label": "Airline gets cash",
+       "owned": "airline"
+      },
+      {
+       "label": "Miles to you",
+       "owned": "passes"
+      }
+     ],
+     "tag": "The co-brand card"
+    }
+   },
+   {
+    "narration": "The airline gets cash today. You get a promise of a seat someday.",
+    "broll_query": "cash register money",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "The airline",
+      "sub": "cash today",
+      "at": "airline"
+     },
+     "right": {
+      "name": "You",
+      "sub": "a seat, someday",
+      "color": "red",
+      "at": "You get"
+     },
+     "vsAt": "You get",
+     "bgBroll": "cash register money"
+    }
+   },
+   {
+    "narration": "Jay Sorensen, a consultant who has studied these programs for years, told the New York Times exactly where the shift came from.",
+    "broll_query": "office desk reports",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "business reports desk",
+     "tag": "Jay Sorensen · IdeaWorksCompany"
+    }
+   },
+   {
+    "narration": "What really changed the dynamics of these programs, he said, is the arrival of credit cards.",
+    "broll_query": "credit cards close up",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "What really changed the dynamics of these programs is the arrival of *credit cards*.",
+     "who": "Jay Sorensen, IdeaWorksCompany",
+     "kicker": "New York Times, 2025",
+     "hlAt": "credit"
+    }
+   },
+   {
+    "narration": "And remember, the airline decides how many miles it creates, and how many miles a seat will cost.",
+    "broll_query": "printing press money",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "IT MAKES THE MILES",
+       "at": "creates",
+       "size": 140
+      },
+      {
+       "text": "IT SETS THE *PRICE*",
+       "at": "seat will",
+       "size": 170
+      }
+     ],
+     "bgBroll": "printing press running"
+    }
+   },
+   {
+    "narration": "The biggest of these deals is between Delta and American Express.",
+    "broll_query": "airplane at gate",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "Delta",
+      "sub": "the miles",
+      "at": "Delta"
+     },
+     "right": {
+      "name": "American Express",
+      "sub": "the card",
+      "color": "red",
+      "at": "American Express"
+     },
+     "vsAt": "American",
+     "vs": "+"
+    }
+   },
+   {
+    "narration": "In 2024, people spent about a hundred and eighty-six billion dollars on Delta-branded cards.",
+    "broll_query": "shopping bags street",
+    "on_screen": "$186 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$186 BILLION",
+     "label": "Spent on Delta cards, 2024",
+     "bgBroll": "shopping street crowd"
+    }
+   },
+   {
+    "narration": "That's roughly one dollar in every eight spent on American Express cards anywhere in the world.",
+    "broll_query": "world map lights",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "waffle",
+     "from": 0,
+     "to": 12,
+     "at": "one dollar",
+     "label": "of all Amex card spending\non Delta cards",
+     "fromLabel": "",
+     "toLabel": "about 12%"
+    }
+   },
+   {
+    "narration": "Delta got seven point four billion dollars from Amex that year. Then eight point two billion the next. Its executives have talked about reaching ten billion.",
+    "broll_query": "rising bar chart",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Amex cash to Delta",
+     "unit": "$B",
+     "max": 10,
+     "items": [
+      {
+       "label": "2024",
+       "value": 7.4,
+       "prefix": "$",
+       "at": "seven point"
+      },
+      {
+       "label": "2025",
+       "value": 8.2,
+       "prefix": "$",
+       "at": "eight point"
+      },
+      {
+       "label": "Goal",
+       "value": 10,
+       "prefix": "$",
+       "color": "red",
+       "at": "ten billion"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "To put that in proportion, the Amex money alone is about fourteen percent of Delta's adjusted revenue. From one partner.",
+    "broll_query": "airport terminal busy",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "donut",
+     "value": 14,
+     "approx": true,
+     "title": "of Delta's revenue",
+     "sub": "from American Express alone, 2025",
+     "at": "fourteen",
+     "bgBroll": "airport terminal busy"
+    }
+   },
+   {
+    "narration": "And these programs are enormous. By 2020, MileagePlus had more than a hundred million members. By 2021, AAdvantage had over a hundred and fifteen million.",
+    "broll_query": "crowd people walking",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "100 MILLION+",
+       "label": "MileagePlus members, 2020",
+       "bgBroll": "crowd people walking"
+      },
+      {
+       "cue": "AAdvantage had",
+       "type": "stat",
+       "value": "115 MILLION+",
+       "label": "AAdvantage members, 2021",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That's more members than most countries have people.",
+    "broll_query": "world map",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "map",
+     "view": "world",
+     "tag": "Bigger than most countries"
+    }
+   },
+   {
+    "narration": "And here's what makes this money so special. It's steady. When people stop flying, they keep shopping.",
+    "broll_query": "shopping mall crowd",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "shopping mall crowd",
+     "tag": "Steady money"
+    }
+   },
+   {
+    "narration": "In the 2008 recession, United's overall revenue fell nineteen percent. Its loyalty revenue fell just two percent.",
+    "broll_query": "recession empty office",
+    "on_screen": "-19% VS -2%",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "United, 2008-09 recession",
+     "unit": "% drop",
+     "max": 20,
+     "items": [
+      {
+       "label": "Total revenue",
+       "value": 19,
+       "at": "nineteen"
+      },
+      {
+       "label": "Loyalty revenue",
+       "value": 2,
+       "color": "red",
+       "at": "just two"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So which is worth more: the planes, or the points? In 2020, the whole world found out.",
+    "broll_query": "empty airport night",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "THE PLANES",
+       "at": "planes",
+       "size": 150
+      },
+      {
+       "text": "OR THE *POINTS*?",
+       "at": "points",
+       "size": 190
+      }
+     ],
+     "bgBroll": "empty airport night"
+    }
+   },
+   {
+    "narration": "In the spring of 2020, the pandemic emptied the sky.",
+    "broll_query": "empty airport terminal",
+    "on_screen": "",
+    "chapter": "Worth more than the airline",
+    "visual": {
+     "type": "clip",
+     "broll": "empty airport terminal",
+     "tag": "Spring 2020"
+    }
+   },
+   {
+    "narration": "Planes sat parked in rows. Airlines were losing money every single day, and they needed loans.",
+    "broll_query": "parked airplanes desert",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "photo",
+     "image": "airliners stored desert",
+     "move": "out",
+     "tag": "Grounded"
+    }
+   },
+   {
+    "narration": "Lenders want collateral. Something valuable they can take if you can't pay.",
+    "broll_query": "bank vault door",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "LENDERS WANT",
+       "size": 120
+      },
+      {
+       "text": "*COLLATERAL*",
+       "at": "collateral",
+       "size": 220
+      }
+     ],
+     "bgBroll": "bank vault door"
+    }
+   },
+   {
+    "narration": "In June 2020, United took out a five billion dollar loan, backed by its MileagePlus program.",
+    "broll_query": "airplane hangar",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$5 BILLION",
+     "label": "Loan backed by MileagePlus",
+     "sub": "June 2020",
+     "bgBroll": "airplane hangar"
+    }
+   },
+   {
+    "narration": "The idea wasn't brand new. Colombia's Avianca had borrowed against its LifeMiles program back in 2017. But nobody had done it at this size.",
+    "broll_query": "bogota city skyline",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "map",
+       "view": "atlantic",
+       "points": [
+        {
+         "name": "Bogotá",
+         "sub": "Avianca · LifeMiles, 2017",
+         "lon": -74.07,
+         "lat": 4.71,
+         "at": "Avianca"
+        }
+       ]
+      },
+      {
+       "cue": "But nobody",
+       "type": "text",
+       "lines": [
+        {
+         "text": "NEVER AT THIS *SIZE*",
+         "size": 170
+        }
+       ],
+       "bgBroll": "airplane hangar"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And United had something lenders loved. Its card deals with Chase and Visa had just been extended into 2029. Years of guaranteed swiping.",
+    "broll_query": "credit cards stack",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "timeline",
+     "from": 2020,
+     "to": 2029,
+     "at": "2029",
+     "label": "Chase + Visa deal extended",
+     "bgBroll": "credit cards stack"
+    }
+   },
+   {
+    "narration": "In its own filing, United valued MileagePlus at about twenty-one point nine billion dollars.",
+    "broll_query": "financial documents",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "clip",
+       "broll": "financial documents desk",
+       "tag": "SEC filing · June 2020"
+      },
+      {
+       "cue": "twenty-one",
+       "type": "stat",
+       "value": "$21.9 BILLION",
+       "label": "MileagePlus, by United's own math",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "At the time, the whole of United Airlines on the stock market, every plane and route included, was worth around eleven point seven billion.",
+    "broll_query": "stock market screen",
+    "on_screen": "$21.9B VS $11.7B",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "June 2020",
+     "unit": "$B",
+     "items": [
+      {
+       "label": "MileagePlus",
+       "value": 21.9,
+       "prefix": "$",
+       "color": "red",
+       "at": 0.0
+      },
+      {
+       "label": "All of United",
+       "value": 11.7,
+       "prefix": "$",
+       "at": "eleven point"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Let that sink in. The points program was worth almost twice the airline that owns it.",
+    "broll_query": "airplane silhouette",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "THE POINTS",
+       "size": 150
+      },
+      {
+       "text": "WORTH *2×*",
+       "at": "almost",
+       "size": 230,
+       "mark": "red"
+      },
+      {
+       "text": "THE AIRLINE",
+       "at": "airline that",
+       "size": 150
+      }
+     ],
+     "bgBroll": "airplane silhouette sunset"
+    }
+   },
+   {
+    "narration": "Delta went next. In September 2020, it borrowed nine billion dollars against SkyMiles. It had planned six and a half. Lenders wanted more.",
+    "broll_query": "runway night lights",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "$9 BILLION",
+       "label": "Backed by SkyMiles",
+       "sub": "Sept 2020",
+       "bgBroll": "runway night lights"
+      },
+      {
+       "cue": "It had planned",
+       "type": "versus",
+       "left": {
+        "name": "$6.5B",
+        "sub": "planned"
+       },
+       "right": {
+        "name": "$9B",
+        "sub": "raised",
+        "color": "red",
+        "at": "Lenders"
+       },
+       "vs": "→",
+       "vsAt": "Lenders"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Look at how Delta set it up. The loan went through a brand new company in the Cayman Islands, called SkyMiles IP.",
+    "broll_query": "tropical island aerial",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "map",
+       "view": "atlantic",
+       "points": [
+        {
+         "name": "Cayman Islands",
+         "sub": "SkyMiles IP Ltd.",
+         "lon": -81.25,
+         "lat": 19.3,
+         "at": "Cayman"
+        }
+       ],
+       "tag": "Sept 2020"
+      },
+      {
+       "cue": "called",
+       "type": "text",
+       "lines": [
+        {
+         "text": "SKYMILES *IP* LTD.",
+         "size": 170
+        }
+       ],
+       "bgBroll": "tropical island aerial"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "At the time, credit agencies rated Delta's debt as junk. Yet it borrowed against SkyMiles at four and a half to four point seven five percent.",
+    "broll_query": "bond market screen",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "4.5%–4.75%",
+     "label": "Interest on the SkyMiles notes",
+     "sub": "Delta's rating: BB, junk",
+     "at": "four and a half",
+     "bgBroll": "bond market screen"
+    }
+   },
+   {
+    "narration": "My read is simple. The lenders weren't betting on the airline. They were betting on the miles.",
+    "broll_query": "poker chips table",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "NOT THE AIRLINE.",
+       "size": 140
+      },
+      {
+       "text": "THE *MILES*.",
+       "at": "betting on the miles",
+       "size": 220,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "casino chips table"
+    }
+   },
+   {
+    "narration": "And the miles held up. Even in that terrible year, SkyMiles brought in two point nine billion dollars in the first nine months of 2020.",
+    "broll_query": "airplane parked gate",
+    "on_screen": "$2.9 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$2.9 BILLION",
+     "label": "SkyMiles income, Jan–Sept 2020",
+     "sub": "in the worst year in modern aviation",
+     "bgBroll": "airplane parked gate"
+    }
+   },
+   {
+    "narration": "Then in March 2021, American raised ten billion dollars backed by AAdvantage, and used it to pay back a loan from the US Treasury.",
+    "broll_query": "treasury building",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "ledger",
+     "title": "Borrowed against miles",
+     "rows": [
+      {
+       "year": 2020,
+       "name": "United · MileagePlus",
+       "price": "$5B",
+       "at": 0.0
+      },
+      {
+       "year": 2020,
+       "name": "Delta · SkyMiles",
+       "price": "$9B",
+       "at": 0.0
+      },
+      {
+       "year": 2021,
+       "name": "American · AAdvantage",
+       "price": "$10B",
+       "at": "March"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That's twenty-four billion dollars, borrowed against miles, by just three airlines.",
+    "broll_query": "stacks of money",
+    "on_screen": "$24 BILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$24 BILLION",
+     "label": "Borrowed against miles",
+     "sub": "three airlines, 2020-21",
+     "bgBroll": "stacks of money"
+    }
+   },
+   {
+    "narration": "But what exactly were the lenders getting? Partly... you.",
+    "broll_query": "silhouette crowd",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "WHAT WERE THEY",
+       "size": 120
+      },
+      {
+       "text": "BUYING?",
+       "size": 200
+      },
+      {
+       "text": "*YOU.*",
+       "at": "you",
+       "size": 240,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "airport crowd silhouette"
+    }
+   },
+   {
+    "narration": "Delta's loan documents spell out what backs the deal.",
+    "broll_query": "legal documents signing",
+    "on_screen": "",
+    "chapter": "You're the collateral",
+    "visual": {
+     "type": "clip",
+     "broll": "legal documents signing",
+     "tag": "The loan documents"
+    }
+   },
+   {
+    "narration": "The rights to its credit card partnerships and the payments from them. The bank accounts where SkyMiles money lands.",
+    "broll_query": "bank accounts screen",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "empire",
+     "center": "$9B LOAN",
+     "radius": 230,
+     "rx": 560,
+     "cy": 430,
+     "nodes": [
+      {
+       "label": "Card deals",
+       "at": "credit card"
+      },
+      {
+       "label": "Partner payments",
+       "at": "payments"
+      },
+      {
+       "label": "Bank accounts",
+       "at": "bank accounts"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And the program's intellectual property, including member profile data.",
+    "broll_query": "data server room",
+    "on_screen": "MEMBER DATA",
+    "chapter": "",
+    "visual": {
+     "type": "empire",
+     "center": "$9B LOAN",
+     "radius": 230,
+     "rx": 560,
+     "cy": 430,
+     "nodes": [
+      {
+       "label": "Card deals",
+       "at": 0.0
+      },
+      {
+       "label": "Partner payments",
+       "at": 0.0
+      },
+      {
+       "label": "Bank accounts",
+       "at": 0.0
+      },
+      {
+       "label": "Member data",
+       "sub": "you",
+       "at": "member"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In plain words, the program and the information on its members, you included, helped secure a nine billion dollar loan.",
+    "broll_query": "people walking city data",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "data network screen",
+     "tag": "You, included"
+    }
+   },
+   {
+    "narration": "That's why the airline cares so much that you keep swiping.",
+    "broll_query": "credit card swipe",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "KEEP *SWIPING*",
+       "size": 220
+      }
+     ],
+     "bgBroll": "credit card swipe close up"
+    }
+   },
+   {
+    "narration": "United's numbers show how lopsided it is. In 2019, MileagePlus brought in five point three billion dollars in cash.",
+    "broll_query": "airport check in",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$5.3 BILLION",
+     "label": "MileagePlus cash, 2019",
+     "bgBroll": "airport check in desk"
+    }
+   },
+   {
+    "narration": "Seventy-one percent of that came from outside partners, like card issuers. Not from people buying flights on United.",
+    "broll_query": "credit card company",
+    "on_screen": "71%",
+    "chapter": "",
+    "visual": {
+     "type": "donut",
+     "value": 71,
+     "title": "From outside partners",
+     "sub": "MileagePlus cash, 2019",
+     "at": "Seventy"
+    }
+   },
+   {
+    "narration": "Think about what that means. Most of the money in the program has nothing to do with sitting on a plane.",
+    "broll_query": "plane passengers seats",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "empty airplane seats",
+     "tag": "Not about flying"
+    }
+   },
+   {
+    "narration": "There is one catch for the airline. Every mile it sells is a seat it owes someone, someday.",
+    "broll_query": "empty airplane seat",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "photo",
+     "image": "airliner cabin empty seats",
+     "tag": "An IOU"
+    }
+   },
+   {
+    "narration": "By late 2020, Delta's loyalty deferred revenue, basically miles sold but not yet flown, stood at seven point one billion dollars.",
+    "broll_query": "accounting books",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$7.1 BILLION",
+     "label": "Miles sold, not yet flown",
+     "sub": "Delta, Q3 2020",
+     "bgBroll": "accounting books calculator"
+    }
+   },
+   {
+    "narration": "That's an IOU to millions of members. So what's the cheapest way to shrink an IOU?",
+    "broll_query": "pen paper signature",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "HOW DO YOU SHRINK",
+       "size": 120
+      },
+      {
+       "text": "AN *IOU*?",
+       "at": "IOU",
+       "size": 230,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "pen paper signature"
+    }
+   },
+   {
+    "narration": "You make each mile worth a little less. And when you hold a promise, the person who wrote it can rewrite it.",
+    "broll_query": "pen writing contract",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "THEY CAN",
+       "size": 130
+      },
+      {
+       "text": "*REWRITE* IT",
+       "at": "rewrite",
+       "size": 210
+      }
+     ],
+     "bgBroll": "pen writing contract"
+    }
+   },
+   {
+    "narration": "American already showed the way. In 2016, it stopped giving miles for the distance you flew, and started giving them for the price of your ticket.",
+    "broll_query": "airplane flight path",
+    "on_screen": "",
+    "chapter": "Moving the goalposts",
+    "visual": {
+     "shots": [
+      {
+       "type": "timeline",
+       "from": 1989,
+       "to": 2016,
+       "at": "2016",
+       "label": "Miles by price, not distance"
+      },
+      {
+       "cue": "price of your",
+       "type": "versus",
+       "left": {
+        "name": "Distance",
+        "sub": "before 2016"
+       },
+       "right": {
+        "name": "Ticket price",
+        "sub": "from 2016",
+        "color": "red",
+        "at": "price"
+       },
+       "vsAt": "price"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So a cheap long flight suddenly earned a lot less. In 2022, it replaced its elite rules again, with something called Loyalty Points.",
+    "broll_query": "economy airplane seats",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "economy airplane seats",
+     "tag": "2022 · Loyalty Points"
+    }
+   },
+   {
+    "narration": "Then, in September 2023, Delta went further, with big changes to SkyMiles.",
+    "broll_query": "airport lounge",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "airport lounge interior",
+     "tag": "September 2023"
+    }
+   },
+   {
+    "narration": "Elite status would no longer come from how much you flew. It would come from how much you spent.",
+    "broll_query": "luggage airport",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "Before",
+      "sub": "miles flown",
+      "at": "flew"
+     },
+     "right": {
+      "name": "After",
+      "sub": "dollars spent",
+      "color": "red",
+      "at": "spent"
+     },
+     "vsAt": "spent"
+    }
+   },
+   {
+    "narration": "The top tier, Diamond, used to need twenty thousand qualifying dollars, plus enough flights. The new plan said thirty-five thousand.",
+    "broll_query": "diamond close up",
+    "on_screen": "$35,000",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Delta Diamond status",
+     "unit": "qualifying $",
+     "items": [
+      {
+       "label": "Before",
+       "value": 20000,
+       "prefix": "$",
+       "at": "twenty"
+      },
+      {
+       "label": "Proposed",
+       "value": 35000,
+       "prefix": "$",
+       "color": "red",
+       "at": "thirty-five"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Lounge visits for people holding Delta's premium cards were going to be capped too.",
+    "broll_query": "airport lounge seating",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "LOUNGE VISITS",
+       "size": 140
+      },
+      {
+       "text": "*CAPPED*",
+       "at": "capped",
+       "size": 230,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "airport lounge seating"
+    }
+   },
+   {
+    "narration": "Customers revolted. Within two weeks, Delta's chief executive Ed Bastian admitted the changes probably went too far.",
+    "broll_query": "angry crowd",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "The changes *probably went too far*.",
+     "who": "Ed Bastian, Delta CEO (as reported)",
+     "kicker": "September 2023",
+     "hlAt": "probably",
+     "bgBroll": "airport crowd"
+    }
+   },
+   {
+    "narration": "In October, Delta backed off. Diamond came down to twenty-eight thousand. Still far above where it started.",
+    "broll_query": "airplane landing",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Delta Diamond status",
+     "unit": "qualifying $",
+     "items": [
+      {
+       "label": "Before",
+       "value": 20000,
+       "prefix": "$",
+       "at": 0.0
+      },
+      {
+       "label": "Proposed",
+       "value": 35000,
+       "prefix": "$",
+       "at": 0.0
+      },
+      {
+       "label": "Final",
+       "value": 28000,
+       "prefix": "$",
+       "color": "red",
+       "at": "twenty-eight"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And it's not just Delta. That industry study found that several airlines have cut or ended mileage earning on their cheapest tickets.",
+    "broll_query": "budget airline boarding",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "clip",
+       "broll": "passengers boarding airplane",
+       "tag": "IdeaWorks, 2025"
+      },
+      {
+       "cue": "cheapest",
+       "type": "text",
+       "lines": [
+        {
+         "text": "CHEAPEST TICKETS:",
+         "size": 120
+        },
+        {
+         "text": "*FEWER* MILES",
+         "size": 200
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Which is a big part of why the value you get back has fallen by about half.",
+    "broll_query": "falling chart",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "waffle",
+     "from": 100,
+     "to": 50,
+     "at": "fallen",
+     "label": "Reward payback",
+     "fromLabel": "2019",
+     "toLabel": "about half"
+    }
+   },
+   {
+    "narration": "Regulators noticed. In September 2024, the US Department of Transportation opened a probe into the reward programs of the four biggest US airlines.",
+    "broll_query": "capitol washington",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "photo",
+       "image": "United States Department of Transportation headquarters",
+       "tag": "Washington · Sept 2024"
+      },
+      {
+       "cue": "four biggest",
+       "type": "brands",
+       "items": [
+        "American",
+        "Delta",
+        "United",
+        "Southwest"
+       ],
+       "cols": 4,
+       "tag": "Under review"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "It named four worries. Points losing value. Hidden and changing prices. Extra fees. And less competition.",
+    "broll_query": "magnifying glass documents",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "POINTS LOSING VALUE",
+       "at": "losing",
+       "size": 100
+      },
+      {
+       "text": "HIDDEN, CHANGING PRICES",
+       "at": "Hidden",
+       "size": 100
+      },
+      {
+       "text": "EXTRA FEES",
+       "at": "Extra",
+       "size": 100
+      },
+      {
+       "text": "*LESS* COMPETITION",
+       "at": "less",
+       "size": 100
+      }
+     ],
+     "bgBroll": "magnifying glass documents"
+    }
+   },
+   {
+    "narration": "Investigators asked the airlines for records on how their programs had changed over the past six years.",
+    "broll_query": "filing cabinet records",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "timeline",
+     "from": 2018,
+     "to": 2024,
+     "at": "six years",
+     "label": "Six years of rule changes"
+    }
+   },
+   {
+    "narration": "The stated goal was to make sure people get the value they were promised.",
+    "broll_query": "boarding pass hand",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "Our goal is to ensure consumers are getting the *value that was promised* to them.",
+     "who": "US Department of Transportation",
+     "kicker": "September 2024",
+     "hlAt": "value",
+     "bgBroll": "boarding pass hand"
+    }
+   },
+   {
+    "narration": "Pete Buttigieg, the Transportation Secretary at the time, summed up the problem.",
+    "broll_query": "government building",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "government building flags",
+     "tag": "US Department of Transportation"
+    }
+   },
+   {
+    "narration": "He said these rewards are controlled by a company that can unilaterally change their value.",
+    "broll_query": "airplane gate window",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "These rewards are controlled by a company that can *unilaterally change their value*.",
+     "who": "Pete Buttigieg, US Transportation Secretary",
+     "kicker": "September 2024",
+     "hlAt": "unilaterally"
+    }
+   },
+   {
+    "narration": "To be fair, a probe is not a verdict. Nobody has been found guilty of anything. But it shows how this deal looks from the outside.",
+    "broll_query": "courtroom gavel",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "A PROBE",
+       "size": 140
+      },
+      {
+       "text": "IS NOT A *VERDICT*",
+       "at": "not a verdict",
+       "size": 170
+      }
+     ],
+     "bgBroll": "gavel close up"
+    }
+   },
+   {
+    "narration": "So if you don't have an airline card, none of this touches you. Right? Not quite.",
+    "broll_query": "supermarket checkout line",
+    "on_screen": "",
+    "chapter": "Who really pays",
+    "visual": {
+     "type": "clip",
+     "broll": "supermarket checkout line",
+     "tag": "Not quite"
+    }
+   },
+   {
+    "narration": "Every time a shop takes a card, the shop pays a fee. And there's a fight in Congress over those fees.",
+    "broll_query": "card reader shop",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "card reader small shop",
+     "tag": "Swipe fees"
+    }
+   },
+   {
+    "narration": "Supporters of a bill known as Durbin-Marshall say more competition between card networks would cut costs for merchants. The airlines' trade group warned it could put airline card rewards at risk.",
+    "broll_query": "us capitol building",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "Durbin-Marshall",
+      "sub": "lower fees for stores",
+      "at": "Supporters"
+     },
+     "right": {
+      "name": "Airlines",
+      "sub": "rewards at risk",
+      "color": "red",
+      "at": "trade group"
+     },
+     "vsAt": "trade group",
+     "bgBroll": "us capitol building"
+    }
+   },
+   {
+    "narration": "When an industry fights that hard over a swipe fee, it tells you where the money is.",
+    "broll_query": "money in wallet",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "FOLLOW THE",
+       "size": 140
+      },
+      {
+       "text": "*SWIPE*",
+       "size": 240,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "wallet cards cash"
+    }
+   },
+   {
+    "narration": "Now, the other side. Plenty of people love these cards. Lounge access, free bags, upgrades.",
+    "broll_query": "first class cabin",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "first class airplane seat",
+     "tag": "The other side"
+    }
+   },
+   {
+    "narration": "Alaska Airlines' loyalty chief told Reuters that people without a card still earn meaningful value just by flying.",
+    "broll_query": "airplane window view",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "Non-cardholders continue to earn *meaningful value* through flying.",
+     "who": "Kevin Scott, Alaska Airlines (paraphrased by Reuters)",
+     "kicker": "2026",
+     "hlAt": "meaningful",
+     "bgBroll": "airplane window view"
+    }
+   },
+   {
+    "narration": "And if you fly a lot, pay your card off every month, and book carefully, the math can work for you.",
+    "broll_query": "calculator travel",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "FLY A LOT",
+       "at": "fly a lot",
+       "size": 120
+      },
+      {
+       "text": "PAY IT OFF",
+       "at": "pay your",
+       "size": 120
+      },
+      {
+       "text": "BOOK *CAREFULLY*",
+       "at": "book",
+       "size": 140
+      }
+     ]
+    }
+   },
+   {
+    "narration": "But I don't think that's most people. The way the system works, the airline comes out ahead almost any way you play it.",
+    "broll_query": "chess board",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "chess pieces board",
+     "tag": "My take"
+    }
+   },
+   {
+    "narration": "Carry a balance on the card? The bank earns interest. Your miles sit unused? The airline already has the cash. The price of a free seat goes up? You need more miles.",
+    "broll_query": "piggy bank coins",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "Balance: bank wins",
+       "owned": "Carry"
+      },
+      {
+       "label": "Unused miles: airline keeps cash",
+       "owned": "unused"
+      },
+      {
+       "label": "Seat costs more miles",
+       "owned": "goes up"
+      }
+     ],
+     "tag": "Heads they win"
+    }
+   },
+   {
+    "narration": "Delta, for example, books part of that Amex cash as revenue right away. The rest waits until you actually spend your miles.",
+    "broll_query": "accounting ledger",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "accounting ledger calculator",
+     "tag": "Cash now, seat later"
+    }
+   },
+   {
+    "narration": "One loyalty expert told the New York Times what would happen if you took these programs away.",
+    "broll_query": "newspaper stack",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "newspaper stack",
+     "tag": "Evert de Boer · On Point Loyalty"
+    }
+   },
+   {
+    "narration": "He said it would have a huge impact on the big US carriers.",
+    "broll_query": "airplanes at gates",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "If you were to take away the loyalty programs, it would have a *huge impact* on the big U.S. carriers.",
+     "who": "Evert de Boer, On Point Loyalty",
+     "kicker": "New York Times, 2025",
+     "hlAt": "huge",
+     "bgBroll": "airplanes at gates"
+    }
+   },
+   {
+    "narration": "So, is your airline really a bank that flies planes?",
+    "broll_query": "airplane above city",
+    "on_screen": "",
+    "chapter": "The verdict",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "A BANK THAT",
+       "size": 150
+      },
+      {
+       "text": "FLIES *PLANES*?",
+       "size": 200
+      }
+     ],
+     "bgBroll": "airplane over city"
+    }
+   },
+   {
+    "narration": "Here's what the numbers say. Delta gets more from Amex than it makes in operating profit. American's partners pay it about four times its profit.",
+    "broll_query": "airline chart",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Card cash vs. operating profit, 2025",
+     "unit": "×",
+     "items": [
+      {
+       "label": "Delta",
+       "value": 1.4,
+       "at": "Delta gets"
+      },
+      {
+       "label": "American",
+       "value": 4,
+       "color": "red",
+       "at": "four times"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And it's spreading. At Alaska Airlines, loyalty is now about sixteen percent of all revenue. Southwest sells most of its points to JPMorgan Chase.",
+    "broll_query": "airplane taking off",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "16%",
+       "label": "Alaska Airlines revenue from loyalty",
+       "bgBroll": "airplane taking off"
+      },
+      {
+       "cue": "Southwest",
+       "type": "versus",
+       "left": {
+        "name": "Southwest",
+        "sub": "sells the points"
+       },
+       "right": {
+        "name": "JPMorgan Chase",
+        "sub": "buys most of them",
+        "color": "red",
+        "at": "JPMorgan"
+       },
+       "vsAt": "JPMorgan"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "This year, Reuters reports, rising jet fuel costs tied to the Middle East conflict are squeezing airline margins. Which makes the steady card money matter even more.",
+    "broll_query": "jet fuel truck",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "airplane refueling truck",
+     "tag": "Fuel up, margins down"
+    }
+   },
+   {
+    "narration": "And in 2020, United's points program was valued at almost twice the airline itself.",
+    "broll_query": "airplane parked",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "$21.9B",
+      "sub": "MileagePlus"
+     },
+     "right": {
+      "name": "$11.7B",
+      "sub": "all of United",
+      "color": "red",
+      "at": "airline itself"
+     },
+     "vsAt": "airline itself",
+     "bgBroll": "airplane parked apron"
+    }
+   },
+   {
+    "narration": "My verdict: miles aren't a gift. They're a currency the airline creates, and the airline sets the exchange rate.",
+    "broll_query": "currency exchange board",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "NOT A GIFT",
+       "at": "gift",
+       "size": 150
+      },
+      {
+       "text": "A *CURRENCY*",
+       "at": "currency",
+       "size": 200,
+       "mark": "red"
+      },
+      {
+       "text": "THEY SET THE RATE",
+       "at": "exchange",
+       "size": 110
+      }
+     ],
+     "bgBroll": "currency exchange board"
+    }
+   },
+   {
+    "narration": "So treat them like one. Spend them, don't hoard them. Don't chase status you can't afford. And never carry a balance for a free flight.",
+    "broll_query": "traveler airport window",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "SPEND, DON'T HOARD",
+       "at": "Spend",
+       "size": 120
+      },
+      {
+       "text": "SKIP THE STATUS CHASE",
+       "at": "chase",
+       "size": 120
+      },
+      {
+       "text": "*NEVER* CARRY A BALANCE",
+       "at": "never",
+       "size": 120
+      }
+     ],
+     "bgBroll": "traveler airport window"
+    }
+   },
+   {
+    "narration": "Because in this business, the plane is what they show you. The card is what they sell you.",
+    "broll_query": "airplane takeoff",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "airplane takeoff runway",
+     "tag": "The real product"
+    }
+   },
+   {
+    "narration": "If you want to see the same playbook on the ground, watch how Costco really makes money next. It isn't the groceries either.",
+    "broll_query": "warehouse store aisle",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "warehouse store aisle",
+     "tag": "Next: how Costco really makes money"
+    }
+   }
+  ],
+  "sources": [
+   "https://www.investing.com/news/stock-market-news/creditcard-cash-reshapes-us-airline-loyalty--and-profit-4559355",
+   "https://ideaworkscompany.com/wp-content/uploads/2025/09/2025-09-06-New-York-Times.pdf",
+   "https://skift.com/2025/10/13/delta-amex-numbers-show-its-growing-bet-on-wealthy-travelers/",
+   "https://en.wikipedia.org/wiki/AAdvantage",
+   "https://ir.united.com/node/23771/html",
+   "https://www.executivetraveller.com/news/how-united-airlines-took-a-7bn-mortgage-on-its-frequent-flyer-scheme",
+   "https://ir.delta.com/news/news-details/2020/Delta-Air-Lines-Announces-Upsize-of-SkyMiles-Financing-to-9-Billion/default.aspx",
+   "https://wolfstreet.com/2020/10/15/whats-behind-the-billions-that-airlines-raised-via-frequent-flier-programs-youre-the-collateral/",
+   "https://www.sec.gov/Archives/edgar/data/4515/000000620121000024/aex991securednotespricingp.htm",
+   "https://www.businesstraveller.com/news/delta-ceo-skymiles-changes-reaction/",
+   "https://mynews13.com/fl/orlando/ap-top-news/2023/10/18/delta-air-lines-scales-back-changes-to-its-loyalty-program-after-a-revolt-by-customers",
+   "https://www.transportation.gov/briefing-room/usdot-seeks-protect-consumers-airline-rewards-probe-four-largest-us-airlines-rewards"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Original script and structure (debate: are miles a bad deal?); analytics file has no videos yet, so applied the top-channel playbook: line one states the stakes with a sourced number, rehook at every chapter, verdict labelled as opinion, fair line for the other side (Alaska, heavy flyers)."
+ }
+}
