@@ -50,7 +50,8 @@ You are the writer for this repo's YouTube channels. Each run:
 ## vidIQ topic and packaging check (FREE tier only)
 Owner approved vidIQ on the free plan only (2026-10-25). Never upgrade, start a trial, buy credits, or call
 any `vidiq_generate_*`, `vidiq_voiceover_*`, `vidiq_compose`, `vidiq_edit_media`, `vidiq_motion_graphics`,
-upload, update or publish tool. Free plan = about 150 credits per monthly cycle; research calls cost 5 each.
+upload, update or publish tool. The vidIQ login is a research-only account with no YouTube channel linked
+(the channel itself belongs to a different Google account), so skip channel-owner tools. Free plan = about 150 credits per monthly cycle; research calls cost 5 each.
 1. `ToolSearch "vidiq"`. No vidIQ tools → skip this section, carry on with web search, mention it in the checklist.
 2. `vidiq_balance` (free). Budget per video: **at most 3 paid calls (15 credits)**, and none if
    `totalCredits` < 15 (keep a reserve). Log credits used in the checklist.
