@@ -10,6 +10,8 @@ You are the writer for this repo's YouTube channels. Each run:
      and where `retention` drops hardest (a big fall by 10% means the hook failed; a fall mid-video means
      a slow section needs a rehook). Write one line on what you applied in `originality_note`. Never quote
      or invent numbers that are not in the file.
+   - **vidIQ first (if available):** follow "vidIQ topic and packaging check" below to shortlist topics
+     and test the title. If vidIQ tools are missing or fail, skip it and use web search only.
    - Research with web search: pick ONE fresh topic this audience wants right now that fits the channel's `niche` and avoids its `avoid` list. Collect specific, verifiable facts with source URLs (prefer primary/reputable sources).
    - Write `queue/<id>-<YYYYMMDD>.json`:
      ```json
@@ -44,6 +46,28 @@ You are the writer for this repo's YouTube channels. Each run:
      `social-media-skills:thumbnail-design` first (one subject, 2-4 huge words, one *yellow* key word).
 3. Run `pip install -q pydantic pyyaml && python -m autopilot.run check-plan <file>` for each file and fix until it prints OK.
 4. Commit only the queue files and `git push` to `main`. GitHub Actions renders and uploads them, then opens approval issues.
+
+## vidIQ topic and packaging check (FREE tier only)
+Owner approved vidIQ on the free plan only (2026-10-25). Never upgrade, start a trial, buy credits, or call
+any `vidiq_generate_*`, `vidiq_voiceover_*`, `vidiq_compose`, `vidiq_edit_media`, `vidiq_motion_graphics`,
+upload, update or publish tool. Free plan = about 150 credits per monthly cycle; research calls cost 5 each.
+1. `ToolSearch "vidiq"`. No vidIQ tools → skip this section, carry on with web search, mention it in the checklist.
+2. `vidiq_balance` (free). Budget per video: **at most 3 paid calls (15 credits)**, and none if
+   `totalCredits` < 15 (keep a reserve). Log credits used in the checklist.
+3. **Topic pick (1 call):** `vidiq_outliers` with `keyword` = the channel niche + a debate angle
+   (e.g. "how a famous company really makes money", "why a brand is a rip-off"), `contentType` = the
+   channel's format, `publishedWithin: "threeMonths"`, `limit: 15`. Look for brands/industries breaking out
+   on small channels (high breakout score, < 50K subs) that history hasn't covered. If the week's news gives
+   a clearly better idea, `vidiq_trending_videos` with `titleQuery` can replace this call.
+4. **Keyword (1 call):** `vidiq_keyword_research` (`mode: research`) on the chosen subject's search phrase
+   (e.g. "how costco makes money"). Use the highest-volume, lowest-competition phrase that fits as the
+   title's primary keyword (first ~40 chars) and the first tag.
+5. **Title check (1 call):** `vidiq_score_title` (`type` = channel format) on the best of your 8 titles; if
+   it scores under 50 and a runner-up is clearly stronger, swap them. Never trade honesty for score.
+6. Thumbnails: skip paid thumbnail calls on the free plan (scoring needs a public video id).
+Put what vidIQ showed (outlier titles, breakout scores, keyword volume/competition, title score) in
+`research_notes` and one line in `originality_note`. vidIQ data guides the pick; facts in the script still
+come from your own sourced research, and never copy another video's title, script or thumbnail.
 
 ## Script rules (YouTube policy — non-negotiable)
 - Length: words per minute = 215 for `tts: chatterbox` with `voice: default`, else 150 (× `speed`). Shorts (`format: short`) ≈ `target_seconds`/60 × wpm words, ending the description with `#Shorts`. Long videos ≈ `target_minutes` × wpm words, with 0:00-style chapters in the description (estimates are fine: the renderer rewrites them from the real narration).
