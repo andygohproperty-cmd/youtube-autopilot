@@ -55,7 +55,26 @@ def load_plan_file(path: str):
         raise SystemExit(f"{path}: {words} words, expected about {channel.target_words} (at least {int(low)})")
     if not plan.sources:
         raise SystemExit(f"{path}: no sources")
+    overrides = data.get("channel_overrides", {})
+    if channel.voice_pool and not {"tts", "voice"} & set(overrides):
+        _pick_voice(channel, plan.title)
     return channel, plan, data.get("research_notes", "")
+
+
+def _voice_id(v: dict) -> str:
+    return f"{v.get('tts', 'kokoro')}:{v.get('voice', 'default')}"
+
+
+def _pick_voice(channel, title: str) -> None:
+    """Rotate the channel's voices (owner's call, 2026-10-27): the one used longest ago, ties broken by
+    the title, so the narrate and render jobs of one video always agree."""
+    import hashlib
+
+    last = {vid: i for i, vid in enumerate(r["voice"] for r in history(channel.id) if r.get("voice"))}
+    pick = min(channel.voice_pool, key=lambda v: (last.get(_voice_id(v), -1),
+                                                  hashlib.sha1((title + _voice_id(v)).encode()).hexdigest()))
+    for key, value in pick.items():
+        setattr(channel, key, value)
 
 
 def _real_chapter_times(description: str, segments, durations: list[float]) -> str:
@@ -243,6 +262,7 @@ def produce(channel_id: str | None, dry_run: bool, force: bool, plan_file: str |
     append_record("history", channel.id, {
         "video_id": video_id, "title": plan.title, "status": "awaiting_approval",
         "synthetic": plan.uses_realistic_ai_media, "seconds": round(sum(durations)), "music": music,
+        "voice": f"{channel.tts}:{channel.voice}",
     })
     meta = {"channel": channel.id, "video_id": video_id, "synthetic": plan.uses_realistic_ai_media}
     sources = "\n".join(f"- {u}" for u in plan.sources)
