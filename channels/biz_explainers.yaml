@@ -8,6 +8,10 @@ tts: chatterbox                      # natural, expressive free voice (andy pick
 voice: default
 exaggeration: 0.6
 speed: 1.0
+voice_pool:                          # rotated per video, used longest ago first (andy 2026-10-27: "try a variety")
+  - {tts: chatterbox, voice: default, exaggeration: 0.6, speed: 1.0}        # sample C
+  - {tts: chatterbox-turbo, voice: default, speed: 1.05}                    # sample A
+  - {tts: kokoro, voice: af_heart, speed: 1.15}                             # sample B
 visual_style: remotion               # dark documentary graphics (REMOTION.md); andy picked it over stock 2026-10-25
 music_mood: documentary
 category_id: "27"                    # Education

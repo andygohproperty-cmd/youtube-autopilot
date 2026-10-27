@@ -43,6 +43,7 @@ class Channel:
     tint: str = "red"                   # collage background tint on segments with a key number
     tts: str = "kokoro"                 # "kokoro" (fast) or "chatterbox" (more natural, ~10x slower on CPU)
     exaggeration: float = 0.6           # Chatterbox expressiveness
+    voice_pool: list = field(default_factory=list)  # [{tts, voice, speed, ...}]: rotate voices across videos
 
     @property
     def is_short(self) -> bool:
