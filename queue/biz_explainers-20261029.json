@@ -1,0 +1,1811 @@
+{
+ "channel": "biz_explainers",
+ "channel_overrides": {
+  "grade": "cinematic"
+ },
+ "research_notes": "Which? 23 Sep 2022: Epson WF-3820 ink £1.78/ml vs Dom Perignon 24p/ml (>7x); set £111.99; 3 sets/yr >£330 vs <£140 third-party; only 4% of inkjet owners found third-party didn't work; asked CMA to investigate branded ink pricing and HP dynamic security; HP: 'Dynamic security is a process that authenticates print supplies' (quality, IP, counterfeits); Epson doesn't block via firmware; Brother accepts third-party.\nWhich? 28 Sep 2026: Canon Pixma TS9551Ca, 30 pages/month, 10 yrs: original £762 vs third-party £321; HP+ blocks third-party ink entirely, opt-in irreversible.\nHP FY2025 (8-K Q4): revenue $55,295M; Printing $16,702M, op earnings $3,118M, margin 18.7%; Personal Systems $38,532M, earnings $2,054M, margin 5.3%; Supplies $10,916M (65% of printing). Printing = 30% of revenue, 60% of the two segments' op earnings (my calc).\nLores CNBC Jan 2024 (The Register 19 Jan 2024): 'bad investment' quote; 'make printing a subscription'; 'embed viruses into cartridges'; HP bug bounty Oct 2022 confirmed reprogrammable third-party chips could deliver malware.\nThinkJet 1984, $495 (~$1,478 today), cartridges $8, ~500 pages (TechRadar).\nFortune 7 Oct 2019: shares -9.6%; 7,000-9,000 job cuts; two printer categories (cheaper locked to HP ink vs pricier unlocked); Argus analyst Kelleher on online cartridge buying; ~65% of printing revenue from supplies.\n13 Sep 2016 firmware: cartridges rejected, 'damaged or missing' messages HP admitted were wrong; US settlement $1.5M (The Register Sep 2018).\nACCC 3 May 2018: ~220,000 printers, 10 OfficeJet models, $50 per blocked customer, HP admitted non-disclosure likely breached ACL.\nAGCM 9 Dec 2020: €10M fine; limits not disclosed, changed by firmware updates; firmware recorded cartridge data, used to deny assistance; ordered packaging disclosure.\nInstant Ink 13M+ subscribers (Lores, Mar 2024); Tran Oct 2023: profit-upfront and HP+ printers = 60% of unit shipments (The Register 7 Mar 2024).",
+ "plan": {
+  "title": "Why Printer Ink Costs More Than Champagne",
+  "alt_titles": [
+   "HP Thinks You're a Bad Investment If You Buy Cheap Ink",
+   "How HP Really Makes Money (It's Not the Printers)"
+  ],
+  "description": "Some printer ink costs more than seven times as much as Dom Pérignon champagne. This is how HP really makes money from printer ink, why its printers block cheaper cartridges, what regulators in three countries found, and why I think ink is mostly a rip-off.\n\nWhy is printer ink so expensive? HP's printing business is under a third of its sales but about 60% of the profit from its two businesses, and supplies are about two thirds of printing revenue.\n\nChapters:\n0:00 Intro\n0:45 The eight dollar cartridge\n2:00 The real business\n4:10 Locking the door\n5:30 Caught\n7:20 The subscription\n8:30 The verdict\n\nSources:\nhttps://www.which.co.uk/policy-and-insight/article/which-calls-for-action-over-printer-inks-costing-up-to-seven-times-more-than-dom-perignon-champagne-aeHrW6g7B3vb\nhttps://www.which.co.uk/news/article/cheap-printer-ink-save-1000-over-your-printers-lifetime-aPzca3Q4uPNv\nhttps://www.theregister.com/2024/01/19/hps_ceo_spells_it_out/\nhttps://www.sec.gov/Archives/edgar/data/47217/000004721725000068/hp103125exhibit991q425.htm\nhttps://www.techradar.com/pro/how-hps-first-thinkjet-printer-brought-office-printing-to-the-masses-40-years-ago\nhttps://fortune.com/2019/10/07/hp-printers-ink-investors\nhttps://www.theregister.com/2018/09/21/hp_should_pay_out_15m_for_printer_bricking_update/\nhttps://www.accc.gov.au/media-release/hp-to-compensate-printer-customers\nhttps://en.agcm.it/en/media/press-releases/2020/12/PS11144\nhttps://www.theregister.com/2024/03/07/hp_ink_addicts/\n\nNarration is AI-generated. Educational content and opinion only, not financial or legal advice.",
+  "tags": [
+   "why is printer ink so expensive",
+   "printer ink",
+   "hp ink",
+   "how hp makes money",
+   "hp dynamic security",
+   "third party ink",
+   "instant ink",
+   "razor and blades model",
+   "business documentary",
+   "printer ink rip off"
+  ],
+  "thumbnail_text": "7× *CHAMPAGNE*",
+  "thumbnail_segment": 0,
+  "alt_thumbnail_text": "YOU'RE A BAD *INVESTMENT*",
+  "alt_thumbnail_segment": 42,
+  "segments": [
+   {
+    "narration": "Why does printer ink cost more than champagne? That's not a joke. A consumer group actually measured it.",
+    "broll_query": "ink cartridges close up",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "photo",
+     "image": "inkjet printer ink cartridges",
+     "move": "in",
+     "tag": "Printer ink"
+    }
+   },
+   {
+    "narration": "In 2022, the UK consumer group Which? priced a set of Epson ink at one pound seventy-eight per millilitre.",
+    "broll_query": "ink drop macro",
+    "on_screen": "£1.78 PER ML",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "clip",
+       "broll": "ink drop macro",
+       "tag": "Which? · 2022"
+      },
+      {
+       "cue": "one pound",
+       "type": "stat",
+       "value": "£1.78 / ml",
+       "label": "Original Epson ink",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Dom Pérignon champagne worked out at twenty-four pence per millilitre. The ink was more than seven times the price.",
+    "broll_query": "champagne pouring glass",
+    "on_screen": "7× CHAMPAGNE",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Price per millilitre",
+     "unit": "£",
+     "items": [
+      {
+       "label": "Champagne",
+       "value": 0.24,
+       "prefix": "£",
+       "at": "twenty-four"
+      },
+      {
+       "label": "Printer ink",
+       "value": 1.78,
+       "prefix": "£",
+       "color": "red",
+       "at": "seven times"
+      }
+     ],
+     "bgBroll": "champagne pouring glass"
+    }
+   },
+   {
+    "narration": "And you've probably paid it. Maybe for a printer you used twice a month.",
+    "broll_query": "home office printer",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "home office printer printing",
+     "tag": "You've paid it"
+    }
+   },
+   {
+    "narration": "The company that sells the most of this stuff is HP. And its boss once said something on TV that explains the whole business.",
+    "broll_query": "television studio interview",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "television studio interview",
+     "tag": "CNBC · January 2024"
+    }
+   },
+   {
+    "narration": "If a customer doesn't use HP's supplies, he said, that customer is a bad investment.",
+    "broll_query": "office printer paper",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "If that customer doesn't print enough or doesn't use our supplies, it's a *bad investment*.",
+     "who": "Enrique Lores, HP CEO",
+     "kicker": "CNBC, January 2024",
+     "hlAt": "bad",
+     "bgBroll": "office printer paper"
+    }
+   },
+   {
+    "narration": "A bad investment. That's you, if you buy cheaper ink.",
+    "broll_query": "person looking at receipt",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "THAT'S",
+       "size": 130
+      },
+      {
+       "text": "*YOU*",
+       "size": 260,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "person shopping online laptop"
+    }
+   },
+   {
+    "narration": "And here's the strange part. HP sells far more computers than printers, yet printing makes it more profit. We'll get to how.",
+    "broll_query": "laptop factory",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "MORE COMPUTERS.",
+       "size": 140
+      },
+      {
+       "text": "MORE PROFIT FROM *INK*.",
+       "at": "printing makes",
+       "size": 160
+      }
+     ],
+     "bgBroll": "laptop assembly factory"
+    }
+   },
+   {
+    "narration": "So is printer ink a rip-off? I think it is, mostly. By the end you'll see why, and what HP says in its defence.",
+    "broll_query": "ink cartridge box",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "IS PRINTER INK",
+       "size": 130
+      },
+      {
+       "text": "A *RIP-OFF*?",
+       "at": "rip-off",
+       "size": 220
+      }
+     ],
+     "bgBroll": "ink cartridges shelf store"
+    }
+   },
+   {
+    "narration": "To understand it, we have to go back to 1984, and an eight dollar cartridge.",
+    "broll_query": "vintage computer 1980s",
+    "on_screen": "",
+    "chapter": "The eight dollar cartridge",
+    "visual": {
+     "type": "timeline",
+     "from": 2026,
+     "to": 1984,
+     "at": "1984",
+     "label": "The ThinkJet"
+    }
+   },
+   {
+    "narration": "That year, HP launched the ThinkJet, one of the first inkjet printers built for ordinary offices.",
+    "broll_query": "vintage printer",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "photo",
+     "image": "HP ThinkJet printer",
+     "tag": "HP ThinkJet · 1984"
+    }
+   },
+   {
+    "narration": "It cost four hundred and ninety-five dollars. About fifteen hundred in today's money.",
+    "broll_query": "vintage office desk",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$495",
+     "label": "The ThinkJet, 1984",
+     "sub": "about $1,500 today",
+     "bgBroll": "vintage office desk computer"
+    }
+   },
+   {
+    "narration": "Its cartridges cost eight dollars each and printed around five hundred pages.",
+    "broll_query": "printer cartridge",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "$8",
+       "label": "Per cartridge",
+       "sub": "about 500 pages"
+      },
+      {
+       "cue": "five hundred",
+       "type": "clip",
+       "broll": "paper stack printing",
+       "bw": true
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Four years later, in 1988, came the DeskJet. Three hundred dots per inch, two pages a minute, and a sheet feeder. Inkjets were ready for everyone.",
+    "broll_query": "vintage printer printing",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "timeline",
+       "from": 1984,
+       "to": 1988,
+       "at": "1988",
+       "label": "The DeskJet"
+      },
+      {
+       "cue": "Three hundred",
+       "type": "clip",
+       "broll": "vintage printer printing",
+       "bw": true,
+       "tag": "300 dpi · 2 pages a minute"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In 1991, colour arrived with the DeskJet 500C. Now you could run out of colour ink as well as black.",
+    "broll_query": "colour ink drops",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "colour ink drops water",
+     "tag": "DeskJet 500C · 1991"
+    }
+   },
+   {
+    "narration": "Notice the shape of that deal. You buy the machine once. You buy the ink forever.",
+    "broll_query": "printer paper output",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "The printer",
+      "sub": "once",
+      "at": "machine"
+     },
+     "right": {
+      "name": "The ink",
+      "sub": "forever",
+      "color": "red",
+      "at": "forever"
+     },
+     "vsAt": "forever"
+    }
+   },
+   {
+    "narration": "Business schools call it the razor and blades model. Sell the handle cheaply, and make your money on the blades.",
+    "broll_query": "razor blades bathroom",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "Cheap handle",
+       "owned": "handle"
+      },
+      {
+       "label": "Pricey blades",
+       "owned": "blades"
+      },
+      {
+       "label": "Repeat",
+       "owned": "money"
+      }
+     ],
+     "tag": "Razor and blades",
+     "ownedText": "THE MODEL"
+    }
+   },
+   {
+    "narration": "Printers turned out to be the perfect version of it. Every printer only takes its own cartridges, and every cartridge runs dry.",
+    "broll_query": "empty ink cartridge",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "replacing printer cartridge",
+     "tag": "Every cartridge runs dry"
+    }
+   },
+   {
+    "narration": "Over the next decades, inkjets moved from offices into almost every home. And the ink became a gold mine.",
+    "broll_query": "family home computer",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "timeline",
+       "from": 1984,
+       "to": 2019,
+       "at": 0.2,
+       "label": "Into every home"
+      },
+      {
+       "cue": "gold mine",
+       "type": "text",
+       "lines": [
+        {
+         "text": "A *GOLD MINE*",
+         "size": 220
+        }
+       ],
+       "bgBroll": "gold bars"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "How big a gold mine? HP's own numbers tell you.",
+    "broll_query": "financial report pages",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "HOW BIG?",
+       "size": 230
+      }
+     ],
+     "bgBroll": "financial report pages"
+    }
+   },
+   {
+    "narration": "HP is really two businesses. It sells personal computers, and it sells printing.",
+    "broll_query": "laptop and printer desk",
+    "on_screen": "",
+    "chapter": "The real business",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "Personal Systems",
+      "sub": "PCs and laptops",
+      "at": "computers"
+     },
+     "right": {
+      "name": "Printing",
+      "sub": "printers and ink",
+      "color": "red",
+      "at": "printing"
+     },
+     "vsAt": "printing",
+     "bgBroll": "laptop printer desk"
+    }
+   },
+   {
+    "narration": "In its 2025 financial year, HP brought in fifty-five point three billion dollars.",
+    "broll_query": "corporate building",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$55.3 BILLION",
+     "label": "HP revenue, fiscal 2025",
+     "bgBroll": "corporate office building"
+    }
+   },
+   {
+    "narration": "Computers were the big one: thirty-eight and a half billion. Printing brought in sixteen point seven.",
+    "broll_query": "laptops on shelves",
+    "on_screen": "$38.5B VS $16.7B",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "HP revenue, fiscal 2025",
+     "unit": "$B",
+     "items": [
+      {
+       "label": "Computers",
+       "value": 38.5,
+       "prefix": "$",
+       "at": "thirty-eight"
+      },
+      {
+       "label": "Printing",
+       "value": 16.7,
+       "prefix": "$",
+       "color": "red",
+       "at": "sixteen"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "So computers are the main business, right? Look at the profit.",
+    "broll_query": "calculator money",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "calculator money desk",
+     "tag": "Now the profit"
+    }
+   },
+   {
+    "narration": "Computers made about two point one billion dollars in operating profit. Printing made three point one billion.",
+    "broll_query": "money stacks",
+    "on_screen": "$3.1B PROFIT",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Operating profit, fiscal 2025",
+     "unit": "$B",
+     "items": [
+      {
+       "label": "Computers",
+       "value": 2.1,
+       "prefix": "$",
+       "at": "two point"
+      },
+      {
+       "label": "Printing",
+       "value": 3.1,
+       "prefix": "$",
+       "color": "red",
+       "at": "three point"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Printing is less than a third of HP's sales. It's about sixty percent of the profit from those two businesses.",
+    "broll_query": "pie chart office",
+    "on_screen": "ABOUT 60%",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "waffle",
+       "from": 0,
+       "to": 30,
+       "at": 0.0,
+       "label": "share of sales",
+       "toLabel": "about 30%"
+      },
+      {
+       "cue": "sixty",
+       "type": "donut",
+       "value": 60,
+       "approx": true,
+       "title": "share of the profit",
+       "sub": "computers + printing, FY2025"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The margins show why. Every dollar of printing made almost nineteen cents of profit. Every dollar of computers made about five.",
+    "broll_query": "coins counting",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "5.3¢",
+      "sub": "per $1 of computers",
+      "at": "computers made"
+     },
+     "right": {
+      "name": "18.7¢",
+      "sub": "per $1 of printing",
+      "color": "red",
+      "at": "nineteen"
+     },
+     "vsAt": "nineteen",
+     "bgBroll": "coins counting"
+    }
+   },
+   {
+    "narration": "And inside printing, most of the money isn't printers. It's supplies: ink and toner. About ten point nine billion dollars of it.",
+    "broll_query": "toner cartridges warehouse",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$10.9 BILLION",
+     "label": "HP supplies revenue, fiscal 2025",
+     "sub": "ink and toner",
+     "bgBroll": "warehouse shelves boxes"
+    }
+   },
+   {
+    "narration": "That's roughly two thirds of the whole printing business.",
+    "broll_query": "ink bottles",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "donut",
+     "value": 65,
+     "approx": true,
+     "title": "of printing revenue",
+     "sub": "is supplies",
+     "at": "two thirds"
+    }
+   },
+   {
+    "narration": "And this isn't new. Back in 2019, printing's profit margin was fifteen point six percent, against five point six for computers. Nearly two thirds of printing revenue was already supplies.",
+    "broll_query": "office documents 2019",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "5.6%",
+      "sub": "computers, 2019",
+      "at": "five point six"
+     },
+     "right": {
+      "name": "15.6%",
+      "sub": "printing, 2019",
+      "color": "red",
+      "at": "fifteen"
+     },
+     "vsAt": "fifteen",
+     "bgBroll": "office documents"
+    }
+   },
+   {
+    "narration": "Fortune described it as a razor and blades business, where the ink profits subsidise so much elsewhere in the company.",
+    "broll_query": "magazine pages",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "...*subsidize* so much elsewhere in the company.",
+     "who": "Fortune, on HP's ink profits",
+     "kicker": "October 2019",
+     "hlAt": "subsidize",
+     "bgBroll": "magazine pages turning"
+    }
+   },
+   {
+    "narration": "So when Lores calls a customer an investment, he's being honest. The printer is the cost. The ink is the return.",
+    "broll_query": "investment chart",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "THE PRINTER: *COST*",
+       "at": "printer is",
+       "size": 140
+      },
+      {
+       "text": "THE INK: *RETURN*",
+       "at": "ink is",
+       "size": 140
+      }
+     ],
+     "bgBroll": "stock chart screen"
+    }
+   },
+   {
+    "narration": "Which raises an obvious problem. What if you buy your ink somewhere else?",
+    "broll_query": "online shopping cart",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "online shopping laptop",
+     "tag": "Cheaper ink, elsewhere"
+    }
+   },
+   {
+    "narration": "Plenty of people do. Third-party cartridges can cost a fraction of the original.",
+    "broll_query": "ink refill kit",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "ink refill bottles",
+     "tag": "Third-party ink"
+    }
+   },
+   {
+    "narration": "In 2019, an analyst at Argus Research warned that more business customers were buying replacement cartridges online, eating into HP's most profitable business.",
+    "broll_query": "warehouse delivery boxes",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "delivery boxes warehouse",
+     "tag": "Argus Research · 2019"
+    }
+   },
+   {
+    "narration": "That October, HP's shares fell almost ten percent in a day, after it announced up to nine thousand job cuts and a rethink of its printer business.",
+    "broll_query": "stock market red",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "-9.6%",
+       "label": "HP shares, October 2019",
+       "color": "red",
+       "bgBroll": "stock market screen red"
+      },
+      {
+       "cue": "nine thousand",
+       "type": "stat",
+       "value": "UP TO 9,000",
+       "label": "jobs cut"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "HP employed about fifty-five thousand people at the time. Yet on the same day, it raised its dividend by ten percent and promised more share buybacks.",
+    "broll_query": "office workers leaving",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "55,000",
+       "label": "HP staff, 2019",
+       "bgBroll": "office workers walking"
+      },
+      {
+       "cue": "raised its dividend",
+       "type": "stat",
+       "value": "+10%",
+       "label": "Dividend, same day",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The plan was simple. A cheaper printer that only works with HP ink. Or a pricier one that takes any ink you like.",
+    "broll_query": "two printers",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "Cheaper printer",
+      "sub": "HP ink only",
+      "at": "cheaper"
+     },
+     "right": {
+      "name": "Pricier printer",
+      "sub": "any ink",
+      "color": "red",
+      "at": "pricier"
+     },
+     "vsAt": "pricier"
+    }
+   },
+   {
+    "narration": "But HP had already been doing something else. Something buyers didn't know about.",
+    "broll_query": "dark computer code",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "SOMETHING BUYERS",
+       "size": 130
+      },
+      {
+       "text": "*DIDN'T KNOW*",
+       "size": 200,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "computer code dark screen"
+    }
+   },
+   {
+    "narration": "On the thirteenth of September 2016, owners of some HP printers woke up to a problem.",
+    "broll_query": "printer error light",
+    "on_screen": "",
+    "chapter": "Locking the door",
+    "visual": {
+     "type": "timeline",
+     "from": 2019,
+     "to": 2016,
+     "at": "2016",
+     "label": "September 13"
+    }
+   },
+   {
+    "narration": "Their printers suddenly refused cartridges that had worked the day before.",
+    "broll_query": "frustrated person printer",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "frustrated woman printer",
+     "tag": "Worked yesterday"
+    }
+   },
+   {
+    "narration": "The error messages said the cartridges were damaged or missing. HP later admitted those messages were wrong.",
+    "broll_query": "error message screen",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "CARTRIDGE",
+       "size": 130
+      },
+      {
+       "text": "*DAMAGED OR MISSING*",
+       "size": 160,
+       "mark": "red"
+      },
+      {
+       "text": "(IT WASN'T)",
+       "at": "admitted",
+       "size": 90
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The cartridges were fine. They just weren't made by HP.",
+    "broll_query": "ink cartridge hand",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "photo",
+     "image": "compatible ink cartridge",
+     "tag": "Not made by HP"
+    }
+   },
+   {
+    "narration": "An earlier firmware update had installed a feature HP calls Dynamic Security. It checks whether a cartridge is HP's own, and on many printers it refuses the rest.",
+    "broll_query": "circuit board chip",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "Cartridge in",
+       "owned": "checks"
+      },
+      {
+       "label": "HP chip?",
+       "owned": "HP's own"
+      },
+      {
+       "label": "No: refused",
+       "owned": "refuses",
+       "stamp": "BLOCKED"
+      }
+     ],
+     "tag": "Dynamic Security",
+     "bgBroll": "circuit board macro"
+    }
+   },
+   {
+    "narration": "A later lawsuit says HP had used Dynamic Security from around 2010.",
+    "broll_query": "old printer office",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "timeline",
+     "from": 2016,
+     "to": 2010,
+     "at": "2010",
+     "label": "Dynamic Security, per a lawsuit"
+    }
+   },
+   {
+    "narration": "Italy's regulator later described it the same way. Printers accept original HP cartridges, and refuse to print with non-original ones, or even with cartridges made before a certain date.",
+    "broll_query": "printer cartridge slot",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "ORIGINAL HP: ✓",
+       "at": "accept",
+       "size": 130
+      },
+      {
+       "text": "NON-ORIGINAL: *✗*",
+       "at": "refuse",
+       "size": 130
+      },
+      {
+       "text": "TOO OLD: *✗*",
+       "at": "before a certain",
+       "size": 130
+      }
+     ],
+     "bgBroll": "printer cartridge slot"
+    }
+   },
+   {
+    "narration": "HP's explanation is that Dynamic Security authenticates supplies, to protect print quality and its intellectual property, and to stop counterfeits.",
+    "broll_query": "quality control lab",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "Dynamic security is a process that *authenticates print supplies*.",
+     "who": "HP, statement to Which?",
+     "kicker": "2022",
+     "hlAt": "authenticates",
+     "bgBroll": "quality control lab"
+    }
+   },
+   {
+    "narration": "Lores went further. He told CNBC that you can embed viruses into cartridges.",
+    "broll_query": "computer virus screen",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "We have seen that you can embed *viruses* into cartridges.",
+     "who": "Enrique Lores, HP CEO",
+     "kicker": "CNBC, January 2024",
+     "hlAt": "viruses",
+     "bgBroll": "computer virus screen"
+    }
+   },
+   {
+    "narration": "And he said it is important for HP to protect its intellectual property.",
+    "broll_query": "patent documents",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "patent documents",
+     "tag": "\"Protect our IP\""
+    }
+   },
+   {
+    "narration": "To be fair, there's something to that. HP's bug bounty program confirmed in 2022 that third-party cartridges with reprogrammable chips could deliver malware.",
+    "broll_query": "hacker laptop",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "hacker laptop dark",
+     "tag": "Bug bounty · 2022"
+    }
+   },
+   {
+    "narration": "But critics point out that a printer that blocks cheaper ink also happens to protect HP's most profitable product. And regulators weren't convinced.",
+    "broll_query": "courthouse columns",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "SECURITY?",
+       "size": 150
+      },
+      {
+       "text": "OR *PROFIT*?",
+       "at": "profitable",
+       "size": 210,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "courthouse columns"
+    }
+   },
+   {
+    "narration": "In May 2018, Australia's consumer watchdog, the ACCC, stepped in.",
+    "broll_query": "sydney skyline",
+    "on_screen": "",
+    "chapter": "Caught",
+    "visual": {
+     "type": "map",
+     "view": "australia",
+     "points": [
+      {
+       "name": "Australia",
+       "sub": "ACCC · May 2018",
+       "lon": 149.13,
+       "lat": -35.28,
+       "at": 0.2
+      }
+     ],
+     "tag": "May 2018"
+    }
+   },
+   {
+    "narration": "It said HP had sold around two hundred and twenty thousand printers there that could block non-HP cartridges, without telling buyers.",
+    "broll_query": "printers store shelf",
+    "on_screen": "220,000 PRINTERS",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "220,000",
+     "label": "HP printers sold in Australia",
+     "sub": "with the blocking feature",
+     "bgBroll": "electronics store shelves"
+    }
+   },
+   {
+    "narration": "The ACCC's deputy chair put it simply: consumers were not made aware of the restriction on using non-HP ink cartridges.",
+    "broll_query": "sydney opera house",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "Consumers were *not made aware* of the restriction on using non-HP ink cartridges.",
+     "who": "Dr Michael Schaper, ACCC Deputy Chair",
+     "kicker": "May 2018",
+     "hlAt": "not",
+     "bgBroll": "sydney harbour"
+    }
+   },
+   {
+    "narration": "HP admitted that not disclosing it was likely to breach Australian consumer law. It agreed to pay fifty dollars to each customer who was blocked.",
+    "broll_query": "signing document",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "clip",
+       "broll": "signing document pen",
+       "tag": "Court-enforceable undertaking"
+      },
+      {
+       "cue": "fifty dollars",
+       "type": "stat",
+       "value": "$50",
+       "label": "per blocked customer",
+       "sub": "Australia, 2018"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Ten OfficeJet models were affected. HP also promised a firmware update that removed the block from some of them.",
+    "broll_query": "office printer",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "office inkjet printer",
+     "tag": "10 OfficeJet models"
+    }
+   },
+   {
+    "narration": "In the US, owners sued. HP agreed to pay one and a half million dollars into a settlement fund for people whose printing was interrupted.",
+    "broll_query": "us courthouse",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$1.5 MILLION",
+     "label": "US settlement fund",
+     "sub": "2018",
+     "bgBroll": "courthouse steps"
+    }
+   },
+   {
+    "narration": "Then came Italy. In December 2020, the competition authority there fined HP ten million euros.",
+    "broll_query": "rome city",
+    "on_screen": "€10 MILLION",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "map",
+       "view": "italy",
+       "highlight": [
+        "380"
+       ],
+       "points": [
+        {
+         "name": "Rome",
+         "sub": "AGCM",
+         "lon": 12.5,
+         "lat": 41.9,
+         "at": 0.1
+        }
+       ]
+      },
+      {
+       "cue": "ten million",
+       "type": "stat",
+       "value": "€10 MILLION",
+       "label": "Fine from Italy's AGCM",
+       "sub": "December 2020",
+       "color": "red"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "It found that HP didn't properly tell buyers about the limits on non-original cartridges, and that firmware updates changed those limits later, again without proper notice.",
+    "broll_query": "legal papers desk",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "LIMITS NOT DISCLOSED",
+       "at": "didn't",
+       "size": 120
+      },
+      {
+       "text": "CHANGED BY *UPDATES*",
+       "at": "firmware",
+       "size": 140
+      }
+     ],
+     "bgBroll": "legal papers desk"
+    }
+   },
+   {
+    "narration": "And there was more. The authority said HP's firmware quietly recorded which cartridges people used, original or not.",
+    "broll_query": "data server lights",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "data server lights",
+     "tag": "Logged without telling you"
+    }
+   },
+   {
+    "narration": "According to the regulator, that data was used to deny help to printers that had run non-original cartridges.",
+    "broll_query": "customer service phone",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "USED A CHEAP CARTRIDGE?",
+       "size": 110
+      },
+      {
+       "text": "*NO HELP*",
+       "at": "deny",
+       "size": 230,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "customer service call center"
+    }
+   },
+   {
+    "narration": "Italy ordered HP to say clearly on its packaging what each printer would and wouldn't accept.",
+    "broll_query": "product box packaging",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "product box packaging",
+     "tag": "Say it on the box"
+    }
+   },
+   {
+    "narration": "HP appealed. A regional court in Lazio rejected the appeal, and the ten million euro fine stands.",
+    "broll_query": "courtroom italy",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "APPEAL",
+       "size": 150
+      },
+      {
+       "text": "*REJECTED*",
+       "at": "rejected",
+       "size": 230,
+       "mark": "red"
+      },
+      {
+       "text": "€10M FINE STANDS",
+       "at": "stands",
+       "size": 110
+      }
+     ],
+     "bgBroll": "courtroom"
+    }
+   },
+   {
+    "narration": "Consumer groups in Italy, Belgium, Spain, Portugal and Brazil then demanded up to a hundred and fifty euros for each affected owner. That was a demand, not a court ruling.",
+    "broll_query": "consumer protest",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "map",
+     "view": "atlantic",
+     "points": [
+      {
+       "name": "Italy",
+       "lon": 12.5,
+       "lat": 41.9,
+       "at": "Italy"
+      },
+      {
+       "name": "Belgium",
+       "lon": 4.35,
+       "lat": 50.85,
+       "at": "Belgium"
+      },
+      {
+       "name": "Spain",
+       "lon": -3.7,
+       "lat": 40.4,
+       "at": "Spain"
+      },
+      {
+       "name": "Portugal",
+       "lon": -9.14,
+       "lat": 38.72,
+       "at": "Portugal"
+      },
+      {
+       "name": "Brazil",
+       "lon": -47.9,
+       "lat": -15.8,
+       "at": "Brazil"
+      }
+     ],
+     "tag": "Up to €150 each (demand)"
+    }
+   },
+   {
+    "narration": "In 2022, Which? asked Britain's competition regulator to investigate branded ink pricing, and HP's Dynamic Security in particular.",
+    "broll_query": "london parliament",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "photo",
+     "image": "Competition and Markets Authority London",
+     "tag": "Which? · 2022"
+    }
+   },
+   {
+    "narration": "And it isn't over. In January 2024, a new US class action claimed that an HP update in late 2022 or early 2023 again disabled printers when a non-HP cartridge was put in.",
+    "broll_query": "lawyer documents",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "timeline",
+       "from": 2022,
+       "to": 2024,
+       "at": "2024",
+       "label": "New class action"
+      },
+      {
+       "cue": "again disabled",
+       "type": "clip",
+       "broll": "printer error screen",
+       "tag": "Alleged, not proven"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The suit also claims HP raised its own cartridge prices in the same period. Those are allegations. Our sources show no ruling on them yet.",
+    "broll_query": "price tag rising",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "ALLEGED:",
+       "size": 120
+      },
+      {
+       "text": "BLOCK, THEN *RAISE PRICES*",
+       "at": "raised",
+       "size": 140
+      }
+     ],
+     "bgBroll": "price tags store"
+    }
+   },
+   {
+    "narration": "So what does an HP owner who wants cheaper ink actually do? Which? says that because of Dynamic Security, most HP printers need remanufactured cartridges: used HP shells, refilled.",
+    "broll_query": "refilled cartridges",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "Used HP cartridge",
+       "owned": "used"
+      },
+      {
+       "label": "Refilled",
+       "owned": "refilled"
+      },
+      {
+       "label": "Accepted",
+       "owned": "remanufactured"
+      }
+     ],
+     "tag": "The workaround"
+    }
+   },
+   {
+    "narration": "Those cost more than third-party ink for other brands. But they're still usually much cheaper than original HP ink.",
+    "broll_query": "price comparison",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "comparing prices shopping",
+     "tag": "Still cheaper"
+    }
+   },
+   {
+    "narration": "Not every brand blocks third-party ink. Epson told Which? it doesn't stop it through firmware. Brother said all its printers accept it.",
+    "broll_query": "printers lined up",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "brands",
+     "items": [
+      {
+       "name": "Epson",
+       "at": "Epson"
+      },
+      {
+       "name": "Brother",
+       "at": "Brother"
+      }
+     ],
+     "cols": 2,
+     "tag": "Don't block third-party ink",
+     "bgBroll": "printers lined up store"
+    }
+   },
+   {
+    "narration": "Which tells you blocking isn't a law of nature. It's a choice.",
+    "broll_query": "door lock key",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "IT'S A",
+       "size": 140
+      },
+      {
+       "text": "*CHOICE*",
+       "size": 250,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "door lock key"
+    }
+   },
+   {
+    "narration": "So HP found a smoother way to keep you. Subscriptions.",
+    "broll_query": "mailbox delivery package",
+    "on_screen": "",
+    "chapter": "The subscription",
+    "visual": {
+     "type": "clip",
+     "broll": "package delivery doorstep",
+     "tag": "Instant Ink"
+    }
+   },
+   {
+    "narration": "Lores has said HP's long-term goal is to make printing a subscription.",
+    "broll_query": "subscription app phone",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "Our long-term objective is to make printing a *subscription*.",
+     "who": "Enrique Lores, HP CEO",
+     "kicker": "CNBC, January 2024",
+     "hlAt": "subscription"
+    }
+   },
+   {
+    "narration": "With Instant Ink, your printer tells HP when it's running low, and new cartridges arrive by post. You pay a monthly fee for a set number of pages.",
+    "broll_query": "printer and delivery",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "Printer reports ink",
+       "owned": "running low"
+      },
+      {
+       "label": "HP posts cartridges",
+       "owned": "arrive"
+      },
+      {
+       "label": "You pay monthly",
+       "owned": "monthly"
+      }
+     ],
+     "tag": "How Instant Ink works"
+    }
+   },
+   {
+    "narration": "By March 2024, it had more than thirteen million subscribers.",
+    "broll_query": "crowd people",
+    "on_screen": "13 MILLION",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "13 MILLION+",
+     "label": "Instant Ink subscribers",
+     "sub": "March 2024",
+     "bgBroll": "crowd people walking"
+    }
+   },
+   {
+    "narration": "It needs your printer connected directly to the internet. And HP's own help page says Instant Ink cartridges won't work after the billing cycle in which you cancel.",
+    "broll_query": "printer blinking light",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "printer blinking light",
+     "tag": "Rented ink"
+    }
+   },
+   {
+    "narration": "Prices move, too. In January 2024, German subscribers were told the ten-page plan would go from ninety-nine cents to one forty-nine a month. About fifty percent more.",
+    "broll_query": "euro coins",
+    "on_screen": "+50%",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Instant Ink, 10-page plan (Germany)",
+     "unit": "€",
+     "items": [
+      {
+       "label": "Before",
+       "value": 0.99,
+       "prefix": "€",
+       "at": "ninety-nine"
+      },
+      {
+       "label": "Jan 2024",
+       "value": 1.49,
+       "prefix": "€",
+       "color": "red",
+       "at": "one forty-nine"
+      }
+     ],
+     "bgBroll": "euro coins"
+    }
+   },
+   {
+    "narration": "And in the US, an HP plan that bundles the printer itself charges up to two hundred and seventy dollars if you leave early.",
+    "broll_query": "contract signing",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "UP TO $270",
+     "label": "Early cancellation fee",
+     "sub": "HP all-in printer plan, US",
+     "bgBroll": "contract signing"
+    }
+   },
+   {
+    "narration": "In the UK, plans currently run from one pound seventy-nine a month for ten pages to about twenty-nine pounds for seven hundred.",
+    "broll_query": "british pound coins",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Instant Ink UK, per month",
+     "unit": "£",
+     "items": [
+      {
+       "label": "10 pages",
+       "value": 1.79,
+       "prefix": "£",
+       "at": "one pound"
+      },
+      {
+       "label": "100 pages",
+       "value": 6.49,
+       "prefix": "£",
+       "at": 0.4
+      },
+      {
+       "label": "700 pages",
+       "value": 28.99,
+       "prefix": "£",
+       "color": "red",
+       "at": "twenty-nine"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "HP's newer HP Plus printers go further still. According to Which?, they block third-party ink completely, and once you opt in, you can't undo it.",
+    "broll_query": "new printer unboxing",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "HP+ PRINTERS",
+       "size": 130
+      },
+      {
+       "text": "THIRD-PARTY INK: *BLOCKED*",
+       "at": "block",
+       "size": 140
+      },
+      {
+       "text": "NO WAY BACK",
+       "at": "undo",
+       "size": 110
+      }
+     ],
+     "bgBroll": "printer unboxing"
+    }
+   },
+   {
+    "narration": "By late 2023, HP said these printers, together with ones priced for profit upfront, were sixty percent of the printers it shipped.",
+    "broll_query": "factory production line",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "waffle",
+     "from": 0,
+     "to": 60,
+     "at": "sixty",
+     "label": "of HP printer shipments",
+     "toLabel": "60%",
+     "bgBroll": "factory production line"
+    }
+   },
+   {
+    "narration": "So the deal has quietly flipped. You used to buy a printer and choose your ink. Now, more and more, the ink chooses you.",
+    "broll_query": "printer in dark room",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "NOW THE INK",
+       "size": 140
+      },
+      {
+       "text": "*CHOOSES YOU*",
+       "at": "chooses",
+       "size": 210,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "printer dark room"
+    }
+   },
+   {
+    "narration": "So, is printer ink a rip-off?",
+    "broll_query": "ink cartridges pile",
+    "on_screen": "",
+    "chapter": "The verdict",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "SO, IS IT A",
+       "size": 140
+      },
+      {
+       "text": "*RIP-OFF*?",
+       "size": 240,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "ink cartridges pile"
+    }
+   },
+   {
+    "narration": "Here's the fair case for HP. Printers are cheap up front because the ink pays for them. Without that, you'd pay much more for the machine.",
+    "broll_query": "cheap printer store",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "printer for sale store",
+     "tag": "HP's side"
+    }
+   },
+   {
+    "narration": "HP even offers that choice. And security worries about hacked cartridges aren't made up.",
+    "broll_query": "lock icon screen",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "cyber security lock screen",
+     "tag": "Fair point"
+    }
+   },
+   {
+    "narration": "But look at what the numbers say. Ink so expensive it beats champagne by the millilitre.",
+    "broll_query": "champagne glasses",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "7×",
+     "label": "Ink vs. champagne, per ml",
+     "sub": "Which?, 2022",
+     "bgBroll": "champagne glasses"
+    }
+   },
+   {
+    "narration": "In that 2022 test, a set of original Epson cartridges cost one hundred and twelve pounds. Replace it three times a year and that's over three hundred and thirty. Three third-party sets came in under a hundred and forty.",
+    "broll_query": "shopping receipt",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "A year of ink (Which?, 2022)",
+     "unit": "£",
+     "items": [
+      {
+       "label": "Original",
+       "value": 330,
+       "prefix": "£",
+       "color": "red",
+       "at": "three hundred and thirty"
+      },
+      {
+       "label": "Third-party",
+       "value": 140,
+       "prefix": "£",
+       "at": "under a hundred"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Over ten years, Which? found a Canon printer user would pay seven hundred and sixty-two pounds for original ink, or about three hundred and twenty with recommended third-party ink.",
+    "broll_query": "pound coins",
+    "on_screen": "£762 VS £321",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "10 years of ink (Which?, 2026)",
+     "unit": "£",
+     "items": [
+      {
+       "label": "Original",
+       "value": 762,
+       "prefix": "£",
+       "color": "red",
+       "at": "seven hundred"
+      },
+      {
+       "label": "Third-party",
+       "value": 321,
+       "prefix": "£",
+       "at": "three hundred"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "It also found some third-party inks cost as little as a tenth of the original. Its best value suppliers averaged about sixty percent cheaper.",
+    "broll_query": "ink bottles shelf",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "~60% CHEAPER",
+     "label": "Which? best-value third-party ink",
+     "sub": "some as low as 1/10 the price",
+     "bgBroll": "ink bottles shelf"
+    }
+   },
+   {
+    "narration": "And only four percent of inkjet owners it surveyed said a third-party cartridge didn't work.",
+    "broll_query": "survey clipboard",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "waffle",
+     "from": 0,
+     "to": 4,
+     "at": "four percent",
+     "label": "said third-party ink\ndidn't work",
+     "toLabel": "4%"
+    }
+   },
+   {
+    "narration": "Add three regulators and a settlement over hidden blocking, and a CEO who calls ink-shopping customers a bad investment.",
+    "broll_query": "gavel desk",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "ledger",
+     "title": "The record",
+     "rows": [
+      {
+       "year": 2018,
+       "name": "Australia · ACCC",
+       "price": "$50 each",
+       "at": 0.0
+      },
+      {
+       "year": 2018,
+       "name": "US settlement",
+       "price": "$1.5M",
+       "at": "settlement"
+      },
+      {
+       "year": 2020,
+       "name": "Italy · AGCM",
+       "price": "€10M",
+       "at": "settlement"
+      },
+      {
+       "year": 2024,
+       "name": "\"Bad investment\"",
+       "price": "CEO",
+       "at": "CEO"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "My verdict: the printer isn't the product. You are. Your ink habit is what HP is really selling to its shareholders.",
+    "broll_query": "person printing at home",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "THE PRINTER ISN'T",
+       "size": 120
+      },
+      {
+       "text": "THE PRODUCT.",
+       "size": 160
+      },
+      {
+       "text": "*YOU ARE.*",
+       "at": "You are",
+       "size": 220,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "person printing at home"
+    }
+   },
+   {
+    "narration": "So before you buy a printer, check three things. Does it accept third-party ink? What does a page really cost? And can you opt out of the lock?",
+    "broll_query": "checklist paper",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "TAKES THIRD-PARTY INK?",
+       "at": "accept",
+       "size": 110
+      },
+      {
+       "text": "COST PER *PAGE*?",
+       "at": "page",
+       "size": 120
+      },
+      {
+       "text": "CAN YOU OPT OUT?",
+       "at": "opt out",
+       "size": 110
+      }
+     ],
+     "bgBroll": "checklist paper pen"
+    }
+   },
+   {
+    "narration": "If you print a lot, compare laser and ink tank printers on cost per page. If you rarely print, the library might be cheapest of all.",
+    "broll_query": "library printer",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "public library interior",
+     "tag": "Cheaper options"
+    }
+   },
+   {
+    "narration": "Because the cheapest page is the one you print on your own terms.",
+    "broll_query": "paper coming out printer",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "paper coming out printer",
+     "tag": "Your terms"
+    }
+   },
+   {
+    "narration": "And if you liked this, watch how airlines make more from your credit card than from flying. Same trick, different machine.",
+    "broll_query": "airplane takeoff",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "airplane takeoff runway",
+     "tag": "Next: airlines and your credit card"
+    }
+   }
+  ],
+  "sources": [
+   "https://www.which.co.uk/policy-and-insight/article/which-calls-for-action-over-printer-inks-costing-up-to-seven-times-more-than-dom-perignon-champagne-aeHrW6g7B3vb",
+   "https://www.which.co.uk/news/article/cheap-printer-ink-save-1000-over-your-printers-lifetime-aPzca3Q4uPNv",
+   "https://www.theregister.com/2024/01/19/hps_ceo_spells_it_out/",
+   "https://www.sec.gov/Archives/edgar/data/47217/000004721725000068/hp103125exhibit991q425.htm",
+   "https://www.techradar.com/pro/how-hps-first-thinkjet-printer-brought-office-printing-to-the-masses-40-years-ago",
+   "https://fortune.com/2019/10/07/hp-printers-ink-investors",
+   "https://www.theregister.com/2018/09/21/hp_should_pay_out_15m_for_printer_bricking_update/",
+   "https://www.accc.gov.au/media-release/hp-to-compensate-printer-customers",
+   "https://en.agcm.it/en/media/press-releases/2020/12/PS11144",
+   "https://www.theregister.com/2024/03/07/hp_ink_addicts/"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Original script and structure (debate: is printer ink a rip-off?); analytics file has no video data yet, so applied the playbook: sourced stakes in line one, rehook per chapter, opinion labelled, HP's side given (cheap printers, malware risk) before the verdict."
+ }
+}
