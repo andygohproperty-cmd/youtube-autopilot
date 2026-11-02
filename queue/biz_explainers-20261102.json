@@ -1,0 +1,1660 @@
+{
+ "channel": "biz_explainers",
+ "channel_overrides": {
+  "grade": "cinematic"
+ },
+ "research_notes": "MCD 10-K FY2025: revenue $26,885M; franchised revenues $16,548M; company-operated sales $9,690M; franchised margins $13,930M vs company-operated margins $1,422M; operating income $12,393M, margin 46.1%; 45,356 restaurants ~95% franchised; owns ~56% of land and ~80% of buildings (consolidated markets); rent and royalties based on % of sales; 20-year terms. Rents $10.4B / royalties $6.0B / fees $0.1B (FourWeekMBA citing 10-K; sums to the 10-K total).\nErlinger open letter 29 May 2024: Big Mac avg $4.39 (2019) -> $5.29 (+21%); $18 meal at 1 of 13,700+ locations; franchisees own >95% US restaurants and set prices to cover supply chain, wage and inflation costs. CNBC/NBC paraphrase: average menu item up ~40% since 2019.\nHistory: 1940 San Bernardino; 1948 Speedee, 15c hamburger; 1954 Kroc (mixer salesman); 15 Apr 1955 Des Plaines; 1961 buyout $2.7M (McDonald's history). Handshake 1% royalty claim only from a nephew (Wikipedia Ray Kroc).\nSonneborn: ex-Tastee-Freez finance VP; Franchise Realty 1957; land on 10-year contract for deed, bank loan for building, lease at 40% markup + 5% of sales above base; Kroc autobiography 'beginning of real income'; >100 restaurants 1959, ~200 Aug 1960; 1961 $1.5M loan from three insurers for 22.5% equity (Restaurant Finance). 'Real estate business' line is from The Founder (2016). First president 1959, resigned 8 Jun 1967 over expansion vs recession (Wikipedia).\nFDD (Franchise Chatter Oct 2026): fee $45,000; investment $1,472,000-$2,807,000; royalty 4-5%; advertising >=4%; effective rent 0-33.37% (2025); avg franchised US sales $4,057,000; operating income before occupancy $864K at $3.4M (25.4%).\nRoyalty 4% -> 5% for new US/Canada restaurants from 1 Jan 2024; ~$36,000/yr on $3.6M (The Takeout).\nNOA survey (>100 franchisees, via Restaurant Business, Sept 2026): 95% profit fell Q1 2026; 97% plan not improving cash flow; ~8 in 10 cash flow can't cover reinvestment; 99% higher food/paper costs; remodel cycle 2027-28 $400K-$700K per store; Kempczinski 'They've got a lot of borrowing capacity still.'\nJuly 29 2024: global comps -1%, first since pandemic; Kempczinski quote on price increases (NRN). Sept 2 2025: Extra Value Meals ~15% off; lower-income visits down double digits industrywide Q2; 'That absolutely is shaping value perceptions in a negative way.' (Fortune).",
+ "plan": {
+  "title": "Why McDonald's Got So Expensive (Follow the Rent)",
+  "alt_titles": [
+   "McDonald's Is a Landlord That Sells Burgers",
+   "How McDonald's Really Makes Money (It's Not Burgers)"
+  ],
+  "description": "McDonald's collected $10.4 billion in rent in 2025, more than it made from royalties. This is how McDonald's really makes money as a landlord, why menu prices rose about 40% since 2019, and why I think the rent model explains who pays when prices go up.\n\nHow McDonald's makes money: from Harry Sonneborn's 1957 Franchise Realty idea to a company with a 46% operating margin, plus what franchise owners and customers say about the squeeze.\n\nChapters:\n0:00 Intro\n0:45 The milkshake salesman\n1:50 The landlord\n4:00 The money machine\n5:40 The franchisee's side\n7:30 The customer pays\n8:50 The verdict\n\nSources:\nhttps://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm\nhttps://fourweekmba.com/mcdonalds-revenue-breakdown/\nhttps://corporate.mcdonalds.com/corpmcd/our-stories/article/providing-meaningful-value-to-our-fans-with-a-side-of-facts.html\nhttps://www.nbcdfw.com/news/national-international/mcdonalds-exec-says-average-menu-item-costs-40-more-than-2019/3553945/\nhttps://corporate.mcdonalds.com/corpmcd/our-company/who-we-are/our-history\nhttps://en.wikipedia.org/wiki/Ray_Kroc\nhttps://en.wikipedia.org/wiki/Harry_J._Sonneborn\nhttps://www.restfinance.com/restaurant-finance-across-america/ray-kroc-not-the-founder-but-a-financial-engineer/article_a3d94b01-60db-5a81-9ac9-6e1ec10d8d28.html\nhttps://www.franchisechatter.com/2026/10/11/mcdonalds-franchise-review-2026-costs-fees-news-average-revenues-and-or-profits/\nhttps://thetakeout.com/mcdonalds-new-location-franchises-higher-royalty-fees-1850871196\nhttps://lexpress-franchise.com/en-us/news/mcdonalds-franchisees-flag-falling-profits-as-remodel-costs-loom/\nhttps://www.nrn.com/quick-service/consumer-pullback-turns-mcdonald-s-sales-negative-first-time-covid\nhttps://fortune.com/2025/09/02/mcdonalds-slashes-prices-extra-value-meals-lower-income-consumer\n\nNarration is AI-generated. Educational content and opinion only, not financial advice.",
+  "tags": [
+   "why is mcdonalds so expensive",
+   "mcdonalds real estate",
+   "how mcdonalds makes money",
+   "mcdonalds franchise",
+   "mcdonalds prices",
+   "harry sonneborn",
+   "ray kroc",
+   "franchise business model",
+   "business documentary",
+   "fast food prices"
+  ],
+  "thumbnail_text": "*$10.4B* IN RENT",
+  "thumbnail_segment": 0,
+  "alt_thumbnail_text": "NOT THE *BURGERS*",
+  "alt_thumbnail_segment": 2,
+  "segments": [
+   {
+    "narration": "Every time you buy a Big Mac, part of what you pay ends up as rent.",
+    "broll_query": "fast food restaurant night",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "photo",
+     "image": "fast food restaurant drive-thru night",
+     "move": "in",
+     "tag": "Where your money goes"
+    }
+   },
+   {
+    "narration": "Last year, McDonald's collected ten point four billion dollars of it.",
+    "broll_query": "money counting",
+    "on_screen": "$10.4B IN RENT",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$10.4 BILLION",
+     "label": "Rent collected by McDonald's, 2025",
+     "color": "red",
+     "bgBroll": "money counting machine"
+    }
+   },
+   {
+    "narration": "Not from selling burgers. From renting buildings to the people who sell the burgers.",
+    "broll_query": "burger on tray",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "photo",
+     "image": "hamburger close up",
+     "move": "in",
+     "tag": "Not the burgers"
+    }
+   },
+   {
+    "narration": "Meanwhile, the price of a Big Mac in the US went from about four thirty-nine in 2019 to five twenty-nine by 2024. That's McDonald's own number.",
+    "broll_query": "burger close up",
+    "on_screen": "+21%",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Average US Big Mac price",
+     "unit": "$",
+     "items": [
+      {
+       "label": "2019",
+       "value": 4.39,
+       "prefix": "$",
+       "at": "four thirty"
+      },
+      {
+       "label": "2024",
+       "value": 5.29,
+       "prefix": "$",
+       "color": "red",
+       "at": "five twenty"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Across the menu, the average item cost around forty percent more than in 2019.",
+    "broll_query": "fast food menu board",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "~40%",
+     "label": "Average menu price rise since 2019",
+     "sub": "per McDonald's USA, 2024",
+     "bgBroll": "fast food menu board"
+    }
+   },
+   {
+    "narration": "So customers got angry. Franchise owners say they're barely making it. And the company makes more profit than ever from a percentage of every sale.",
+    "broll_query": "angry customer counter",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "fast food counter customers",
+     "tag": "Everyone's unhappy. Almost."
+    }
+   },
+   {
+    "narration": "Which raises a question. Who actually made McDonald's so expensive?",
+    "broll_query": "golden arches sign",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "WHO MADE IT",
+       "size": 140
+      },
+      {
+       "text": "SO *EXPENSIVE*?",
+       "size": 210,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "fast food sign night"
+    }
+   },
+   {
+    "narration": "I think the answer is hiding in the rent. To see why, we have to go back to 1957, and a finance man most people have never heard of.",
+    "broll_query": "vintage 1950s diner",
+    "on_screen": "",
+    "chapter": "The milkshake salesman",
+    "visual": {
+     "shots": [
+      {
+       "type": "timeline",
+       "from": 2026,
+       "to": 1957,
+       "at": "1957",
+       "label": "Franchise Realty"
+      },
+      {
+       "cue": "finance man",
+       "type": "clip",
+       "broll": "vintage 1950s diner",
+       "bw": true
+      }
+     ]
+    }
+   },
+   {
+    "narration": "First, the burgers. In 1940, two brothers, Dick and Mac McDonald, opened a drive-in in San Bernardino, California.",
+    "broll_query": "vintage drive-in restaurant",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "map",
+       "view": "usa",
+       "points": [
+        {
+         "name": "San Bernardino",
+         "sub": "1940",
+         "lon": -117.29,
+         "lat": 34.11,
+         "at": "San Bernardino"
+        }
+       ]
+      },
+      {
+       "cue": "drive-in",
+       "type": "clip",
+       "broll": "vintage drive in restaurant",
+       "bw": true
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In 1948, they cut the menu right down and built a fast, self-service kitchen around a fifteen-cent hamburger. They called it the Speedee Service System.",
+    "broll_query": "vintage kitchen assembly",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "timeline",
+       "from": 1940,
+       "to": 1948,
+       "at": "1948",
+       "label": "Speedee Service System"
+      },
+      {
+       "cue": "fifteen-cent",
+       "type": "stat",
+       "value": "15¢",
+       "label": "The hamburger, 1948"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In 1954, a milkshake-machine salesman called Ray Kroc came to see why this one restaurant was buying so many of his mixers.",
+    "broll_query": "vintage milkshake machine",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "milkshake machine vintage",
+     "bw": true,
+     "tag": "Ray Kroc · 1954"
+    }
+   },
+   {
+    "narration": "He became their franchise agent, and on April fifteenth, 1955, he opened his own McDonald's in Des Plaines, Illinois.",
+    "broll_query": "vintage restaurant opening",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "map",
+       "view": "usa",
+       "from": "usa",
+       "points": [
+        {
+         "name": "Des Plaines, IL",
+         "sub": "April 15, 1955",
+         "lon": -87.88,
+         "lat": 42.03,
+         "at": "Des Plaines"
+        }
+       ]
+      },
+      {
+       "cue": "Des Plaines",
+       "type": "photo",
+       "image": "McDonald's Des Plaines museum 1955",
+       "tag": "Des Plaines · 1955"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The idea was simple. Kroc would sell the McDonald's system to other owners across the country, and take a small cut of their sales.",
+    "broll_query": "vintage map usa",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "Sell the system",
+       "owned": "sell"
+      },
+      {
+       "label": "Owners open stores",
+       "owned": "owners"
+      },
+      {
+       "label": "A small cut",
+       "owned": "small cut"
+      }
+     ],
+     "tag": "The original plan"
+    }
+   },
+   {
+    "narration": "But selling franchises for a small cut of burger sales was hard money. The franchisees were thriving. McDonald's itself was not.",
+    "broll_query": "cash register vintage",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "Franchisees",
+      "sub": "thriving",
+      "at": "franchisees"
+     },
+     "right": {
+      "name": "McDonald's",
+      "sub": "not",
+      "color": "red",
+      "at": "itself"
+     },
+     "vsAt": "itself",
+     "bgBroll": "vintage cash register"
+    }
+   },
+   {
+    "narration": "Then a former finance executive from Tastee-Freez, Harry Sonneborn, came up with a different idea.",
+    "broll_query": "vintage office man",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "vintage office typewriter",
+     "bw": true,
+     "tag": "Harry Sonneborn"
+    }
+   },
+   {
+    "narration": "Don't just sell franchises. Own the ground they stand on.",
+    "broll_query": "empty land lot",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "OWN THE",
+       "size": 140
+      },
+      {
+       "text": "*GROUND*",
+       "size": 250,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "empty land lot aerial"
+    }
+   },
+   {
+    "narration": "In 1957, they set up a company called Franchise Realty. Here's how it worked.",
+    "broll_query": "real estate documents",
+    "on_screen": "",
+    "chapter": "The landlord",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "FRANCHISE *REALTY*",
+       "size": 180
+      },
+      {
+       "text": "1957",
+       "size": 110,
+       "color": "red"
+      }
+     ],
+     "bgBroll": "real estate documents"
+    }
+   },
+   {
+    "narration": "The company would find a site and buy the land on a ten-year contract. A bank loan paid for the building.",
+    "broll_query": "construction site",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "Find a site",
+       "owned": "find"
+      },
+      {
+       "label": "Buy the land",
+       "owned": "buy"
+      },
+      {
+       "label": "Bank builds",
+       "owned": "bank"
+      }
+     ],
+     "tag": "Step one"
+    }
+   },
+   {
+    "narration": "Then it leased the whole thing to the franchisee, at a forty percent markup over its own payments.",
+    "broll_query": "keys handover",
+    "on_screen": "+40% MARKUP",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "+40%",
+     "label": "Markup on the lease",
+     "sub": "over McDonald's own payments",
+     "bgBroll": "keys handover"
+    }
+   },
+   {
+    "narration": "And on top of that, once sales passed a set level, the franchisee paid rent of five percent of sales.",
+    "broll_query": "money counting",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "5% OF SALES",
+     "label": "Extra rent above a base",
+     "bgBroll": "money counting hands"
+    }
+   },
+   {
+    "narration": "And if a franchisee already owned the land? The company leased it from them, and then leased it straight back to them.",
+    "broll_query": "property deed",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "YOUR LAND?",
+       "size": 140
+      },
+      {
+       "text": "WE'LL *LEASE IT*",
+       "at": "leased it from",
+       "size": 160
+      },
+      {
+       "text": "BACK TO YOU",
+       "at": "straight back",
+       "size": 140
+      }
+     ],
+     "bgBroll": "property deed signing"
+    }
+   },
+   {
+    "narration": "Think about what that does. McDonald's is now paid twice. Once for the brand, and once for the building.",
+    "broll_query": "two coins",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "The brand",
+      "sub": "royalties",
+      "at": "brand"
+     },
+     "right": {
+      "name": "The building",
+      "sub": "rent",
+      "color": "red",
+      "at": "building"
+     },
+     "vsAt": "building"
+    }
+   },
+   {
+    "narration": "And if a franchisee fails, the company still owns the land.",
+    "broll_query": "for sale sign",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "empty storefront for lease",
+     "tag": "The land stays"
+    }
+   },
+   {
+    "narration": "Ray Kroc later wrote in his autobiography that this was the beginning of real income for McDonald's.",
+    "broll_query": "old book pages",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "This was the beginning of *real income* for McDonald's.",
+     "who": "Ray Kroc, autobiography",
+     "kicker": "on the real estate plan",
+     "hlAt": "real",
+     "bgBroll": "old book pages"
+    }
+   },
+   {
+    "narration": "You might know the famous line, you're not in the burger business, you're in the real estate business.",
+    "broll_query": "film reel cinema",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "You're not in the burger business, you're in the *real estate* business.",
+     "who": "Sonneborn's character, The Founder (2016 film)",
+     "kicker": "a movie line",
+     "hlAt": "real"
+    }
+   },
+   {
+    "narration": "To be accurate, that exact sentence comes from the 2016 film The Founder. But the idea was real. Sonneborn sold bankers on McDonald's as a property business.",
+    "broll_query": "bank building",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "bank building exterior",
+     "tag": "The pitch to bankers"
+    }
+   },
+   {
+    "narration": "And bankers listened. By 1959, more than a hundred restaurants were open. By August 1960, close to two hundred.",
+    "broll_query": "vintage restaurants street",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "McDonald's restaurants",
+     "unit": "",
+     "items": [
+      {
+       "label": "1959",
+       "value": 100,
+       "at": "1959"
+      },
+      {
+       "label": "Aug 1960",
+       "value": 200,
+       "color": "red",
+       "at": "August"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In 1960 came its first loan from an institution: a two hundred and sixty thousand dollar mortgage at six percent, which paid for six restaurants. Lenders liked the land underneath.",
+    "broll_query": "vintage bank interior",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$260,000",
+     "label": "First institutional mortgage, 1960",
+     "sub": "6% · financed six stores",
+     "bgBroll": "vintage bank interior"
+    }
+   },
+   {
+    "narration": "In 1961, three insurance companies lent one and a half million dollars, and took twenty-two and a half percent of the company's equity in return.",
+    "broll_query": "insurance office",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "$1.5 MILLION",
+       "label": "Loan from three insurers, 1961",
+       "bgBroll": "insurance office building"
+      },
+      {
+       "cue": "twenty-two",
+       "type": "donut",
+       "value": 22.5,
+       "title": "of the equity",
+       "sub": "the lenders' price"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That same year, Kroc bought out the McDonald brothers for two point seven million dollars.",
+    "broll_query": "handshake contract",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$2.7 MILLION",
+     "label": "Buying out the McDonald brothers",
+     "sub": "1961",
+     "bgBroll": "handshake contract"
+    }
+   },
+   {
+    "narration": "Kroc wanted to pay it in installments. The brothers said no. They wanted the full amount.",
+    "broll_query": "cash in briefcase",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "cash in briefcase",
+     "tag": "No installments"
+    }
+   },
+   {
+    "narration": "A family member later claimed Kroc also promised them a one percent royalty on a handshake. There's no written proof it existed, and it was never paid.",
+    "broll_query": "handshake close up",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "A 1% ROYALTY",
+       "size": 140
+      },
+      {
+       "text": "ON A *HANDSHAKE*?",
+       "at": "handshake",
+       "size": 170
+      },
+      {
+       "text": "(NO WRITTEN PROOF)",
+       "at": "no written",
+       "size": 90
+      }
+     ],
+     "bgBroll": "handshake close up"
+    }
+   },
+   {
+    "narration": "The brothers also kept their original restaurant. Kroc was furious, and opened a new McDonald's nearby. The original, renamed the Big M, eventually closed.",
+    "broll_query": "old restaurant closed",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "text",
+       "lines": [
+        {
+         "text": "THE ORIGINAL",
+         "size": 140
+        },
+        {
+         "text": "RENAMED *THE BIG M*",
+         "at": "renamed",
+         "size": 160
+        }
+       ]
+      },
+      {
+       "cue": "eventually closed",
+       "type": "clip",
+       "broll": "abandoned old restaurant",
+       "bw": true,
+       "tag": "Closed"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And Sonneborn? He ran the company as its first president, until 1967.",
+    "broll_query": "vintage boardroom",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "timeline",
+     "from": 1959,
+     "to": 1967,
+     "at": "1967",
+     "label": "Sonneborn resigns"
+    }
+   },
+   {
+    "narration": "He believed a recession was coming and wanted to stop building. Kroc wanted to keep expanding. Sonneborn resigned, and Kroc took his title.",
+    "broll_query": "office door closing",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "Sonneborn",
+      "sub": "stop building",
+      "at": "Sonneborn believed"
+     },
+     "right": {
+      "name": "Kroc",
+      "sub": "keep expanding",
+      "color": "red",
+      "at": "Kroc wanted"
+     },
+     "vsAt": "Kroc wanted"
+    }
+   },
+   {
+    "narration": "But his machine stayed. And today, it's enormous.",
+    "broll_query": "city aerial restaurants",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "THE MACHINE",
+       "size": 150
+      },
+      {
+       "text": "*STAYED*",
+       "size": 240,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "city aerial night"
+    }
+   },
+   {
+    "narration": "At the end of 2025, there were forty-five thousand three hundred and fifty-six McDonald's restaurants. About ninety-five percent are run by franchisees.",
+    "broll_query": "world map lights",
+    "on_screen": "",
+    "chapter": "The money machine",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "45,356",
+       "label": "McDonald's restaurants, end of 2025",
+       "bgBroll": "world map lights"
+      },
+      {
+       "cue": "ninety-five",
+       "type": "waffle",
+       "from": 0,
+       "to": 95,
+       "label": "run by franchisees",
+       "toLabel": "about 95%"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In the markets it runs directly, McDonald's owns about fifty-six percent of the land under its restaurants, and about eighty percent of the buildings.",
+    "broll_query": "aerial view restaurant parking",
+    "on_screen": "56% LAND · 80% BUILDINGS",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "What McDonald's owns",
+     "unit": "%",
+     "max": 100,
+     "items": [
+      {
+       "label": "Land",
+       "value": 56,
+       "at": "fifty-six"
+      },
+      {
+       "label": "Buildings",
+       "value": 80,
+       "color": "red",
+       "at": "eighty"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Total revenue in 2025 was about twenty-six point nine billion dollars.",
+    "broll_query": "corporate headquarters",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$26.9 BILLION",
+     "label": "McDonald's revenue, 2025",
+     "bgBroll": "corporate headquarters glass"
+    }
+   },
+   {
+    "narration": "Just under ten billion came from restaurants McDonald's runs itself. Sixteen and a half billion came from franchisees.",
+    "broll_query": "restaurant kitchen workers",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Revenue, 2025",
+     "unit": "$B",
+     "items": [
+      {
+       "label": "Own restaurants",
+       "value": 9.7,
+       "prefix": "$",
+       "at": "Just under"
+      },
+      {
+       "label": "From franchisees",
+       "value": 16.5,
+       "prefix": "$",
+       "color": "red",
+       "at": "Sixteen"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "And look at what that franchise money is made of. Royalties, about six billion. Rent, about ten point four billion.",
+    "broll_query": "rent payment",
+    "on_screen": "RENT > ROYALTIES",
+    "chapter": "",
+    "visual": {
+     "type": "donut",
+     "value": 63,
+     "approx": true,
+     "title": "is rent",
+     "sub": "of franchise revenue, 2025",
+     "at": "Rent",
+     "bgBroll": "rent payment documents"
+    }
+   },
+   {
+    "narration": "So McDonald's makes more from being a landlord than from its own brand fees.",
+    "broll_query": "landlord keys",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "MORE AS A",
+       "size": 140
+      },
+      {
+       "text": "*LANDLORD*",
+       "size": 240,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "building keys"
+    }
+   },
+   {
+    "narration": "And these deals are long. Franchise agreements generally run for twenty years.",
+    "broll_query": "calendar pages",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "timeline",
+     "from": 2025,
+     "to": 2045,
+     "at": "twenty",
+     "label": "A typical franchise term"
+    }
+   },
+   {
+    "narration": "Now the profit. The restaurants McDonald's runs itself made about one point four billion dollars in margin.",
+    "broll_query": "fast food kitchen",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "fast food kitchen workers",
+     "tag": "Running restaurants"
+    }
+   },
+   {
+    "narration": "The franchised side made thirteen point nine billion. About ten times as much.",
+    "broll_query": "money stacks",
+    "on_screen": "10× THE PROFIT",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Margins, 2025",
+     "unit": "$B",
+     "items": [
+      {
+       "label": "Own restaurants",
+       "value": 1.4,
+       "prefix": "$",
+       "at": 0.0
+      },
+      {
+       "label": "Franchised",
+       "value": 13.9,
+       "prefix": "$",
+       "color": "red",
+       "at": "thirteen"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "That's why McDonald's operating margin was forty-six percent. For a restaurant company, that's extraordinary.",
+    "broll_query": "stock chart green",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "46.1%",
+     "label": "Operating margin, 2025",
+     "bgBroll": "stock chart rising"
+    }
+   },
+   {
+    "narration": "Here's the key detail. Both rent and royalties are tied to a percentage of sales.",
+    "broll_query": "receipt printing",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "RENT: % OF *SALES*",
+       "at": "rent",
+       "size": 140
+      },
+      {
+       "text": "ROYALTY: % OF *SALES*",
+       "at": "royalties",
+       "size": 140
+      }
+     ],
+     "bgBroll": "receipt printing"
+    }
+   },
+   {
+    "narration": "So when menu prices go up, sales go up. And McDonald's collects more, without paying the higher wages or food costs itself.",
+    "broll_query": "price tag rising",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "Prices up",
+       "owned": "prices"
+      },
+      {
+       "label": "Sales up",
+       "owned": "sales go"
+      },
+      {
+       "label": "Rent + royalty up",
+       "owned": "collects"
+      }
+     ],
+     "tag": "The percentage",
+     "ownedText": "↑"
+    }
+   },
+   {
+    "narration": "Who does pay those costs? The franchisee. So let's look at the deal from their side of the counter.",
+    "broll_query": "restaurant owner counter",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "WHO PAYS",
+       "size": 150
+      },
+      {
+       "text": "THE *COSTS*?",
+       "size": 210,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "restaurant owner counter"
+    }
+   },
+   {
+    "narration": "Buying into McDonald's in the US starts with a forty-five thousand dollar franchise fee.",
+    "broll_query": "signing contract",
+    "on_screen": "",
+    "chapter": "The franchisee's side",
+    "visual": {
+     "type": "stat",
+     "value": "$45,000",
+     "label": "Initial franchise fee",
+     "bgBroll": "signing contract pen"
+    }
+   },
+   {
+    "narration": "The total start-up cost runs from about one point five to two point eight million dollars.",
+    "broll_query": "restaurant construction",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$1.5M–$2.8M",
+     "label": "Estimated initial investment",
+     "bgBroll": "restaurant construction"
+    }
+   },
+   {
+    "narration": "Then, every year, a royalty of four or five percent of sales. At least four percent more for advertising. And rent.",
+    "broll_query": "accounting calculator",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "ledger",
+     "title": "Taken from sales",
+     "rows": [
+      {
+       "year": "Royalty",
+       "name": "service fee",
+       "price": "4–5%",
+       "at": "royalty"
+      },
+      {
+       "year": "Ads",
+       "name": "advertising",
+       "price": "4%+",
+       "at": "advertising"
+      },
+      {
+       "year": "Rent",
+       "name": "to McDonald's",
+       "price": "0–33%",
+       "at": "rent"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "In 2025, the effective rent across franchised restaurants ranged from nothing at all up to thirty-three percent of sales.",
+    "broll_query": "restaurant exterior",
+    "on_screen": "UP TO 33%",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "UP TO 33%",
+     "label": "Effective rent, % of sales",
+     "sub": "2025 franchise disclosure",
+     "color": "red",
+     "bgBroll": "restaurant exterior"
+    }
+   },
+   {
+    "narration": "To put that in dollars: at twenty percent rent, a restaurant doing four million a year in sales would pay eight hundred thousand dollars a year to its landlord. And the landlord is often McDonald's.",
+    "broll_query": "rent check",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$800,000",
+     "label": "Rent at 20% on $4M sales",
+     "sub": "an illustration",
+     "color": "red",
+     "bgBroll": "rent check writing"
+    }
+   },
+   {
+    "narration": "And in January 2024, McDonald's raised the royalty on new US restaurants from four to five percent.",
+    "broll_query": "calendar january",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "Royalty on new US restaurants",
+     "unit": "%",
+     "items": [
+      {
+       "label": "Before",
+       "value": 4,
+       "at": "four"
+      },
+      {
+       "label": "From Jan 2024",
+       "value": 5,
+       "color": "red",
+       "at": "five percent"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Existing owners kept the old rate. The new one hits restaurants that are newly built, or bought straight from the company.",
+    "broll_query": "new restaurant opening",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "new restaurant opening",
+     "tag": "New stores only"
+    }
+   },
+   {
+    "narration": "On a typical restaurant doing three point six million in sales, that extra point is about thirty-six thousand dollars a year.",
+    "broll_query": "dollar bills",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "~$36,000",
+     "label": "Extra per year",
+     "sub": "on $3.6M in sales",
+     "bgBroll": "dollar bills counting"
+    }
+   },
+   {
+    "narration": "A franchised US restaurant open at least a year averaged about four million dollars in sales in 2025.",
+    "broll_query": "busy drive thru",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "busy drive thru cars",
+     "tag": "~$4.06M average sales, 2025"
+    }
+   },
+   {
+    "narration": "Sounds great. But McDonald's own disclosure shows operating income before rent and fees at roughly a quarter of sales. Rent, royalties and loan payments all come out of that.",
+    "broll_query": "restaurant office paperwork",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "waffle",
+     "from": 0,
+     "to": 25,
+     "at": "quarter",
+     "label": "left before rent,\nfees and debt",
+     "toLabel": "~25%",
+     "bgBroll": "office paperwork"
+    }
+   },
+   {
+    "narration": "To be fair, McDonald's says about two thirds of its franchisees beat the eight hundred and sixty-four thousand dollar benchmark in that disclosure. Plenty of owners do well.",
+    "broll_query": "restaurant owner smiling",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "waffle",
+     "from": 0,
+     "to": 66,
+     "at": "two thirds",
+     "label": "beat the $864K benchmark",
+     "toLabel": "about 66%",
+     "bgBroll": "restaurant owner smiling"
+    }
+   },
+   {
+    "narration": "And the people running them say that number is shrinking.",
+    "broll_query": "worried business owner",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "worried business owner",
+     "tag": "Owners speak up"
+    }
+   },
+   {
+    "narration": "In 2026, an independent franchisee group, the National Owners Association, surveyed more than a hundred owners. Restaurant Business reported the results.",
+    "broll_query": "survey clipboard",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "survey clipboard",
+     "tag": "National Owners Association · 2026"
+    }
+   },
+   {
+    "narration": "Ninety-five percent said their restaurant-level profit fell in the first quarter of 2026. Ninety-nine percent said food and paper costs had gone up.",
+    "broll_query": "food supply truck",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "95%",
+       "label": "saw profits fall, Q1 2026",
+       "color": "red"
+      },
+      {
+       "cue": "Ninety-nine",
+       "type": "stat",
+       "value": "99%",
+       "label": "hit by higher food and paper costs"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "Ninety-seven percent said the company's current plan isn't improving their cash flow.",
+    "broll_query": "cash flow chart down",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "97%",
+     "label": "say the plan isn't helping cash flow",
+     "color": "red",
+     "bgBroll": "chart going down"
+    }
+   },
+   {
+    "narration": "Nearly eight in ten said their cash flow can't cover the reinvestment McDonald's requires.",
+    "broll_query": "empty wallet",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "waffle",
+     "from": 0,
+     "to": 80,
+     "at": "eight in ten",
+     "label": "can't cover required\nreinvestment",
+     "toLabel": "~8 in 10"
+    }
+   },
+   {
+    "narration": "And here's the strangest number. All but three percent said their control over pricing had been weakened, or taken away.",
+    "broll_query": "menu board",
+    "on_screen": "97%",
+    "chapter": "",
+    "visual": {
+     "type": "waffle",
+     "from": 0,
+     "to": 97,
+     "at": "All but",
+     "label": "say their pricing control\nwas weakened or removed",
+     "toLabel": "97%",
+     "bgBroll": "menu board"
+    }
+   },
+   {
+    "narration": "Remember that, because it's about to matter.",
+    "broll_query": "clock ticking",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "REMEMBER *THAT*",
+       "size": 200
+      }
+     ],
+     "bgBroll": "clock ticking"
+    }
+   },
+   {
+    "narration": "And that reinvestment is coming. Owners expect a new remodel cycle starting around 2027 to cost four hundred to seven hundred thousand dollars per restaurant. Paid by them.",
+    "broll_query": "restaurant renovation",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "$400K–$700K",
+     "label": "Remodel, per restaurant",
+     "sub": "paid by franchisees",
+     "bgBroll": "restaurant renovation"
+    }
+   },
+   {
+    "narration": "Asked about it, McDonald's chief executive Chris Kempczinski said franchisees still have a lot of borrowing capacity.",
+    "broll_query": "office interview",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "They've got a lot of *borrowing capacity* still.",
+     "who": "Chris Kempczinski, McDonald's CEO",
+     "kicker": "as reported, 2026",
+     "hlAt": "borrowing"
+    }
+   },
+   {
+    "narration": "Remember who often owns the building being remodelled.",
+    "broll_query": "building exterior",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "WHO OWNS",
+       "size": 140
+      },
+      {
+       "text": "THE *BUILDING*?",
+       "size": 210,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "restaurant building exterior"
+    }
+   },
+   {
+    "narration": "Then there's you, the customer. In May 2024, an eighteen-dollar Big Mac meal went viral, and McDonald's had to respond.",
+    "broll_query": "phone social media",
+    "on_screen": "",
+    "chapter": "The customer pays",
+    "visual": {
+     "type": "clip",
+     "broll": "scrolling phone social media",
+     "tag": "May 2024"
+    }
+   },
+   {
+    "narration": "McDonald's USA president Joe Erlinger wrote an open letter. That eighteen-dollar price, he said, came from one restaurant out of more than thirteen thousand seven hundred.",
+    "broll_query": "letter writing",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "1 OF 13,700+",
+     "label": "Where the $18 Big Mac meal was found",
+     "sub": "per McDonald's USA",
+     "bgBroll": "letter writing desk"
+    }
+   },
+   {
+    "narration": "He argued prices for many items had risen less than inflation, and that the viral claims of prices doubling were wrong.",
+    "broll_query": "inflation chart",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "inflation price chart",
+     "tag": "McDonald's side"
+    }
+   },
+   {
+    "narration": "He also pointed out that franchisees set their own menu prices, to cover rising wages, supply costs and inflation.",
+    "broll_query": "menu board prices",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "Franchisees set prices to cover *historic rises* in supply chain costs, wages and other inflationary pressures.",
+     "who": "McDonald's USA open letter (paraphrased)",
+     "kicker": "May 2024",
+     "hlAt": "historic"
+    }
+   },
+   {
+    "narration": "But remember that survey. Owners say their control over prices has been weakened. So who is really deciding?",
+    "broll_query": "question mark",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "SO WHO",
+       "size": 150
+      },
+      {
+       "text": "*DECIDES*?",
+       "size": 230,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "menu board close up"
+    }
+   },
+   {
+    "narration": "That's true. But it's also convenient. The company that collects a percentage of every sale isn't the one blamed for the price.",
+    "broll_query": "two people pointing",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "TRUE.",
+       "size": 150
+      },
+      {
+       "text": "AND *CONVENIENT*.",
+       "at": "convenient",
+       "size": 190,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "fast food counter"
+    }
+   },
+   {
+    "narration": "Customers noticed anyway. In July 2024, McDonald's global same-store sales fell one percent. The first drop since the pandemic.",
+    "broll_query": "empty restaurant",
+    "on_screen": "FIRST DROP SINCE COVID",
+    "chapter": "",
+    "visual": {
+     "type": "stat",
+     "value": "-1%",
+     "label": "Global same-store sales",
+     "sub": "Q2 2024 · first drop since the pandemic",
+     "color": "red",
+     "bgBroll": "empty restaurant tables"
+    }
+   },
+   {
+    "narration": "Kempczinski admitted that price increases had disrupted long-running value programs, and made people rethink their habits.",
+    "broll_query": "conference call",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "These price increases disrupted long running value programs and led consumers to *reconsider* their buying habits.",
+     "who": "Chris Kempczinski, McDonald's CEO",
+     "kicker": "July 2024",
+     "hlAt": "reconsider"
+    }
+   },
+   {
+    "narration": "He called lower-income customers the battleground.",
+    "broll_query": "people walking street",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "The battleground is with the *low-income* consumer.",
+     "who": "Chris Kempczinski, McDonald's CEO",
+     "kicker": "2024",
+     "hlAt": "low-income",
+     "bgBroll": "people walking street"
+    }
+   },
+   {
+    "narration": "So McDonald's launched a five-dollar meal deal that summer. In September 2025, it added Extra Value Meals, about fifteen percent cheaper than buying the items separately.",
+    "broll_query": "burger meal deal",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "shots": [
+      {
+       "type": "stat",
+       "value": "$5 MEAL DEAL",
+       "label": "Summer 2024"
+      },
+      {
+       "cue": "In September",
+       "type": "stat",
+       "value": "~15% OFF",
+       "label": "Extra Value Meals, Sept 2025",
+       "color": "red",
+       "bgBroll": "burger fries meal"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "The limited-time offer was an eight-dollar Big Mac meal and a five-dollar Sausage McMuffin meal, a dollar more in California, Alaska, Hawaii and Guam.",
+    "broll_query": "breakfast sandwich coffee",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "versus",
+     "left": {
+      "name": "$8",
+      "sub": "Big Mac meal",
+      "at": "eight-dollar"
+     },
+     "right": {
+      "name": "$5",
+      "sub": "Sausage McMuffin meal",
+      "color": "red",
+      "at": "five-dollar"
+     },
+     "vsAt": "five-dollar",
+     "bgBroll": "breakfast sandwich coffee"
+    }
+   },
+   {
+    "narration": "Because lower-income customers were disappearing. McDonald's said their fast food visits fell by double-digit percentages across the industry.",
+    "broll_query": "people walking past",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "people walking past restaurant",
+     "tag": "Lower-income visits: down double digits"
+    }
+   },
+   {
+    "narration": "Kempczinski said that absolutely is shaping value perceptions in a negative way.",
+    "broll_query": "receipt close up",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "quote",
+     "text": "That absolutely is shaping *value perceptions* in a negative way.",
+     "who": "Chris Kempczinski, McDonald's CEO",
+     "kicker": "September 2025",
+     "hlAt": "value"
+    }
+   },
+   {
+    "narration": "And the five-dollar deal did help. McDonald's said that summer it was starting to bring visits back, after traffic had stayed soft through early 2024.",
+    "broll_query": "drive thru line cars",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "drive thru line cars",
+     "tag": "Visits coming back"
+    }
+   },
+   {
+    "narration": "So, who made McDonald's so expensive?",
+    "broll_query": "golden arches",
+    "on_screen": "",
+    "chapter": "The verdict",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "SO WHO MADE IT",
+       "size": 140
+      },
+      {
+       "text": "*EXPENSIVE*?",
+       "size": 230,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "fast food sign"
+    }
+   },
+   {
+    "narration": "The fair answer: a lot of it was real. Wages, food and paper all cost more, and franchisees set their own prices.",
+    "broll_query": "kitchen worker cooking",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "kitchen worker cooking burgers",
+     "tag": "The fair answer"
+    }
+   },
+   {
+    "narration": "But look at the design. The franchisee takes the costs and the blame. The customer takes the price. And McDonald's takes a percentage, rent and royalty, off the top of every sale.",
+    "broll_query": "three people line",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "chain",
+     "steps": [
+      {
+       "label": "Franchisee: costs + blame",
+       "owned": "franchisee takes"
+      },
+      {
+       "label": "You: the price",
+       "owned": "customer takes"
+      },
+      {
+       "label": "McDonald's: % of sales",
+       "owned": "off the top"
+      }
+     ],
+     "tag": "Who carries what"
+    }
+   },
+   {
+    "narration": "Look at the numbers again. Rent, ten point four billion. Royalties, six. Margin on the restaurants it runs itself, one point four.",
+    "broll_query": "financial chart",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "bars",
+     "title": "McDonald's, 2025",
+     "unit": "$B",
+     "items": [
+      {
+       "label": "Rent",
+       "value": 10.4,
+       "prefix": "$",
+       "color": "red",
+       "at": "Rent"
+      },
+      {
+       "label": "Royalties",
+       "value": 6.0,
+       "prefix": "$",
+       "at": "Royalties"
+      },
+      {
+       "label": "Own-store margin",
+       "value": 1.4,
+       "prefix": "$",
+       "at": "Margin"
+      }
+     ]
+    }
+   },
+   {
+    "narration": "My verdict: McDonald's isn't really selling you a burger. It's renting a building, and the burger pays the rent.",
+    "broll_query": "burger dramatic",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "THE BURGER",
+       "size": 150
+      },
+      {
+       "text": "PAYS THE *RENT*",
+       "at": "pays the rent",
+       "size": 210,
+       "mark": "red"
+      }
+     ],
+     "bgBroll": "burger dramatic close up"
+    }
+   },
+   {
+    "narration": "That model made Harry Sonneborn's idea one of the most successful in business history. And it explains why the company can thrive while owners and customers feel squeezed.",
+    "broll_query": "city skyline sunset",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "city skyline sunset",
+     "tag": "Sonneborn's machine"
+    }
+   },
+   {
+    "narration": "If you want to save money, use the app deals and value meals, and compare prices between locations. They really can differ.",
+    "broll_query": "phone app ordering",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "text",
+     "lines": [
+      {
+       "text": "USE THE APP DEALS",
+       "at": "app",
+       "size": 120
+      },
+      {
+       "text": "GET THE VALUE MEALS",
+       "at": "value",
+       "size": 120
+      },
+      {
+       "text": "COMPARE *LOCATIONS*",
+       "at": "compare",
+       "size": 130
+      }
+     ],
+     "bgBroll": "phone app ordering"
+    }
+   },
+   {
+    "narration": "And if this landlord trick sounds familiar, watch how airlines make more from your credit card than from flying. Same idea: the product you see isn't where the money is.",
+    "broll_query": "airplane takeoff",
+    "on_screen": "",
+    "chapter": "",
+    "visual": {
+     "type": "clip",
+     "broll": "airplane takeoff runway",
+     "tag": "Next: airlines and your credit card"
+    }
+   }
+  ],
+  "sources": [
+   "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+   "https://fourweekmba.com/mcdonalds-revenue-breakdown/",
+   "https://corporate.mcdonalds.com/corpmcd/our-stories/article/providing-meaningful-value-to-our-fans-with-a-side-of-facts.html",
+   "https://www.nbcdfw.com/news/national-international/mcdonalds-exec-says-average-menu-item-costs-40-more-than-2019/3553945/",
+   "https://corporate.mcdonalds.com/corpmcd/our-company/who-we-are/our-history",
+   "https://en.wikipedia.org/wiki/Ray_Kroc",
+   "https://en.wikipedia.org/wiki/Harry_J._Sonneborn",
+   "https://www.restfinance.com/restaurant-finance-across-america/ray-kroc-not-the-founder-but-a-financial-engineer/article_a3d94b01-60db-5a81-9ac9-6e1ec10d8d28.html",
+   "https://www.franchisechatter.com/2026/10/11/mcdonalds-franchise-review-2026-costs-fees-news-average-revenues-and-or-profits/",
+   "https://thetakeout.com/mcdonalds-new-location-franchises-higher-royalty-fees-1850871196",
+   "https://lexpress-franchise.com/en-us/news/mcdonalds-franchisees-flag-falling-profits-as-remodel-costs-loom/",
+   "https://www.nrn.com/quick-service/consumer-pullback-turns-mcdonald-s-sales-negative-first-time-covid",
+   "https://fortune.com/2025/09/02/mcdonalds-slashes-prices-extra-value-meals-lower-income-consumer"
+  ],
+  "uses_realistic_ai_media": false,
+  "originality_note": "Original script and structure (debate: who made McDonald's expensive?); no video analytics yet, so applied the playbook: sourced stakes in line one, rehook each chapter, movie-quote myth corrected, McDonald's side (real cost inflation, franchisees set prices) given before a labelled-opinion verdict."
+ }
+}
